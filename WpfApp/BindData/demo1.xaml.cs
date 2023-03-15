@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace WpfApp.BindData
 {
     /// <summary>
-    /// dWindow1.xaml 的互動邏輯
+    /// demo1.xaml 的互動邏輯
     /// </summary>
-    public partial class dWindow1 : Window
+    public partial class demo1 : Window
     {
-        public dWindow1 ()
+        public demo1 ()
         {
             InitializeComponent();
         }

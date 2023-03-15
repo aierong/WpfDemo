@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfApp.BindData.demo1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp.BindData"
+        mc:Ignorable="d"
+        Title="demo1" Height="450" Width="800">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250" />
+            <RowDefinition Height="150" />
+            <RowDefinition Height="138*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock Width="248"
+                       Height="24"
+                       Text="名称:"
+                       TextWrapping="Wrap" />
+            <ListBox x:Name="listStockName"
+                     Width="248"
+                     Height="126">
+                <ListBoxItem Content="全通教育" />
+                <ListBoxItem Content="ABC" />
+                <ListBoxItem Content="宝钢" />
+                <ListBoxItem Content="浦发银行" />
+                <ListBoxItem Content="工商银行" />
+                <ListBoxItem Content="中国建筑" />
+            </ListBox>
+            <TextBlock Width="248"
+                       Height="24"
+                       Text="你所选中的名称:" />
+            <TextBlock x:Name="lab_result"
+                       Width="248"
+                       Height="24"
+                       Text="{Binding ElementName=listStockName, Path=SelectedItem.Content}" />
+        </StackPanel>
+    </Grid>
+</Window>
