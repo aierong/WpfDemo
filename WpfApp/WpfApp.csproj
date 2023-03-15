@@ -60,6 +60,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="BindData\demo2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BUJU\DockPanel\demo1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -106,6 +110,9 @@
     </Compile>
     <Compile Include="BindData\demo1.xaml.cs">
       <DependentUpon>demo1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BindData\demo2.xaml.cs">
+      <DependentUpon>demo2.xaml</DependentUpon>
     </Compile>
     <Compile Include="BUJU\DockPanel\demo1.xaml.cs">
       <DependentUpon>demo1.xaml</DependentUpon>

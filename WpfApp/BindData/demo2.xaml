@@ -1,0 +1,58 @@
+﻿<Window x:Class="WpfApp.BindData.demo2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp.BindData"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="简单绑定demo2"
+        Width="800"
+        Height="650"
+        mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="350" />
+            <RowDefinition Height="138*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1">
+            <TextBlock Width="248"
+                       Height="24"
+                       Text="颜色:"
+                       TextWrapping="Wrap" />
+            <ListBox x:Name="listColor"
+                     Width="248"
+                     Height="145">
+                <ListBoxItem Content="Blue" />
+                <ListBoxItem Content="Red" />
+                <ListBoxItem Content="Green" />
+                <ListBoxItem Content="Gray" />
+                <ListBoxItem Content="Cyan" />
+                <ListBoxItem Content="GreenYellow" />
+                <ListBoxItem Content="Orange" />
+            </ListBox>
+            <!--<TextBlock Width="248"
+                       Height="24"
+                       Text="改变背景色:" />
+            <TextBlock Width="248"
+                       Height="24"
+                       Background="{Binding ElementName=listColor, Path=SelectedItem.Content, Mode=OneWay}" />-->
+            <TextBlock Width="248"
+                       Height="24"
+                       Text="改变背景色:" />
+            <TextBlock Width="248"
+                       Height="24"
+                       Background="{Binding ElementName=listColor, Path=SelectedItem.Content, Mode=OneWay}"
+                       Text="{Binding ElementName=listColor, Path=SelectedItem.Content, Mode=OneWay}" />
+            <TextBox Name="txtTwoWay"
+                     Width="248"
+                     Height="24"
+                     Background="{Binding ElementName=listColor, Path=SelectedItem.Content, Mode=TwoWay}"
+                     Text="{Binding ElementName=listColor, Path=SelectedItem.Content, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox Width="248"
+                     Height="24"
+                     Text="zw" />
+
+        </StackPanel>
+
+    </Grid>
+</Window>
