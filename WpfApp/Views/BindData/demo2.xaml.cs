@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfApp.BindData
+namespace WpfApp.Views.BindData
 {
     /// <summary>
     /// demo2.xaml 的互動邏輯

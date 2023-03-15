@@ -56,11 +56,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="BindData\demo1.xaml">
+    <Compile Include="Views\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\BindData\demo1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BindData\demo2.xaml">
+    <Page Include="Views\BindData\demo2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -108,10 +111,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BindData\demo1.xaml.cs">
+    <Compile Include="Views\BindData\demo1.xaml.cs">
       <DependentUpon>demo1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BindData\demo2.xaml.cs">
+    <Compile Include="Views\BindData\demo2.xaml.cs">
       <DependentUpon>demo2.xaml</DependentUpon>
     </Compile>
     <Compile Include="BUJU\DockPanel\demo1.xaml.cs">
@@ -145,8 +148,13 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
