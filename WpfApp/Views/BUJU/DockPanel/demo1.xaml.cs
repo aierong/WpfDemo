@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfApp.BUJU.WrapPanel
+namespace WpfApp.Views.BUJU.DockPanel
 {
     /// <summary>
-    /// Vertical.xaml 的互動邏輯
+    /// demo1.xaml 的互動邏輯
     /// </summary>
-    public partial class Vertical : Window
+    public partial class demo1 : Window
     {
-        public Vertical ()
+        public demo1 ()
         {
             InitializeComponent();
         }

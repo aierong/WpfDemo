@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfApp.BUJU.DockPanel
+namespace WpfApp.Views.BUJU.Grid
 {
     /// <summary>
-    /// LastChildFill.xaml 的互動邏輯
+    /// cicun.xaml 的互動邏輯
     /// </summary>
-    public partial class LastChildFill : Window
+    public partial class cicun : Window
     {
-        public LastChildFill ()
+        public cicun ()
         {
             InitializeComponent();
         }

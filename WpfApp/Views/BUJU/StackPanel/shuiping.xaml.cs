@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfApp.BUJU.Grid
+namespace WpfApp.Views.BUJU.StackPanel
 {
     /// <summary>
-    /// cicun.xaml 的互動邏輯
+    /// shuiping.xaml 的互動邏輯
     /// </summary>
-    public partial class cicun : Window
+    public partial class shuiping : Window
     {
-        public cicun ()
+        public shuiping ()
         {
             InitializeComponent();
         }

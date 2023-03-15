@@ -1,32 +1,28 @@
-﻿<Window x:Class="WpfApp.BUJU.Grid.cicun"
+﻿<Window x:Class="WpfApp.Views.BUJU.Grid.GridDEMO"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:WpfApp.BUJU.Grid"
+        xmlns:local="clr-namespace:WpfApp.Views.BUJU.Grid"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="配置尺寸"
+        Title="Grid布局demo"
         Width="800"
         Height="450"
         mc:Ignorable="d">
-    <!--  定义网格，此处显示了网格线  -->
-    <Grid ShowGridLines="True">
-        <!--  定义行,3行  -->
+    <Grid>
+        <!--  3行2列的表格  -->
         <Grid.RowDefinitions>
-            <!--  自动行高  -->
-            <RowDefinition Height="Auto" />
-            <!--  按比例行高  -->
-            <RowDefinition Height="*" />
-            <!--  固定行高  -->
-            <RowDefinition Height="50" />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
-        <!--  定义列，2列  -->
         <Grid.ColumnDefinitions>
-            <!--  按比例列宽  -->
-            <ColumnDefinition Width="*" />
-            <!--  固定列宽  -->
-            <ColumnDefinition Width="200" />
+            <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <!--  定义元素，并指定单元格  -->
+
+        <!--  定义元素，并指定单元格
+        Grid.Row Grid.Column 不指定就是默认第0行第0列
+        -->
         <TextBlock Grid.Row="0" Grid.Column="0">第一行第一列</TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="0">第二行第一列</TextBlock>
         <TextBlock Grid.Row="2" Grid.Column="0">第三行第一列</TextBlock>

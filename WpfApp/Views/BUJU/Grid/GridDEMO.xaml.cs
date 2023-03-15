@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfApp.BUJU.Grid
+namespace WpfApp.Views.BUJU.Grid
 {
     /// <summary>
-    /// Spandemo.xaml 的互動邏輯
+    /// GridDEMO.xaml 的互動邏輯
     /// </summary>
-    public partial class Spandemo : Window
+    public partial class GridDEMO : Window
     {
-        public Spandemo ()
+        public GridDEMO ()
         {
             InitializeComponent();
         }

@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfApp.BUJU.WrapPanel
+namespace WpfApp.Views.BUJU.DockPanel
 {
     /// <summary>
-    /// Horizontal.xaml 的互動邏輯
+    /// LastChildFill.xaml 的互動邏輯
     /// </summary>
-    public partial class Horizontal : Window
+    public partial class LastChildFill : Window
     {
-        public Horizontal ()
+        public LastChildFill ()
         {
             InitializeComponent();
         }

@@ -67,39 +67,39 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BUJU\DockPanel\demo1.xaml">
+    <Page Include="Views\BUJU\DockPanel\demo1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="BUJU\DockPanel\LastChildFill.xaml">
+    <Page Include="Views\BUJU\DockPanel\LastChildFill.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="BUJU\Grid\cicun.xaml">
+    <Page Include="Views\BUJU\Grid\cicun.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="BUJU\Grid\GridDEMO.xaml">
+    <Page Include="Views\BUJU\Grid\GridDEMO.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="BUJU\Grid\Spandemo.xaml">
+    <Page Include="Views\BUJU\Grid\Spandemo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="BUJU\StackPanel\cuizhi.xaml">
+    <Page Include="Views\BUJU\StackPanel\cuizhi.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="BUJU\StackPanel\shuiping.xaml">
+    <Page Include="Views\BUJU\StackPanel\shuiping.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="BUJU\WrapPanel\Horizontal.xaml">
+    <Page Include="Views\BUJU\WrapPanel\Horizontal.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="BUJU\WrapPanel\Vertical.xaml">
+    <Page Include="Views\BUJU\WrapPanel\Vertical.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -117,31 +117,31 @@
     <Compile Include="Views\BindData\demo2.xaml.cs">
       <DependentUpon>demo2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BUJU\DockPanel\demo1.xaml.cs">
+    <Compile Include="Views\BUJU\DockPanel\demo1.xaml.cs">
       <DependentUpon>demo1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BUJU\DockPanel\LastChildFill.xaml.cs">
+    <Compile Include="Views\BUJU\DockPanel\LastChildFill.xaml.cs">
       <DependentUpon>LastChildFill.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BUJU\Grid\cicun.xaml.cs">
+    <Compile Include="Views\BUJU\Grid\cicun.xaml.cs">
       <DependentUpon>cicun.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BUJU\Grid\GridDEMO.xaml.cs">
+    <Compile Include="Views\BUJU\Grid\GridDEMO.xaml.cs">
       <DependentUpon>GridDEMO.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BUJU\Grid\Spandemo.xaml.cs">
+    <Compile Include="Views\BUJU\Grid\Spandemo.xaml.cs">
       <DependentUpon>Spandemo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BUJU\StackPanel\cuizhi.xaml.cs">
+    <Compile Include="Views\BUJU\StackPanel\cuizhi.xaml.cs">
       <DependentUpon>cuizhi.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BUJU\StackPanel\shuiping.xaml.cs">
+    <Compile Include="Views\BUJU\StackPanel\shuiping.xaml.cs">
       <DependentUpon>shuiping.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BUJU\WrapPanel\Horizontal.xaml.cs">
+    <Compile Include="Views\BUJU\WrapPanel\Horizontal.xaml.cs">
       <DependentUpon>Horizontal.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BUJU\WrapPanel\Vertical.xaml.cs">
+    <Compile Include="Views\BUJU\WrapPanel\Vertical.xaml.cs">
       <DependentUpon>Vertical.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">

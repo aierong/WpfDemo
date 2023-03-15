@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfApp.BUJU.StackPanel
+namespace WpfApp.Views.BUJU.Grid
 {
     /// <summary>
-    /// shuiping.xaml 的互動邏輯
+    /// Spandemo.xaml 的互動邏輯
     /// </summary>
-    public partial class shuiping : Window
+    public partial class Spandemo : Window
     {
-        public shuiping ()
+        public Spandemo ()
         {
             InitializeComponent();
         }

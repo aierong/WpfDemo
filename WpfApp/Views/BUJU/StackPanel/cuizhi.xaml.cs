@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfApp.BUJU.StackPanel
+namespace WpfApp.Views.BUJU.StackPanel
 {
     /// <summary>
     /// cuizhi.xaml 的互動邏輯
