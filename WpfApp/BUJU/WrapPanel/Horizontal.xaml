@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfApp.BUJU.WrapPanel.Horizontal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp.BUJU.WrapPanel"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="Horizontal"
+        Width="500"
+        Height="450"
+        mc:Ignorable="d">
+    <!--当Orientation属性的值设置为 Horizontal：元素是从左向右排列的，然后自上至下自动换行。
+    当Orientation属性的值设置为Vertical：元素是从上向下排列的，然后从左至右自动换行。-->
+    <WrapPanel Orientation="Horizontal">
+        <Button Width="100">按钮1</Button>
+        <Button Width="100">按钮2</Button>
+        <Button Width="100">按钮3</Button>
+        <Button Width="100">按钮4</Button>
+        <Button Width="100">按钮5</Button>
+        <Button Width="100">按钮6</Button>
+    </WrapPanel>
+</Window>
