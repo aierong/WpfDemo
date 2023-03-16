@@ -10,10 +10,33 @@
         mc:Ignorable="d">
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
+            <!--  第一行固定高度  -->
             <RowDefinition Height="50" />
-
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
-        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Border Background="#7178DB" />
+
+        <!--  1行6列  -->
+        <Grid ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+
+
     </Grid>
 </Window>

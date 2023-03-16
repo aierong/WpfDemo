@@ -4,4 +4,7 @@
              xmlns:local="clr-namespace:WpfApp"
              StartupUri="/Views/BUJU/zhonghe1.XAML">
     <Application.Resources />
+
+
+
 </Application>
