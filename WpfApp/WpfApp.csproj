@@ -94,9 +94,6 @@
     <Compile Include="Views\BUJU\ZhongHeDemo\zhonghe1.xaml.cs">
       <DependentUpon>zhonghe1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\BUJU\ZhongHeDemo\Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
-    </Compile>
     <Page Include="Views\BindData\demo1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -187,10 +184,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\BUJU\ZhongHeDemo\zhonghe1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\BUJU\ZhongHeDemo\Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
