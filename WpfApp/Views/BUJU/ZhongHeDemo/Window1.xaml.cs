@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfApp.Views.BUJU
+namespace WpfApp.Views.BUJU.ZhongHeDemo
 {
     /// <summary>
-    /// zhonghe1.xaml 的交互逻辑
+    /// Window1.xaml 的互動邏輯
     /// </summary>
-    public partial class zhonghe1 : Window
+    public partial class Window1 : Window
     {
-        public zhonghe1 ()
+        public Window1 ()
         {
             InitializeComponent();
         }
