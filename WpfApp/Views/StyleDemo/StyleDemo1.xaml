@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfApp.Views.StyleDemo.StyleDemo1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp.Views.StyleDemo"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="StyleDemo1"
+        Width="800"
+        Height="450"
+        mc:Ignorable="d">
+    <Window.Resources>
+        <!--
+            这是基础的模板其他控件可以引用
+            x:Key是指定一个名字
+            TargetType是指定一个控件类型
+        -->
+        <Style x:Key="BaseText" TargetType="TextBox">
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="Background" Value="LightBlue" />
+        </Style>
+        <!--  这是继承上面的样式 BasedOn是指定继承  -->
+        <Style x:Key="inputText"
+               BasedOn="{StaticResource BaseText}"
+               TargetType="TextBox">
+            <Setter Property="Text" Value="请输入文本值" />
+        </Style>
+        <!--  这是一个button控件样式  -->
+        <Style x:Key="clickButton" TargetType="Button">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Content" Value="查询" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Background" Value="Orange" />
+            <Setter Property="Width" Value=" 100" />
+            <Setter Property="Height" Value=" 50" />
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <Label>33</Label>
+            <!--
+                控件样式实现方式
+                调用资源里面定义好的
+            -->
+            <TextBox Style="{StaticResource inputText}" />
+            <Button Style="{StaticResource clickButton}" />
+
+            <!--
+                这个控件自己定义的样式会覆盖资源中定义的样式
+                Width Background会覆盖资源中定义的样式
+            -->
+            <Button Width="150"
+                    Background="Blue"
+                    Style="{StaticResource clickButton}" />
+        </StackPanel>
+    </Grid>
+</Window>
