@@ -6,37 +6,118 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="zhonghe1"
         Width="800"
-        Height="450"
+        Height="500"
         mc:Ignorable="d">
-    <Grid ShowGridLines="True">
+
+    <!--
+        特别说明： 这个界面是参考zhonghe1.png做的
+    -->
+
+    <Grid>
+        <!--  最外层表格是一个2行1列的  -->
         <Grid.RowDefinitions>
             <!--  第一行固定高度  -->
             <RowDefinition Height="50" />
-            <RowDefinition Height="auto" />
+            <RowDefinition />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Border Background="#7178DB" />
 
-        <!--  1行6列  -->
-        <Grid ShowGridLines="True">
+        <Border Grid.Row="0"
+                Grid.Column="0"
+                Margin="5"
+                Background="#7178DB" />
+
+        <!--  1行2列  -->
+        <Grid Grid.Row="1" Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition />
-
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
+                <!--  第一列固定宽度  -->
+                <ColumnDefinition Width="50" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
+            <!--  左边这个是一个固定宽度列  -->
+            <Border Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="5"
+                    Background="blue" />
+            <!--  分成5行5列的表格  -->
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <!--  第1行是5个格  -->
+                <Border Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="5"
+                        Background="#7378DB" />
+                <Border Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="5"
+                        Background="#4698CE" />
+                <Border Grid.Row="0"
+                        Grid.Column="2"
+                        Margin="5"
+                        Background="#DF7FD2" />
+                <Border Grid.Row="0"
+                        Grid.Column="3"
+                        Margin="5"
+                        Background="#4FB8B7" />
+                <Border Grid.Row="0"
+                        Grid.Column="4"
+                        Margin="5"
+                        Background="#E17A7D" />
+
+                <!--  第2第3行合并了  -->
+                <!--
+                    Grid.RowSpan="2"是合并2行
+                    Grid.ColumnSpan="3"是合并3列
+                -->
+                <Border Grid.Row="1"
+                        Grid.RowSpan="2"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3"
+                        Margin="5"
+                        Background="Red" />
+
+                <Border Grid.Row="1"
+                        Grid.RowSpan="2"
+                        Grid.Column="3"
+                        Grid.ColumnSpan="2"
+                        Margin="5"
+                        Background="Yellow" />
+
+                <!--  第4第5行合并了  -->
+                <Border Grid.Row="3"
+                        Grid.RowSpan="2"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3"
+                        Margin="5"
+                        Background="Blue" />
+
+                <Border Grid.Row="3"
+                        Grid.RowSpan="2"
+                        Grid.Column="3"
+                        Grid.ColumnSpan="2"
+                        Margin="5"
+                        Background="Green" />
+            </Grid>
         </Grid>
-
-
-
     </Grid>
 </Window>
