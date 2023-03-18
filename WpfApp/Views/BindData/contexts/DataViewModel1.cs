@@ -45,6 +45,7 @@ namespace WpfApp.Views.BindData.contexts
             {
                 name = value;
 
+                //通知数据已经变化
                 PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Name" ) );
             }
         }
@@ -63,6 +64,7 @@ namespace WpfApp.Views.BindData.contexts
             {
                 title = value;
 
+                //通知数据已经变化
                 PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Title" ) );
             }
         }

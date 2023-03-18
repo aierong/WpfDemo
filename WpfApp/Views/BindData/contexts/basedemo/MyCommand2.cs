@@ -11,10 +11,10 @@ namespace WpfApp.Views.BindData.contexts.basedemo
     {
         public event EventHandler CanExecuteChanged;
 
-        Action execAction;
+        Action<string> execAction;
 
 
-        public MyCommand2 ( Action action )
+        public MyCommand2 ( Action<string> action )
         {
             execAction = action;
         }
@@ -26,7 +26,7 @@ namespace WpfApp.Views.BindData.contexts.basedemo
 
         public void Execute ( object parameter )
         {
-            execAction();
+            execAction( parameter.ToString() );
         }
     }
 }

@@ -4,11 +4,33 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace WpfApp.Views.BindData.contexts.basedemo
 {
     public class DataViewModel2 : ViewModelBase
     {
+        public DataViewModel2 ()
+        {
+            Name = "Name_init";
+            Title = "Titleinit";
+
+            ShowCommand = new MyCommand2( ( string val ) =>
+            {
+                Name = "改了";
+                Title = "gai le title";
+
+                MessageBox.Show( "show Command:" + val );
+
+                
+            } );
+        }
+
+        public MyCommand2 ShowCommand
+        {
+            get; set;
+        }
+
         private string name;
 
         /// <summary>
@@ -24,7 +46,10 @@ namespace WpfApp.Views.BindData.contexts.basedemo
             {
                 name = value;
 
-                OnPropertyChanged("Name");
+                //通知数据已经变化
+                OnPropertyChanged();
+                //通知数据已经变化 
+                OnPropertyChanged( "Description" );
             }
         }
 
@@ -42,8 +67,34 @@ namespace WpfApp.Views.BindData.contexts.basedemo
             {
                 title = value;
 
-                OnPropertyChanged( "Title" );
+                //通知数据已经变化
+                OnPropertyChanged();
+                //通知数据已经变化
+                OnPropertyChanged( "Description" );
             }
         }
+
+        private string description;
+
+        /// <summary>
+        /// 描述
+        /// </summary>
+        public string Description
+        {
+            get => string.Format( "{0}---{1}" , name , title );
+            set
+            {
+                description = value;
+            }
+        }
+
+
+        //public void Show ( string val )
+        //{
+        //    Name = "改了";
+        //    Title = "gai le title";
+
+        //    MessageBox.Show( "show Command:" + val );
+        //}
     }
 }

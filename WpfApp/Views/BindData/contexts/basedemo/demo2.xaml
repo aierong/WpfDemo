@@ -1,32 +1,15 @@
-﻿<!--
-    d:DataContext 可以使xmal中有属性提示
-
-    d:DataContext="{d:DesignInstance local:DataViewModel1,
-    IsDesignTimeCreatable=True}"
-
-
-    <Window.DataContext>
-        <local:DataViewModel1 />
-    </Window.DataContext>
--->
-
-<Window x:Class="WpfApp.Views.BindData.contexts.dataWindow1"
+﻿<Window x:Class="WpfApp.Views.BindData.contexts.basedemo.demo2"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:WpfApp.Views.BindData.contexts"
+        xmlns:local="clr-namespace:WpfApp.Views.BindData.contexts.basedemo"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="data"
+        Title="demo2"
         Width="800"
         Height="450"
-        d:DataContext="{d:DesignInstance local:DataViewModel1,
+        d:DataContext="{d:DesignInstance local:DataViewModel2,
                                          IsDesignTimeCreatable=True}"
         mc:Ignorable="d">
-
-    <!--<Window.DataContext>
-        <local:DataViewModel1 />
-    </Window.DataContext>-->
-
     <Grid ShowGridLines="True">
         <!--  3行2列的表格  -->
         <Grid.RowDefinitions>
@@ -45,14 +28,17 @@
                      Text="{Binding Name}" />
             <TextBox Width="190"
                      Height="30"
-                     Text="{Binding Title}" />
-
+                     Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox Width="190"
+                     Height="30"
+                     IsReadOnly="True"
+                     Text="{Binding Description}" />
             <Button Width="100"
                     Height="30"
                     Command="{Binding ShowCommand}"
+                    CommandParameter="{Binding Title}"
                     Content="改变值" />
 
         </StackPanel>
-         
     </Grid>
 </Window>

@@ -92,6 +92,9 @@
     </ApplicationDefinition>
     <Compile Include="ViewModels\test.cs" />
     <Compile Include="Views\BindData\contexts\basedemo\DataViewModel2.cs" />
+    <Compile Include="Views\BindData\contexts\basedemo\demo2.xaml.cs">
+      <DependentUpon>demo2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\BindData\contexts\basedemo\MyCommand2.cs" />
     <Compile Include="Views\BindData\contexts\basedemo\ViewModelBase.cs" />
     <Compile Include="Views\BindData\contexts\DataViewModel1.cs" />
@@ -105,6 +108,10 @@
     <Compile Include="Views\StyleDemo\StyleDemo1.xaml.cs">
       <DependentUpon>StyleDemo1.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\BindData\contexts\basedemo\demo2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\BindData\contexts\dataWindow1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
