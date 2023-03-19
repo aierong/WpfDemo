@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Printing.IndexedProperties;
 using System.Text;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
@@ -30,6 +31,26 @@ namespace WpfDemoNet6.Demo
             }
         }
 
+        private bool isEnabled = false;
+
+        /// <summary>
+        /// 是否可以使用
+        /// </summary>
+        public bool IsEnabled
+        {
+            get => isEnabled;
+            set
+            {
+                SetProperty( ref isEnabled , value );
+
+                //通知命令 已经改变
+                ButtonClickCommand.NotifyCanExecuteChanged();
+            }
+        }
+
+        /// <summary>
+        /// 命令
+        /// </summary>
         public RelayCommand ButtonClickCommand
         {
             get;
@@ -37,11 +58,27 @@ namespace WpfDemoNet6.Demo
 
         public DataViewModel1 ()
         {
+            //RelayCommand的第一个参数是命令调用语句
+            //              第2个参数(可选)是否允许使用
             ButtonClickCommand = new RelayCommand( () =>
             {
                 //点击按钮,修改标题
                 Title = "hello(改)";
+            } , () =>
+            {
+                return IsEnabled;
             } );
+
+            ButtonClickCommandPar = new RelayCommand<double>( ( double val ) =>
+            {
+                Title = $"hello(改):{val}";
+            } );
+        }
+
+
+        public RelayCommand<double> ButtonClickCommandPar
+        {
+            get;
         }
     }
 }
