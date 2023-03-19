@@ -10,7 +10,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WpfDemoNet6.Demo"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="绑定"
+        Title="最基本的使用"
         Width="800"
         Height="450"
         d:DataContext="{d:DesignInstance local:DataViewModel1,
@@ -21,14 +21,12 @@
     </Window.Resources>-->
     <Grid ShowGridLines="True">
 
-        <!--  3行2列的表格  -->
+        <!--  2行1列的表格  -->
         <Grid.RowDefinitions>
-            <RowDefinition />
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0"

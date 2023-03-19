@@ -15,13 +15,15 @@ using System.Windows.Shapes;
 namespace WpfDemoNet6.Demo
 {
     /// <summary>
-    /// Window1.xaml 的交互逻辑
+    /// Data2.xaml 的交互逻辑
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Data2 : Window
     {
-        public Window1()
+        public Data2 ()
         {
             InitializeComponent();
+
+            this.DataContext = new DataViewModel2();
         }
     }
 }
