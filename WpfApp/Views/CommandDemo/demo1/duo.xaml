@@ -11,6 +11,7 @@
                                          IsDesignTimeCreatable=True}"
         mc:Ignorable="d">
     <Window.Resources>
+        引入转换器
         <local:ObjectConvert x:Key="objectConverter" />
     </Window.Resources>
     <Grid ShowGridLines="True">

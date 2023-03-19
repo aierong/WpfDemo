@@ -15,8 +15,10 @@ namespace WpfApp.Views.BindData.contexts.basedemo
             Name = "Name_init";
             Title = "Titleinit";
 
+
             ShowCommand = new MyCommand2( ( string titleval ) =>
             {
+                //接收到命令传递过来的一个参数
                 MessageBox.Show( "show Command:" + titleval );
 
                 Name = "改了";

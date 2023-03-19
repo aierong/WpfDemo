@@ -17,7 +17,7 @@ namespace WpfApp.Views.CommandDemo.demo1
             object parameter ,
             CultureInfo culture )
         {
-            //
+            //把数据Clone返回
             return values.Clone();
         }
 

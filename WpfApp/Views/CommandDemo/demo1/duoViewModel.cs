@@ -16,8 +16,7 @@ namespace WpfApp.Views.CommandDemo.demo1
 
             SaveDataCommand = new MyCommand( ( object obj ) =>
             {
-                //MessageBox.Show( "show Command:" + titleval );
-
+                //obj是传递过来的参数
                 if ( obj != null )
                 {
                     //obj是一个数组
