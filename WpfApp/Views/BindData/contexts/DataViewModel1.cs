@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 
 
-//INotifyPropertyChanged 需要实现接口
+//定义ViewModel类实现接口: INotifyPropertyChanged 
 
 namespace WpfApp.Views.BindData.contexts
 {
