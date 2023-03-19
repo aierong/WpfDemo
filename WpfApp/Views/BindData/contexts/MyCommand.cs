@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
+//命令需要实现接口:ICommand
+
 namespace WpfApp.Views.BindData.contexts
 {
     public class MyCommand : ICommand
