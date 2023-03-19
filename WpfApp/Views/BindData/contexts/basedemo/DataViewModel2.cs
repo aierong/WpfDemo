@@ -15,14 +15,13 @@ namespace WpfApp.Views.BindData.contexts.basedemo
             Name = "Name_init";
             Title = "Titleinit";
 
-            ShowCommand = new MyCommand2( ( string val ) =>
+            ShowCommand = new MyCommand2( ( string titleval ) =>
             {
+                MessageBox.Show( "show Command:" + titleval );
+
                 Name = "改了";
                 Title = "gai le title";
 
-                MessageBox.Show( "show Command:" + val );
-
-                
             } );
         }
 
