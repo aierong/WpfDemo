@@ -31,8 +31,8 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0" Grid.Column="0">
-
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0">
             <TextBox x:Name="txt1"
                      Width="190"
                      Height="30"

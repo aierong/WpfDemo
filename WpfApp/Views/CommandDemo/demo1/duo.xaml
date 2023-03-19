@@ -4,14 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WpfApp.Views.CommandDemo.demo1"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="duo"
+        Title="传递多个参数"
         Width="800"
         Height="450"
         d:DataContext="{d:DesignInstance local:duoViewModel,
                                          IsDesignTimeCreatable=True}"
         mc:Ignorable="d">
     <Window.Resources>
-        <!--引入转换器-->
+        <!--  引入转换器  -->
         <local:ObjectConvert x:Key="objectConverter" />
     </Window.Resources>
     <Grid ShowGridLines="True">
@@ -26,7 +26,8 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Row="0" Grid.Column="0">
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0">
 
             <TextBox x:Name="txt1"
                      Width="190"
@@ -41,13 +42,14 @@
                     Height="30"
                     Command="{Binding SaveDataCommand}"
                     Content="改变值">
-                <!--准备传递4个参数-->
+                <!--  准备传递4个参数  -->
                 <Button.CommandParameter>
                     <MultiBinding Converter="{StaticResource objectConverter}">
                         <Binding Path="Title" />
                         <Binding Path="Name" />
                         <!--  把控件的高度传递过去  -->
-                        <Binding ElementName="txt1" Path="Height" />
+                        <Binding ElementName="txt1"
+                                 Path="Height" />
                         <!--  把控件传递过去  -->
                         <Binding ElementName="txt2" />
                     </MultiBinding>
