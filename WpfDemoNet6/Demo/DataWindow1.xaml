@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfDemoNet6.Demo.DataWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfDemoNet6.Demo"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="DataWindow1"
+        Width="800"
+        Height="450"
+        d:DataContext="{d:DesignInstance local:DataViewModel1,
+                                         IsDesignTimeCreatable=True}"
+        mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+
+        <!--  3行2列的表格  -->
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0">
+
+
+            <TextBox Width="190"
+                     Height="30"
+                     Text="{Binding Title}" />
+
+            <Button Width="100"
+                    Height="30"
+                    Command="{Binding ButtonClickCommand}"
+                    Content="改变值" />
+
+        </StackPanel>
+
+    </Grid>
+</Window>
