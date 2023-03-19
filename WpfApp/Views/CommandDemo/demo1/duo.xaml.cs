@@ -22,6 +22,8 @@ namespace WpfApp.Views.CommandDemo.demo1
         public duo ()
         {
             InitializeComponent();
+
+            this.DataContext = new duoViewModel();
         }
     }
 }

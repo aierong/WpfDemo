@@ -109,6 +109,8 @@
       <DependentUpon>duo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CommandDemo\demo1\duoViewModel.cs" />
+    <Compile Include="Views\CommandDemo\demo1\MyCommand.cs" />
+    <Compile Include="Views\CommandDemo\demo1\ObjectConvert.cs" />
     <Compile Include="Views\CommandDemo\demo1\ViewModelBase.cs" />
     <Compile Include="Views\StyleDemo\StyleDemo1.xaml.cs">
       <DependentUpon>StyleDemo1.xaml</DependentUpon>
