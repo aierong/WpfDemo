@@ -11,6 +11,8 @@ using CommunityToolkit.Mvvm.Input;
 
 1.继承ObservableObject 并且类标记是分部类partial
 2.私有变量标记属性 [ObservableProperty]
+3.NotifyCanExecuteChangedFor  触发命令
+4.RelayCommand  定义命令
 */
 
 namespace WpfDemoNet6.Demo
@@ -23,7 +25,12 @@ namespace WpfDemoNet6.Demo
         注意:这个私有变量命名:必须是小写开头,或者下划线,或者m_
         */
 
+        /*
+        NotifyPropertyChangedFor 通知依赖属性
+        */
+
         [ObservableProperty]
+        [NotifyPropertyChangedFor( nameof( Caption ) )]
         private string title = "hello";
 
         //public string Title
@@ -43,38 +50,94 @@ namespace WpfDemoNet6.Demo
         //}
 
 
+        /*
+                [NotifyCanExecuteChangedFor( nameof( ButtonClickCommand ) )]
+        NotifyCanExecuteChangedFor是通知依赖命令(触发命令),相当于set中ButtonClickCommand.NotifyCanExecuteChanged();
+        */
+
         [ObservableProperty]
+        [NotifyCanExecuteChangedFor( nameof( ButtonClickCommand ) )]
         private bool isEnabled = false;
 
 
-        public RelayCommand ButtonClickCommand
+        //public bool IsEnabled
+        //{
+        //    get => isEnabled;
+        //    set
+        //    {
+        //        SetProperty( ref isEnabled , value );
+
+        //        //通知命令 已经改变
+        //        ButtonClickCommand.NotifyCanExecuteChanged();
+        //    }
+        //}
+
+        /*
+        RelayCommand是定义命令,自动生成的命令名是方法名+Command,并且初始化
+        例如:下面的会自动生成ButtonClickCommand
+
+        CanExecute是指定一个判断方法,判断是否可用
+        */
+
+        [RelayCommand( CanExecute = nameof( CanButton ) )]
+        void ButtonClick ()
         {
-            get;
+            //点击按钮,修改标题
+            Title = "hello(改)";
         }
+
+        bool CanButton ()
+        {
+            return IsEnabled;
+        }
+
+        //public RelayCommand ButtonClickCommand
+        //{
+        //    get;
+        //}
+
+
 
         public DataViewModel2 ()
         {
             //RelayCommand的第一个参数是命令调用语句
             //              第2个参数(可选)是否允许使用
-            ButtonClickCommand = new RelayCommand( () =>
-            {
-                //点击按钮,修改标题
-                Title = "hello(改)";
-            } , () =>
-            {
-                return IsEnabled;
-            } );
+            //ButtonClickCommand = new RelayCommand( () =>
+            //{
+            //    //点击按钮,修改标题
+            //    Title = "hello(改)";
+            //} , () =>
+            //{
+            //    return IsEnabled;
+            //} );
 
-            ButtonClickCommandPar = new RelayCommand<double>( ( double val ) =>
-            {
-                Title = $"hello(改):{val}";
-            } );
+            //ButtonClickParCommand = new RelayCommand<double>( ( double val ) =>
+            //{
+            //    Title = $"hello(改):{val}";
+            //} );
         }
 
 
-        public RelayCommand<double> ButtonClickCommandPar
+
+        [RelayCommand]
+        void ButtonClickPar ( double val )
         {
-            get;
+            Title = $"hello(改):{val}";
+        }
+
+        //public RelayCommand<double> ButtonClickParCommand
+        //{
+        //    get;
+        //}
+
+
+
+        public string Caption
+        {
+            get
+            {
+                return string.Format( "Title:{0}" , Title );
+            }
         }
     }
 }

@@ -10,5 +10,41 @@
         d:DataContext="{d:DesignInstance local:DataViewModel2,
                                          IsDesignTimeCreatable=True}"
         mc:Ignorable="d">
-    <Grid />
+    <Grid ShowGridLines="True">
+
+        <!--  2行1列的表格  -->
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0">
+            <TextBox x:Name="txt1"
+                     Width="190"
+                     Height="30"
+                     Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}" />
+            <!--  Caption是只读的属性,所以Mode=OneWay  -->
+            <TextBlock Width="190"
+                       Height="30"
+                       Text="{Binding Caption, Mode=OneWay}" />
+            <CheckBox Width="190"
+                      Content="是可用"
+                      IsChecked="{Binding IsEnabled, UpdateSourceTrigger=PropertyChanged}" />
+            <Button Width="100"
+                    Height="30"
+                    Command="{Binding ButtonClickCommand}"
+                    Content="改变值" />
+            <!--  把第一个文本框的宽度值当作参数传递  -->
+            <Button Width="100"
+                    Height="30"
+                    Command="{Binding ButtonClickParCommand}"
+                    CommandParameter="{Binding ElementName=txt1, Path=Width}"
+                    Content="改变值(带参数)" />
+
+        </StackPanel>
+
+    </Grid>
 </Window>
