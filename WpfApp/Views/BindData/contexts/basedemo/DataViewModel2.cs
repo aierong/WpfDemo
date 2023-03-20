@@ -8,6 +8,9 @@ using System.Windows;
 
 namespace WpfApp.Views.BindData.contexts.basedemo
 {
+    /// <summary>
+    /// ViewModel继承基类
+    /// </summary>
     public class DataViewModel2 : ViewModelBase
     {
         public DataViewModel2 ()
@@ -90,12 +93,6 @@ namespace WpfApp.Views.BindData.contexts.basedemo
         }
 
 
-        //public void Show ( string val )
-        //{
-        //    Name = "改了";
-        //    Title = "gai le title";
-
-        //    MessageBox.Show( "show Command:" + val );
-        //}
+ 
     }
 }

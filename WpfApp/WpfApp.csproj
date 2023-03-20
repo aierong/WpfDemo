@@ -115,6 +115,8 @@
     <Compile Include="Views\StyleDemo\StyleDemo1.xaml.cs">
       <DependentUpon>StyleDemo1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControlDemo\zw.cs" />
+    <Compile Include="Views\ValidationData\zw.cs" />
     <Page Include="Views\BindData\contexts\basedemo\demo2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -267,5 +269,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

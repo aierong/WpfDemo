@@ -24,10 +24,7 @@ namespace WpfApp.Views.BindData.contexts
             ShowCommand = new MyCommand( Show );
         }
 
-        public MyCommand ShowCommand
-        {
-            get; set;
-        }
+
 
 
         private string name;
@@ -68,6 +65,18 @@ namespace WpfApp.Views.BindData.contexts
                 PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Title" ) );
             }
         }
+
+
+
+        /// <summary>
+        /// 命令
+        /// </summary>
+        public MyCommand ShowCommand
+        {
+            get; set;
+        }
+
+
 
         public void Show ()
         {
