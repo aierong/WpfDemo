@@ -13,6 +13,15 @@
     <Compile Update="Demo\DataWindow1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MessengerDemo\MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MessengerDemo\UC\UserControlLeft.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MessengerDemo\UC\UserControlTop.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Demo\Data2.xaml">
@@ -22,6 +31,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MessengerDemo\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MessengerDemo\UC\UserControlLeft.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MessengerDemo\UC\UserControlTop.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
