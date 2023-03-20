@@ -35,7 +35,6 @@
         <StackPanel Grid.Row="0"
                     Grid.Column="1">
             <myuc:UserControlTop />
-
         </StackPanel>
         <StackPanel Grid.Row="1"
                     Grid.Column="0" />
