@@ -23,6 +23,9 @@ namespace WpfApp.Views.UserControlDemo.zhonghedemo.UCUserControl
         public UserControlLeft ()
         {
             InitializeComponent();
+
+            this.DataContext = new UserControlLeftViewModel();
+
         }
     }
 }

@@ -1,12 +1,22 @@
-﻿<Window x:Class="WpfApp.Views.UserControlDemo.zhonghedemo.zhonghe"
+﻿<!--
+    引用空间名：
+    xmlns:myuc="clr-namespace:WpfApp.Views.UserControlDemo.zhonghedemo.UCUserControl"
+
+    使用
+   <myuc:UserControlLeft />-->
+
+<Window x:Class="WpfApp.Views.UserControlDemo.zhonghedemo.zhonghe"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WpfApp.Views.UserControlDemo.zhonghedemo"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="综合demo"
+        xmlns:myuc="clr-namespace:WpfApp.Views.UserControlDemo.zhonghedemo.UCUserControl"
+        Title="综合demo(每个用户控件可以有自己的viewmodel)"
         Width="800"
         Height="450"
+        d:DataContext="{d:DesignInstance local:ZhongHeViewModel,
+                                         IsDesignTimeCreatable=True}"
         mc:Ignorable="d">
     <Grid ShowGridLines="True">
         <!--  2行2列的表格  -->
@@ -19,13 +29,21 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0"
-                    Grid.Column="0" />
+                    Grid.Column="0">
+            <myuc:UserControlLeft />
+        </StackPanel>
         <StackPanel Grid.Row="0"
-                    Grid.Column="1" />
+                    Grid.Column="1">
+            <myuc:UserControlTop />
+
+        </StackPanel>
         <StackPanel Grid.Row="1"
                     Grid.Column="0" />
         <StackPanel Grid.Row="1"
-                    Grid.Column="1" />
+                    Grid.Column="1">
+            <TextBox Text="{Binding Name}" />
+            <Button Content="这个按钮是主页的" />
+        </StackPanel>
 
     </Grid>
 </Window>

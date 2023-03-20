@@ -22,6 +22,8 @@ namespace WpfApp.Views.UserControlDemo.zhonghedemo
         public zhonghe ()
         {
             InitializeComponent();
+
+            this.DataContext = new ZhongHeViewModel();
         }
     }
 }

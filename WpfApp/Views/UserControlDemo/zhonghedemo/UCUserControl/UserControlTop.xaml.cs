@@ -23,6 +23,8 @@ namespace WpfApp.Views.UserControlDemo.zhonghedemo.UCUserControl
         public UserControlTop ()
         {
             InitializeComponent();
+
+            this.DataContext = new UserControlTopViewModel();
         }
     }
 }

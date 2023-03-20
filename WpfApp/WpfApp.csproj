@@ -127,15 +127,20 @@
     <Compile Include="Views\UserControlDemo\demo1\uc\UserControlLeft.xaml.cs">
       <DependentUpon>UserControlLeft.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControlDemo\zhonghedemo\UCUserControl\MyCommand.cs" />
+    <Compile Include="Views\UserControlDemo\zhonghedemo\UCUserControl\TopCommand.cs" />
     <Compile Include="Views\UserControlDemo\zhonghedemo\UCUserControl\UserControlLeft.xaml.cs">
       <DependentUpon>UserControlLeft.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControlDemo\zhonghedemo\UCUserControl\UserControlLeftViewModel.cs" />
     <Compile Include="Views\UserControlDemo\zhonghedemo\UCUserControl\UserControlTop.xaml.cs">
       <DependentUpon>UserControlTop.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControlDemo\zhonghedemo\UCUserControl\UserControlTopViewModel.cs" />
     <Compile Include="Views\UserControlDemo\zhonghedemo\zhonghe.xaml.cs">
       <DependentUpon>zhonghe.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControlDemo\zhonghedemo\ZhongHeViewModel.cs" />
     <Compile Include="Views\ValidationData\zw.cs" />
     <Page Include="Views\BindData\contexts\basedemo\demo2.xaml">
       <SubType>Designer</SubType>

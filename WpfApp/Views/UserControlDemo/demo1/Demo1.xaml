@@ -4,7 +4,8 @@
     xmlns:myuc="clr-namespace:WpfApp.Views.UserControlDemo.demo1.uc"
 
     使用
-    <myuc:UserControlLeft />-->
+    <myuc:UserControlLeft />
+-->
 
 
 <Window x:Class="WpfApp.Views.UserControlDemo.demo1.Demo1"
