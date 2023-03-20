@@ -115,7 +115,27 @@
     <Compile Include="Views\StyleDemo\StyleDemo1.xaml.cs">
       <DependentUpon>StyleDemo1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\UserControlDemo\zw.cs" />
+    <Compile Include="Views\UserControlDemo\demo1\Demo1.xaml.cs">
+      <DependentUpon>Demo1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControlDemo\demo1\UCUserControl\UserControlTop.xaml.cs">
+      <DependentUpon>UserControlTop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControlDemo\demo1\uc\UserControlBelow.xaml.cs">
+      <DependentUpon>UserControlBelow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControlDemo\demo1\uc\UserControlLeft.xaml.cs">
+      <DependentUpon>UserControlLeft.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControlDemo\zhonghedemo\UCUserControl\UserControlLeft.xaml.cs">
+      <DependentUpon>UserControlLeft.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControlDemo\zhonghedemo\UCUserControl\UserControlTop.xaml.cs">
+      <DependentUpon>UserControlTop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControlDemo\zhonghedemo\zhonghe.xaml.cs">
+      <DependentUpon>zhonghe.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ValidationData\zw.cs" />
     <Page Include="Views\BindData\contexts\basedemo\demo2.xaml">
       <SubType>Designer</SubType>
@@ -223,6 +243,34 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\StyleDemo\StyleDemo1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControlDemo\demo1\Demo1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControlDemo\demo1\UCUserControl\UserControlTop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControlDemo\demo1\uc\UserControlBelow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControlDemo\demo1\uc\UserControlLeft.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControlDemo\zhonghedemo\UCUserControl\UserControlLeft.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControlDemo\zhonghedemo\UCUserControl\UserControlTop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControlDemo\zhonghedemo\zhonghe.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

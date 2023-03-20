@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="WpfApp.Views.UserControlDemo.demo1.uc.UserControlLeft"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WpfApp.Views.UserControlDemo.demo1.uc"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="100"
+             d:DesignWidth="100"
+             mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0">
+            <TextBox Text="我是上面文本框" />
+            <Button Content="改变值" />
+        </StackPanel>
+
+    </Grid>
+</UserControl>
