@@ -22,6 +22,8 @@ namespace WpfDemoNet6.MessengerDemo
         public MainWindow ()
         {
             InitializeComponent();
+
+            this.DataContext = new MainWindowvIViewModel();
         }
     }
 }

@@ -8,6 +8,8 @@
         Title="MainWindow"
         Width="800"
         Height="450"
+        d:DataContext="{d:DesignInstance local:MainWindowvIViewModel,
+                                         IsDesignTimeCreatable=True}"
         mc:Ignorable="d">
     <Grid ShowGridLines="True">
         <!--  2行2列的表格  -->
@@ -26,6 +28,13 @@
         <StackPanel Grid.Row="0"
                     Grid.Column="1">
             <myuc:UserControlTop />
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0" />
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1">
+            <TextBox Text="{Binding Title}" />
+
         </StackPanel>
     </Grid>
 </Window>
