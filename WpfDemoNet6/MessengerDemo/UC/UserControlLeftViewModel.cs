@@ -7,6 +7,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 using CommunityToolkit.Mvvm.Messaging.Messages;
+using WpfDemoNet6.MessengerDemo.Model;
 
 //ObservableObject 
 namespace WpfDemoNet6.MessengerDemo.UC
@@ -29,19 +30,21 @@ namespace WpfDemoNet6.MessengerDemo.UC
             //点击按钮,修改标题
             Name = "hello(Left改)";
 
-            WeakReferenceMessenger.Default.Send( "qq1" );
+            //Send发送消息
+            WeakReferenceMessenger.Default.Send<string>( "qq1" );
 
             //第一个参数是发送的消息值,第2个参数是token,可以给接收方区分用的
-            //WeakReferenceMessenger.Default.Send( "UserControlLeftViewModel发来的qq1" , "token_1" );
+            WeakReferenceMessenger.Default.Send<string , string>( "UserControlLeftViewModel发来的qq1" , "token_1" );
 
-
+            //Send发送 一个复杂数据 
+            WeakReferenceMessenger.Default.Send<MyUserMessage , string>( new MyUserMessage() { Age = 18 , UserName = "qq" } , "token_class" );
 
             //reMyMessage可以接收返回的值
-            var reMyMessage = WeakReferenceMessenger.Default.Send<MyMessage>( new MyMessage() { Datas = "qqq" } );
-            if( reMyMessage != null )
+            var result = WeakReferenceMessenger.Default.Send<MyMessage , string>( new MyMessage() { Datas = "qqq" , Ids = 100 } , "token_Response" );
+            if ( result != null )
             {
                 //获取到 返回的值
-                var val = reMyMessage.Response;
+                var val = result.Response;
 
                 Name = val;
             }
@@ -49,9 +52,9 @@ namespace WpfDemoNet6.MessengerDemo.UC
     }
 
 
-    public class MyMessage : RequestMessage<string>
-    {
-        public string Datas;
+    //public class MyMessage : RequestMessage<string>
+    //{
+    //    public string Datas;
 
-    }
+    //}
 }

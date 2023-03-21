@@ -8,6 +8,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 using CommunityToolkit.Mvvm.Messaging.Messages;
+using WpfDemoNet6.MessengerDemo.Model;
 
 //IRecipient<string>
 
@@ -25,39 +26,43 @@ namespace WpfDemoNet6.MessengerDemo.UC
         }
 
 
-        
+
 
         protected override void OnActivated ()
         {
-
-            
+            //Register<>第一个类型一般是自己的类型,第2个是接收数据的类型
+            //Register方法第1个参数一般是this,第2个参数是一个方法,可以获取接收到的值
             Messenger.Register<UserControlTopViewModel , string>( this , ( r , message ) =>
             {
                 Name = Name + "  收到msg:" + message;
+            } );
 
-                //message.r
+            //Register<>第一个类型一般是自己的类型,第2个是接收数据的类型,第3个是token数据的类型
+            //Register方法第1个参数一般是this,第2个参数是token,第3个参数是一个方法,可以获取接收到的值
+            Messenger.Register<UserControlTopViewModel , string , string>( this , "token_1" , ( r , message ) =>
+            {
+                Name = Name + "  收到msg:" + message;
             } );
 
 
-
-            //Messenger.Register<UserControlTopViewModel , string , string>( this , "token_1" , ( r , message ) =>
-            //{
-            //    Name = Name + "  收到msg:" + message;
-            //} );
-
-
-            Messenger.Register<UserControlTopViewModel , MyMessage>( this , ( r , message ) =>
+            Messenger.Register<UserControlTopViewModel , MyUserMessage , string>( this , "token_class" , ( r , user ) =>
             {
-                Name = Name + "  收到msg:" + message.Datas ;
+                Name = Name + "  收到msg:" + user.UserName + user.Age;
+            } );
+
+
+            Messenger.Register<UserControlTopViewModel , MyMessage , string>( this , "token_Response" , ( r , message ) =>
+            {
+                Name = Name + "  收到msg:" + message.Datas;
 
 
                 //Reply是答复 ,这样可以返回值
-                message.Reply("给你返回值");
-                                 
+                message.Reply( "给你返回值" );
+
             } );
         }
 
-         
+
 
         //public void Receive ( string message )
         //{
