@@ -22,10 +22,12 @@ namespace WpfDemoNet6.MessengerDemo
 
         protected override void OnActivated ()
         {
-             
-             
+            
+
+
             Messenger.Register<MainWindowvIViewModel , string , string>( this , "token_1" , ( r , message ) =>
             {
+               
 
                 Title = Title + "  收到msg:" + message;
             } );

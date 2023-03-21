@@ -13,10 +13,13 @@ using CommunityToolkit.Mvvm.Input;
 
 1.继承ObservableObject 并且类标记是分部类partial
 2.私有变量标记属性 [ObservableProperty]
-3.NotifyCanExecuteChangedFor  触发命令
+3.NotifyCanExecuteChangedFor  通知依赖命令
+  NotifyPropertyChangedFor    通知依赖属性
 4.RelayCommand  定义命令
 5.OnPropertyChanged 手动通知属性更新
 6.ButtonClickCommand.NotifyCanExecuteChanged() 手动通知命令更新
+7.OnLastNameChanging OnLastNameChanged  某个属性改变
+8.OnPropertyChanged  所有属性改变
 */
 
 namespace WpfDemoNet6.Demo
@@ -24,13 +27,13 @@ namespace WpfDemoNet6.Demo
     public partial class DataViewModel2 : ObservableObject
     {
         /*
-        [ObservableProperty]标记后,会自动生成属性(大写命名),例如:下面自动生成Title
+        [ObservableProperty]标记后,会自动生成属性(大写命名),例如:下面会自动生成Title
 
         注意:这个私有变量命名:必须是小写开头,或者下划线,或者m_
         */
 
         /*
-        NotifyPropertyChangedFor 通知依赖属性
+        NotifyPropertyChangedFor 通知依赖属性Caption
         */
 
         [ObservableProperty]
@@ -80,6 +83,9 @@ namespace WpfDemoNet6.Demo
         //     //如果上面的[NotifyCanExecuteChangedFor( nameof( ButtonClickCommand ) )]不写，可以这里手动通知更新 
         //    //ButtonClickCommand.NotifyCanExecuteChanged();
         //}
+
+
+
 
         /*
         RelayCommand是定义命令,自动生成的命令名是方法名+Command,并且初始化
@@ -151,7 +157,7 @@ namespace WpfDemoNet6.Demo
 
 
         [ObservableProperty]
-        //[NotifyPropertyChangedFor( nameof( Caption ) )]
+        [NotifyPropertyChangedFor( nameof( Caption ) )]
         private string lastName = "abc";
 
         /*
@@ -176,8 +182,13 @@ namespace WpfDemoNet6.Demo
 
 
 
+        /// <summary>
+        /// 所有属性改变
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnPropertyChanged ( PropertyChangedEventArgs e )
         {
+
             base.OnPropertyChanged( e );
 
             // 可以获取到是哪个属性改变了
