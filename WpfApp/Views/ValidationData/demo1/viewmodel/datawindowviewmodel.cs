@@ -26,13 +26,7 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
 
             ShowCommand = new MyCommand( Show , IsShow );
            
-        }
-
-
-        //public ICommand TestCommand
-        //{
-        //    get; set;
-        //}
+        }     
 
         private string name;
 
@@ -151,8 +145,6 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
 
 
 
-
-
         public string this[string name]
         {
             get
@@ -185,10 +177,11 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
 
                 }
 
-                Error = result;
+                //Error = result;
                 //IsShow();
                 //ShowCommand.CanExecuteChanged(this,null);
-                ShowCommand.CanExecute( Error );
+                //ShowCommand.CanExecute( Error );
+
                 return result;
             }
         }
