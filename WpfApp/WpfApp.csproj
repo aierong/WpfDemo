@@ -111,6 +111,12 @@
     <Compile Include="Views\CommandDemo\demo1\MyCommand.cs" />
     <Compile Include="Views\CommandDemo\demo1\ObjectConvert.cs" />
     <Compile Include="Views\CommandDemo\demo1\ViewModelBase.cs" />
+    <Compile Include="Views\ConverterDemo\demo1\conver\BoolConverter.cs" />
+    <Compile Include="Views\ConverterDemo\demo1\MyCommand.cs" />
+    <Compile Include="Views\ConverterDemo\demo1\viewmodel\WindowViewModel1.cs" />
+    <Compile Include="Views\ConverterDemo\demo1\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\StyleDemo\StyleDemo1.xaml.cs">
       <DependentUpon>StyleDemo1.xaml</DependentUpon>
     </Compile>
@@ -247,6 +253,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CommandDemo\demo1\duo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ConverterDemo\demo1\Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

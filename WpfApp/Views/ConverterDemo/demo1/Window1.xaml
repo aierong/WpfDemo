@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfApp.Views.ConverterDemo.demo1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp.Views.ConverterDemo.demo1"
+        xmlns:localcv="clr-namespace:WpfApp.Views.ConverterDemo.demo1.conver"
+        xmlns:localvm="clr-namespace:WpfApp.Views.ConverterDemo.demo1.viewmodel"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="转换器"
+        Width="800"
+        Height="450"
+        d:DataContext="{d:DesignInstance localvm:WindowViewModel1,
+                                         IsDesignTimeCreatable=True}"
+        mc:Ignorable="d">
+    <!--  引用，并起一个名字  -->
+    <Window.Resources>
+        <localcv:BoolConverter x:Key="myboolconvert" />
+    </Window.Resources>
+    <Grid ShowGridLines="True">
+        <!--  3行2列的表格  -->
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0">
+
+            <TextBox Width="190"
+                     Height="30"
+                     Text="{Binding Name}" />
+            <!--    -->
+            <TextBox Width="190"
+                     Height="30"
+                     Text="{Binding IsFlag, Converter={StaticResource myboolconvert}}" />
+
+            <Button Width="100"
+                    Height="30"
+                    Command="{Binding ShowCommand}"
+                    Content="改变值val" />
+
+        </StackPanel>
+
+    </Grid>
+</Window>
