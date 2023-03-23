@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace CommunityToolkitMvvmDemo.Views
 {
     /// <summary>
-    /// Window1.xaml 的互動邏輯
+    /// mainpage.xaml 的互動邏輯
     /// </summary>
-    public partial class Window1 : Window
+    public partial class mainpage : Window
     {
-        public Window1 ()
+        public mainpage ()
         {
             InitializeComponent();
         }
