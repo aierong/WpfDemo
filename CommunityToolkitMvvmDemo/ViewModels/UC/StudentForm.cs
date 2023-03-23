@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommunityToolkitMvvmDemo.ViewModels
+namespace CommunityToolkitMvvmDemo.ViewModels.UC
 {
-    internal class zw
+    internal class StudentForm
     {
     }
 }
