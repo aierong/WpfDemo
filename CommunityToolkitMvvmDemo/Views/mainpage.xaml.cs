@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CommunityToolkitMvvmDemo.ViewModels;
 
 namespace CommunityToolkitMvvmDemo.Views
 {
@@ -22,6 +23,8 @@ namespace CommunityToolkitMvvmDemo.Views
         public mainpage ()
         {
             InitializeComponent();
+
+            this.DataContext = new mainpageViewModel();
         }
     }
 }

@@ -18,7 +18,7 @@ namespace CommunityToolkitMvvmDemo.Views.UC
     /// <summary>
     /// StudentList.xaml 的互動邏輯
     /// </summary>
-    public partial class StudentList : Page
+    public partial class StudentList : UserControl
     {
         public StudentList ()
         {

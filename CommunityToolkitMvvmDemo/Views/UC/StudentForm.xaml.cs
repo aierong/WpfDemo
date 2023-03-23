@@ -18,7 +18,7 @@ namespace CommunityToolkitMvvmDemo.Views.UC
     /// <summary>
     /// StudentForm.xaml 的互動邏輯
     /// </summary>
-    public partial class StudentForm : Page
+    public partial class StudentForm : UserControl
     {
         public StudentForm ()
         {
