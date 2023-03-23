@@ -16,7 +16,7 @@
         <!--  2行1列的表格  -->
         <Grid.RowDefinitions>
             <RowDefinition />
-            <RowDefinition Height="30" />
+            <RowDefinition Height="50" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -41,12 +41,14 @@
             <StackPanel Grid.Row="0"
                         Grid.Column="1">
 
-                <!--<localviewuc:StudentForm />-->
+                <localviewuc:StudentForm />
             </StackPanel>
         </Grid>
         <StackPanel Grid.Row="1"
                     Grid.Column="0">
-            <TextBox Margin="5"
+            <TextBox Height="40"
+                     Margin="5"
+                     FontSize="25"
                      IsReadOnly="True"
                      Text="{Binding SqlTxt}" />
 

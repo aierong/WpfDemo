@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CommunityToolkitMvvmDemo.ViewModels.UC;
 
 namespace CommunityToolkitMvvmDemo.Views.UC
 {
@@ -23,6 +24,7 @@ namespace CommunityToolkitMvvmDemo.Views.UC
         public StudentList ()
         {
             InitializeComponent();
+            this.DataContext = new StudentListViewModel();
         }
     }
 }
