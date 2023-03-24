@@ -7,8 +7,8 @@
         xmlns:localvm="clr-namespace:CommunityToolkitMvvmDemo.ViewModels"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="mainpage"
-        Width="800"
-        Height="450"
+        Width="990"
+        Height="350"
         d:DataContext="{d:DesignInstance localvm:mainpageViewModel,
                                          IsDesignTimeCreatable=True}"
         mc:Ignorable="d">
