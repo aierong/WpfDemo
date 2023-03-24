@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfDemoNet6.IOCDemo.ViewModels
 {
-    internal class Class1
+    public  class WindowViewModel1
     {
     }
 }
