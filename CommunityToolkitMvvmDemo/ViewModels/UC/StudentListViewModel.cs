@@ -22,8 +22,10 @@ namespace CommunityToolkitMvvmDemo.ViewModels.UC
 
         public StudentListViewModel ()
         {
-            
+
         }
+
+
 
         [RelayCommand()]
         void CBClick ( bool isselect )
@@ -33,6 +35,8 @@ namespace CommunityToolkitMvvmDemo.ViewModels.UC
 
 
         }
+
+
 
     }
 }

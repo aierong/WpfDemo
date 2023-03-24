@@ -10,5 +10,10 @@ namespace CommunityToolkitMvvmDemo.Common
     {
 
         public const string tokenname_userselect = "token_isselect";
+
+        public const string tokenname_studentvaluechage = "token_studentvaluechage";
+
+        public const string tokenname_student = "tokenname_student";
+
     }
 }
