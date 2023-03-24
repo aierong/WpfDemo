@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace WpfDemoNet6.IOCDemo.Service.Service
 {
-    public class BillService
+    public class BillService : IBill
     {
+        public string GetData ( string name )
+        {
+            return string.Format( "name:{0}" , name );
+        }
+
+        public bool IsExistId ( string name )
+        {
+            return name == "qq";
+        }
     }
 }

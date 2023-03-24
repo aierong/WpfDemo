@@ -13,6 +13,7 @@ using CommunityToolkitMvvmDemo.Models;
 
 
 
+
 namespace CommunityToolkitMvvmDemo.ViewModels.UC
 {
     public partial class StudentFormViewModel : ObservableRecipient
