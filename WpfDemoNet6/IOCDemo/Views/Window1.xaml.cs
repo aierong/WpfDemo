@@ -24,9 +24,15 @@ namespace WpfDemoNet6.IOCDemo.Views
     {
         public Window1 ()
         {
+
             InitializeComponent();
 
-            this.DataContext = App.Current.Services.GetService<WindowViewModel1>();  //new WindowViewModel1();
+            // this.DataContext = new WindowViewModel1(); 这样不可以使用了,请用App.Current.Services.GetService
+            this.DataContext = App.Current.Services.GetService<WindowViewModel1>();
+
+            //代码任何处,都可以使用App.Current.Services.GetService获取到服务
+            //IFilesService filesService = App.Current.Services.GetService<IFilesService>();
+
 
         }
     }

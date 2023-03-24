@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfDemoNet6.IOCDemo.Service.Repository
 {
-    internal class BillService : IBill
+    public class BillService : IBill
     {
         public string GetData ( string name )
         {

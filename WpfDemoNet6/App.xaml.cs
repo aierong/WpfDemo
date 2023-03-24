@@ -37,20 +37,20 @@ namespace WpfDemoNet6
             this.InitializeComponent();
         }
 
-
-
         private static IServiceProvider ConfigureServices ()
         {
             var services = new ServiceCollection();
 
-            // Services  注册Services
+            //    注册Services
             services.AddSingleton<IOCDemo.Service.Repository.IBill , IOCDemo.Service.Repository.BillService>();
             services.AddSingleton<IOCDemo.Service.Service.IBill , IOCDemo.Service.Service.BillService>();
             //services.AddSingleton<ISettingsService , SettingsService>();
 
 
-            // Viewmodels 注册Viewmodels
+            //  注册Viewmodels
+            // 不是每个Viewmodels都得来AddTransient,如果Viewmodels不需要ioc,可以不用这里注册
             services.AddTransient<IOCDemo.ViewModels.WindowViewModel1>();
+
 
             return services.BuildServiceProvider();
         }
