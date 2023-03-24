@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfDemoNet6.IOCDemo.新文件夹
+namespace WpfDemoNet6.IOCDemo.Service.Service
 {
     internal class Class1
     {

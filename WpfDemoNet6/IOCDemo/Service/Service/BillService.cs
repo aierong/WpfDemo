@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfDemoNet6.IOCDemo.新文件夹1
+namespace WpfDemoNet6.IOCDemo.Service.Service
 {
-    internal class Class1
+    public class BillService
     {
     }
 }
