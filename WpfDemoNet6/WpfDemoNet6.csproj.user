@@ -13,6 +13,9 @@
     <Compile Update="Demo\DataWindow1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="IOCDemo\Views\Window1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MessengerDemo\MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,6 +31,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Demo\DataWindow1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="IOCDemo\Views\Window1.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
