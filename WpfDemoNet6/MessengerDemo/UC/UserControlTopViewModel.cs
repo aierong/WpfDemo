@@ -49,17 +49,27 @@ namespace WpfDemoNet6.MessengerDemo.UC
 
             //Register<>第一个类型一般是自己的类型,第2个是接收数据的类型,第3个是token数据的类型
             //Register方法第1个参数一般是this,第2个参数是token,第3个参数是一个方法,可以获取接收到的值
-            Messenger.Register<UserControlTopViewModel , string , string>( this , "token_1" , ( r , message ) =>
+            //Messenger.Register<UserControlTopViewModel , string , string>( this , "token_1" , ( r , message ) =>
+            //{
+
+            //    Name = Name + "  收到msg:" + message;
+            //} );
+            //ValueChangedMessage<string>                  
+            Messenger.Register<UserControlTopViewModel , ValueChangedMessage<string> , string>( this , "token_1" , ( r , message ) =>
             {
 
-                Name = Name + "  收到msg:" + message;
+                Name = Name + "  收到msg:" + message.Value;
             } );
-                              
 
 
-            Messenger.Register<UserControlTopViewModel , MyUserMessage , string>( this , "token_class" , ( r , user ) =>
+
+            //Messenger.Register<UserControlTopViewModel , MyUserMessage , string>( this , "token_class" , ( r , user ) =>
+            //{
+            //    Name = Name + "  收到msg:" + user.UserName + user.Age;
+            //} );
+            Messenger.Register<UserControlTopViewModel , ValueChangedMessage<MyUserMessage> , string>( this , "token_class" , ( r , user ) =>
             {
-                Name = Name + "  收到msg:" + user.UserName + user.Age;
+                Name = Name + "  收到msg:" + user.Value.UserName + user.Value.Age;
             } );
 
 

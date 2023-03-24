@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
+using CommunityToolkit.Mvvm.Messaging.Messages;
 using CommunityToolkitMvvmDemo.Models;
 
 
@@ -31,7 +32,8 @@ namespace CommunityToolkitMvvmDemo.ViewModels.UC
         void CBClick ( bool isselect )
         {
             //发送消息，通知
-            WeakReferenceMessenger.Default.Send<string , string>( isselect ? "1" : "0" , Common.Constant.tokenname_userselect );
+            WeakReferenceMessenger.Default.Send<ValueChangedMessage<bool> , string>( new ValueChangedMessage<bool>( isselect ) , 
+                                                                            Common.Constant.tokenname_userselect );
 
 
         }

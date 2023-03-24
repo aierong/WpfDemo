@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Messaging;
+using CommunityToolkit.Mvvm.Messaging.Messages;
 using CommunityToolkitMvvmDemo.Models;
 using CommunityToolkitMvvmDemo.ViewModels.UC;
 
@@ -29,12 +30,12 @@ namespace CommunityToolkitMvvmDemo.ViewModels
 
         protected override void OnActivated ()
         {
-            Messenger.Register<mainpageViewModel , Student , string>( this , Common.Constant.tokenname_studentvaluechage , ( r , message ) =>
+            Messenger.Register<mainpageViewModel , ValueChangedMessage<Student> , string>( this , Common.Constant.tokenname_studentvaluechage , ( r , val ) =>
             {
                 string mb = string.Format( "insert into tb(Name,Class,Phone) values('{0}','{1}','{2}')" ,
-                                                        message.Name ,
-                                                        message.Class ,
-                                                        message.Phone );
+                                                        val.Value.Name ,
+                                                        val.Value.Class ,
+                                                        val.Value.Phone );
 
                 SqlTxt = mb;
             } );

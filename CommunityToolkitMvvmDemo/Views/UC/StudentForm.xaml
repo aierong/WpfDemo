@@ -68,6 +68,7 @@
                     Margin="10,10,0,0"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
+                    Command="{Binding AddClickCommand}"
                     Content="提交" />
         </Grid>
     </GroupBox>

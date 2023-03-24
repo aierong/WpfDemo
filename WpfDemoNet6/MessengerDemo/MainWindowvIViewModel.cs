@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using CommunityToolkit.Mvvm.ComponentModel;
-
+using CommunityToolkit.Mvvm.Messaging.Messages;
 
 namespace WpfDemoNet6.MessengerDemo
 {
@@ -23,13 +23,9 @@ namespace WpfDemoNet6.MessengerDemo
         protected override void OnActivated ()
         {
             
-
-
-            Messenger.Register<MainWindowvIViewModel , string , string>( this , "token_1" , ( r , message ) =>
+            Messenger.Register<MainWindowvIViewModel , ValueChangedMessage<string> , string>( this , "token_1" , ( r , message ) =>
             {
-               
-
-                Title = Title + "  收到msg:" + message;
+                Title = Title + "  收到msg:" + message.Value;
             } );
 
         }

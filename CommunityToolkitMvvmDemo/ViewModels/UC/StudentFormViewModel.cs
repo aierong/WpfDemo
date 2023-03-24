@@ -34,9 +34,9 @@ namespace CommunityToolkitMvvmDemo.ViewModels.UC
         protected override void OnActivated ()
         {
             //接收消息
-            Messenger.Register<StudentFormViewModel , string , string>( this , Common.Constant.tokenname_userselect , ( r , message ) =>
+            Messenger.Register<StudentFormViewModel , ValueChangedMessage<bool> , string>( this , Common.Constant.tokenname_userselect , ( r , val ) =>
             {
-                this.isShow = message == "1";
+                this.isShow = val.Value;
 
                 //通知命令
                 AddClickCommand.NotifyCanExecuteChanged();
@@ -48,6 +48,8 @@ namespace CommunityToolkitMvvmDemo.ViewModels.UC
         {
             //这里 没有验证
 
+
+
             //发送消息
             var data = new Student()
             {
@@ -55,7 +57,8 @@ namespace CommunityToolkitMvvmDemo.ViewModels.UC
                 Name = this.Name ,
                 Phone = this.Phone
             };
-            WeakReferenceMessenger.Default.Send<Student , string>( data , Common.Constant.tokenname_student );
+            WeakReferenceMessenger.Default.Send<ValueChangedMessage<Student> , string>( new ValueChangedMessage<Student> ( data ) , 
+                                                                                    Common.Constant.tokenname_student );
 
         }
 
@@ -104,7 +107,8 @@ namespace CommunityToolkitMvvmDemo.ViewModels.UC
                 Name = this.Name ,
                 Phone = this.Phone
             };
-            WeakReferenceMessenger.Default.Send<Student , string>( data , Common.Constant.tokenname_studentvaluechage );
+            WeakReferenceMessenger.Default.Send<ValueChangedMessage<Student> , string>( new ValueChangedMessage<Student>( data ) ,
+                                                                                    Common.Constant.tokenname_studentvaluechage );
 
         }
     }
