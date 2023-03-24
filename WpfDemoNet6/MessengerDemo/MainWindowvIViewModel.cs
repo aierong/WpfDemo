@@ -24,7 +24,7 @@ namespace WpfDemoNet6.MessengerDemo
         protected override void OnActivated ()
         {
 
-            Messenger.Register<MainWindowvIViewModel , MyMessage , string>( this , "token_Response" , ( r , message ) =>
+            Messenger.Register<MainWindowvIViewModel , MyMessage , string>( this , "token_Response222" , ( r , message ) =>
             {
                 Title = Title + "  收到msg:" + message.Datas;
 
@@ -40,7 +40,7 @@ namespace WpfDemoNet6.MessengerDemo
             } );
 
 
-            Messenger.Register<MainWindowvIViewModel , ValueChangedMessage<string> , string>( this , "token_1" , ( r , message ) =>
+            Messenger.Register<MainWindowvIViewModel,ValueChangedMessage<string> , string>( this , "token_1" , ( r , message ) =>
             {
                 Title = Title + "  收到msg:" + message.Value;
             } );

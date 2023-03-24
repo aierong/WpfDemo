@@ -55,15 +55,47 @@ namespace WpfDemoNet6.MessengerDemo.UC
             //result接收返回的值
             //MyMessage这个类必须继承RequestMessage
             var _data2 = new MyMessage() { Datas = "qqq" , Ids = 100 };
-            var result = WeakReferenceMessenger.Default.Send<MyMessage , string>( _data2 , "token_Response" );
-            if ( result != null )
+            var result1 = WeakReferenceMessenger.Default.Send<MyMessage , string>( _data2 , "token_Response" );
+            if ( result1 != null )
+            {
+                //result1.
+
+                //if ( result1.HasReceivedResponse )
+                //{
+                //    //获取到 返回的值
+                //    var val = result1.Response;
+
+                //    Name = val;
+                //}
+
+
+
+                //获取到 返回的值
+                var val = result1.Response;
+
+                Name = val;
+
+            }
+
+            var _data222 = new MyMessage() { Datas = "qqq" , Ids = 100 };
+            var result2 = WeakReferenceMessenger.Default.Send<MyMessage , string>( _data222 , "token_Response222" );
+            if ( result2 != null )
             {
                 //result.HasReceivedResponse = true;
 
+                //if ( !result.HasReceivedResponse )
+                //{
+                //    //获取到 返回的值
+                //    var val = result.Response;
+
+                //    Name = val;
+                //}
+
                 //获取到 返回的值
-                var val = result.Response;
-                
+                var val = result2.Response;
+
                 Name = val;
+
             }
         }
     }
