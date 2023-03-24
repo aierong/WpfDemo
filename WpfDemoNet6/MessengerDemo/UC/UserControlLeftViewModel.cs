@@ -60,7 +60,7 @@ namespace WpfDemoNet6.MessengerDemo.UC
             {
                 //获取到 返回的值
                 var val = result.Response;
-
+                
                 Name = val;
             }
         }

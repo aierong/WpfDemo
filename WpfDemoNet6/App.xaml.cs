@@ -37,6 +37,8 @@ namespace WpfDemoNet6
             this.InitializeComponent();
         }
 
+
+
         private static IServiceProvider ConfigureServices ()
         {
             var services = new ServiceCollection();
