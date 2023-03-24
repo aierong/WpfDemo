@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CommunityToolkit.Mvvm.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using WpfDemoNet6.IOCDemo.ViewModels;
 
 namespace WpfDemoNet6.IOCDemo.Views
@@ -23,7 +25,9 @@ namespace WpfDemoNet6.IOCDemo.Views
         public Window1 ()
         {
             InitializeComponent();
-            this.DataContext = new WindowViewModel1();
+
+            this.DataContext = App.Current.Services.GetService<WindowViewModel1>();  //new WindowViewModel1();
+
         }
     }
 }

@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Microsoft.Extensions.DependencyInjection;
+using WpfDemoNet6.IOCDemo.Service.Service;
 
 //nuget 安装:Microsoft.Extensions.DependencyInjection
 
@@ -37,15 +39,17 @@ namespace WpfDemoNet6
 
         private static IServiceProvider ConfigureServices ()
         {
-            //var services = new ServiceCollection();
+            var services = new ServiceCollection();
 
-            //services.AddSingleton<IFilesService , FilesService>();
+            // Services  注册Services
+            services.AddSingleton<IBill , BillService>();
             //services.AddSingleton<ISettingsService , SettingsService>();
-            //services.AddSingleton<IClipboardService , ClipboardService>();
-            //services.AddSingleton<IShareService , ShareService>();
-            //services.AddSingleton<IEmailService , EmailService>();
 
-            //return services.BuildServiceProvider();
+
+            // Viewmodels 注册Viewmodels
+            services.AddTransient<IOCDemo.ViewModels.WindowViewModel1>();
+
+            return services.BuildServiceProvider();
         }
     }
 }

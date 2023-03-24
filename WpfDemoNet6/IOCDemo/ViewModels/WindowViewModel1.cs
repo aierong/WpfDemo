@@ -5,14 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using WpfDemoNet6.IOCDemo.Service.Service;
 
 namespace WpfDemoNet6.IOCDemo.ViewModels
 {
     public partial class WindowViewModel1 : ObservableObject
     {
-        public WindowViewModel1 ()
+        private IBill _IBill;
+        public WindowViewModel1 ( IBill iBill )
         {
-
+            this._IBill = iBill;
         }
 
         [ObservableProperty]
@@ -28,7 +30,15 @@ namespace WpfDemoNet6.IOCDemo.ViewModels
         void ButtonClick ()
         {
             //点击按钮,修改标题
-            Title = "hello(改)";
+
+            if ( this._IBill.IsExistId( Title ) )
+            {
+                Title = "qq" + this._IBill.GetData( Title );
+            }
+            else
+            {
+                Title = "qq";
+            }
         }
 
         bool CanButton ()
