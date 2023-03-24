@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Messaging.Messages;
+using WpfDemoNet6.MessengerDemo.Model;
 
 namespace WpfDemoNet6.MessengerDemo
 {
@@ -22,7 +23,23 @@ namespace WpfDemoNet6.MessengerDemo
 
         protected override void OnActivated ()
         {
-            
+
+            Messenger.Register<MainWindowvIViewModel , MyMessage , string>( this , "token_Response" , ( r , message ) =>
+            {
+                Title = Title + "  收到msg:" + message.Datas;
+
+                //if ( !message.HasReceivedResponse )
+                //{
+                //    //Reply是答复 ,这样可以返回值
+                //    message.Reply( "MainWindowvIViewModel给你返回值" );
+                //}
+
+                //Reply是答复 ,这样可以返回值
+                message.Reply( "MainWindowvIViewModel给你返回值" );
+
+            } );
+
+
             Messenger.Register<MainWindowvIViewModel , ValueChangedMessage<string> , string>( this , "token_1" , ( r , message ) =>
             {
                 Title = Title + "  收到msg:" + message.Value;

@@ -58,6 +58,8 @@ namespace WpfDemoNet6.MessengerDemo.UC
             var result = WeakReferenceMessenger.Default.Send<MyMessage , string>( _data2 , "token_Response" );
             if ( result != null )
             {
+                //result.HasReceivedResponse = true;
+
                 //获取到 返回的值
                 var val = result.Response;
                 

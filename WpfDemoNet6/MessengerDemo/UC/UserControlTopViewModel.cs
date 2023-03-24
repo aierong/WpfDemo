@@ -79,7 +79,7 @@ namespace WpfDemoNet6.MessengerDemo.UC
 
 
                 //Reply是答复 ,这样可以返回值
-                message.Reply( "给你返回值" );
+                message.Reply( "UserControlTopViewModel给你返回值" );
 
             } );
         }
