@@ -5,14 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using WpfDemoNet6.IOCDemo.Service.Service;
+
 
 namespace WpfDemoNet6.IOCDemo.ViewModels
 {
     public partial class WindowViewModel1 : ObservableObject
     {
-        private IBill _IBill;
-        public WindowViewModel1 ( IBill iBill )
+        readonly Service.Service.IBill _IBill;
+
+
+        public WindowViewModel1 ( Service.Service.IBill iBill )
         {
             this._IBill = iBill;
         }

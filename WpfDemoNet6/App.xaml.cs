@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
-using WpfDemoNet6.IOCDemo.Service.Service;
+
 
 //nuget 安装:Microsoft.Extensions.DependencyInjection
 
@@ -42,7 +42,8 @@ namespace WpfDemoNet6
             var services = new ServiceCollection();
 
             // Services  注册Services
-            services.AddSingleton<IBill , BillService>();
+            services.AddSingleton<IOCDemo.Service.Repository.IBill , IOCDemo.Service.Repository.BillService>();
+            services.AddSingleton<IOCDemo.Service.Service.IBill , IOCDemo.Service.Service.BillService>();
             //services.AddSingleton<ISettingsService , SettingsService>();
 
 

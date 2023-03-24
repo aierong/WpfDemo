@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace WpfDemoNet6.IOCDemo.Service.Repository
 {
-    internal class Class1
+    public interface IBill
     {
+        bool IsExistId ( string name );
+
+        string GetData ( string name );
     }
 }
