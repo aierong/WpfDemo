@@ -101,6 +101,7 @@
       <DependentUpon>dataWindow1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\BindData\contexts\MyCommand.cs" />
+    <Compile Include="Views\BindData\ListData\zw.cs" />
     <Compile Include="Views\BUJU\ZhongHeDemo\zhonghe1.xaml.cs">
       <DependentUpon>zhonghe1.xaml</DependentUpon>
     </Compile>
