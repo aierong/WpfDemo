@@ -28,12 +28,6 @@ namespace WpfDemoNet6.MessengerDemo
             {
                 Title = Title + "  收到msg:" + message.Datas;
 
-                //if ( !message.HasReceivedResponse )
-                //{
-                //    //Reply是答复 ,这样可以返回值
-                //    message.Reply( "MainWindowvIViewModel给你返回值" );
-                //}
-
                 //Reply是答复 ,这样可以返回值
                 message.Reply( "MainWindowvIViewModel给你返回值" );
 

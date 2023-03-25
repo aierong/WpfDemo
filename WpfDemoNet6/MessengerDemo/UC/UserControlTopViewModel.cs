@@ -77,16 +77,8 @@ namespace WpfDemoNet6.MessengerDemo.UC
             {
                 Name = Name + "  收到msg:" + message.Datas;
 
-                //if ( !message.HasReceivedResponse )
-                //{
-                //    //Reply是答复 ,这样可以返回值
-                //    message.Reply( "UserControlTopViewModel给你返回值" );
-                //}
-
                 //Reply是答复 ,这样可以返回值
-                message.Reply( "UserControlTopViewModel给你返回值" );
-
-                
+                message.Reply( "UserControlTopViewModel给你返回值" );      
 
             } );
         }
