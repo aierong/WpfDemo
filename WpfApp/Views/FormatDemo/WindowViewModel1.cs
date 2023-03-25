@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace WpfApp.Views.FormatDemo
 {
@@ -11,7 +12,48 @@ namespace WpfApp.Views.FormatDemo
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private decimal  price;
+        public WindowViewModel1 ()
+        {
+            ShowCommand = new MyCommand( Show );
+        }
+
+        /// <summary>
+        /// 命令
+        /// </summary>
+        public MyCommand ShowCommand
+        {
+            get; set;
+        }
+
+
+
+        public void Show ()
+        {
+            Name = "Guo";
+            Price = 1.23456789M;
+
+            //MessageBox.Show( "show Command" );
+        }
+
+        private DateTime nowtime = DateTime.Now;
+
+        public DateTime NowTime
+        {
+            get
+            {
+                return nowtime;
+            }
+            set
+            {
+                nowtime = value;
+
+                //通知数据已经变化
+                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "NowTime" ) );
+            }
+        }
+
+
+        private decimal price = 123.456789M;
 
 
         public decimal Price
@@ -29,7 +71,7 @@ namespace WpfApp.Views.FormatDemo
             }
         }
 
-        private string name;
+        private string name = "cheng";
 
         /// <summary>
         /// 名字
@@ -49,7 +91,7 @@ namespace WpfApp.Views.FormatDemo
             }
         }
 
-        private string lastname;
+        private string lastname = "guo";
 
         /// <summary>
         /// 名字
@@ -58,6 +100,7 @@ namespace WpfApp.Views.FormatDemo
         {
             get
             {
+
                 return lastname;
             }
             set
