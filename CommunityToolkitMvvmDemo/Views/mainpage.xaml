@@ -12,7 +12,7 @@
         d:DataContext="{d:DesignInstance localvm:mainpageViewModel,
                                          IsDesignTimeCreatable=True}"
         mc:Ignorable="d">
-    <Grid ShowGridLines="True">
+    <Grid>
         <!--  2行1列的表格  -->
         <Grid.RowDefinitions>
             <RowDefinition />

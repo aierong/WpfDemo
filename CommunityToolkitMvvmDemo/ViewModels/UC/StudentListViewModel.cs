@@ -14,25 +14,43 @@ using CommunityToolkitMvvmDemo.Models;
 
 namespace CommunityToolkitMvvmDemo.ViewModels.UC
 {
-    public partial class StudentListViewModel : ObservableObject
+    public partial class StudentListViewModel : ObservableRecipient
     {
         public ObservableCollection<Student> Students
         {
             get;
         } = new ObservableCollection<Student>() { };
 
-        public StudentListViewModel ()
-        {
 
+        public int StudentCounts
+        {
+            get
+            {
+                return Students.Count;
+            }
         }
 
+        public StudentListViewModel ()
+        {
+            //注意这样要写,才可以接听
+            IsActive = true;
+        }
+
+
+        protected override void OnActivated ()
+        {
+            Messenger.Register<StudentListViewModel , ValueChangedMessage<Student> , string>( this , Common.Constant.tokenname_student , ( r , val ) =>
+            {
+                Students.Add( val.Value );
+            } );
+        }
 
 
         [RelayCommand()]
         void CBClick ( bool isselect )
         {
             //发送消息，通知
-            WeakReferenceMessenger.Default.Send<ValueChangedMessage<bool> , string>( new ValueChangedMessage<bool>( isselect ) , 
+            WeakReferenceMessenger.Default.Send<ValueChangedMessage<bool> , string>( new ValueChangedMessage<bool>( isselect ) ,
                                                                             Common.Constant.tokenname_userselect );
 
 
