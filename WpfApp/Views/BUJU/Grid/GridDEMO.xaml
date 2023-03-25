@@ -7,6 +7,7 @@
         Title="Grid布局demo"
         Width="800"
         Height="450"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <Grid>
         <!--  3行2列的表格  -->

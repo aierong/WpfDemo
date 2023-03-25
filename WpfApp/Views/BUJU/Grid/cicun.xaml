@@ -7,6 +7,7 @@
         Title="配置尺寸"
         Width="800"
         Height="450"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <!--  定义网格，此处显示了网格线  -->
     <Grid ShowGridLines="True">
@@ -27,11 +28,29 @@
             <ColumnDefinition Width="200" />
         </Grid.ColumnDefinitions>
         <!--  定义元素，并指定单元格  -->
-        <TextBlock Grid.Row="0" Grid.Column="0">第一行第一列</TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="0">第二行第一列</TextBlock>
-        <TextBlock Grid.Row="2" Grid.Column="0">第三行第一列</TextBlock>
-        <Button Grid.Row="0" Grid.Column="1">第一行第二列</Button>
-        <Button Grid.Row="1" Grid.Column="1">第二行第二列</Button>
-        <Button Grid.Row="2" Grid.Column="1">第三行第二列</Button>
+        <TextBlock Grid.Row="0"
+                   Grid.Column="0">
+            第一行第一列
+        </TextBlock>
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0">
+            第二行第一列
+        </TextBlock>
+        <TextBlock Grid.Row="2"
+                   Grid.Column="0">
+            第三行第一列
+        </TextBlock>
+        <Button Grid.Row="0"
+                Grid.Column="1">
+            第一行第二列
+        </Button>
+        <Button Grid.Row="1"
+                Grid.Column="1">
+            第二行第二列
+        </Button>
+        <Button Grid.Row="2"
+                Grid.Column="1">
+            第三行第二列
+        </Button>
     </Grid>
 </Window>
