@@ -68,7 +68,7 @@ namespace WpfDemoNet6.MessengerDemo.UC
             /* 
             特别注意:这种带返回值的Send,如果有多个地方订阅接收会报错误:A response has already been issued for the current message 
             
-            我的解决方式是:定义多个Send,每个Send的token不一样,并且每个传递值是当地定义的(不要共用),订阅接收也就是多个了
+            我的解决方式是:定义多个Send,每个Send的token不一样,并且每个传递值是单独定义的(不要只定义一个共用),当然订阅接收也要注册多个
 
             官网有提到:HasReceivedResponse属性 没有看明白
             
