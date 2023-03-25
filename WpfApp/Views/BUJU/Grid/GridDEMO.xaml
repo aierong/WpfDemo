@@ -21,14 +21,33 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <!--  定义元素，并指定单元格
-        Grid.Row Grid.Column 不指定就是默认第0行第0列
+        <!--
+            定义元素，并指定单元格
+            Grid.Row Grid.Column 不指定就是默认第0行第0列
         -->
-        <TextBlock Grid.Row="0" Grid.Column="0">第一行第一列</TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="0">第二行第一列</TextBlock>
-        <TextBlock Grid.Row="2" Grid.Column="0">第三行第一列</TextBlock>
-        <Button Grid.Row="0" Grid.Column="1">第一行第二列</Button>
-        <Button Grid.Row="1" Grid.Column="1">第二行第二列</Button>
-        <Button Grid.Row="2" Grid.Column="1">第三行第二列</Button>
+        <TextBlock Grid.Row="0"
+                   Grid.Column="0">
+            第一行第一列
+        </TextBlock>
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0">
+            第二行第一列
+        </TextBlock>
+        <TextBlock Grid.Row="2"
+                   Grid.Column="0">
+            第三行第一列
+        </TextBlock>
+        <Button Grid.Row="0"
+                Grid.Column="1">
+            第一行第二列
+        </Button>
+        <Button Grid.Row="1"
+                Grid.Column="1">
+            第二行第二列
+        </Button>
+        <Button Grid.Row="2"
+                Grid.Column="1">
+            第三行第二列
+        </Button>
     </Grid>
 </Window>
