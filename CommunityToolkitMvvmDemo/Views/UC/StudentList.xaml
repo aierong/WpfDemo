@@ -19,8 +19,7 @@
 
 
     </UserControl.Resources>
-    <Grid ShowGridLines="True">
-
+    <Grid>
         <!--  3行1列的表格  -->
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
@@ -31,28 +30,42 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <GroupBox Grid.Row="0"
+        <CheckBox x:Name="cbedit"
+                  Grid.Row="0"
                   Grid.Column="0"
-                  Header="编辑控制">
-            <CheckBox x:Name="cbedit"
-                      Width="190"
-                      Margin="20,2,0,2"
-                      HorizontalAlignment="Left"
-                      Command="{Binding CBClickCommand}"
-                      CommandParameter="{Binding ElementName=cbedit, Path=IsChecked}"
-                      Content="可编辑" />
-        </GroupBox>
+                  Width="190"
+                  Margin="20,8,0,2"
+                  HorizontalAlignment="Left"
+                  Command="{Binding CBClickCommand}"
+                  CommandParameter="{Binding ElementName=cbedit, Path=IsChecked}"
+                  Content="可编辑"
+                  FontSize="15" />
 
-        <GroupBox Grid.Row="1"
-                  Grid.Column="0"
-                  Header="">
-            <TextBlock Height="40"
-                       Margin="5"
-                       FontSize="15"
-                       Text="{Binding StudentCounts, Mode=OneWay, StringFormat={StaticResource SourceStringFormat}}" />
-        </GroupBox>
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Height="40"
+                   Margin="20,2,0,2"
+                   FontSize="15"
+                   Text="{Binding StudentCount, Mode=OneWay, StringFormat={StaticResource SourceStringFormat}}" />
 
         <StackPanel Grid.Row="2"
-                    Grid.Column="0" />
+                    Grid.Column="0">
+            <ListBox ItemsSource="{Binding Students}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock>
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}{0}, {1}, {2}">
+                                    <Binding Path="Name" />
+                                    <Binding Path="Class" />
+                                    <Binding Path="Phone" />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </StackPanel>
     </Grid>
 </UserControl>

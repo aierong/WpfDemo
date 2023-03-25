@@ -25,7 +25,12 @@
             <Setter Property="HorizontalAlignment" Value="Right" />
         </Style>
     </UserControl.Resources>
-    <GroupBox Header="请填写学生资料">
+    
+    <Border Padding="10"
+            BorderThickness="1"
+            BorderBrush="LightGray"
+            CornerRadius="5">
+               
         <Grid>
             <!--  4行1列的表格  -->
             <Grid.RowDefinitions>
@@ -60,7 +65,9 @@
                 <TextBox Margin="10,10,10,10"
                          Text="{Binding Phone, UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
-
+            
+            <!--<Separator />-->
+            
             <Button Grid.Row="3"
                     Grid.Column="0"
                     Width="150"
@@ -71,5 +78,5 @@
                     Command="{Binding AddClickCommand}"
                     Content="提交" />
         </Grid>
-    </GroupBox>
+    </Border>
 </UserControl>

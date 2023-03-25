@@ -6,11 +6,12 @@
         xmlns:localviewuc="clr-namespace:CommunityToolkitMvvmDemo.Views.UC"
         xmlns:localvm="clr-namespace:CommunityToolkitMvvmDemo.ViewModels"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="mainpage"
+        Title="主页"
         Width="990"
         Height="350"
         d:DataContext="{d:DesignInstance localvm:mainpageViewModel,
                                          IsDesignTimeCreatable=True}"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <Grid>
         <!--  2行1列的表格  -->
@@ -22,8 +23,7 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid Grid.Row="0"
-              Grid.Column="0"
-              ShowGridLines="True">
+              Grid.Column="0">
             <!--  1行2列的表格  -->
             <Grid.RowDefinitions>
                 <RowDefinition />
@@ -35,12 +35,10 @@
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Row="0"
                         Grid.Column="0">
-
                 <localviewuc:StudentList />
             </StackPanel>
             <StackPanel Grid.Row="0"
                         Grid.Column="1">
-
                 <localviewuc:StudentForm />
             </StackPanel>
         </Grid>

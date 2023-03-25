@@ -22,7 +22,7 @@ namespace CommunityToolkitMvvmDemo.ViewModels.UC
         } = new ObservableCollection<Student>() { };
 
 
-        public int StudentCounts
+        public int StudentCount
         {
             get
             {
@@ -34,8 +34,18 @@ namespace CommunityToolkitMvvmDemo.ViewModels.UC
         {
             //注意这样要写,才可以接听
             IsActive = true;
+
+            Students.CollectionChanged += Students_CollectionChanged;
         }
 
+
+
+        private void Students_CollectionChanged ( object? sender , System.Collections.Specialized.NotifyCollectionChangedEventArgs e )
+        {
+            //throw new NotImplementedException();
+
+            OnPropertyChanged( nameof( StudentCount ) );
+        }
 
         protected override void OnActivated ()
         {
