@@ -4,7 +4,7 @@
 
 效果如下:
 
-![](D:\Code\MyGitHub\WpfDemo\CommunityToolkitMvvmDemo\UI.png)
+![](UI.png)
 
 
 
