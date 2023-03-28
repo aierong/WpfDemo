@@ -34,6 +34,8 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
             //在添加、删除或移动项或刷新整个列表时发生。
             Students.CollectionChanged += ( object sender , System.Collections.Specialized.NotifyCollectionChangedEventArgs e ) =>
             {
+                //e 这个参数里面有很多有用数据,可以判断类型等等
+
                 PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Total" ) );
             };
 

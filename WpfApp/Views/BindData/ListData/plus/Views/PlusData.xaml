@@ -33,5 +33,44 @@
                    Grid.Column="0"
                    Height="23"
                    Text="员工列表:" />
+
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0">
+            <ListBox HorizontalAlignment="Left"
+                     ItemsSource="{Binding Students}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+
+                        <StackPanel Name="stackPanel2"
+                                    Orientation="Horizontal">
+                            <TextBlock Margin="5"
+                                       Background="Beige"
+                                       Text="{Binding Id, Mode=TwoWay}" />
+                            <TextBlock Margin="5"
+                                       Text="{Binding Name, Mode=TwoWay}" />
+                            <TextBlock Margin="5"
+                                       Text="{Binding Age, Mode=TwoWay}" />
+                        </StackPanel>
+
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Button Width="110"
+                    Height="23"
+                    HorizontalAlignment="Left"
+                    Command="{Binding UpdateCommand}"
+                    Content="调整数据" />
+            <Button Width="110"
+                    Height="23"
+                    HorizontalAlignment="Left"
+                    Command="{Binding AllUpdateCommand}"
+                    Content="调整全部数据" />
+            <Button Width="110"
+                    Height="23"
+                    HorizontalAlignment="Left"
+                    Command="{Binding UpdateOneCommand}"
+                    Content="修改某一条数据" />
+        </StackPanel>
+
     </Grid>
 </Window>
