@@ -102,6 +102,11 @@
     </Compile>
     <Compile Include="Views\BindData\contexts\MyCommand.cs" />
     <Compile Include="Views\BindData\ListData\Models\Student.cs" />
+    <Compile Include="Views\BindData\ListData\plus\Models\EMP.cs" />
+    <Compile Include="Views\BindData\ListData\plus\ViewModels\PlusDataViewModel.cs" />
+    <Compile Include="Views\BindData\ListData\plus\Views\PlusData.xaml.cs">
+      <DependentUpon>PlusData.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\BindData\ListData\ViewModels\MyCommands.cs" />
     <Compile Include="Views\BindData\ListData\ViewModels\ListDataViewModel.cs" />
     <Compile Include="Views\BindData\ListData\Views\ListData.xaml.cs">
@@ -175,6 +180,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\BindData\demo2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BindData\ListData\plus\Views\PlusData.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
