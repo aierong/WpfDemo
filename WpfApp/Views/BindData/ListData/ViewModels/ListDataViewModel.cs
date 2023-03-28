@@ -8,5 +8,7 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
 {
     public class ListDataViewModel
     {
+
+
     }
 }
