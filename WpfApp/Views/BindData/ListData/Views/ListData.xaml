@@ -34,8 +34,8 @@
                  Grid.Column="0"
                  Height="30"
                  HorizontalAlignment="Left"
-                 Text="{Binding Total,Mode=OneWay }" />
-        
+                 Text="{Binding Total, Mode=OneWay}" />
+
         <TextBlock Grid.Row="1"
                    Grid.Column="0"
                    Height="23"
@@ -63,17 +63,21 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <Button Width="75"
+            <Button Width="110"
                     Height="23"
+                    HorizontalAlignment="Left"
                     Command="{Binding UpdateCommand}"
-                    HorizontalAlignment="Left"
                     Content="调整数据" />
-            <Button Width="75"
+            <Button Width="110"
                     Height="23"
-                    Command="{Binding  AllUpdateCommand}"
                     HorizontalAlignment="Left"
+                    Command="{Binding AllUpdateCommand}"
                     Content="调整全部数据" />
-             
+            <Button Width="110"
+                    Height="23"
+                    HorizontalAlignment="Left"
+                    Command="{Binding UpdateOneCommand}"
+                    Content="修改某一条数据" />
         </StackPanel>
 
     </Grid>

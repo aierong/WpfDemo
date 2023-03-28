@@ -37,6 +37,9 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
                 PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Total" ) );
             };
 
+
+
+            //修改列表中数据,删除几个,再添加
             UpdateCommand = new MyCommands( () =>
            {
                if ( Students.Count >= 2 )
@@ -47,6 +50,10 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
 
                Students.Add( new Student() { Id = Students.Count >= 1 ? Students.Max( item => item.Id + 1 ) : 1 , Age = 18 , Name = "guoguo" } );
 
+               //修改最后一项数据
+               //必须重新 new一个新对象
+               Students[Students.Count - 1] = new Student() { Id = 2222222 , Age = 8 , Name = "guoguo2" };
+
 
                //通知数据已经变化  这里可以不写了,因为注册了事件CollectionChanged
                //PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Total" ) );
@@ -54,16 +61,39 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
 
             AllUpdateCommand = new MyCommands( () =>
             {
-                Students = new ObservableCollection<Student>() {
-                new Student(){ Id=111, Age=11, Name="Tom"},
-                new Student(){ Id=222, Age=12, Name="Darren"},
-                new Student(){ Id=333, Age=13, Name="Jacky"},
-                new Student(){ Id=444, Age=14, Name="Andy"}
-                 };
+                //这样直接赋值,UI无法感知变化的
+                //Students = new ObservableCollection<Student>() {
+                //new Student(){ Id=111, Age=11, Name="Tom"},
+                //new Student(){ Id=222, Age=12, Name="Darren"},
+                //new Student(){ Id=333, Age=13, Name="Jacky"},
+                //new Student(){ Id=444, Age=14, Name="Andy"}
+                // };
 
+                //只有删除全部,再一个个添加
+                Students.Clear();
+                Students.Add( new Student() { Id = 1111 , Age = 18 , Name = "guoguo1" } );
+                Students.Add( new Student() { Id = 2222 , Age = 28 , Name = "guoguo2" } );
 
+                
                 //通知数据已经变化 这里可以不写了,因为注册了事件CollectionChanged
                 //PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Total" ) );
+            } );
+
+            UpdateOneCommand = new MyCommands( () =>
+            {
+                if ( Students.Count > 0 )
+                {
+                    //修改某一个记录
+                    Students[0].Age = Students[0].Age + 1;
+                    Students[0].Name = Students[0].Name + "_GAI";
+                    //特别注意:Id没有实现,属性通知,所以ui就不知道其改变的
+                    Students[0].Id = Students[0].Id + 1111;
+
+
+
+                    //通知数据已经变化  ,CollectionChanged在单独修改某个项的属性时是不会触发的
+                    PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Total" ) );
+                }
             } );
         }
 
@@ -91,9 +121,7 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
 
 
 
-        /// <summary>
-        /// 命令
-        /// </summary>
+
         public MyCommands UpdateCommand
         {
             get; set;
@@ -106,6 +134,10 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
         }
 
 
+        public MyCommands UpdateOneCommand
+        {
+            get; set;
+        }
 
 
         /// <summary>
