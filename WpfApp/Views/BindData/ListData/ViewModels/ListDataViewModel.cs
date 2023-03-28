@@ -141,7 +141,7 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
 
 
         /// <summary>
-        /// 描述
+        /// 总计
         /// </summary>
         public int Total
         {
