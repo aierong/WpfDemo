@@ -1,8 +1,4 @@
 ﻿
-<!--
-    d:DataContext="{d:DesignInstance localvm:ListDataViewModel,
-    IsDesignTimeCreatable=True}"
--->
 
 
 <Window x:Class="WpfApp.Views.BindData.ListData.Views.ListData"
@@ -34,7 +30,7 @@
                  Grid.Column="0"
                  Height="30"
                  HorizontalAlignment="Left"
-                 Text="{Binding Total, Mode=OneWay}" />
+                 Text="{Binding Total, Mode=OneWay, StringFormat=总计:{0}岁}" />
 
         <TextBlock Grid.Row="1"
                    Grid.Column="0"

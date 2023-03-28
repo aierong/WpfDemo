@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp.Views.BindData.ListData.plus.ViewModels;
 
 namespace WpfApp.Views.BindData.ListData.plus.Views
 {
@@ -22,6 +23,8 @@ namespace WpfApp.Views.BindData.ListData.plus.Views
         public PlusData ()
         {
             InitializeComponent();
+
+            this.DataContext = new PlusDataViewModel();
         }
     }
 }
