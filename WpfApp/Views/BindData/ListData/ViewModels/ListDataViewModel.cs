@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfApp.Views.BindData.ListData
+namespace WpfApp.Views.BindData.ListData.ViewModels
 {
-    internal class zw
+    public class ListDataViewModel
     {
     }
 }

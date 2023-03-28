@@ -101,7 +101,10 @@
       <DependentUpon>dataWindow1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\BindData\contexts\MyCommand.cs" />
-    <Compile Include="Views\BindData\ListData\zw.cs" />
+    <Compile Include="Views\BindData\ListData\ViewModels\ListDataViewModel.cs" />
+    <Compile Include="Views\BindData\ListData\Views\ListData.xaml.cs">
+      <DependentUpon>ListData.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\BUJU\ZhongHeDemo\zhonghe1.xaml.cs">
       <DependentUpon>zhonghe1.xaml</DependentUpon>
     </Compile>
@@ -170,6 +173,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\BindData\demo2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BindData\ListData\Views\ListData.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
