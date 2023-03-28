@@ -102,6 +102,7 @@
     </Compile>
     <Compile Include="Views\BindData\contexts\MyCommand.cs" />
     <Compile Include="Views\BindData\ListData\Models\Student.cs" />
+    <Compile Include="Views\BindData\ListData\ViewModels\MyCommands.cs" />
     <Compile Include="Views\BindData\ListData\ViewModels\ListDataViewModel.cs" />
     <Compile Include="Views\BindData\ListData\Views\ListData.xaml.cs">
       <DependentUpon>ListData.xaml</DependentUpon>

@@ -34,34 +34,12 @@
                  Grid.Column="0"
                  Height="30"
                  HorizontalAlignment="Left"
-                 Text="{Binding Name}" />
+                 Text="{Binding Total,Mode=OneWay }" />
+        
         <TextBlock Grid.Row="1"
                    Grid.Column="0"
                    Height="23"
                    Text="学员列表:" />
-        <!--
-            d:ItemsSource="{d:DesignInstance IsDesignTimeCreatable=True }"
-        -->
-        <!--<ListBox Name="lbStudent"
-                     Width="305"
-                     Height="156"
-                     HorizontalAlignment="Left"
-                     ItemsSource="{Binding Infos}">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel
-                                    Orientation="Horizontal">
-                            <TextBlock Margin="5"
-                                       Text="{Binding Id}" />
-                            <TextBlock Margin="5"
-                                       Text="{Binding Name}" />
-                            <TextBlock Margin="5"
-                                       Text="{Binding Age}" />
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>-->
-
 
 
         <StackPanel Grid.Row="2"
@@ -70,7 +48,7 @@
                      ItemsSource="{Binding Students}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        
+
                         <StackPanel Name="stackPanel2"
                                     Orientation="Horizontal">
                             <TextBlock Margin="5"
@@ -81,11 +59,21 @@
                             <TextBlock Margin="5"
                                        Text="{Binding Age, Mode=TwoWay}" />
                         </StackPanel>
-                        
+
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-
+            <Button Width="75"
+                    Height="23"
+                    Command="{Binding UpdateCommand}"
+                    HorizontalAlignment="Left"
+                    Content="调整数据" />
+            <Button Width="75"
+                    Height="23"
+                    Command="{Binding  AllUpdateCommand}"
+                    HorizontalAlignment="Left"
+                    Content="调整全部数据" />
+             
         </StackPanel>
 
     </Grid>
