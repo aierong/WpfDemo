@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfApp.Views.BindData.ListData.Models
 {
-    public class Students
+    public class Student
     {
         public int Id
         {

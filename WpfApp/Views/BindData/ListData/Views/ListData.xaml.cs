@@ -25,6 +25,8 @@ namespace WpfApp.Views.BindData.ListData.Views
             InitializeComponent();
 
             this.DataContext = new ListDataViewModel();
+
+            //lbStudent.DataContext = new ListDataViewModel();
         }
     }
 }

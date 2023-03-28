@@ -24,6 +24,7 @@ namespace CommunityToolkitMvvmDemo.Views.UC
         public StudentList ()
         {
             InitializeComponent();
+
             this.DataContext = new StudentListViewModel();
         }
     }

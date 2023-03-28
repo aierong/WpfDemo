@@ -19,7 +19,7 @@ namespace CommunityToolkitMvvmDemo.ViewModels.UC
         public ObservableCollection<Student> Students
         {
             get;
-        } = new ObservableCollection<Student>() { };
+        } 
 
 
         public int StudentCount
@@ -35,6 +35,8 @@ namespace CommunityToolkitMvvmDemo.ViewModels.UC
             //注意这样要写,才可以接听
             IsActive = true;
 
+            //先实例化一下,再注册事件
+            Students = new ObservableCollection<Student>() { };
             Students.CollectionChanged += Students_CollectionChanged;
         }
 
