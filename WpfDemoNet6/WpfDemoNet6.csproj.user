@@ -16,6 +16,9 @@
     <Compile Update="Demo\ListData\demo\Views\StudentList.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Demo\ListData\plus\Views\EmpList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="IOCDemo\Views\Window1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -37,6 +40,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Demo\ListData\demo\Views\StudentList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Demo\ListData\plus\Views\EmpList.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="IOCDemo\Views\Window1.xaml">

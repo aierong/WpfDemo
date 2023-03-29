@@ -2,11 +2,77 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfDemoNet6.Demo.ListData.plus.Views"
-        mc:Ignorable="d"
-        Title="EmpList" Height="450" Width="800">
+        xmlns:localvm="clr-namespace:WpfDemoNet6.Demo.ListData.plus.ViewModels"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="BindingList演示"
+        Width="800"
+        Height="450"
+        d:DataContext="{d:DesignInstance localvm:EmpListViewModel,
+                                         IsDesignTimeCreatable=True}"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
     <Grid>
-        
+
+        <!--  3行1列的表格  -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBox Grid.Row="0"
+                 Grid.Column="0"
+                 Height="30"
+                 HorizontalAlignment="Left"
+                 Text="{Binding Total, Mode=OneWay, StringFormat=总计:{0}岁}" />
+
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Height="23"
+                   Text="学员列表:" />
+
+
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0">
+            <ListBox HorizontalAlignment="Left"
+                     ItemsSource="{Binding Students}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+
+                        <StackPanel Name="stackPanel2"
+                                    Orientation="Horizontal">
+                            <TextBlock Margin="5"
+                                       Background="Beige"
+                                       Text="{Binding Id, Mode=TwoWay}" />
+                            <TextBlock Margin="5"
+                                       Text="{Binding Name, Mode=TwoWay}" />
+                            <TextBlock Margin="5"
+                                       Text="{Binding Age, Mode=TwoWay}" />
+                        </StackPanel>
+
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Button Width="110"
+                    Height="23"
+                    HorizontalAlignment="Left"
+                    Command="{Binding UpdateCommand}"
+                    Content="调整数据" />
+            <Button Width="110"
+                    Height="23"
+                    HorizontalAlignment="Left"
+                    Command="{Binding AllUpdateCommand}"
+                    Content="调整全部数据" />
+            <Button Width="110"
+                    Height="23"
+                    HorizontalAlignment="Left"
+                    Command="{Binding UpdateOneCommand}"
+                    Content="修改某一条数据" />
+        </StackPanel>
+
     </Grid>
 </Window>
