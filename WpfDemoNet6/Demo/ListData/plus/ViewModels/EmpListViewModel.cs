@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace WpfDemoNet6.Demo.ListData.plus.ViewModels
 {
-    internal class Class1
+    public class EmpListViewModel
     {
+        public EmpListViewModel()
+        {
+        }
     }
 }
