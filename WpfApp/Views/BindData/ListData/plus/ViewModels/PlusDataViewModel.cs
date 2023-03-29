@@ -87,35 +87,11 @@ namespace WpfApp.Views.BindData.ListData.plus.ViewModels
                     //特别注意:Id没有实现,属性通知,所以ui就不知道其改变的
                     Students[0].Id = Students[0].Id + 1111;
 
-
-
                     ////通知数据已经变化  ,ListChanged 事件已经实现
                     //PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Total" ) );
                 }
             } );
 
-        }
-
-
-
-        private string name;
-
-        /// <summary>
-        /// 名字
-        /// </summary>
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = value;
-
-                //通知数据已经变化
-                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Name" ) );
-            }
         }
 
 
@@ -143,7 +119,6 @@ namespace WpfApp.Views.BindData.ListData.plus.ViewModels
         public int Total
         {
             get => Students != null & Students.Count > 0 ? Students.Sum( item => item.Age ) : 0;
-
         }
 
 

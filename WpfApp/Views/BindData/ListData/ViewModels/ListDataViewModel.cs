@@ -18,7 +18,7 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
         public ObservableCollection<Student> Students
         {
             get; set;
-        }
+        } = new ObservableCollection<Student>();
 
         public ListDataViewModel ()
         {
@@ -34,8 +34,9 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
             //在添加、删除或移动项或刷新整个列表时发生。
             Students.CollectionChanged += ( object sender , System.Collections.Specialized.NotifyCollectionChangedEventArgs e ) =>
             {
-                //e 这个参数里面有很多有用数据,可以判断类型等等
+                //e这个参数里面还有很多有用参数,可以判断类型等等
 
+                //通知总计变化了
                 PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Total" ) );
             };
 
@@ -76,7 +77,7 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
                 Students.Add( new Student() { Id = 1111 , Age = 18 , Name = "guoguo1" } );
                 Students.Add( new Student() { Id = 2222 , Age = 28 , Name = "guoguo2" } );
 
-                
+
                 //通知数据已经变化 这里可以不写了,因为注册了事件CollectionChanged
                 //PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Total" ) );
             } );
@@ -85,40 +86,16 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
             {
                 if ( Students.Count > 0 )
                 {
-                    //修改某一个记录
+                    //修改某一个记录  如果是单独修改某一个元素的某个属性，需要Student类型也要继承INotifyPropertyChanged
                     Students[0].Age = Students[0].Age + 1;
                     Students[0].Name = Students[0].Name + "_GAI";
                     //特别注意:Id没有实现,属性通知,所以ui就不知道其改变的
                     Students[0].Id = Students[0].Id + 1111;
 
-
-
-                    //通知数据已经变化  ,CollectionChanged在单独修改某个项的属性时是不会触发的
+                    //通知数据已经变化  ,CollectionChanged在单独修改某个项的属性时是不会触发的  这里只有手动触发更新
                     PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Total" ) );
                 }
             } );
-        }
-
-
-
-        private string name;
-
-        /// <summary>
-        /// 名字
-        /// </summary>
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = value;
-
-                //通知数据已经变化
-                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Name" ) );
-            }
         }
 
 
@@ -148,17 +125,8 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
         public int Total
         {
             get => Students != null & Students.Count > 0 ? Students.Sum( item => item.Age ) : 0;
-
         }
 
 
-
-
-
-
-        //private void Students_CollectionChanged ( object sender , System.Collections.Specialized.NotifyCollectionChangedEventArgs e )
-        //{
-        //    PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Total" ) );
-        //}
     }
 }
