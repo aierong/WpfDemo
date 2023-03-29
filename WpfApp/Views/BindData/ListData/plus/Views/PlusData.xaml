@@ -12,7 +12,7 @@
                                          IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
-    <Grid  >
+    <Grid>
         <!--  3行1列的表格  -->
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
@@ -41,8 +41,7 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
 
-                        <StackPanel Name="stackPanel2"
-                                    Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal">
                             <TextBlock Margin="5"
                                        Background="Beige"
                                        Text="{Binding Id, Mode=TwoWay}" />

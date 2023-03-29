@@ -43,8 +43,7 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
 
-                        <StackPanel Name="stackPanel2"
-                                    Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal">
                             <TextBlock Margin="5"
                                        Background="Beige"
                                        Text="{Binding Id, Mode=TwoWay}" />
