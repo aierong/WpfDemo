@@ -112,6 +112,7 @@ namespace WpfDemoNet6.Demo
         }
 
 
+
         /// <summary>
         /// 命令
         /// </summary>
@@ -119,6 +120,7 @@ namespace WpfDemoNet6.Demo
         {
             get;
         }
+
 
 
         private async Task RunTxtParAsync ( double val )
