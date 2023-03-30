@@ -112,7 +112,7 @@ namespace WpfDemoNet6.Demo
 
 
         /// <summary>
-        /// 命令
+        /// 命令(带参数的)
         /// </summary>
         public IAsyncRelayCommand<double> AsyncButtonParClickCommand
         {

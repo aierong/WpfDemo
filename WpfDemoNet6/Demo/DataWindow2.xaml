@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="自动生成器demo"
         Width="800"
-        Height="650"
+        Height="450"
         d:DataContext="{d:DesignInstance local:DataViewModel2,
                                          IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
@@ -19,7 +19,6 @@
         <!--  2行1列的表格  -->
         <Grid.RowDefinitions>
             <RowDefinition />
-             
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -51,6 +50,9 @@
                     CommandParameter="{Binding ElementName=txt1, Path=Width}"
                     Content="改变值(带参数)" />
 
+            <!--   
+            特别说明：异步命令会自动控制控件的可见性,并且提供一个IsRunning属性可以判断异步是否完成   
+            -->
             <Button Width="100"
                     Height="30"
                     Command="{Binding AsyncButtonClickCommand}"

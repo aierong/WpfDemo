@@ -164,6 +164,7 @@ namespace WpfDemoNet6.Demo
         }
 
 
+
         public string Caption
         {
             get
