@@ -7,19 +7,21 @@ using System.Windows.Input;
 
 
 
-namespace WpfApp.Views.BindData.contexts.basedemo
+namespace WpfApp.Views.KJ.grid.demo1
 {
-    public class MyCommand2 : ICommand
+    public class MyCommands : ICommand
     {
         public event EventHandler CanExecuteChanged;
 
-        Action<string> execAction;
+        Action execAction;
+       
 
-
-        public MyCommand2 ( Action<string> action )
+        public MyCommands ( Action action )
         {
             execAction = action;
         }
+
+        
 
         public bool CanExecute ( object parameter )
         {
@@ -28,7 +30,7 @@ namespace WpfApp.Views.BindData.contexts.basedemo
 
         public void Execute ( object parameter )
         {
-            execAction( parameter.ToString() );
+            execAction();
         }
     }
 }
