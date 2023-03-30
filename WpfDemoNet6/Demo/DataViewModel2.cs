@@ -156,6 +156,14 @@ namespace WpfDemoNet6.Demo
 
 
 
+        [RelayCommand]
+        async Task AsyncButtonParClick ( double val )
+        {
+            await Task.Delay( 4800 );
+            Title = $"hello(Task改):{val}";
+        }
+
+
         public string Caption
         {
             get

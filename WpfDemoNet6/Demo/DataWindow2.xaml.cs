@@ -22,6 +22,8 @@ namespace WpfDemoNet6.Demo
         public DataWindow2 ()
         {
             InitializeComponent();
+
+            this.DataContext = new DataViewModel2();
         }
     }
 }

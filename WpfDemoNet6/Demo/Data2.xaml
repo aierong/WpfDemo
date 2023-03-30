@@ -64,7 +64,19 @@
                        Text="loading......"
                        Visibility="{Binding AsyncButtonClickCommand.IsRunning, Converter={StaticResource myboolconvert}}" />
 
-
+            <Button Width="100"
+                    Height="30"
+                    Command="{Binding AsyncButtonParClickCommand}"
+                    CommandParameter="{Binding ElementName=txt1, Path=Width}"
+                    Content="异步(带参数)" />
+            <TextBlock HorizontalAlignment="Center"
+                       FontSize="20"
+                       FontStyle="Italic"
+                       FontWeight="Bold"
+                       Foreground="Green"
+                       Text="loading......"
+                       Visibility="{Binding AsyncButtonParClickCommand.IsRunning, Converter={StaticResource myboolconvert}}" />
+            
         </StackPanel>
 
     </Grid>
