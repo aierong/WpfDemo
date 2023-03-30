@@ -147,6 +147,15 @@ namespace WpfDemoNet6.Demo
 
 
 
+        [RelayCommand]
+        async Task AsyncButtonClick ()
+        {
+            await Task.Delay( 4800 );
+            Title = "hello(Task改)";
+        }
+
+
+
         public string Caption
         {
             get
@@ -194,6 +203,9 @@ namespace WpfDemoNet6.Demo
             // 可以获取到是哪个属性改变了
             var _proname = e.PropertyName;
         }
+
+
+
 
     }
 }

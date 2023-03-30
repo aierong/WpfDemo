@@ -107,8 +107,6 @@ namespace WpfDemoNet6.Demo
         {
             await Task.Delay( 4800 );
             Title = "hello(Task改)";
-
-
         }
 
 

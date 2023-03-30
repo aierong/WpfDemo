@@ -4,12 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WpfDemoNet6.Demo"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="Data2"
+        Title="自动生成器"
         Width="800"
-        Height="450"
+        Height="650"
         d:DataContext="{d:DesignInstance local:DataViewModel2,
                                          IsDesignTimeCreatable=True}"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
+    <!--  引用，并起一个名字  -->
+    <Window.Resources>
+        <local:BooleanToVisibilityConverter x:Key="myboolconvert" />
+    </Window.Resources>
     <Grid ShowGridLines="True">
 
         <!--  2行1列的表格  -->
@@ -47,6 +52,17 @@
                     CommandParameter="{Binding ElementName=txt1, Path=Width}"
                     Content="改变值(带参数)" />
 
+            <Button Width="100"
+                    Height="30"
+                    Command="{Binding AsyncButtonClickCommand}"
+                    Content="异步" />
+            <TextBlock HorizontalAlignment="Center"
+                       FontSize="20"
+                       FontStyle="Italic"
+                       FontWeight="Bold"
+                       Foreground="Green"
+                       Text="loading......"
+                       Visibility="{Binding AsyncButtonClickCommand.IsRunning, Converter={StaticResource myboolconvert}}" />
 
 
         </StackPanel>

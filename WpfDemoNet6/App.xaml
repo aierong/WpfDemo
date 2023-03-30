@@ -2,6 +2,6 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WpfDemoNet6"
-             StartupUri="Demo/DataWindow1.XAML">
+             StartupUri="Demo/Data2.XAML">
     <Application.Resources />
 </Application>
