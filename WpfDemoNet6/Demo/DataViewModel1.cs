@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
- 
+
 using System.Linq;
 using System.Printing.IndexedProperties;
 using System.Text;
@@ -80,8 +80,8 @@ namespace WpfDemoNet6.Demo
             } );
 
             AsyncButtonClickCommand = new AsyncRelayCommand( RunTxtAsync );
+            AsyncButtonParClickCommand = new AsyncRelayCommand<double>( RunTxtParAsync );
 
-           
         }
 
 
@@ -108,8 +108,25 @@ namespace WpfDemoNet6.Demo
             await Task.Delay( 4800 );
             Title = "hello(Task改)";
 
-            //return WebService.LoadMyTextAsync();
+
         }
 
+
+        /// <summary>
+        /// 命令
+        /// </summary>
+        public IAsyncRelayCommand<double> AsyncButtonParClickCommand
+        {
+            get;
+        }
+
+
+        private async Task RunTxtParAsync ( double val )
+        {
+            await Task.Delay( 4800 );
+            Title = $"hello(Task改):{val}";
+
+
+        }
     }
 }
