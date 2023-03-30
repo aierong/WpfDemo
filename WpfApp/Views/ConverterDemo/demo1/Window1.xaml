@@ -11,39 +11,41 @@
         Height="450"
         d:DataContext="{d:DesignInstance localvm:WindowViewModel1,
                                          IsDesignTimeCreatable=True}"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <!--  引用，并起一个名字  -->
     <Window.Resources>
         <localcv:BoolConverter x:Key="myboolconvert" />
+        <localcv:BooleanToVisibilityConverter x:Key="myconvert" />
     </Window.Resources>
     <Grid ShowGridLines="True">
         <!--  3行2列的表格  -->
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
-            <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0"
                     Grid.Column="0">
-
             <TextBox Width="190"
                      Height="30"
                      Text="{Binding Name}" />
-            <!--    -->
             <TextBox Width="190"
                      Height="30"
                      Text="{Binding IsFlag, Converter={StaticResource myboolconvert}}" />
-
+            <TextBlock HorizontalAlignment="Center"
+                       FontSize="20"
+                       FontStyle="Italic"
+                       FontWeight="Bold"
+                       Foreground="Green"
+                       Text="loading......"
+                       Visibility="{Binding IsFlag, Mode=OneWay, Converter={StaticResource myconvert}}" />
             <Button Width="100"
                     Height="30"
                     Command="{Binding ShowCommand}"
                     Content="改变值val" />
-
         </StackPanel>
-
     </Grid>
 </Window>

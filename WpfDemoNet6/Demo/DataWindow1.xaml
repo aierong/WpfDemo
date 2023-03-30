@@ -15,16 +15,21 @@
         Height="450"
         d:DataContext="{d:DesignInstance local:DataViewModel1,
                                          IsDesignTimeCreatable=True}"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <!--<Window.Resources>
         <local:DataViewModel1 ></local:DataViewModel1>
     </Window.Resources>-->
+    <!--  引用，并起一个名字  -->
+    <Window.Resources>
+        <local:BooleanToVisibilityConverter x:Key="myboolconvert" />
+    </Window.Resources>
     <Grid ShowGridLines="True">
 
         <!--  2行1列的表格  -->
         <Grid.RowDefinitions>
             <RowDefinition />
-            <RowDefinition />
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -48,6 +53,21 @@
                     Command="{Binding ButtonClickCommandPar}"
                     CommandParameter="{Binding ElementName=txt1, Path=Width}"
                     Content="改变值(带参数)" />
+
+            <!--  
+            特别说明：异步命令会自动控制控件的可见性,并且提供一个IsRunning属性可以判断异步是否完成  
+            -->
+            <Button Width="100"
+                    Height="30"
+                    Command="{Binding AsyncButtonClickCommand}"
+                    Content="异步" />
+            <TextBlock HorizontalAlignment="Center"
+                       FontSize="20"
+                       FontStyle="Italic"
+                       FontWeight="Bold"
+                       Foreground="Green"
+                       Text="loading......"
+                       Visibility="{Binding AsyncButtonClickCommand.IsRunning, Converter={StaticResource myboolconvert}}" />
 
         </StackPanel>
 

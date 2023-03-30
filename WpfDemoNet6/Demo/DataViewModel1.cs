@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+ 
 using System.Linq;
 using System.Printing.IndexedProperties;
 using System.Text;
@@ -64,6 +65,10 @@ namespace WpfDemoNet6.Demo
             {
                 //点击按钮,修改标题
                 Title = "hello(改)";
+
+
+                //System.Diagnostics.Debug.WriteLine( "ButtonClickCommand 1" );
+
             } , () =>
             {
                 return IsEnabled;
@@ -73,6 +78,10 @@ namespace WpfDemoNet6.Demo
             {
                 Title = $"hello(改):{val}";
             } );
+
+            AsyncButtonClickCommand = new AsyncRelayCommand( RunTxtAsync );
+
+           
         }
 
 
@@ -80,5 +89,27 @@ namespace WpfDemoNet6.Demo
         {
             get;
         }
+
+        /*
+        特别说明：异步命令会自动控制控件的可见性,并且提供一个IsRunning属性可以判断异步是否完成
+        */
+
+        /// <summary>
+        /// 命令
+        /// </summary>
+        public IAsyncRelayCommand AsyncButtonClickCommand
+        {
+            get;
+        }
+
+
+        private async Task RunTxtAsync ()
+        {
+            await Task.Delay( 4800 );
+            Title = "hello(Task改)";
+
+            //return WebService.LoadMyTextAsync();
+        }
+
     }
 }
