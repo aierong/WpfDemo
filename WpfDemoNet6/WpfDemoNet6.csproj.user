@@ -7,9 +7,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Demo\Data2.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Demo\DataWindow1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -36,9 +33,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Demo\Data2.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Demo\DataWindow1.xaml">
       <SubType>Designer</SubType>
     </Page>
