@@ -31,11 +31,13 @@
         <DataGrid x:Name="userGrid"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
+                  IsReadOnly="True"
                   ItemsSource="{Binding Students}"
                   SelectionMode="Single"
                   SelectionUnit="FullRow">
 
             <i:Interaction.Triggers>
+                <!--  下面这个是单选某行的  -->
                 <i:EventTrigger EventName="SelectionChanged">
                     <i:InvokeCommandAction Command="{Binding SelectionChangedCommand}"
                                            CommandParameter="{Binding ElementName=userGrid, Path=SelectedItem}" />
@@ -46,6 +48,16 @@
                     <i:InvokeCommandAction Command="{Binding SelectionsChangedCommand}"
                                            CommandParameter="{Binding ElementName=userGrid, Path=SelectedItems}" />
                 </i:EventTrigger>-->
+
+                <!--  
+                下面这个是 鼠标双击  
+                参考： https://blog.csdn.net/weixin_38083655/article/details/109187564  
+                -->
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding DoubleClickCommand}"
+                                           CommandParameter="{Binding ElementName=userGrid, Path=SelectedItem}" />
+                </i:EventTrigger>
+
             </i:Interaction.Triggers>
 
 

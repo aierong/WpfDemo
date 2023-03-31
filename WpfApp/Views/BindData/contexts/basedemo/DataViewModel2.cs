@@ -19,7 +19,7 @@ namespace WpfApp.Views.BindData.contexts.basedemo
             Title = "Titleinit";
 
 
-            ShowCommand = new MyCommand2( ( string titleval ) =>
+            ShowCommand = new DelegateCommand<string>( ( string titleval ) =>
             {
                 //接收到命令传递过来的一个参数
                 MessageBox.Show( "show Command:" + titleval );
@@ -30,7 +30,7 @@ namespace WpfApp.Views.BindData.contexts.basedemo
             } );
         }
 
-        public MyCommand2 ShowCommand
+        public DelegateCommand<string> ShowCommand
         {
             get; set;
         }
@@ -93,6 +93,6 @@ namespace WpfApp.Views.BindData.contexts.basedemo
         }
 
 
- 
+
     }
 }

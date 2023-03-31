@@ -55,6 +55,7 @@ namespace WpfApp.Views.KJ.grid.demo1
                 Debug.WriteLine( stu.Id );
             } );
 
+            //多选
             SelectionsChangedCommand = new MyParCommand<System.Collections.IList>( ( System.Collections.IList selectList ) =>
             {
                 //多选
@@ -65,6 +66,14 @@ namespace WpfApp.Views.KJ.grid.demo1
                     Debug.WriteLine( item.Id );
                 }
 
+            } );
+
+            //鼠标双击  
+            DoubleClickCommand = new MyParCommand<Student>( ( Student stu ) =>
+            {
+                Debug.WriteLine( "DoubleClickCommand" );
+
+                Debug.WriteLine( stu.Id );
             } );
         }
 
@@ -86,6 +95,12 @@ namespace WpfApp.Views.KJ.grid.demo1
         }
 
         public MyParCommand<System.Collections.IList> SelectionsChangedCommand
+        {
+            get; set;
+        }
+
+
+        public MyParCommand<Student> DoubleClickCommand
         {
             get; set;
         }

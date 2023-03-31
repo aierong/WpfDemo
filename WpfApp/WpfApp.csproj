@@ -95,7 +95,7 @@
     <Compile Include="Views\BindData\contexts\basedemo\demo2.xaml.cs">
       <DependentUpon>demo2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\BindData\contexts\basedemo\MyCommand2.cs" />
+    <Compile Include="Views\BindData\contexts\basedemo\DelegateCommand.cs" />
     <Compile Include="Views\BindData\contexts\basedemo\ViewModelBase.cs" />
     <Compile Include="Views\BindData\contexts\DataViewModel1.cs" />
     <Compile Include="Views\BindData\contexts\dataWindow1.xaml.cs">
