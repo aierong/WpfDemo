@@ -139,9 +139,9 @@ namespace WpfDemoNet6.Demo
         {
             Title = $"hello(改):{val}";
 
-            //DataWindow1 dlg = new DataWindow1();
+            DataWindow1 dlg = new DataWindow1();
             ////dlg.Show ();
-            //dlg.ShowDialog();
+            dlg.ShowDialog();
         }
 
         //public RelayCommand<double> ButtonClickParCommand

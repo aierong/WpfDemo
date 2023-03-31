@@ -50,8 +50,8 @@
                     CommandParameter="{Binding ElementName=txt1, Path=Width}"
                     Content="改变值(带参数)" />
 
-            <!--   
-            特别说明：异步命令会自动控制控件的可见性,并且提供一个IsRunning属性可以判断异步是否完成   
+            <!--
+                特别说明：异步命令会自动控制控件的可见性,并且提供一个IsRunning属性可以判断异步是否完成
             -->
             <Button Width="100"
                     Height="30"
