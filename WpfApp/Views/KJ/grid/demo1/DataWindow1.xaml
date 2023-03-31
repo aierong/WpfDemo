@@ -8,7 +8,9 @@
 2.nuget:System.Windows.Interactivity.WPF
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
     
-    
+3.nuget:Microsoft.Xaml.Behaviors.Wpf
+     xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+
 -->
 
 
