@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp", "WpfApp\WpfApp.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfDemoNet6", "WpfDemoNet6\WpfDemoNet6.csproj", "{9B9140B8-84FD-4058-B3A4-5D7069CEB5CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityToolkitMvvmDemo", "CommunityToolkitMvvmDemo\CommunityToolkitMvvmDemo.csproj", "{C9866C50-456E-40A8-9900-9BB7A2FBA04F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommunityToolkitMvvmDemo", "CommunityToolkitMvvmDemo\CommunityToolkitMvvmDemo.csproj", "{C9866C50-456E-40A8-9900-9BB7A2FBA04F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceCode", "SourceCode\SourceCode.csproj", "{F8E56236-7B3B-4F30-BB7B-0FDFA2FC7A2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,9 @@ Global
 		{C9866C50-456E-40A8-9900-9BB7A2FBA04F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9866C50-456E-40A8-9900-9BB7A2FBA04F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9866C50-456E-40A8-9900-9BB7A2FBA04F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8E56236-7B3B-4F30-BB7B-0FDFA2FC7A2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8E56236-7B3B-4F30-BB7B-0FDFA2FC7A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8E56236-7B3B-4F30-BB7B-0FDFA2FC7A2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

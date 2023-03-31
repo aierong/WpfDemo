@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CommunityToolkit.Mvvm示例\" />
+    <Folder Include="微软官方WPF示例\" />
+  </ItemGroup>
+
 </Project>
