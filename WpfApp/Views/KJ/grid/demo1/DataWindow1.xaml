@@ -1,9 +1,12 @@
 ﻿
 <!--
-    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
-    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      
     
-    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+1.引入:dll
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+     
+2.nuget:System.Windows.Interactivity.WPF
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
     
     
 -->
