@@ -16,6 +16,24 @@ namespace WpfApp.Views.KJ.grid.demo1
             get; set;
         }
 
+        private bool _isman;
+
+        public bool IsMan
+        {
+            get
+            {
+                return _isman;
+            }
+            set
+            {
+                _isman = value;
+
+                //通知数据已经变化
+                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "IsMan" ) );
+            }
+        }
+
+
         private string _name;
 
         public string Name

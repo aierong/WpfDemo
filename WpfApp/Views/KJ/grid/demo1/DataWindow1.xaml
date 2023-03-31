@@ -1,7 +1,15 @@
-﻿<Window x:Class="WpfApp.Views.KJ.grid.demo1.DataWindow1"
+﻿
+<!--
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+-->
+
+
+<Window x:Class="WpfApp.Views.KJ.grid.demo1.DataWindow1"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:local="clr-namespace:WpfApp.Views.KJ.grid.demo1"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="grid"
@@ -13,9 +21,35 @@
         mc:Ignorable="d">
     <Grid>
 
-        <DataGrid AutoGenerateColumns="False"
+        <!--
+            SelectionUnit="FullRow" 选择行模式
+            SelectionMode="Single"  单选模式
+            
+            AutoGenerateColumns=“False” 不自动生成列
+            CanUserAddRows="False" 去除空白行
+        -->
+        <DataGrid x:Name="userGrid"
+                  AutoGenerateColumns="False"
                   CanUserAddRows="False"
-                  ItemsSource="{Binding Students}">
+                  ItemsSource="{Binding Students}"
+                  SelectionMode="Single"
+                  SelectionUnit="FullRow">
+
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <i:InvokeCommandAction Command="{Binding SelectionChangedCommand}"
+                                           CommandParameter="{Binding ElementName=userGrid, Path=SelectedItem}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+
+            <!--  下面这个是多选模式的,代码正常  -->
+            <!--<i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <i:InvokeCommandAction Command="{Binding SelectionsChangedCommand}"
+                                           CommandParameter="{Binding ElementName=userGrid, Path=SelectedItems}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>-->
+
             <DataGrid.Columns>
                 <DataGridTextColumn Width="100"
                                     Binding="{Binding Id}"
@@ -27,6 +61,12 @@
                 <DataGridTextColumn Width="200"
                                     Binding="{Binding Age}"
                                     Header="年龄" />
+                <!--
+                    DataGridCheckBoxColumn 是要求绑定布尔值
+                -->
+                <DataGridCheckBoxColumn Width="100"
+                                        Binding="{Binding IsMan}"
+                                        Header="是男生" />
                 <DataGridTemplateColumn Width="100"
                                         Header="操作">
                     <DataGridTemplateColumn.CellTemplate>
@@ -35,6 +75,7 @@
                                         VerticalAlignment="Center"
                                         Orientation="Horizontal">
                                 <!--
+                                    参考:https://blog.csdn.net/sdhongjun/article/details/83272736
                                     Command="{Binding Path=DataContext.UpdateCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
                                     发起命令
                                 -->
@@ -42,6 +83,10 @@
                                         Content="编辑" />
                                 <!--
                                     发起命令，并且传递参数
+                                    
+                                    2种写法都可以
+                                    Command="{Binding Path=DataContext.DeleteCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
+                                    Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}"
                                 -->
                                 <Button Margin="8,0,0,0"
                                         Command="{Binding Path=DataContext.DeleteCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
@@ -53,7 +98,6 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-
 
     </Grid>
 </Window>
