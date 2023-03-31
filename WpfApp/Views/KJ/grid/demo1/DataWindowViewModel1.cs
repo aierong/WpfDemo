@@ -34,14 +34,14 @@ namespace WpfApp.Views.KJ.grid.demo1
 
             UpdateCommand = new MyCommands( () =>
             {
-                Debug.WriteLine( "111" );
+                Debug.WriteLine( "UpdateCommand 修改" );
 
                 MessageBox.Show( "修改" );
             } );
 
             DeleteCommand = new MyParCommand<Student>( ( Student stu ) =>
             {
-                Debug.WriteLine( stu );
+                Debug.WriteLine( "DeleteCommand 删除" );
 
                 MessageBox.Show( "del" + stu.Id );
             } );
@@ -50,7 +50,7 @@ namespace WpfApp.Views.KJ.grid.demo1
             //单选的
             SelectionChangedCommand = new MyParCommand<Student>( ( Student stu ) =>
             {
-                Debug.WriteLine( "SelectionChangedCommand" );
+                Debug.WriteLine( "SelectionChangedCommand 单选的" );
 
                 Debug.WriteLine( stu.Id );
             } );
@@ -59,7 +59,7 @@ namespace WpfApp.Views.KJ.grid.demo1
             SelectionsChangedCommand = new MyParCommand<System.Collections.IList>( ( System.Collections.IList selectList ) =>
             {
                 //多选
-                Debug.WriteLine( string.Format( "SelectionsChangedCommand,选择了{0}条记录" , selectList.Count ) );
+                Debug.WriteLine( string.Format( "SelectionsChangedCommand 多选,选择了{0}条记录" , selectList.Count ) );
 
                 foreach ( Student item in selectList )
                 {
@@ -71,7 +71,7 @@ namespace WpfApp.Views.KJ.grid.demo1
             //鼠标双击  
             DoubleClickCommand = new MyParCommand<Student>( ( Student stu ) =>
             {
-                Debug.WriteLine( "DoubleClickCommand" );
+                Debug.WriteLine( "DoubleClickCommand 鼠标双击" );
 
                 Debug.WriteLine( stu.Id );
             } );
