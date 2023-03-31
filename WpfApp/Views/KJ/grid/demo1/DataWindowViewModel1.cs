@@ -47,6 +47,7 @@ namespace WpfApp.Views.KJ.grid.demo1
             } );
 
 
+            //单选的
             SelectionChangedCommand = new MyParCommand<Student>( ( Student stu ) =>
             {
                 Debug.WriteLine( "SelectionChangedCommand" );
@@ -56,7 +57,6 @@ namespace WpfApp.Views.KJ.grid.demo1
 
             SelectionsChangedCommand = new MyParCommand<System.Collections.IList>( ( System.Collections.IList selectList ) =>
             {
-                 
                 //多选
                 Debug.WriteLine( string.Format( "SelectionsChangedCommand,选择了{0}条记录" , selectList.Count ) );
 

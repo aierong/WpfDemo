@@ -40,15 +40,15 @@
                     <i:InvokeCommandAction Command="{Binding SelectionChangedCommand}"
                                            CommandParameter="{Binding ElementName=userGrid, Path=SelectedItem}" />
                 </i:EventTrigger>
-            </i:Interaction.Triggers>
 
-            <!--  下面这个是多选模式的,代码正常  -->
-            <!--<i:Interaction.Triggers>
-                <i:EventTrigger EventName="SelectionChanged">
+                <!--  下面这个是多选模式的,代码正常  -->
+                <!--<i:EventTrigger EventName="SelectionChanged">
                     <i:InvokeCommandAction Command="{Binding SelectionsChangedCommand}"
                                            CommandParameter="{Binding ElementName=userGrid, Path=SelectedItems}" />
-                </i:EventTrigger>
-            </i:Interaction.Triggers>-->
+                </i:EventTrigger>-->
+            </i:Interaction.Triggers>
+
+
 
             <DataGrid.Columns>
                 <DataGridTextColumn Width="100"
