@@ -12,22 +12,38 @@ namespace WpfApp.Views.KJ.grid.demo1
     public class MyParCommand<T> : ICommand
     {
         public event EventHandler CanExecuteChanged;
-        Action<T> execActionpar;
 
-        public MyParCommand ( Action<T> action )
+        Action<T> execAction;
+        Func<T , bool> _canExecuteMethod = null;
+
+
+        public MyParCommand ( Action<T> action ) : this( action , null )
         {
 
-            execActionpar = action;
+        }
+
+        public MyParCommand ( Action<T> action , Func<T , bool> canExecuteMethod )
+        {
+            execAction = action;
+            _canExecuteMethod = canExecuteMethod;
         }
 
         public bool CanExecute ( object parameter )
         {
+            if ( _canExecuteMethod != null )
+            {
+                return _canExecuteMethod( ( T ) parameter );
+            }
             return true;
         }
 
         public void Execute ( object parameter )
         {
-            execActionpar( ( T ) parameter );
+            if ( execAction != null )
+            {
+                execAction( ( T ) parameter );
+            }
+
         }
     }
 }
