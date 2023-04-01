@@ -23,6 +23,8 @@ namespace CalcBindDemo
         public MainWindow ()
         {
             InitializeComponent();
+
+            this.DataContext = new MainViewModel();
         }
     }
 }
