@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommunityToolkitMvvmDemo", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SourceCode", "SourceCode\SourceCode.csproj", "{F8E56236-7B3B-4F30-BB7B-0FDFA2FC7A2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandyOrgDemo", "HandyOrgDemo\HandyOrgDemo.csproj", "{29000807-791F-4EBD-80ED-17F9AE7D2781}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HandyOrgDemo", "HandyOrgDemo\HandyOrgDemo.csproj", "{29000807-791F-4EBD-80ED-17F9AE7D2781}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcBindDemo", "CalcBindDemo\CalcBindDemo.csproj", "{E33B6E41-26B0-4ABA-8B70-489BEC20F482}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{29000807-791F-4EBD-80ED-17F9AE7D2781}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29000807-791F-4EBD-80ED-17F9AE7D2781}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29000807-791F-4EBD-80ED-17F9AE7D2781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E33B6E41-26B0-4ABA-8B70-489BEC20F482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E33B6E41-26B0-4ABA-8B70-489BEC20F482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E33B6E41-26B0-4ABA-8B70-489BEC20F482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E33B6E41-26B0-4ABA-8B70-489BEC20F482}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
