@@ -13,10 +13,12 @@
                                          IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
-    <!--  引用，并起一个名字  -->
+    <!--  引用转换器   -->
     <Window.Resources>
         <localcv:BoolConverter x:Key="myboolconvert" />
-        <!--   引用转换器,并且传递一个参数  -->
+        <!--   
+        引用转换器,并且传递一个参数  
+        -->
         <localcv:BooleanToVisibilityConverter x:Key="myconvert"
                                               FalseUseHidden="True" />
     </Window.Resources>
