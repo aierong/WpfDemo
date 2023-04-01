@@ -8,6 +8,17 @@
         Width="800"
         Height="450"
         Icon="/ooVoo2.ico"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
-    <Grid />
+    <Grid>
+        <StackPanel>
+            <Label Content="我是原始的" />
+            <Label Content="我是加入样式的1"
+                   Style="{StaticResource LabelDanger.Small}" />
+            <Label Content="我是加入样式的2"
+                   Style="{DynamicResource LabelPrimary}" />
+            <Label Content="我是加入样式的3"
+                   Style="{DynamicResource LabelDanger}" />
+        </StackPanel>
+    </Grid>
 </Window>
