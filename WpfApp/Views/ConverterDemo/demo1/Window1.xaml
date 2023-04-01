@@ -16,7 +16,9 @@
     <!--  引用，并起一个名字  -->
     <Window.Resources>
         <localcv:BoolConverter x:Key="myboolconvert" />
-        <localcv:BooleanToVisibilityConverter x:Key="myconvert" />
+        <!--   引用转换器,并且传递一个参数  -->
+        <localcv:BooleanToVisibilityConverter x:Key="myconvert"
+                                              FalseUseHidden="True" />
     </Window.Resources>
     <Grid ShowGridLines="True">
         <!--  3行2列的表格  -->
