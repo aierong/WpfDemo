@@ -36,6 +36,19 @@
                      Text="{c:Binding A*B,
                                       StringFormat={}{0:n2} --StringFormat is used}" />
 
+            <!--  布尔值反向  -->
+            <CheckBox HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      Content="IsChecked布尔值反向"
+                      IsChecked="{c:Binding !IsChecked}" />
+
+            <!--
+                变量Name + ' ' + 变量Last
+            -->
+            <TextBox HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                     Text="{c:Binding (Name + \'  \' + Last)}" />
+            
             <!--
                 a等于10,就显示10,否则20
                 注意:3元运算符,?和:前后都要有空格,否则会报错
@@ -51,18 +64,6 @@
                      VerticalAlignment="Center"
                      Text="{c:Binding '(A > 10) ? A*10 : B + 1'}" />
 
-            <!--  布尔值反向  -->
-            <CheckBox HorizontalAlignment="Center"
-                      VerticalAlignment="Center"
-                      Content="IsChecked布尔值反向"
-                      IsChecked="{c:Binding !IsChecked}" />
-
-            <!--
-                变量Name + ' ' + 变量Last
-            -->
-            <TextBox HorizontalAlignment="Center"
-                     VerticalAlignment="Center"
-                     Text="{c:Binding (Name + \'  \' + Last)}" />
 
             <!--
                 3元运算符,满足条件:变量Name + 变量Last 否则:变量Title
@@ -109,13 +110,13 @@
                     Background="{c:Binding 'IsChecked ? media:Brushes.Green : media:Brushes.Red'}"
                     Content="变色按钮" />
 
-            <!--  利用枚举类型判断  -->
+            <!--  枚举类型判断  -->
             <Button Width="100"
                     Background="{c:Binding 'PlayType==local:DisplayType.All ? media:Brushes.Green : media:Brushes.Red'}"
                     Content="变色按钮" />
 
             <!--
-                自动布尔转换Visibility
+                布尔自动转换Visibility
                 
                 FalseToVisibility就是告知,false时是用Collapsed,还是Hidden
             -->
