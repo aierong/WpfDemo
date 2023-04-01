@@ -1,4 +1,4 @@
-本项目主要是HandyControl的演示demo
+本项目主要是CalcBinding的演示demo
 
 
 
