@@ -368,6 +368,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="README.md" />
     <None Include="WpfApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
