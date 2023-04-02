@@ -17,15 +17,31 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:local="clr-namespace:WpfApp.Views.KJ.grid.demo1"
+        xmlns:localconver="clr-namespace:WpfApp.Views.KJ.grid.demo1.convert"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="grid"
         Width="800"
-        Height="450"
+        Height="650"
         d:DataContext="{d:DesignInstance local:DataWindowViewModel1,
                                          IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
-    <Grid>
+    <!--  引用转换器  -->
+    <Window.Resources>
+        <localconver:EnabledConverter x:Key="myconvert" />
+        <localconver:EnabledToConverter x:Key="myconvert2" />
+    </Window.Resources>
+    <Grid ShowGridLines="True">
+        <!--  定义行  -->
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!--  定义列  -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
 
         <!--
             SelectionUnit="FullRow" 选择行模式
@@ -35,6 +51,8 @@
             CanUserAddRows="False" 去除空白行
         -->
         <DataGrid x:Name="userGrid"
+                  Grid.Row="0"
+                  Grid.Column="0"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
                   IsReadOnly="True"
@@ -85,7 +103,7 @@
                 <DataGridCheckBoxColumn Width="100"
                                         Binding="{Binding IsMan}"
                                         Header="是男生" />
-                <DataGridTemplateColumn Width="100"
+                <DataGridTemplateColumn Width="160"
                                         Header="操作">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -110,6 +128,24 @@
                                         Command="{Binding Path=DataContext.DeleteCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
                                         CommandParameter="{Binding}"
                                         Content="删除" />
+
+                                <!--
+                                     控制某些按钮是否可用
+                                -->
+                                <Button Command="{Binding Path=DataContext.SQCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
+                                        CommandParameter="{Binding}"
+                                        Content="申请">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="IsEnabled" Value="{Binding Age, Converter={StaticResource myconvert}}" />
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+
+                                <Button Command="{Binding Path=DataContext.BYCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
+                                        CommandParameter="{Binding}"
+                                        Content="毕业"
+                                        IsEnabled="{Binding Path=.,Converter={StaticResource myconvert2}}" />
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

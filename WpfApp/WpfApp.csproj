@@ -140,6 +140,8 @@
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FormatDemo\WindowViewModel1.cs" />
+    <Compile Include="Views\KJ\grid\demo1\convert\EnabledToConverter.cs" />
+    <Compile Include="Views\KJ\grid\demo1\convert\EnabledConverter.cs" />
     <Compile Include="Views\KJ\grid\demo1\DataWindow1.xaml.cs">
       <DependentUpon>DataWindow1.xaml</DependentUpon>
     </Compile>

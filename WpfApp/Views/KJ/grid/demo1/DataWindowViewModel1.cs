@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,9 @@ namespace WpfApp.Views.KJ.grid.demo1
                 new Student(){ Id=1, Age=11, Name="Tom" ,IsMan =true  },
                 new Student(){ Id=2, Age=12, Name="Darren" ,IsMan =true},
                 new Student(){ Id=3, Age=13, Name="Jacky" ,IsMan =false },
-                new Student(){ Id=4, Age=14, Name="Andy",IsMan =false}
+                new Student(){ Id=4, Age=14, Name="Andy",IsMan =false},
+                new Student(){ Id=5, Age=16, Name="WUBingBing",IsMan =true},
+                new Student(){ Id=6, Age=18, Name="KT",IsMan =false}
             };
 
             UpdateCommand = new MyCommands( () =>
@@ -46,6 +49,19 @@ namespace WpfApp.Views.KJ.grid.demo1
                 MessageBox.Show( "del" + stu.Id );
             } );
 
+            SQCommand = new MyParCommand<Student>( ( Student stu ) =>
+            {
+                Debug.WriteLine( "SQCommand 申请" );
+
+                MessageBox.Show( "申请:" + stu.Id );
+            } );
+
+            BYCommand = new MyParCommand<Student>( ( Student stu ) =>
+            {
+                Debug.WriteLine( "BYCommand" );
+
+                MessageBox.Show( "毕业:" + stu.Id );
+            } );
 
             //单选的
             SelectionChangedCommand = new MyParCommand<Student>( ( Student stu ) =>
@@ -90,6 +106,16 @@ namespace WpfApp.Views.KJ.grid.demo1
         }
 
         public MyParCommand<Student> SelectionChangedCommand
+        {
+            get; set;
+        }
+
+        public MyParCommand<Student> SQCommand
+        {
+            get; set;
+        }
+
+        public MyParCommand<Student> BYCommand
         {
             get; set;
         }
