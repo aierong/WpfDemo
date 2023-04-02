@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -91,6 +92,26 @@ namespace WpfApp.Views.KJ.grid.demo1
 
                 Debug.WriteLine( stu.Id );
             } );
+
+            //获取选择行(单选)
+            SelectCommand = new MyParCommand<Student>( ( Student stu ) =>
+            {
+                Debug.WriteLine( "SelectCommand 获取选择行(单选)" );
+
+                Debug.WriteLine( stu.Id );
+            } );
+
+            SelectsCommand = new MyParCommand<System.Collections.IList>( ( System.Collections.IList selectList ) =>
+            {
+                //多选
+                Debug.WriteLine( string.Format( "SelectsCommand 多选,选择了{0}条记录" , selectList.Count ) );
+
+                foreach ( Student item in selectList )
+                {
+                    Debug.WriteLine( item.Id );
+                }
+
+            } );
         }
 
 
@@ -127,6 +148,17 @@ namespace WpfApp.Views.KJ.grid.demo1
 
 
         public MyParCommand<Student> DoubleClickCommand
+        {
+            get; set;
+        }
+
+
+        public MyParCommand<Student> SelectCommand
+        {
+            get; set;
+        }
+
+        public MyParCommand<System.Collections.IList> SelectsCommand
         {
             get; set;
         }

@@ -41,117 +41,128 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0">
 
+            <!--
+                SelectionUnit="FullRow" 选择行模式
+                SelectionMode="Single"  单选模式
+                
+                AutoGenerateColumns=“False” 不自动生成列
+                CanUserAddRows="False" 去除空白行
+            -->
+            <DataGrid x:Name="userGrid"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      IsReadOnly="True"
+                      ItemsSource="{Binding Students}"
+                       
+                      SelectionUnit="FullRow">
 
-        <!--
-            SelectionUnit="FullRow" 选择行模式
-            SelectionMode="Single"  单选模式
-            
-            AutoGenerateColumns=“False” 不自动生成列
-            CanUserAddRows="False" 去除空白行
-        -->
-        <DataGrid x:Name="userGrid"
-                  Grid.Row="0"
-                  Grid.Column="0"
-                  AutoGenerateColumns="False"
-                  CanUserAddRows="False"
-                  IsReadOnly="True"
-                  ItemsSource="{Binding Students}"
-                  SelectionMode="Single"
-                  SelectionUnit="FullRow">
+                <i:Interaction.Triggers>
+                    <!--  下面这个是单选某行的  -->
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <i:InvokeCommandAction Command="{Binding SelectionChangedCommand}"
+                                               CommandParameter="{Binding ElementName=userGrid, Path=SelectedItem}" />
+                    </i:EventTrigger>
 
-            <i:Interaction.Triggers>
-                <!--  下面这个是单选某行的  -->
-                <i:EventTrigger EventName="SelectionChanged">
-                    <i:InvokeCommandAction Command="{Binding SelectionChangedCommand}"
-                                           CommandParameter="{Binding ElementName=userGrid, Path=SelectedItem}" />
-                </i:EventTrigger>
-
-                <!--  下面这个是多选模式的,代码正常  -->
-                <!--<i:EventTrigger EventName="SelectionChanged">
+                    <!--  下面这个是多选模式的,代码正常  -->
+                    <!--<i:EventTrigger EventName="SelectionChanged">
                     <i:InvokeCommandAction Command="{Binding SelectionsChangedCommand}"
                                            CommandParameter="{Binding ElementName=userGrid, Path=SelectedItems}" />
                 </i:EventTrigger>-->
 
-                <!--
-                    下面这个是 鼠标双击
-                    参考： https://blog.csdn.net/weixin_38083655/article/details/109187564
-                -->
-                <i:EventTrigger EventName="MouseDoubleClick">
-                    <i:InvokeCommandAction Command="{Binding DoubleClickCommand}"
-                                           CommandParameter="{Binding ElementName=userGrid, Path=SelectedItem}" />
-                </i:EventTrigger>
+                    <!--
+                        下面这个是 鼠标双击
+                        参考： https://blog.csdn.net/weixin_38083655/article/details/109187564
+                    -->
+                    <i:EventTrigger EventName="MouseDoubleClick">
+                        <i:InvokeCommandAction Command="{Binding DoubleClickCommand}"
+                                               CommandParameter="{Binding ElementName=userGrid, Path=SelectedItem}" />
+                    </i:EventTrigger>
 
-            </i:Interaction.Triggers>
+                </i:Interaction.Triggers>
 
 
 
-            <DataGrid.Columns>
-                <DataGridTextColumn Width="100"
-                                    Binding="{Binding Id}"
-                                    Header="ID" />
-                <DataGridTextColumn Width="100"
-                                    Binding="{Binding Name}"
-                                    Header="学生姓名" />
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="100"
+                                        Binding="{Binding Id}"
+                                        Header="ID" />
+                    <DataGridTextColumn Width="100"
+                                        Binding="{Binding Name}"
+                                        Header="学生姓名" />
 
-                <DataGridTextColumn Width="200"
-                                    Binding="{Binding Age}"
-                                    Header="年龄" />
-                <!--
-                    DataGridCheckBoxColumn 是要求绑定布尔值
-                -->
-                <DataGridCheckBoxColumn Width="100"
-                                        Binding="{Binding IsMan}"
-                                        Header="是男生" />
-                <DataGridTemplateColumn Width="160"
-                                        Header="操作">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <StackPanel HorizontalAlignment="Left"
-                                        VerticalAlignment="Center"
-                                        Orientation="Horizontal">
-                                <!--
-                                    参考:https://blog.csdn.net/sdhongjun/article/details/83272736
-                                    Command="{Binding Path=DataContext.UpdateCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
-                                    发起命令
-                                -->
-                                <Button Command="{Binding Path=DataContext.UpdateCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
-                                        Content="编辑" />
-                                <!--
-                                    发起命令，并且传递参数
-                                    
-                                    2种写法都可以
-                                    Command="{Binding Path=DataContext.DeleteCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
-                                    Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}"
-                                -->
-                                <Button Margin="8,0,0,0"
+                    <DataGridTextColumn Width="200"
+                                        Binding="{Binding Age}"
+                                        Header="年龄" />
+                    <!--
+                        DataGridCheckBoxColumn 是要求绑定布尔值
+                    -->
+                    <DataGridCheckBoxColumn Width="100"
+                                            Binding="{Binding IsMan}"
+                                            Header="是男生" />
+                    <DataGridTemplateColumn Width="160"
+                                            Header="操作">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel HorizontalAlignment="Left"
+                                            VerticalAlignment="Center"
+                                            Orientation="Horizontal">
+                                    <!--
+                                        参考:https://blog.csdn.net/sdhongjun/article/details/83272736
+                                        Command="{Binding Path=DataContext.UpdateCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
+                                        发起命令
+                                    -->
+                                    <Button Command="{Binding Path=DataContext.UpdateCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
+                                            Content="编辑" />
+                                    <!--
+                                        发起命令，并且传递参数
+                                        
+                                        2种写法都可以
                                         Command="{Binding Path=DataContext.DeleteCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
-                                        CommandParameter="{Binding}"
-                                        Content="删除" />
+                                        Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}"
+                                    -->
+                                    <Button Margin="8,0,0,0"
+                                            Command="{Binding Path=DataContext.DeleteCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
+                                            CommandParameter="{Binding}"
+                                            Content="删除" />
 
-                                <!--
-                                     控制某些按钮是否可用
-                                -->
-                                <Button Command="{Binding Path=DataContext.SQCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
-                                        CommandParameter="{Binding}"
-                                        Content="申请">
-                                    <Button.Style>
-                                        <Style TargetType="Button">
-                                            <Setter Property="IsEnabled" Value="{Binding Age, Converter={StaticResource myconvert}}" />
-                                        </Style>
-                                    </Button.Style>
-                                </Button>
+                                    <!--
+                                        控制某些按钮是否可用
+                                    -->
+                                    <Button Command="{Binding Path=DataContext.SQCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
+                                            CommandParameter="{Binding}"
+                                            Content="申请">
+                                        <Button.Style>
+                                            <Style TargetType="Button">
+                                                <Setter Property="IsEnabled" Value="{Binding Age, Converter={StaticResource myconvert}}" />
+                                            </Style>
+                                        </Button.Style>
+                                    </Button>
 
-                                <Button Command="{Binding Path=DataContext.BYCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
-                                        CommandParameter="{Binding}"
-                                        Content="毕业"
-                                        IsEnabled="{Binding Path=.,Converter={StaticResource myconvert2}}" />
-                            </StackPanel>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
-        </DataGrid>
-
+                                    <Button Command="{Binding Path=DataContext.BYCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
+                                            CommandParameter="{Binding}"
+                                            Content="毕业"
+                                            IsEnabled="{Binding Path=., Converter={StaticResource myconvert2}}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel   Orientation="Horizontal">
+            <Button Width="100"
+                    HorizontalAlignment="Left"
+                    Command="{Binding SelectCommand}"
+                    CommandParameter="{Binding ElementName=userGrid, Path=SelectedItem}"
+                    Content="获取选择行(单选)" />
+            <Button Width="100"
+                    HorizontalAlignment="Left"
+                    Command="{Binding SelectsCommand}"
+                    CommandParameter="{Binding ElementName=userGrid, Path=SelectedItems}"
+                    Content="获取选择行(多选)" />
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
