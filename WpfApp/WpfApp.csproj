@@ -372,6 +372,7 @@
     </None>
     <None Include="README.md" />
     <None Include="WpfApp_TemporaryKey.pfx" />
+    <None Include="微软官方WPF示例\WPF-Samples-main.zip" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\BUJU\ZhongHeDemo\zhonghe1.png" />
@@ -399,6 +400,7 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Resource Include="微软官方WPF示例\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
