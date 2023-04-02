@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:HandyOrgDemo"
+        xmlns:localuc="clr-namespace:HandyOrgDemo.Views.UserControls"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="主页面"
         Width="800"
@@ -11,8 +12,8 @@
         mc:Ignorable="d">
     <ScrollViewer>
         <TabControl TabStripPlacement="Left">
-            <TabItem Header="NPOI: Excel 读写">
-                <!--<demo:LoggerDemo  />-->
+            <TabItem Header="Label Demo">
+                <localuc:LabelDemoUserControl />
             </TabItem>
             <TabItem Header="任务线程案例" />
             <TabItem Header="InkCanvas绘制箭头" />

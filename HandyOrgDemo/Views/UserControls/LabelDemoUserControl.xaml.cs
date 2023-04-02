@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HandyOrgDemo
+namespace HandyOrgDemo.Views.UserControls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// LabelDemoUserControl.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LabelDemoUserControl : UserControl
     {
-        public MainWindow ()
+        public LabelDemoUserControl ()
         {
             InitializeComponent();
         }
