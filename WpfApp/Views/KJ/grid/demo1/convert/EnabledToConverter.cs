@@ -14,9 +14,12 @@ namespace WpfApp.Views.KJ.grid.demo1.convert
         {
             if ( value != null )
             {
-                var obj = ( Student ) value;
+                if ( value is Student )
+                {
+                    var obj = ( Student ) value;
 
-                return obj.Age >= 16 && obj.IsMan;
+                    return obj.Age >= 16 && obj.IsMan;
+                }
             }
 
             return true;
