@@ -1,0 +1,51 @@
+﻿<Window x:Class="HandyOrgDemo.mainpage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:HandyOrgDemo"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="主页面"
+        Width="800"
+        Height="450"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
+    <ScrollViewer>
+        <TabControl TabStripPlacement="Left">
+            <TabItem Header="NPOI: Excel 读写">
+                <!--<demo:LoggerDemo  />-->
+            </TabItem>
+            <TabItem Header="任务线程案例" />
+            <TabItem Header="InkCanvas绘制箭头" />
+            <TabItem Header="TCP 通讯测试" />
+            <TabItem Header="Modbus 通讯测试" />
+            <TabItem Header="日志记录">
+                <!--<Grid>
+                    <demo:LoggerDemo x:Name="MyLogger"/>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
+                        <Button Content="添加日志" Click="BtnLogger_Click"/>
+                    </StackPanel>
+                </Grid>-->
+            </TabItem>
+            <TabItem Header="自动关闭的窗体">
+                <Button Content="显示自动关闭的窗体" />
+            </TabItem>
+            <TabItem Header="DataGrid 测试" />
+
+            <TabItem Header="HelixToolkit 测试" />
+
+            <TabItem Header="HelixToolkit 目标选中" />
+
+            <TabItem Header="HelixToolkit 3D 模型阅读器" />
+
+            <TabItem Header="三菱PLC MC协议" />
+
+            <TabItem Header="打开、保存文件、打开文件夹" />
+
+            <TabItem Header="DataGrid 样式" />
+
+            <TabItem Header="ProgressBar" />
+
+            <TabItem Header="Epplus: Excel 读写" />
+        </TabControl>
+    </ScrollViewer>
+</Window>
