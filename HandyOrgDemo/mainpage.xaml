@@ -15,10 +15,9 @@
             <TabItem Header="Label Demo">
                 <localuc:LabelDemoUserControl />
             </TabItem>
-            <TabItem Header="任务线程案例" />
-            <TabItem Header="InkCanvas绘制箭头" />
-            <TabItem Header="TCP 通讯测试" />
-            <TabItem Header="Modbus 通讯测试" />
+            <TabItem Header="MessageBox Demo">
+                <localuc:MessageBoxDemoUserControl />
+            </TabItem>
             <TabItem Header="日志记录">
                 <!--<Grid>
                     <demo:LoggerDemo x:Name="MyLogger"/>
@@ -34,19 +33,9 @@
 
             <TabItem Header="HelixToolkit 测试" />
 
-            <TabItem Header="HelixToolkit 目标选中" />
+             
 
-            <TabItem Header="HelixToolkit 3D 模型阅读器" />
-
-            <TabItem Header="三菱PLC MC协议" />
-
-            <TabItem Header="打开、保存文件、打开文件夹" />
-
-            <TabItem Header="DataGrid 样式" />
-
-            <TabItem Header="ProgressBar" />
-
-            <TabItem Header="Epplus: Excel 读写" />
+             
         </TabControl>
     </ScrollViewer>
 </Window>
