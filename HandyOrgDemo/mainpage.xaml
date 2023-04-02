@@ -18,6 +18,9 @@
             <TabItem Header="MessageBox Demo">
                 <localuc:MessageBoxDemoUserControl />
             </TabItem>
+            <TabItem Header="PopupWindow Demo">
+                <localuc:PopupWindowDemoUserControl />
+            </TabItem>
             <TabItem Header="日志记录">
                 <!--<Grid>
                     <demo:LoggerDemo x:Name="MyLogger"/>
@@ -26,16 +29,16 @@
                     </StackPanel>
                 </Grid>-->
             </TabItem>
-            <TabItem Header="自动关闭的窗体">
+            <TabItem Header="PopupWindow Demo">
                 <Button Content="显示自动关闭的窗体" />
             </TabItem>
             <TabItem Header="DataGrid 测试" />
 
             <TabItem Header="HelixToolkit 测试" />
 
-             
 
-             
+
+
         </TabControl>
     </ScrollViewer>
 </Window>
