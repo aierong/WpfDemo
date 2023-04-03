@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="HandyOrgDemo.Views.UserControls.GrowlDemoUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:local="clr-namespace:HandyOrgDemo.Views.UserControls"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             mc:Ignorable="d">
+    <Grid>
+        <ScrollViewer HorizontalAlignment="Right"
+                      VerticalScrollBarVisibility="Hidden">
+            <StackPanel Margin="0,10,10,10"
+                        VerticalAlignment="Top"
+                        hc:Growl.GrowlParent="True" />
+        </ScrollViewer>
+        <Button Content="单击" />
+    </Grid>
+</UserControl>

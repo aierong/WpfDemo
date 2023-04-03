@@ -56,7 +56,6 @@
                       CanUserAddRows="False"
                       IsReadOnly="True"
                       ItemsSource="{Binding Students}"
-                       
                       SelectionUnit="FullRow">
 
                 <i:Interaction.Triggers>
@@ -136,11 +135,13 @@
                                             Content="申请">
                                         <Button.Style>
                                             <Style TargetType="Button">
+                                                <!--  把Age传递过去给转换器,判断大于16岁就可以使用  -->
                                                 <Setter Property="IsEnabled" Value="{Binding Age, Converter={StaticResource myconvert}}" />
                                             </Style>
                                         </Button.Style>
                                     </Button>
 
+                                    <!--  这里把这个对象传递过去给转换器,方便灵活使用  -->
                                     <Button Command="{Binding Path=DataContext.BYCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
                                             CommandParameter="{Binding}"
                                             Content="毕业"
@@ -151,17 +152,19 @@
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
-            <StackPanel   Orientation="Horizontal">
-            <Button Width="100"
-                    HorizontalAlignment="Left"
-                    Command="{Binding SelectCommand}"
-                    CommandParameter="{Binding ElementName=userGrid, Path=SelectedItem}"
-                    Content="获取选择行(单选)" />
-            <Button Width="100"
-                    HorizontalAlignment="Left"
-                    Command="{Binding SelectsCommand}"
-                    CommandParameter="{Binding ElementName=userGrid, Path=SelectedItems}"
-                    Content="获取选择行(多选)" />
+            <StackPanel Orientation="Horizontal">
+                <!--  userGrid是DataGrid x:Name="userGrid"  -->
+                <Button Width="100"
+                        HorizontalAlignment="Left"
+                        Command="{Binding SelectCommand}"
+                        CommandParameter="{Binding ElementName=userGrid, Path=SelectedItem}"
+                        Content="获取选择行(单选)" />
+                <!--  userGrid是DataGrid x:Name="userGrid"  -->
+                <Button Width="100"
+                        HorizontalAlignment="Left"
+                        Command="{Binding SelectsCommand}"
+                        CommandParameter="{Binding ElementName=userGrid, Path=SelectedItems}"
+                        Content="获取选择行(多选)" />
             </StackPanel>
         </StackPanel>
     </Grid>

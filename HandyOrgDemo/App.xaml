@@ -6,7 +6,7 @@
     <!--<Application.Resources>
 
     </Application.Resources>-->
-    
+
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -18,9 +18,12 @@
 </Application>
 
 
-<!--
-  nuget:  HandyControl
 
+<!--
+    
+1.  nuget:  HandyControl
+
+    2.app.xaml
     <Application.Resources>
     <ResourceDictionary>
         <ResourceDictionary.MergedDictionaries>
@@ -29,4 +32,9 @@
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
 </Application.Resources>
+
+    3.空间名
+    xmlns:hc="https://handyorg.github.io/handycontrol"
+    
+    
 -->

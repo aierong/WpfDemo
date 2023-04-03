@@ -30,6 +30,8 @@ namespace HandyOrgDemo.ViewModels.UserControls
             //pwin.ShowDialog ();
         }
 
+
+
         public PopupWindowViewModel ()
         {
 
