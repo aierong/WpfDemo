@@ -10,21 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using HandyOrgDemo.Models;
+using HandyOrgDemo.ViewModels.UserControls;
 
-namespace HandyOrgDemo
+namespace HandyOrgDemo.Views.UserControls
 {
     /// <summary>
-    /// mainpage.xaml 的交互逻辑
+    /// TagListDemo.xaml 的互動邏輯
     /// </summary>
-    public partial class mainpage : Window
+    public partial class TagListDemo : UserControl
     {
-        public static readonly string GrowlScriptToken = Common.GrowlScriptToken;
-
-        public mainpage ()
+        public TagListDemo ()
         {
             InitializeComponent();
+
+            this.DataContext = new TagListDemoViewModel();
         }
     }
 }

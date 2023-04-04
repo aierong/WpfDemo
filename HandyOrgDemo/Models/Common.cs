@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace HandyOrgDemo.Models
 {
-    internal class zw
+    public class Common
     {
+        public const string GrowlScriptToken = "GrowlScriptToken";
     }
+
+
+    
+
 }
