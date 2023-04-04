@@ -149,6 +149,11 @@
     <Compile Include="Views\KJ\grid\demo1\MyCommands.cs" />
     <Compile Include="Views\KJ\grid\demo1\MyParCommand.cs" />
     <Compile Include="Views\KJ\grid\demo1\Student.cs" />
+    <Compile Include="Views\ResourceDemo\MyCommand.cs" />
+    <Compile Include="Views\ResourceDemo\ViewModels\ResourceWindowViewModel.cs" />
+    <Compile Include="Views\ResourceDemo\Views\ResourceWindow.xaml.cs">
+      <DependentUpon>ResourceWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\StyleDemo\StyleDemo1.xaml.cs">
       <DependentUpon>StyleDemo1.xaml</DependentUpon>
     </Compile>
@@ -305,6 +310,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\KJ\grid\demo1\DataWindow1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ResourceDemo\Views\ResourceWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

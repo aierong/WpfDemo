@@ -1,0 +1,85 @@
+﻿<Window x:Class="WpfApp.Views.ResourceDemo.Views.ResourceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp.Views.ResourceDemo.Views"
+        xmlns:localvm="clr-namespace:WpfApp.Views.ResourceDemo.ViewModels"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="ResourceWindow"
+        Width="800"
+        Height="450"
+        d:DataContext="{d:DesignInstance localvm:ResourceWindowViewModel,
+                                         IsDesignTimeCreatable=True}"
+        mc:Ignorable="d">
+    <!--  Window.Resources是定义本窗体的资源，自己这个窗体可访问到  -->
+    <Window.Resources>
+        <!--  这个资源变量在App.xaml里面有定义，这里再定义，在本窗体就以这个为为准  -->
+        <sys:String x:Key="ComboBoxTitle">Items(本窗体):</sys:String>
+
+        <!--  定义一个字符串数组  -->
+        <x:Array x:Key="ComboBoxItems"
+                 Type="sys:String">
+            <sys:String>Item1</sys:String>
+            <sys:String>Item2</sys:String>
+            <sys:String>Item3</sys:String>
+        </x:Array>
+
+
+        <sys:String x:Key="ComboBoxTitleWin">Items(本窗体自己标题):</sys:String>
+
+        <!--  定义数字  -->
+        <sys:Int32 x:Key="int1">123</sys:Int32>
+        <sys:Double x:Key="num1">123.002</sys:Double>
+    </Window.Resources>
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel x:Name="myStackPanel"
+                    Grid.Row="0"
+                    Grid.Column="0">
+            <!--  StackPanel.Resources是定义本控件的资源，这个控件及下属控件可访问到  -->
+            <StackPanel.Resources>
+
+                <sys:String x:Key="ComboBoxTitle">Items(本窗体(StackPanel)):</sys:String>
+                <sys:String x:Key="Title123">Items123:</sys:String>
+            </StackPanel.Resources>
+
+            <Label Content="{StaticResource ComboBoxTitle}" />
+            <ComboBox ItemsSource="{StaticResource ComboBoxItems}" />
+
+            <Label Content="{StaticResource ComboBoxTitleWin}" />
+            <ComboBox ItemsSource="{StaticResource ComboBoxItems}" />
+
+            <Label Content="{StaticResource Title123}" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0">
+            <Label Content="{StaticResource ComboBoxTitle}" />
+            <Label Content="{StaticResource int1}" />
+            <Label Content="{StaticResource num1}" />
+
+            <!--  注意: 下面这个是报错的，它是无法访问到Title123资源的  -->
+            <!--<Label Content="{StaticResource  Title123}" />-->
+        </StackPanel>
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0">
+
+            <Button Width="150"
+                    HorizontalAlignment="Left"
+                    Click="Button_Click"
+                    Content="访问资源" />
+            <Button Width="150"
+                    HorizontalAlignment="Left"
+                    Command="{Binding DataCommand}"
+                    Content="viewmodel访问资源" />
+        </StackPanel>
+    </Grid>
+</Window>
