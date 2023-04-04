@@ -92,9 +92,15 @@
                                         Binding="{Binding Name}"
                                         Header="学生姓名" />
 
+                    <!--<DataGridTextColumn Width="200"
+                                        Binding="{Binding Age}"
+                                        Header="年龄" />-->
+
+                    <!--  Binding Path=Age 这样绑定也是可以的  -->
                     <DataGridTextColumn Width="200"
                                         Binding="{Binding Age}"
                                         Header="年龄" />
+
                     <!--
                         DataGridCheckBoxColumn 是要求绑定布尔值
                     -->
@@ -130,8 +136,9 @@
                                     <!--
                                         控制某些按钮是否可用
                                     -->
+                                    <!--  CommandParameter="{Binding}" 和  CommandParameter="{Binding Path=.}" 是一样的  -->
                                     <Button Command="{Binding Path=DataContext.SQCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
-                                            CommandParameter="{Binding}"
+                                            CommandParameter="{Binding Path=.}"
                                             Content="申请">
                                         <Button.Style>
                                             <Style TargetType="Button">
