@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
+
+
 namespace WpfApp.Views.KJ.grid.demo1.convert
 {
     public class EnabledToConverter : IValueConverter

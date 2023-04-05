@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace WpfApp.Views.KJ.grid.demo1
 {
     public class Student : INotifyPropertyChanged

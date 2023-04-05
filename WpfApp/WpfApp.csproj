@@ -146,6 +146,7 @@
       <DependentUpon>DataWindow1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\KJ\grid\demo1\DataWindowViewModel1.cs" />
+    <Compile Include="Views\KJ\grid\demo1\Models\Class1.cs" />
     <Compile Include="Views\KJ\grid\demo1\MyCommands.cs" />
     <Compile Include="Views\KJ\grid\demo1\MyParCommand.cs" />
     <Compile Include="Views\KJ\grid\demo1\Student.cs" />
