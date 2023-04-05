@@ -11,11 +11,23 @@
              d:DesignHeight="450"
              d:DesignWidth="800"
              mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style x:Key="TagCustomStyle"
+               BasedOn="{StaticResource TagBaseStyle}"
+               TargetType="hc:Tag">
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="IsSelected" Value="False" />
+            <Setter Property="Selectable" Value="False" />
+            <Setter Property="Content" Value="{Binding Name}" />
+            <Setter Property="ShowCloseButton" Value="{Binding ShowCloseButton}" />
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <StackPanel>
             <hc:TagContainer Width="420"
                              Margin="11"
                              Padding="5"
+                             ItemContainerStyle="{StaticResource TagCustomStyle}"
                              ItemsSource="{Binding Students}" />
             <Button Margin="11"
                     Padding="5"

@@ -24,24 +24,24 @@ namespace HandyOrgDemo.ViewModels.UserControls
         {
             Students = new ObservableCollection<Student>()
             {
-                new Student(){ Id=1, Age=11, Name="a1" },
-                new Student(){ Id=2, Age=12, Name="a2" },
-                new Student(){ Id=3, Age=13, Name="A#3" }
+                new Student(){ Id=1, Age=11, Name="a(哈哈无法删除)" ,ShowCloseButton=false},
+                new Student(){ Id=2, Age=12, Name="a2" ,ShowCloseButton=true},
+                new Student(){ Id=3, Age=13, Name="A#3" ,ShowCloseButton=true}
             };
         }
 
         [RelayCommand]
         void Add ()
         {
-
+            var i = Students.Count >= 1 ? Students.Max( item => item.Id + 1 ) : 1;
 
             Students.Add( new Student()
             {
-                Id = Students.Count >= 1 ? Students.Max( item => item.Id + 1 ) : 1 ,
+                ShowCloseButton = true ,
+                Id = i ,
                 Age = 18 ,
-                Name = "guoguo"
+                Name = "guoguo" + i.ToString()
             } );
-
 
         }
 

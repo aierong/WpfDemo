@@ -16,7 +16,9 @@ namespace HandyOrgDemo.Models
             get; set;
         }
 
-        public bool IsSelected
+
+
+        public bool ShowCloseButton
         {
             get; set;
         }
@@ -57,10 +59,10 @@ namespace HandyOrgDemo.Models
 
 
 
-        public override string ToString ()
-        {
-            return Name;
-        }
+        //public override string ToString ()
+        //{
+        //    return Name;
+        //}
 
     }
 }

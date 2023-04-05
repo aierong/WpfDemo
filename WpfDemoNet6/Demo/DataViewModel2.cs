@@ -138,10 +138,6 @@ namespace WpfDemoNet6.Demo
         void ButtonClickPar ( double val )
         {
             Title = $"hello(改):{val}";
-
-            //DataWindow1 dlg = new DataWindow1();
-            //////dlg.Show ();
-            //dlg.ShowDialog();
         }
 
         //public RelayCommand<double> ButtonClickParCommand
