@@ -18,6 +18,12 @@
         </Grid.RowDefinitions>
         <ScrollViewer>
             <TabControl TabStripPlacement="Left">
+                <TabItem Header="Drawer Demo">
+                    <localuc:DrawerUserControl />
+                </TabItem>
+                <TabItem Header="Drawer(MVVM操作) Demo">
+                    <localuc:DrawerMvvm />
+                </TabItem>
                 <TabItem Header="Growl Demo">
                     <localuc:GrowlDemoUserControl />
                 </TabItem>
@@ -37,7 +43,7 @@
                 <TabItem Header="Tag列表(添加,删除) Demo">
                     <localuc:TagListDemo />
                 </TabItem>
-                
+
                 <TabItem Header="日志记录">
                     <!--<Grid>
                     <demo:LoggerDemo x:Name="MyLogger"/>
