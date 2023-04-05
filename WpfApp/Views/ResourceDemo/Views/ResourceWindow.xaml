@@ -31,6 +31,9 @@
         <!--  定义数字  -->
         <sys:Int32 x:Key="int1">123</sys:Int32>
         <sys:Double x:Key="num1">123.002</sys:Double>
+
+
+        <sys:Boolean  x:Key="bl1">true</sys:Boolean>
     </Window.Resources>
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
