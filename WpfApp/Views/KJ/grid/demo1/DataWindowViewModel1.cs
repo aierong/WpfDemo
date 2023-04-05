@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Xml.Linq;
+using WpfApp.Views.KJ.grid.demo1.Models;
 
 namespace WpfApp.Views.KJ.grid.demo1
 {
@@ -41,6 +42,16 @@ namespace WpfApp.Views.KJ.grid.demo1
                 Debug.WriteLine( "UpdateCommand 修改" );
 
                 MessageBox.Show( "修改" );
+            } );
+
+            SelectRowsCommand = new MyCommands( () =>
+            {
+                Debug.WriteLine( "SelectRowsCommand  " );
+
+                foreach ( Student item in Students )
+                {
+                    item.IsSelectRow = item.IsMan && item.Age >= 12;
+                }
             } );
 
             DeleteCommand = new MyParCommand<Student>( ( Student stu ) =>
@@ -98,7 +109,13 @@ namespace WpfApp.Views.KJ.grid.demo1
             {
                 Debug.WriteLine( "SelectCommand 获取选择行(单选)" );
 
-                Debug.WriteLine( stu.Id );
+                if ( stu != null )
+                {
+                    Debug.WriteLine( stu.Id );
+                }
+
+
+
             } );
 
             SelectsCommand = new MyParCommand<System.Collections.IList>( ( System.Collections.IList selectList ) =>
@@ -106,15 +123,24 @@ namespace WpfApp.Views.KJ.grid.demo1
                 //多选
                 Debug.WriteLine( string.Format( "SelectsCommand 多选,选择了{0}条记录" , selectList.Count ) );
 
-                foreach ( Student item in selectList )
+                if ( selectList != null )
                 {
-                    Debug.WriteLine( item.Id );
+                    if ( selectList.Count > 0 )
+                    {
+                        foreach ( Student item in selectList )
+                        {
+                            Debug.WriteLine( item.Id );
+                        }
+                    }
                 }
 
             } );
         }
 
-
+        public MyCommands SelectRowsCommand
+        {
+            get; set;
+        }
 
         public MyCommands UpdateCommand
         {

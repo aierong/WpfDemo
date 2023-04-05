@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
-
+using WpfApp.Views.KJ.grid.demo1.Models;
 
 
 namespace WpfApp.Views.KJ.grid.demo1.convert

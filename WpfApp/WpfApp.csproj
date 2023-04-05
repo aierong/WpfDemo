@@ -146,10 +146,9 @@
       <DependentUpon>DataWindow1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\KJ\grid\demo1\DataWindowViewModel1.cs" />
-    <Compile Include="Views\KJ\grid\demo1\Models\Class1.cs" />
     <Compile Include="Views\KJ\grid\demo1\MyCommands.cs" />
     <Compile Include="Views\KJ\grid\demo1\MyParCommand.cs" />
-    <Compile Include="Views\KJ\grid\demo1\Student.cs" />
+    <Compile Include="Views\KJ\grid\demo1\Models\Student.cs" />
     <Compile Include="Views\ResourceDemo\MyCommand.cs" />
     <Compile Include="Views\ResourceDemo\ViewModels\ResourceWindowViewModel.cs" />
     <Compile Include="Views\ResourceDemo\Views\ResourceWindow.xaml.cs">

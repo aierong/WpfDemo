@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 
 
-namespace WpfApp.Views.KJ.grid.demo1
+namespace WpfApp.Views.KJ.grid.demo1.Models
 {
     public class Student : INotifyPropertyChanged
     {
@@ -16,6 +16,23 @@ namespace WpfApp.Views.KJ.grid.demo1
         public int Id
         {
             get; set;
+        }
+
+        private bool _isselectrow;
+
+        public bool IsSelectRow
+        {
+            get
+            {
+                return _isselectrow;
+            }
+            set
+            {
+                _isselectrow = value;
+
+                //通知数据已经变化
+                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "IsSelectRow" ) );
+            }
         }
 
         private bool _isman;
