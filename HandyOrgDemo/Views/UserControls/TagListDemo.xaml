@@ -1,5 +1,5 @@
 ﻿<!--
-动态生成的写法
+    动态生成的写法
 -->
 
 <UserControl x:Class="HandyOrgDemo.Views.UserControls.TagListDemo"
@@ -16,9 +16,9 @@
              d:DesignWidth="800"
              mc:Ignorable="d">
     <UserControl.Resources>
-			<!--
-			设定项目模版：把数据源的属性和每项的属性绑定
-			-->
+        <!--
+            设定项目模版：把数据源的属性和每项的属性绑定
+        -->
         <Style x:Key="TagCustomStyle"
                BasedOn="{StaticResource TagBaseStyle}"
                TargetType="hc:Tag">
@@ -28,18 +28,37 @@
             <Setter Property="Content" Value="{Binding Name}" />
             <Setter Property="ShowCloseButton" Value="{Binding ShowCloseButton}" />
         </Style>
+        <Style x:Key="TagCustomStyle222"
+               BasedOn="{StaticResource TagBaseStyle}"
+               TargetType="hc:Tag">
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="IsSelected" Value="False" />
+            <Setter Property="Selectable" Value="False" />
+            <Setter Property="Content" Value="{Binding Path=.}" />
+
+        </Style>
     </UserControl.Resources>
     <Grid>
         <StackPanel>
-			<!--
-			ItemContainerStyle 绑定项目模版
-			ItemsSource 绑定数据源
-			-->
+            <!--
+                ItemContainerStyle 绑定项目模版
+                ItemsSource 绑定数据源
+            -->
             <hc:TagContainer Width="420"
                              Margin="11"
                              Padding="5"
                              ItemContainerStyle="{StaticResource TagCustomStyle}"
                              ItemsSource="{Binding Students}" />
+
+            <!--
+                绑定的数据源就是字符串列表
+            -->
+            <hc:TagContainer Width="420"
+                             Margin="11"
+                             Padding="5"
+                             ItemContainerStyle="{StaticResource TagCustomStyle222}"
+                             ItemsSource="{Binding ManList}" />
+
             <Button Margin="11"
                     Padding="5"
                     HorizontalAlignment="Center"

@@ -20,6 +20,12 @@ namespace HandyOrgDemo.ViewModels.UserControls
             get; set;
         } = new ObservableCollection<Student>();
 
+
+        public ObservableCollection<string> ManList
+        {
+            get; set;
+        } = new ObservableCollection<string>();
+
         public TagListDemoViewModel ()
         {
             Students = new ObservableCollection<Student>()
@@ -27,6 +33,12 @@ namespace HandyOrgDemo.ViewModels.UserControls
                 new Student(){ Id=1, Age=11, Name="a(哈哈无法删除)" ,ShowCloseButton=false},
                 new Student(){ Id=2, Age=12, Name="a2" ,ShowCloseButton=true},
                 new Student(){ Id=3, Age=13, Name="A#3" ,ShowCloseButton=true}
+            };
+
+            ManList = new ObservableCollection<string>()
+            {
+                "I",
+                "guoguo"
             };
         }
 
@@ -43,6 +55,7 @@ namespace HandyOrgDemo.ViewModels.UserControls
                 Name = "guoguo" + i.ToString()
             } );
 
+            ManList.Add("qq");
         }
 
 
