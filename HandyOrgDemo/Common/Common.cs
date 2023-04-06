@@ -4,14 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HandyOrgDemo.Models
+namespace HandyOrgDemo.Common
 {
     public class Common
     {
         public const string GrowlScriptToken = "GrowlScriptToken";
     }
-
-
-    
-
 }

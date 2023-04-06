@@ -40,6 +40,9 @@
     </UserControl.Resources>
     <Grid>
         <StackPanel>
+            <!--  
+            开发重点:列表中tag如果被操作者删除后，控件会自动删除vm中列表对应项,所以我们只要在界面上控制添加功能即可  
+            -->
             <!--
                 ItemContainerStyle 绑定项目模版
                 ItemsSource 绑定数据源

@@ -29,16 +29,18 @@ namespace HandyOrgDemo.ViewModels.UserControls
             //HandyControl.Controls.Growl.Success( "运行成功" , Common.GrowlScriptToken );
             HandyControl.Controls.Growl.SuccessGlobal( new GrowlInfo()
             {
-                Token = Common.GrowlScriptToken ,
+                Token = Common.Common.GrowlScriptToken ,
                 Message = "运行成功(全局)" ,
             } );
 
+
+
             HandyControl.Controls.Growl.WarningGlobal( new GrowlInfo()
             {
-                Token = Common.GrowlScriptToken ,
+                Token = Common.Common.GrowlScriptToken ,
                 Message = "运行成功(全局)" ,
             } );
-                       
+
         }
 
 

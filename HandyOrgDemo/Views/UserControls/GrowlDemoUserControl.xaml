@@ -14,7 +14,7 @@
     <Grid>
 
         <!--
-            特别说明:一般不在自己窗体定义ScrollViewer这些xaml，只要在母窗体(mainpage.xaml)定义即可，这样每个子窗体都可以用
+           特别说明:一般不在自己窗体定义ScrollViewer这些xaml，一般只要在母窗体(mainpage.xaml)定义即可，这样每个子窗体都可以调用
         -->
 
         <!--

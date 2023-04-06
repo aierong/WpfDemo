@@ -20,7 +20,7 @@ namespace HandyOrgDemo
     /// </summary>
     public partial class mainpage : Window
     {
-        public static readonly string GrowlScriptToken = Common.GrowlScriptToken;
+        //public static readonly string GrowlScriptToken = Common.GrowlScriptToken;
 
         public mainpage ()
         {
