@@ -44,6 +44,9 @@
                 <TabItem Header="Tag列表(添加,删除) Demo">
                     <localuc:TagListDemo />
                 </TabItem>
+                <TabItem Header="HC版本TextBox Demo">
+                    <localuc:HCTextBox />
+                </TabItem>
 
                 <TabItem Header="日志记录">
                     <!--<Grid>
@@ -74,6 +77,12 @@
         </ScrollViewer>-->
 
 
+        <!--
+           特别说明:
+        一般只要在母窗体(mainpage.xaml)定义xaml即可，这样每个子窗体都可以调用
+        最好使用指定Token模式的
+        -->
+        
         <ScrollViewer Grid.Row="1"
                       HorizontalAlignment="Right"
                       VerticalAlignment="Top"

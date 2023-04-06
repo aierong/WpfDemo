@@ -25,8 +25,9 @@ namespace HandyOrgDemo.ViewModels.UserControls
 
             //方法名字带Global就是全局的,就是在屏幕最上方，下方等等显示消息 (推荐使用全局)
             //方法名字不带Global,就是在本窗体内部显示提示消息
-            //指定token名字  Common.GrowlScriptToken
+            //指定token名字   
             //HandyControl.Controls.Growl.Success( "运行成功" , Common.GrowlScriptToken );
+            //一般使用xxxGlobalq全局弹窗即可
             HandyControl.Controls.Growl.SuccessGlobal( new GrowlInfo()
             {
                 Token = Common.Common.GrowlScriptToken ,
