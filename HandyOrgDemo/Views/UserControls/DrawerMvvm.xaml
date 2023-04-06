@@ -1,4 +1,10 @@
-﻿<UserControl x:Class="HandyOrgDemo.Views.UserControls.DrawerMvvm"
+﻿
+
+        <!--
+            Drawer	DEMO
+        -->
+		
+<UserControl x:Class="HandyOrgDemo.Views.UserControls.DrawerMvvm"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -36,8 +42,12 @@
 
 
         </Grid>
+		<!--
+            Drawer：就是通过控制IsOpen属性来控制弹窗和关闭
+        -->
         <!--
-            Dock	显示位置
+            Dock：显示位置
+			IsOpen :打开关闭弹窗
         -->
         <hc:Drawer Name="DrawerLeft"
                    Dock="Left"
@@ -54,13 +64,15 @@
                     <TextBlock Margin="10,0,0,0"
                                HorizontalAlignment="Left"
                                Text="Header" />
-                    <!--  带一个关闭按钮  -->
+                    <!--  弹窗会带一个关闭按钮 ，点按钮会自动关闭弹窗 -->
                     <!--<Button Grid.Row="0"
                             HorizontalAlignment="Right"
                             hc:IconElement.Geometry="{StaticResource DeleteFillCircleGeometry}"
                             Command="hc:ControlCommands.Close"
                             Foreground="{DynamicResource PrimaryTextBrush}"
                             Style="{StaticResource ButtonIcon}" />-->
+							
+					<!--  我们自己用一个按钮 ，控制弹窗关闭 -->
                     <Button Grid.Row="1"
                             Grid.Column="0"
                             Margin="10"

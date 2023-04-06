@@ -53,6 +53,7 @@ namespace WpfApp.Views.KJ.grid.demo1
 
                 foreach ( Student item in Students )
                 {
+					//给IsSelectRow赋值，前端页面就会选择上
                     item.IsSelectRow = item.IsMan && item.Age >= 12;
                 }
             } );

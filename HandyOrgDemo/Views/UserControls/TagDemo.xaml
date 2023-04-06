@@ -1,4 +1,8 @@
-﻿<UserControl x:Class="HandyOrgDemo.Views.UserControls.TagDemo"
+﻿<!--
+固定写法
+-->
+
+<UserControl x:Class="HandyOrgDemo.Views.UserControls.TagDemo"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -29,7 +33,6 @@
                 <hc:Tag Margin="5"
                         Content="Text3" />
             </hc:TagContainer>
-
         </StackPanel>
     </Grid>
 </UserControl>
