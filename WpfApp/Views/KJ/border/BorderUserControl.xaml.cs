@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp.Views.KJ
+namespace WpfApp.Views.KJ.border
 {
     /// <summary>
-    /// Window22.xaml 的互動邏輯
+    /// BorderUserControl.xaml 的互動邏輯
     /// </summary>
-    public partial class Window22 : Window
+    public partial class BorderUserControl : UserControl
     {
-        public Window22 ()
+        public BorderUserControl ()
         {
             InitializeComponent();
         }

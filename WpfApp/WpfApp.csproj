@@ -143,6 +143,9 @@
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FormatDemo\WindowViewModel1.cs" />
+    <Compile Include="Views\KJ\border\BorderUserControl.xaml.cs">
+      <DependentUpon>BorderUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\KJ\border\BorderWindow1.xaml.cs">
       <DependentUpon>BorderWindow1.xaml</DependentUpon>
     </Compile>
@@ -155,17 +158,13 @@
     <Compile Include="Views\KJ\grid\demo1\MyCommands.cs" />
     <Compile Include="Views\KJ\grid\demo1\MyParCommand.cs" />
     <Compile Include="Views\KJ\grid\demo1\Models\Student.cs" />
+    <Compile Include="Views\KJ\img\ImageUserControl.xaml.cs">
+      <DependentUpon>ImageUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KJ\img\ImageViewModel.cs" />
+    <Compile Include="Views\KJ\img\MyCommand.cs" />
     <Compile Include="Views\KJ\mainpage.xaml.cs">
       <DependentUpon>mainpage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\KJ\UserControl12.xaml.cs">
-      <DependentUpon>UserControl12.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\KJ\UserControl12345.xaml.cs">
-      <DependentUpon>UserControl12345.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\KJ\Window22.xaml.cs">
-      <DependentUpon>Window22.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ResourceDemo\MyCommand.cs" />
     <Compile Include="Views\ResourceDemo\ViewModels\ResourceWindowViewModel.cs" />
@@ -331,6 +330,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\KJ\border\BorderUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\KJ\border\BorderWindow1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -339,19 +342,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\KJ\img\ImageUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\KJ\mainpage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\KJ\UserControl12.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\KJ\UserControl12345.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\KJ\Window22.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -451,6 +446,8 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Resource Include="Imgs\VER.png" />
+    <Resource Include="Imgs\zhonghe1.png" />
     <Resource Include="微软官方WPF示例\readme.txt" />
   </ItemGroup>
   <ItemGroup />

@@ -24,10 +24,13 @@ namespace WpfApp.Views.KJ
             InitializeComponent();
         }
 
+
+
         private void btnNav_Click ( object sender , RoutedEventArgs e )
         {
             Button btn = sender as Button;
             var uri = btn.Tag.ToString();
+
             //uri = "pack://application:,,,/Views/KJ/Window22.xaml";
             //uri = "/Views/KJ/UserControl12.xaml";
 

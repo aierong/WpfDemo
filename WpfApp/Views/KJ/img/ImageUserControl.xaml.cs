@@ -13,16 +13,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp.Views.KJ
+namespace WpfApp.Views.KJ.img
 {
     /// <summary>
-    /// UserControl12.xaml 的互動邏輯
+    /// ImageUserControl.xaml 的互動邏輯
     /// </summary>
-    public partial class UserControl12 : UserControl
+    public partial class ImageUserControl : UserControl
     {
-        public UserControl12 ()
+        public ImageUserControl ()
         {
             InitializeComponent();
+
+            this.DataContext = new ImageViewModel();
         }
     }
 }

@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="WpfApp.Views.KJ.img.ImageUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WpfApp.Views.KJ.img"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DataContext="{d:DesignInstance local:ImageViewModel,
+                                              IsDesignTimeCreatable=True}"
+             d:DesignHeight="650"
+             d:DesignWidth="800"
+             mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+        <!--  dd  -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!--  可以这样加载网络上图片  -->
+        <!--<Image Grid.Row="0"
+               Grid.Column="0"
+               Source="https://upload.wikimedia.org/wikipedia/commons/3/30/Googlelogo.png" />-->
+
+
+        <Image Grid.Row="0"
+               Grid.Column="0"
+               Source="/Imgs/zhonghe1.png" />
+
+        <Image Grid.Row="1"
+               Grid.Column="0"
+               Source="/Imgs/VER.png" />
+
+        <Image Grid.Row="2"
+               Grid.Column="0"
+               Width="100"
+               Height="100"
+               Source="/Imgs/VER.png" />
+
+        <!--
+            Stretch属性:
+            
+            Uniform: 这是默认模式。 图片将自动缩放，以便它适合图片区域。 将保留图片的宽高比。
+            UniformToFill: 图片将被缩放，以便完全填充图片区域。 将保留图片的宽高比。
+            Fill: 图片将缩放以适合图片控件的区域。 可能无法保留宽高比，因为图片的高度和宽度是独立缩放的。
+            None: 如果图片小于图片控件，则不执行任何操作。 如果它比图片控件大，则会裁剪图片以适合图片控件，这意味着只有部分图片可见。
+        -->
+        <Image Grid.Row="0"
+               Grid.Column="1"
+               Source="/Imgs/zhonghe1.png"
+               Stretch="Fill" />
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1">
+            <Grid ShowGridLines="True">
+                <!--  dd  -->
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row="0"
+                       Grid.Column="0"
+                       Source="{Binding ImgName}" />
+                <Button Grid.Row="1"
+                        Grid.Column="0"
+                        Height="30"
+                        Command="{Binding UpdateImgCommand}"
+                        Content="动态改变图片" />
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>
