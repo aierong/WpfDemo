@@ -7,7 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using WpfApp.Views.BaseCommand;
-using WpfApp.Views.KJ.Base;
+
+
 
 namespace WpfApp.Views.KJ.img
 {

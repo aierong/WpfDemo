@@ -129,7 +129,6 @@
     </Compile>
     <Compile Include="Views\CommandDemo\demo1\duoViewModel.cs" />
     <Compile Include="Views\CommandDemo\demo1\MyCommand.cs" />
-    <Compile Include="Views\CommandDemo\demo1\MyParCommand.cs" />
     <Compile Include="Views\CommandDemo\demo1\ObjectConvert.cs" />
     <Compile Include="Views\CommandDemo\demo1\ViewModelBase.cs" />
     <Compile Include="Views\ConverterDemo\demo1\conver\BoolConverter.cs" />
@@ -144,9 +143,6 @@
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FormatDemo\WindowViewModel1.cs" />
-    <Compile Include="Views\KJ\Base\Page1.xaml.cs">
-      <DependentUpon>Page1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\KJ\border\BorderUserControl.xaml.cs">
       <DependentUpon>BorderUserControl.xaml</DependentUpon>
     </Compile>
@@ -336,10 +332,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\FormatDemo\Window1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\KJ\Base\Page1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

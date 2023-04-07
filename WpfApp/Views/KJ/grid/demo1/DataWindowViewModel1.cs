@@ -12,7 +12,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Xml.Linq;
 using WpfApp.Views.KJ.grid.demo1.Models;
-using WpfApp.Views.KJ.Base;
 using WpfApp.Views.BaseCommand;
 
 namespace WpfApp.Views.KJ.grid.demo1
