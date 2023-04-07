@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using WpfApp.Views.BaseCommand;
 using WpfApp.Views.BindData.ListData.Models;
 
 namespace WpfApp.Views.BindData.ListData.ViewModels
@@ -43,7 +44,7 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
 
 
             //修改列表中数据,删除几个,再添加
-            UpdateCommand = new MyCommands( () =>
+            UpdateCommand = new MyCommand( () =>
            {
                if ( Students.Count >= 2 )
                {
@@ -62,7 +63,7 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
                //PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Total" ) );
            } );
 
-            AllUpdateCommand = new MyCommands( () =>
+            AllUpdateCommand = new MyCommand( () =>
             {
                 //这样直接赋值,UI无法感知变化的
                 //Students = new ObservableCollection<Student>() {
@@ -82,7 +83,7 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
                 //PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Total" ) );
             } );
 
-            UpdateOneCommand = new MyCommands( () =>
+            UpdateOneCommand = new MyCommand( () =>
             {
                 if ( Students.Count > 0 )
                 {
@@ -101,19 +102,19 @@ namespace WpfApp.Views.BindData.ListData.ViewModels
 
 
 
-        public MyCommands UpdateCommand
+        public MyCommand UpdateCommand
         {
             get; set;
         }
 
 
-        public MyCommands AllUpdateCommand
+        public MyCommand AllUpdateCommand
         {
             get; set;
         }
 
 
-        public MyCommands UpdateOneCommand
+        public MyCommand UpdateOneCommand
         {
             get; set;
         }

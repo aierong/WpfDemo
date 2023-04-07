@@ -111,7 +111,6 @@
     <Compile Include="Views\BindData\ListData\plus\Views\PlusData.xaml.cs">
       <DependentUpon>PlusData.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\BindData\ListData\ViewModels\MyCommands.cs" />
     <Compile Include="Views\BindData\ListData\ViewModels\ListDataViewModel.cs" />
     <Compile Include="Views\BindData\ListData\Views\ListData.xaml.cs">
       <DependentUpon>ListData.xaml</DependentUpon>
