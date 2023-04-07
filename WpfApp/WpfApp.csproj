@@ -144,6 +144,9 @@
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FormatDemo\WindowViewModel1.cs" />
+    <Compile Include="Views\KJ\Base\Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\KJ\border\BorderUserControl.xaml.cs">
       <DependentUpon>BorderUserControl.xaml</DependentUpon>
     </Compile>
@@ -156,7 +159,7 @@
       <DependentUpon>DataWindow1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\KJ\grid\demo1\DataWindowViewModel1.cs" />
-    <Compile Include="Views\KJ\Base\MyParCommand.cs" />
+    <Compile Include="Views\BaseCommand\MyParCommand.cs" />
     <Compile Include="Views\KJ\grid\demo1\Models\Student.cs" />
     <Compile Include="Views\KJ\img\ImageUserControl.xaml.cs">
       <DependentUpon>ImageUserControl.xaml</DependentUpon>
@@ -333,6 +336,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\FormatDemo\Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KJ\Base\Page1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
