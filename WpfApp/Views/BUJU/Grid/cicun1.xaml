@@ -29,14 +29,26 @@
                 下面3列宽度分配原则：
                 
                 第3列：固定200 剩下的分给其它2列
-            
+                
                 剩下的分成5份
-                第1列：占1/5  第2列：占4/5  
+                第1列：占1/5  第2列：占4/5
             -->
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="4*" />
             <!--  固定列宽  -->
             <ColumnDefinition Width="200" />
         </Grid.ColumnDefinitions>
+        <Border Grid.Row="0"
+                Grid.Column="0"
+                Background="Aqua" />
+        <Border Grid.Row="1"
+                Grid.Column="0"
+                Background="green" />
+        <Border Grid.Row="2"
+                Grid.Column="0"
+                Background="red" />
+        <Border Grid.Row="3"
+                Grid.Column="0"
+                Background="Aquamarine" />
     </Grid>
 </Window>
