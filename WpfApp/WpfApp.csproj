@@ -105,10 +105,8 @@
     <Compile Include="Views\BindData\contexts\dataWindow1.xaml.cs">
       <DependentUpon>dataWindow1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\BindData\contexts\MyCommand.cs" />
     <Compile Include="Views\BindData\ListData\Models\Student.cs" />
     <Compile Include="Views\BindData\ListData\plus\Models\EMP.cs" />
-    <Compile Include="Views\BindData\ListData\plus\ViewModels\CZCommand.cs" />
     <Compile Include="Views\BindData\ListData\plus\ViewModels\PlusDataViewModel.cs" />
     <Compile Include="Views\BindData\ListData\plus\Views\PlusData.xaml.cs">
       <DependentUpon>PlusData.xaml</DependentUpon>

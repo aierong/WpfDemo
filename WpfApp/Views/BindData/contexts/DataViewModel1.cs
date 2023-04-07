@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using WpfApp.Views.BaseCommand;
 
 
 //定义ViewModel类实现接口: INotifyPropertyChanged 

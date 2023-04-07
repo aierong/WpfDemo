@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WpfApp.Views.BaseCommand;
 using WpfApp.Views.BindData.ListData.plus.Models;
 
 
@@ -39,7 +40,7 @@ namespace WpfApp.Views.BindData.ListData.plus.ViewModels
                 PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Total" ) );
             };
 
-            UpdateCommand = new CZCommand( () =>
+            UpdateCommand = new MyCommand( () =>
             {
                 if ( Students.Count >= 2 )
                 {
@@ -57,7 +58,7 @@ namespace WpfApp.Views.BindData.ListData.plus.ViewModels
                 //PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Total" ) );
             } );
 
-            AllUpdateCommand = new CZCommand( () =>
+            AllUpdateCommand = new MyCommand( () =>
             {
                 //这样直接赋值,UI无法感知变化的
                 //Students = new BindingList<EMP>() {
@@ -77,7 +78,7 @@ namespace WpfApp.Views.BindData.ListData.plus.ViewModels
             } );
 
 
-            UpdateOneCommand = new CZCommand( () =>
+            UpdateOneCommand = new MyCommand( () =>
             {
                 if ( Students.Count > 0 )
                 {
@@ -95,19 +96,19 @@ namespace WpfApp.Views.BindData.ListData.plus.ViewModels
         }
 
 
-        public CZCommand UpdateCommand
+        public MyCommand UpdateCommand
         {
             get; set;
         }
 
 
-        public CZCommand AllUpdateCommand
+        public MyCommand AllUpdateCommand
         {
             get; set;
         }
 
 
-        public CZCommand UpdateOneCommand
+        public MyCommand UpdateOneCommand
         {
             get; set;
         }
