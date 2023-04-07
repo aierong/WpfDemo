@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using WpfApp.Views.BaseCommand;
 
 namespace WpfApp.Views.CommandDemo.demo1
 {
@@ -14,7 +14,7 @@ namespace WpfApp.Views.CommandDemo.demo1
             Name = "Name_init";
             Title = "Titleinit";
 
-            SaveDataCommand = new MyCommand( ( object obj ) =>
+            SaveDataCommand = new MyObjCommand( ( object obj ) =>
             {
                 //obj是传递过来的参数
                 if ( obj != null )
@@ -32,7 +32,7 @@ namespace WpfApp.Views.CommandDemo.demo1
             } );
         }
 
-        public MyCommand SaveDataCommand
+        public MyObjCommand SaveDataCommand
         {
             get; set;
         }

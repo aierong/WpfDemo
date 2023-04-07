@@ -125,7 +125,7 @@
       <DependentUpon>duo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CommandDemo\demo1\duoViewModel.cs" />
-    <Compile Include="Views\CommandDemo\demo1\MyCommand.cs" />
+    <Compile Include="Views\CommandDemo\demo1\MyObjCommand.cs" />
     <Compile Include="Views\CommandDemo\demo1\ObjectConvert.cs" />
     <Compile Include="Views\CommandDemo\demo1\ViewModelBase.cs" />
     <Compile Include="Views\ConverterDemo\demo1\conver\BoolConverter.cs" />

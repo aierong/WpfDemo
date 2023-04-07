@@ -7,14 +7,14 @@ using System.Windows.Input;
 
 namespace WpfApp.Views.CommandDemo.demo1
 {
-    public  class MyCommand : ICommand
+    public  class MyObjCommand : ICommand
     {
         public event EventHandler CanExecuteChanged;
 
         Action<object> execAction;
 
 
-        public MyCommand ( Action<object> action )
+        public MyObjCommand ( Action<object> action )
         {
             execAction = action;
         }
