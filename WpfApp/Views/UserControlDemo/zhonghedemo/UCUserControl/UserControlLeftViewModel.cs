@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Xml.Linq;
+using WpfApp.Views.BaseCommand;
 
 namespace WpfApp.Views.UserControlDemo.zhonghedemo.UCUserControl
 {
