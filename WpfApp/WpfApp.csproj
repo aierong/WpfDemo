@@ -134,7 +134,6 @@
     <Compile Include="Views\ConverterDemo\demo1\Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormatDemo\MyCommand.cs" />
     <Compile Include="Views\FormatDemo\Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
