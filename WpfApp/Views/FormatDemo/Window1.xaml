@@ -57,7 +57,7 @@
 
             <!--  绑定字符串  -->
             <TextBox Text="{Binding Name, StringFormat=我名字:{0}}" />
-            <!--  绑定字符串 如果前缀不要其它文字,请用{}  -->
+            <!--  绑定字符串 如果前缀没有其它文字, 那么在XAML中定义时，您需要添加一组额外的花括号{}  -->
             <TextBox Text="{Binding Name, StringFormat={}{0}la}" />
 
             <!--  多重绑定  -->

@@ -5,23 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-
-
-namespace WpfApp.Views.KJ.grid.demo1
+namespace WpfApp.Views.KJ.Base
 {
-    public class MyCommands : ICommand
+    public class MyCommand : ICommand
     {
         public event EventHandler CanExecuteChanged;
-
         Action execAction;
-       
 
-        public MyCommands ( Action action )
+        public MyCommand ( Action action )
         {
             execAction = action;
         }
-
-        
 
         public bool CanExecute ( object parameter )
         {

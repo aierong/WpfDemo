@@ -12,6 +12,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Xml.Linq;
 using WpfApp.Views.KJ.grid.demo1.Models;
+using WpfApp.Views.KJ.Base;
 
 namespace WpfApp.Views.KJ.grid.demo1
 {
@@ -40,14 +41,14 @@ namespace WpfApp.Views.KJ.grid.demo1
                 new Student(){ Id=9, Age=19, Name="Yang",IsMan =true}
             };
 
-            UpdateCommand = new MyCommands( () =>
+            UpdateCommand = new MyCommand( () =>
             {
                 Debug.WriteLine( "UpdateCommand 修改" );
 
                 MessageBox.Show( "修改" );
             } );
 
-            SelectRowsCommand = new MyCommands( () =>
+            SelectRowsCommand = new MyCommand( () =>
             {
                 Debug.WriteLine( "SelectRowsCommand  " );
 
@@ -141,12 +142,12 @@ namespace WpfApp.Views.KJ.grid.demo1
             } );
         }
 
-        public MyCommands SelectRowsCommand
+        public MyCommand SelectRowsCommand
         {
             get; set;
         }
 
-        public MyCommands UpdateCommand
+        public MyCommand UpdateCommand
         {
             get; set;
         }

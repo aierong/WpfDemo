@@ -31,6 +31,11 @@
                     Content="Image"
                     Tag="/Views/KJ/img/ImageUserControl.xaml" />
 
+            <Button Margin="5"
+                    Click="btnNav_Click"
+                    Content="TabControl"
+                    Tag="/Views/KJ/Tab/TabUserControl.xaml" />
+
         </WrapPanel>
 
         <Frame Name="frmMain"

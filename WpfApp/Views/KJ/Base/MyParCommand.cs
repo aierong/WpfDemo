@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 
 
-namespace WpfApp.Views.KJ.grid.demo1
+namespace WpfApp.Views.KJ.Base
 {
     public class MyParCommand<T> : ICommand
     {
