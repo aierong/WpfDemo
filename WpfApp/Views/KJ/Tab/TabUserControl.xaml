@@ -14,7 +14,7 @@
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
-
+             
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -69,7 +69,20 @@
                 <Label Content="tab 3" />
             </TabItem>
         </TabControl>
+        <!--  通过使用TabStripPlacement 属性改变标签位置  -->
+        <TabControl Grid.Row="2"
+                    Grid.Column="0"
+                    TabStripPlacement="Bottom">
+            <TabItem Header="General">
+                <Label Content="Content goes here..." />
+            </TabItem>
+            <TabItem Header="Security" />
+            <TabItem Header="Details" />
+        </TabControl>
 
+
+
+        <!--  mvvm控制tab  -->
         <Grid Grid.Row="0"
               Grid.Column="1"
               ShowGridLines="True">
@@ -80,7 +93,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            
+
             <TabControl Grid.Row="0"
                         Grid.Column="0"
                         SelectedIndex="{Binding UserSelectIndex}">
@@ -99,9 +112,11 @@
                         Orientation="Horizontal">
                 <Button Width="80"
                         Margin="10,0,0,0"
+                        Command="{Binding UpdateNextCommand}"
                         Content="下一个tab" />
                 <Button Width="120"
                         Margin="10,0,0,0"
+                        Command="{Binding GetIndexCommand}"
                         Content="得选择的tab" />
             </StackPanel>
         </Grid>

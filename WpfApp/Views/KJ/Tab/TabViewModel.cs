@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using WpfApp.Views.KJ.Base;
 
 namespace WpfApp.Views.KJ.Tab
 {
-    public partial class TabViewModel :    INotifyPropertyChanged
+    public partial class TabViewModel : INotifyPropertyChanged
     {
-     
-        
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -19,12 +21,19 @@ namespace WpfApp.Views.KJ.Tab
         {
             UserSelectIndex = 1;
 
-            //UpdateImgCommand = new MyCommand( () =>
-            //{
-            //    Debug.WriteLine( "UpdateImgCommand:" );
+            UpdateNextCommand = new MyCommand( () =>
+            {
+                Debug.WriteLine( "UpdateImgCommand:" );
 
-            //    ImgName = "/Imgs/VER.png";
-            //} );
+                UserSelectIndex = UserSelectIndex >= 2 ? 0 : UserSelectIndex + 1;
+            } );
+
+            GetIndexCommand = new MyCommand( () =>
+            {
+                Debug.WriteLine( "UpdateImgCommand:" );
+
+                MessageBox.Show( UserSelectIndex.ToString() );
+            } );
         }
 
 
@@ -56,5 +65,9 @@ namespace WpfApp.Views.KJ.Tab
             get; set;
         }
 
+        public MyCommand GetIndexCommand
+        {
+            get; set;
+        }
     }
 }
