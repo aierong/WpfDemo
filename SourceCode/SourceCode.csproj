@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CommunityToolkit.Mvvm示例\" />
+    <Folder Include="CommunityToolkit.Mvvm官方示例\" />
     <Folder Include="微软官方WPF示例\" />
   </ItemGroup>
 
