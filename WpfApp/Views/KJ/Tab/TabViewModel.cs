@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using WpfApp.Views.BaseCommand;
 using WpfApp.Views.KJ.Base;
 
 namespace WpfApp.Views.KJ.Tab

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace WpfApp.Views.KJ.Base
+namespace WpfApp.Views.BaseCommand
 {
     public class MyCommand : ICommand
     {

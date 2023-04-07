@@ -94,6 +94,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\BaseCommand\MyCommand.cs" />
     <Compile Include="Views\BindData\contexts\basedemo\DataViewModel2.cs" />
     <Compile Include="Views\BindData\contexts\basedemo\demo2.xaml.cs">
       <DependentUpon>demo2.xaml</DependentUpon>
@@ -143,7 +144,6 @@
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FormatDemo\WindowViewModel1.cs" />
-    <Compile Include="Views\KJ\Base\MyCommand.cs" />
     <Compile Include="Views\KJ\border\BorderUserControl.xaml.cs">
       <DependentUpon>BorderUserControl.xaml</DependentUpon>
     </Compile>
