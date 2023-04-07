@@ -130,7 +130,6 @@
     <Compile Include="Views\CommandDemo\demo1\ViewModelBase.cs" />
     <Compile Include="Views\ConverterDemo\demo1\conver\BoolConverter.cs" />
     <Compile Include="Views\ConverterDemo\demo1\conver\BooleanToVisibilityConverter.cs" />
-    <Compile Include="Views\ConverterDemo\demo1\MyCommand.cs" />
     <Compile Include="Views\ConverterDemo\demo1\viewmodel\WindowViewModel1.cs" />
     <Compile Include="Views\ConverterDemo\demo1\Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
