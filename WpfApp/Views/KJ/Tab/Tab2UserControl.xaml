@@ -11,8 +11,6 @@
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
-
-
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />

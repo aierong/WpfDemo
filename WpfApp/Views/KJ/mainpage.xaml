@@ -39,6 +39,11 @@
                     Click="btnNav_Click"
                     Content="TabControl2"
                     Tag="/Views/KJ/Tab/Tab2UserControl.xaml" />
+
+            <Button Margin="5"
+                    Click="btnNav_Click"
+                    Content="ItemsControl"
+                    Tag="/Views/KJ/ItemsControl/ItemsControlUserControl.xaml" />
         </WrapPanel>
 
         <Frame Name="frmMain"
