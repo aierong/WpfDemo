@@ -13,17 +13,23 @@
     <Grid ShowGridLines="True">
         <!--  定义行,3行  -->
         <Grid.RowDefinitions>
-            <!--  自动行高  -->
+            <!--
+                下面3行高度分配原则：第1行：随内部控件所占高度 第3行：固定高度50 剩下的就是第2行
+            -->
+            <!--  自动行高  就是看内部控件所占高度  -->
             <RowDefinition Height="Auto" />
             <!--  按比例行高  -->
-            <RowDefinition Height="*" />
+            <RowDefinition Height="1*" />
             <!--  固定行高  -->
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
         <!--  定义列，2列  -->
         <Grid.ColumnDefinitions>
+            <!--
+                下面2列宽度分配原则：第2列：固定200 剩下的就是第1列
+            -->
             <!--  按比例列宽  -->
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="1*" />
             <!--  固定列宽  -->
             <ColumnDefinition Width="200" />
         </Grid.ColumnDefinitions>

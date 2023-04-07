@@ -117,6 +117,9 @@
     <Compile Include="Views\BindData\ListData\Views\ListData.xaml.cs">
       <DependentUpon>ListData.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\BUJU\Grid\cicun1.xaml.cs">
+      <DependentUpon>cicun1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\BUJU\ZhongHeDemo\zhonghe1.xaml.cs">
       <DependentUpon>zhonghe1.xaml</DependentUpon>
     </Compile>
@@ -223,6 +226,10 @@
     <Page Include="Views\BUJU\Grid\cicun.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BUJU\Grid\cicun1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\BUJU\Grid\GridDEMO.xaml">
       <Generator>MSBuild:Compile</Generator>

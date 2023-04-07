@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApp.Views.BUJU.Grid.cicun1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp.Views.BUJU.Grid"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="cicun1"
+        Width="800"
+        Height="450"
+        mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <!--
+                下面4行高度分配原则：
+                第4行：固定高度30,剩下的分给其它3行
+                
+                剩下的分成6份
+                第1行：占1/6 第2行：占2/6 第3行：占3/6
+            -->
+
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <!--
+                下面3列宽度分配原则：
+                
+                第3列：固定200 剩下的分给其它2列
+            
+                剩下的分成5份
+                第1列：占1/5  第2列：占4/5  
+            -->
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="4*" />
+            <!--  固定列宽  -->
+            <ColumnDefinition Width="200" />
+        </Grid.ColumnDefinitions>
+    </Grid>
+</Window>

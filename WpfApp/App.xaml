@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WpfApp"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             StartupUri="/Views/KJ/grid/demo1/DataWindow1.XAML">
+             StartupUri="/Views/BUJU/Grid/cicun1.XAML">
 
     <!--  Application.Resources是定义整个程序级别的资源，每个窗体都可以访问到  -->
     <Application.Resources>
