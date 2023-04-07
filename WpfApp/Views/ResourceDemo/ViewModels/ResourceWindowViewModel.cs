@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using WpfApp.Properties;
+using WpfApp.Views.BaseCommand;
 
 namespace WpfApp.Views.ResourceDemo.ViewModels
 {

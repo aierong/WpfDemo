@@ -166,7 +166,6 @@
       <DependentUpon>TabUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\KJ\Tab\TabViewModel.cs" />
-    <Compile Include="Views\ResourceDemo\MyCommand.cs" />
     <Compile Include="Views\ResourceDemo\ViewModels\ResourceWindowViewModel.cs" />
     <Compile Include="Views\ResourceDemo\Views\ResourceWindow.xaml.cs">
       <DependentUpon>ResourceWindow.xaml</DependentUpon>
