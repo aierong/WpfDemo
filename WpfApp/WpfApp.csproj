@@ -204,7 +204,7 @@
     </Compile>
     <Compile Include="Views\UserControlDemo\zhonghedemo\ZhongHeViewModel.cs" />
     <Compile Include="Views\ValidationData\demo1\viewmodel\datawindowviewmodel.cs" />
-    <Compile Include="Views\ValidationData\demo1\viewmodel\MyCommand.cs" />
+    <Compile Include="Views\ValidationData\demo1\viewmodel\MysCommand.cs" />
     <Compile Include="Views\ValidationData\demo1\view\datawindow.xaml.cs">
       <DependentUpon>datawindow.xaml</DependentUpon>
     </Compile>

@@ -7,14 +7,26 @@ using System.Windows.Input;
 
 namespace WpfApp.Views.ValidationData.demo1.viewmodel
 {
-    public class MyCommand : ICommand
+    public class MysCommand : ICommand
     {
-        public event EventHandler CanExecuteChanged;
+        //public event EventHandler CanExecuteChanged;
+
+        public event EventHandler CanExecuteChanged
+        {
+            add
+            {
+                CommandManager.RequerySuggested += value;
+            }
+            remove
+            {
+                CommandManager.RequerySuggested -= value;
+            }
+        }
 
         Action execAction;
         Func<bool> canexecAction;
 
-        public MyCommand ( Action action , Func<bool> canexecAction )
+        public MysCommand ( Action action , Func<bool> canexecAction )
         {
             execAction = action;
             this.canexecAction = canexecAction;

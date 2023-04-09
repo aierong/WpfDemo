@@ -17,7 +17,7 @@
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
-            <RowDefinition />
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -26,23 +26,69 @@
         <StackPanel Grid.Row="0"
                     Grid.Column="0">
 
+            <StackPanel.Resources>
+                <Style TargetType="TextBox">
+                    <Setter Property="Validation.ErrorTemplate">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <StackPanel>
+                                    <Grid>
+                                        <!--  AdornedElementPlaceholder 是装饰器  -->
+                                        <AdornedElementPlaceholder Name="TextBoxAdornedElement" />
+                                        <Border BorderBrush="Red"
+                                                BorderThickness="1" />
+                                    </Grid>
+                                    <!--
+                                        TextBlock是显示异常信息的
+                                        绑定的是装饰器
+                                    -->
+                                    
+                                    
+                                    <TextBlock Margin="0,3,0,0"
+                                               Foreground="Red"
+                                               Text="{Binding ElementName=TextBoxAdornedElement,Path=AdornedElement.(Validation.Errors)[0].ErrorContent}" />
+                                    
+                                    
+                                    
+                                    <!--
+                                    下面这样写法也是可以的
+                                    -->
+                                    
+                                    <!--
+                                    <TextBlock Margin="0,3,0,0"
+                                               Foreground="Red"
+                                               Text="{Binding ErrorContent}"/>
+                                    -->
+                                    
+                                
+                                </StackPanel>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </StackPanel.Resources>
+
+            <!--  TextBox 要配置Margin,给异常信息显示用  -->
             <TextBox Width="190"
                      Height="30"
-                     Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                     Margin="0,10"
+                     Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnDataErrors=True}" />
 
             <TextBox x:Name="txttitle"
                      Width="190"
                      Height="30"
-                     Text="{Binding Title, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                     Margin="0,10"
+                     Text="{Binding Title, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnDataErrors=True}" />
 
             <TextBox x:Name="txtage"
                      Width="190"
                      Height="30"
-                     Text="{Binding Age, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                     Margin="0,10"
+                     Text="{Binding Age, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnDataErrors=True}" />
 
             <Button Width="100"
                     Height="30"
-                    Command="{Binding ShowCommand}"
+                    Command="{Binding  SaveCommand}"
                     Content="改变值" />
 
         </StackPanel>
