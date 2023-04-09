@@ -28,41 +28,30 @@
 
             <TextBox Width="190"
                      Height="30"
-                     Text="{Binding Name}" />
-
-            <!--<TextBox Width="190"
-                     Height="30"
-                     Text="{Binding Title}" />-->
+                     Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
 
             <TextBox x:Name="txttitle"
                      Width="190"
                      Height="30"
-                     Text="{Binding Title, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
-                     ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors)[0].ErrorContent}" />
-
-            <!--<TextBox Width="190"
-                     Height="30"
-                     Text="{Binding Age}" />-->
+                     Text="{Binding Title, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
 
             <TextBox x:Name="txtage"
                      Width="190"
                      Height="30"
-                     Text="{Binding Age, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
-                     ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors)[0].ErrorContent}" />
+                     Text="{Binding Age, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
 
             <Button Width="100"
                     Height="30"
                     Command="{Binding ShowCommand}"
-                    Content="改变值">
-
-               
-
-            </Button>
+                    Content="改变值" />
 
         </StackPanel>
 
     </Grid>
 </Window>
+
+
+
 
 
 <!--<Button.Style>

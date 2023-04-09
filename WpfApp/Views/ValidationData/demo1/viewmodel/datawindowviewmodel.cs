@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -9,12 +10,14 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Xml.Linq;
 
+//1.实现接口 INotifyDataErrorInfo
+
 namespace WpfApp.Views.ValidationData.demo1.viewmodel
 {
-    public class datawindowviewmodel : INotifyPropertyChanged, IDataErrorInfo
+    public class datawindowviewmodel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
+        
         public datawindowviewmodel ()
         {
 
@@ -24,9 +27,9 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
 
             Age = 18;
 
-            ShowCommand = new MyCommand( Show , IsShow );
-           
-        }     
+            //ShowCommand = new MyCommand( Show    );
+
+        }
 
         private string name;
 
@@ -92,8 +95,7 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
         {
             get; set;
         }
-
-  
+                      
 
         public void Show ()
         {
@@ -105,85 +107,20 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
 
 
 
-        public bool IsShow ()
-        {
-            if ( !string.IsNullOrEmpty( Error ) )
-            {
-                return false;
-            }
-
-            return  true;
-        }
 
 
 
-        public bool IsShowButton
-        {
-            get
-            {
-                return string.IsNullOrWhiteSpace( Error );
-            }
-        }
 
 
 
-        private string error;
-
-        public string Error
-        {
-            get
-            {
-                return error;
-            }
-            set
-            {
-                error = value;
-
-                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Error" ) );
-            }
-        }
 
 
 
-        public string this[string name]
-        {
-            get
-            {
-                string result = null;
 
-                if ( name == "Age" )
-                {
-                    if ( this.age < 0 || this.age > 150 )
-                    {
-                        result = "Age(年龄) 必须 not be less than 0 or greater than 150.";
-                    }
 
-                }
 
-                if ( name == "Title" )
-                {
-                    if ( !String.IsNullOrEmpty( this.title ) )
-                    {
-                        if ( this.title.Length > 20 )
-                        {
-                            result = "title 长度大于10";
-                        }
 
-                    }
-                    else
-                    {
-                        result = "title必须填写";
-                    }
 
-                }
-
-                //Error = result;
-                //IsShow();
-                //ShowCommand.CanExecuteChanged(this,null);
-                //ShowCommand.CanExecute( Error );
-
-                return result;
-            }
-        }
+        
     }
 }
