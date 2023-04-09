@@ -1,0 +1,70 @@
+https://www.cnblogs.com/aierong/p/17300066.html
+
+<fieldset><legend>本系列文章导航</legend>
+<ol>
+<li><a href="../aierong/tag/CommunityToolkit.Mvvm" target="_blank" rel="noopener">https://www.cnblogs.com/aierong/tag/CommunityToolkit.Mvvm</a></li>
+<li><a href="https://github.com/aierong/WpfDemo" target="_blank" rel="noopener">https://github.com/aierong/WpfDemo (自我Demo地址)</a></li>
+
+</ol>
+</fieldset>
+
+
+CommunityToolkit.Mvvm8.1系列文章导航
+
+CommunityToolkit.Mvvm8.1 MVVM工具包安装引用指南(1)
+https://www.cnblogs.com/aierong/p/17299452.html
+CommunityToolkit.Mvvm8.1 viewmodel使用-旧式写法(2)
+https://www.cnblogs.com/aierong/p/17300025.html
+
+
+https://www.cnblogs.com/aierong/tag/CommunityToolkit.Mvvm
+
+CommunityToolkit.Mvvm8.1 viewmodel使用-旧式写法(2)
+
+ 必须继承:ObservableObject
+
+SetProperty是给属性赋值,并且通知更改通知
+ButtonClickCommand.NotifyCanExecuteChanged(); //通知命令 已经改变
+RelayCommand ButtonClickCommand //定义命令
+
+CommunityToolkit.Mvvm8.1 MVVM工具包安装引用指南(1)   
+
+CommunityToolkit.Mvvm包(又名MVVM 工具包，以前名为 Microsoft.Toolkit.Mvvm)是一个现代、快速且模块化的 MVVM 库。
+它支持:.NET Standard 2.0、 .NET Standard 2.1 和 .NET 6(UI Framework 不支持)
+
+ 
+文档地址: 
+https://learn.microsoft.com/zh-cn/dotnet/communitytoolkit/mvvm/
+github:
+https://github.com/CommunityToolkit/dotnet
+
+自我Demo地址:
+https://github.com/aierong/WpfDemo
+
+1.安装
+nuget中安装:CommunityToolkit.Mvvm
+
+
+2.使用
+CommunityToolkit.Mvvm8.1最令人惊喜的是它提供的源生成器功能,它极大简化我们的mvvm代码
+
+
+
+
+
+大部分通过标记一个属性就可以实现某个功能,这个很方便快捷,推荐
+
+常用的总结
+1.继承ObservableObject 并且类标记是分部类partial
+2.私有变量标记属性 [ObservableProperty]
+3.NotifyCanExecuteChangedFor  通知依赖命令
+  NotifyPropertyChangedFor    通知依赖属性
+4.RelayCommand  定义命令
+5.OnPropertyChanged 手动通知属性更新
+6.ButtonClickCommand.NotifyCanExecuteChanged() 手动通知命令更新
+7.OnLastNameChanging OnLastNameChanged  某个属性改变
+8.OnPropertyChanged  所有属性改变
+
+
+
+wpf CommunityToolkit Mvvm 
