@@ -49,6 +49,18 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
             }
             set
             {
+
+                name = value;
+
+                //通知数据已经变化
+                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Name" ) );
+
+                
+
+                this.ValidateProperty<string>( value , nameof( Name ) );
+
+
+                //如果不调用ValidateProperty，直接按下面代码写也是同样效果
                 //if ( value.Length < 5 )
                 //{
                 //    AddError( nameof( Name ) , "名字不可以小于5" );
@@ -58,14 +70,7 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
                 //    DeleteError( nameof( Name ) );
                 //}
 
-                name = value;
-
-                //通知数据已经变化
-                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Name" ) );
-
                 //OnErrorChanged( nameof( Name ) );
-
-                this.ValidateProperty<string>( value , nameof( Name ) );
             }
         }
 
@@ -82,30 +87,11 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
 
             set
             {
-                //if ( value.Length < 10 )
-                //{
-                //    AddError( nameof( Title ) , "长度不可以小于10" );
-                //}
-                //else
-                //{
-                //    DeleteError( nameof( Title ) );
-                //}
-
-                //if ( !value.StartsWith( "abc" ) )
-                //{
-                //    AddError( nameof( Title ) , "标题必须abc开头" );
-                //}
-                //else
-                //{
-                //    DeleteError( nameof( Title ) );
-                //}
 
                 title = value;
 
                 //通知数据已经变化
                 PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Title" ) );
-
-                //OnErrorChanged( nameof( Title ) );
 
                 this.ValidateProperty<string>( value , nameof( Title ) );
             }
@@ -154,7 +140,7 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
                 return;
             }
 
-            MessageBox.Show( "show Command" );
+            MessageBox.Show( "CommandOK" );
         }
 
 
@@ -177,7 +163,7 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
             //是否还存在异常信息
             bool HasErrors { get; }
 
-            //ErrorsChanged就是UI进行异常信息展示
+            //ErrorsChanged就是通知异常 
             event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
 
             //获取一组验证信息， 多个 ValidationAttribute验证后返回来的信息，提供给Validation 使用，对应Validation.ErrorsBing会在绑定的控件上生成 附加属性Validation.Errors，保存验证信息。
@@ -214,13 +200,12 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
             }
         }
 
-        //我们定义一个集合存放错误信息
+
 
         /// <summary>
         /// 集合存放错误信息
         /// </summary>
         private readonly Dictionary<string , List<string>> ErrorData = new Dictionary<string , List<string>>() { };
-
 
         /// <summary>
         /// 错误信息加入列表
@@ -262,18 +247,20 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
 
 
 
-
+        /// <summary>
+        /// 验证
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="val"></param>
+        /// <param name="propertyName"></param>
         void ValidateProperty<T> ( T val , [CallerMemberName] string propertyName = "" )
         {
-            if ( ErrorData.ContainsKey( propertyName ) )
-            {
-                //存在就删除
-                ErrorData.Remove( propertyName );
-            }
+            // 先删除
+            DeleteError( propertyName );
+
 
 
             //下面一个个属性写判断逻辑
-
             if ( propertyName == "Title" )
             {
                 //判断逻辑写这里
@@ -320,7 +307,7 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
             }
 
             //通知一下，错误信息
-            ErrorsChanged?.Invoke( this , new DataErrorsChangedEventArgs( propertyName ) );
+            OnErrorChanged( propertyName );
 
             return;
         }
