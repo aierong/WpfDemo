@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -30,7 +31,7 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
 
             SaveCommand = new MysCommand( SaveData , () =>
             {
-                return !ErrorData.Any();
+                return !HasErrors;
             } );
 
         }
@@ -48,28 +49,29 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
             }
             set
             {
-                if ( value.Length < 5 )
-                {
-                    AddError( nameof( Name ) , "名字不可以小于5" );
-                }
-                else
-                {
-                    DeleteError( nameof( Name ) );
-                }
+                //if ( value.Length < 5 )
+                //{
+                //    AddError( nameof( Name ) , "名字不可以小于5" );
+                //}
+                //else
+                //{
+                //    DeleteError( nameof( Name ) );
+                //}
 
                 name = value;
 
                 //通知数据已经变化
                 PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Name" ) );
 
-                OnErrorChanged( nameof( Name ) );
+                //OnErrorChanged( nameof( Name ) );
 
-
+                this.ValidateProperty<string>( value , nameof( Name ) );
             }
         }
 
-        private string title;
 
+
+        private string title;
 
         /// <summary>
         /// 标题
@@ -80,32 +82,36 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
 
             set
             {
-                if ( value.Length < 10 )
-                {
-                    AddError( nameof( Title ) , "长度不可以小于10" );
-                }
-                else
-                {
-                    DeleteError( nameof( Title ) );
-                }
+                //if ( value.Length < 10 )
+                //{
+                //    AddError( nameof( Title ) , "长度不可以小于10" );
+                //}
+                //else
+                //{
+                //    DeleteError( nameof( Title ) );
+                //}
 
-                if ( !value.StartsWith( "abc" ) )
-                {
-                    AddError( nameof( Title ) , "标题必须abc开头" );
-                }
-                else
-                {
-                    DeleteError( nameof( Title ) );
-                }
+                //if ( !value.StartsWith( "abc" ) )
+                //{
+                //    AddError( nameof( Title ) , "标题必须abc开头" );
+                //}
+                //else
+                //{
+                //    DeleteError( nameof( Title ) );
+                //}
 
                 title = value;
 
                 //通知数据已经变化
                 PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Title" ) );
 
-                OnErrorChanged( nameof( Title ) );
+                //OnErrorChanged( nameof( Title ) );
+
+                this.ValidateProperty<string>( value , nameof( Title ) );
             }
         }
+
+
 
 
 
@@ -122,6 +128,8 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
                 age = value;
 
                 PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Age" ) );
+
+                this.ValidateProperty<int>( value , nameof( Age ) );
             }
         }
 
@@ -139,8 +147,12 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
 
         void SaveData ()
         {
-            Name = "改了";
-            Title = "le title";
+            if ( HasErrors )
+            {
+                MessageBox.Show( "有错误呀" );
+
+                return;
+            }
 
             MessageBox.Show( "show Command" );
         }
@@ -222,7 +234,6 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
             {
                 ErrorData.Add( propertyName , new List<string> { errorMessage } );
             }
-
         }
 
         /// <summary>
@@ -249,6 +260,70 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
             ErrorsChanged?.Invoke( this , new DataErrorsChangedEventArgs( propertyName ) );
         }
 
+
+
+
+        void ValidateProperty<T> ( T val , [CallerMemberName] string propertyName = "" )
+        {
+            if ( ErrorData.ContainsKey( propertyName ) )
+            {
+                //存在就删除
+                ErrorData.Remove( propertyName );
+            }
+
+
+            //下面一个个属性写判断逻辑
+
+            if ( propertyName == "Title" )
+            {
+                //判断逻辑写这里
+                string value = val.ToString();
+
+                if ( value.Length < 10 )
+                {
+                    AddError( propertyName , "长度不可以小于10" );
+                }
+                else
+                {
+                    if ( !value.StartsWith( "abc" ) )
+                    {
+                        AddError( propertyName , "标题必须abc开头" );
+                    }
+                }
+            }
+
+            if ( propertyName == "Age" )
+            {
+                int value = int.Parse( val.ToString() );
+
+                if ( value < 18 )
+                {
+                    AddError( propertyName , "年龄必须大于18" );
+                }
+                else
+                {
+                    if ( value > 250 )
+                    {
+                        AddError( propertyName , "年龄必须小于250" );
+                    }
+                }
+            }
+
+            if ( propertyName == "Name" )
+            {
+                string value = val.ToString();
+
+                if ( value.Length < 5 )
+                {
+                    AddError( propertyName , "名字不可以小于5" );
+                }
+            }
+
+            //通知一下，错误信息
+            ErrorsChanged?.Invoke( this , new DataErrorsChangedEventArgs( propertyName ) );
+
+            return;
+        }
 
 
 

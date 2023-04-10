@@ -4,6 +4,7 @@
     StartupUri="/Views/KJ/mainpage.XAML"  控件主页
     
     StartupUri="/Views/ValidationData/demo1/view/datawindow.XAML"
+    
     StartupUri="/Views/BindData/RelativeSource/DataWindow1.XAML"
 -->
 
@@ -13,7 +14,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WpfApp"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             StartupUri="/Views/BindData/RelativeSource/DataWindow1.XAML">
+             StartupUri="/Views/ValidationData/demo1/view/datawindow.XAML">
 
     <!--  Application.Resources是定义整个程序级别的资源，每个窗体都可以访问到  -->
     <Application.Resources>
