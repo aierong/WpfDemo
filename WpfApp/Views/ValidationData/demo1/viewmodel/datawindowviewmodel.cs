@@ -302,7 +302,7 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
 
                 if ( value.Length < 5 )
                 {
-                    AddError( propertyName , "名字不可以小于5" );
+                    AddError( propertyName , "名字长度不可以小于5" );
                 }
             }
 

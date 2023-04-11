@@ -131,6 +131,8 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
             {
                 string result = null;
 
+
+                //下面一个个属性写判断逻辑
                 if ( name == "Title" )
                 {
                     //判断逻辑写这里
@@ -149,13 +151,23 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
                     }
                 }
 
+                if ( name == "Name" )
+                {
+                    string value = this.Name;
+
+                    if ( value.Length < 5 )
+                    {
+                        result = "名字长度不可以小于5";
+                    }
+                }
+
                 if ( name == "Age" )
                 {
-                    int value = this.Age ;
+                    int value = this.Age;
 
                     if ( value < 18 )
                     {
-                        result= "年龄必须大于18";
+                        result = "年龄必须大于18";
                     }
                     else
                     {
@@ -166,20 +178,14 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
                     }
                 }
 
-                if ( string.IsNullOrEmpty( result ) )
+
+
+                //先删除再说
+                ErrorData.Remove( name );
+
+                if ( !string.IsNullOrEmpty( result ) )
                 {
-                    if ( ErrorData.ContainsKey( name ) )
-                    {
-                        //存在就删除
-                        ErrorData.Remove( name );
-                    }
-                }
-                else
-                {
-                    if ( !ErrorData.ContainsKey( name ) )
-                    {
-                        ErrorData.Add( name , result );
-                    }
+                    ErrorData.Add( name , result );
                 }
 
                 return result;
@@ -191,7 +197,7 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
         /// </summary>
         private readonly Dictionary<string , string> ErrorData = new Dictionary<string , string>() { };
 
- 
+
 
 
 
