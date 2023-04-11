@@ -13,6 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove=".gitattributes" />
+    <None Remove=".gitignore" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="CommunityToolkit.Mvvm官方示例\" />
     <Folder Include="微软官方WPF示例\" />
   </ItemGroup>

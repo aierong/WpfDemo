@@ -473,8 +473,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".gitattributes" />
-    <Content Include=".gitignore" />
     <Resource Include="Imgs\VER.png" />
     <Resource Include="Imgs\zhonghe1.png" />
   </ItemGroup>
