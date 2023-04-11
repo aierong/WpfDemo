@@ -7,24 +7,10 @@ using Prism.Mvvm;
 
 
 
-namespace PrismDemo.ViewModels
+namespace PrismDemo.ViewModels.v1
 {
-    public class MainWindowViewModel : BindableBase
+    public class TestWindowViewModel : BindableBase
     {
-        private string _text = "init";
-
-        public string Text
-        {
-            get
-            {
-                return _text;
-            }
-            set
-            {
-                SetProperty( ref _text , value );
-            }
-        }
-
         private string _texts = "inits";
 
         public string TextS
