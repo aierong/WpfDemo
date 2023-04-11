@@ -208,8 +208,12 @@
     <Compile Include="Views\UserControlDemo\zhonghedemo\ZhongHeViewModel.cs" />
     <Compile Include="Views\ValidationData\demo1\viewmodel\datawindowviewmodel.cs" />
     <Compile Include="Views\ValidationData\demo1\viewmodel\MysCommand.cs" />
+    <Compile Include="Views\ValidationData\demo1\viewmodel\YzViewModel.cs" />
     <Compile Include="Views\ValidationData\demo1\view\datawindow.xaml.cs">
       <DependentUpon>datawindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ValidationData\demo1\view\Yz.xaml.cs">
+      <DependentUpon>Yz.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\BindData\contexts\basedemo\demo2.xaml">
       <SubType>Designer</SubType>
@@ -409,6 +413,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ValidationData\demo1\view\datawindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ValidationData\demo1\view\Yz.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
