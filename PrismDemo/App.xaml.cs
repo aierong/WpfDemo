@@ -9,9 +9,8 @@ using System.Windows;
 using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Unity;
-using PrismDemo.ViewModels;
-using PrismDemo.Views.v1;
-using PrismDemo.Views.v1.LG;
+
+
 
 
 
@@ -53,8 +52,8 @@ namespace PrismDemo
             //手动指定一个view与vm绑定关系
             base.ConfigureViewModelLocator();
 
-            ViewModelLocationProvider.Register<Views.Window1, Class123>();
-            ViewModelLocationProvider.Register( typeof( Views.Window2 ).ToString() , typeof( ViewModels.v2.Class2 ) );
+            ViewModelLocationProvider.Register<Views.Window1, ViewModels.vm1>();
+            ViewModelLocationProvider.Register( typeof( Views.Window2 ).ToString() , typeof(ViewModels.vm.classtwo) );
 
 
 

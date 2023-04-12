@@ -71,11 +71,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ViewModels\Class123.cs" />
+    <Compile Include="ViewModels\vm1.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\v1\LG\MYWinViewModel.cs" />
     <Compile Include="ViewModels\v1\TestWindowViewModel.cs" />
-    <Compile Include="ViewModels\v2\Class2.cs" />
+    <Compile Include="ViewModels\vm\classtwo.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>

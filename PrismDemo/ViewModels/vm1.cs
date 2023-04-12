@@ -7,7 +7,7 @@ using Prism.Mvvm;
 
 namespace PrismDemo.ViewModels
 {
-    public  class Class123 : BindableBase
+    public  class vm1 : BindableBase
     {
         private string _texts = "init123";
 

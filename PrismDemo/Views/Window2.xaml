@@ -3,13 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:PrismDemo.Views"
-        xmlns:localvm="clr-namespace:PrismDemo.ViewModels.v2"
+        xmlns:localvm="clr-namespace:PrismDemo.ViewModels.vm"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
         Title="Window2"
         Width="800"
         Height="450"
-        d:DataContext="{d:DesignInstance localvm:Class2,
+        d:DataContext="{d:DesignInstance localvm:classtwo,
                                          IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">

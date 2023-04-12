@@ -9,7 +9,7 @@
         Title="Window1"
         Width="800"
         Height="450"
-        d:DataContext="{d:DesignInstance localvm:Class123,
+        d:DataContext="{d:DesignInstance localvm:vm1,
                                          IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
