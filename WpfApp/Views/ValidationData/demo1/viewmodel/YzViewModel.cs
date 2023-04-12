@@ -119,6 +119,7 @@ namespace WpfApp.Views.ValidationData.demo1.viewmodel
         {
             get
             {
+                //这个没有啥用，返回null
                 return null;
             }
         }

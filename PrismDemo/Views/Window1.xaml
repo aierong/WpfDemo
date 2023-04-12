@@ -1,4 +1,4 @@
-﻿<Window x:Class="PrismDemo.Views.MainWindow"
+﻿<Window x:Class="PrismDemo.Views.Window1"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,27 +6,29 @@
         xmlns:localvm="clr-namespace:PrismDemo.ViewModels"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
-        Title="MainWindow"
+        Title="Window1"
         Width="800"
         Height="450"
-        d:DataContext="{d:DesignInstance localvm:MainWindowViewModel,
+        d:DataContext="{d:DesignInstance localvm:Class123,
                                          IsDesignTimeCreatable=True}"
-        prism:ViewModelLocator.AutoWireViewModel="True"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
+    <!--
+        我们在App.cs代码已经指定了这个view与vm的绑定，所以这里不要再指定 :prism:ViewModelLocator.AutoWireViewModel="True"
+    -->
     <Grid>
         <StackPanel>
-            <TextBox Width="100"
-                     HorizontalAlignment="Left"
-                     Text="{Binding Text}" />
+
             <TextBox Width="100"
                      HorizontalAlignment="Left"
                      Text="{Binding TextS}" />
+            <TextBox Width="100"
+                     HorizontalAlignment="Left"
+                     Text="{Binding TextA}" />
             <Button Width="100"
                     Height="30"
                     HorizontalAlignment="Left"
-                    Content="qq" />
+                    Content="点击" />
         </StackPanel>
-
     </Grid>
 </Window>

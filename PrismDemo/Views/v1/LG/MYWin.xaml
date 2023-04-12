@@ -12,6 +12,7 @@
         d:DataContext="{d:DesignInstance localvm:MYWinViewModel,
                                          IsDesignTimeCreatable=True}"
         prism:ViewModelLocator.AutoWireViewModel="True"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <Grid>
         <Grid>

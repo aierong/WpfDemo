@@ -1,20 +1,36 @@
-﻿<Application x:Class="PrismDemo.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:PrismDemo"
-             StartupUri="Views/v1/LG/MYWin.xaml">
-    <Application.Resources />
-</Application>
+﻿<prism:PrismApplication x:Class="PrismDemo.App"
+                        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:local="clr-namespace:PrismDemo"
+                        xmlns:prism="http://prismlibrary.com/">
+    <Application.Resources>
+        <!--  app资源  -->
+    </Application.Resources>
+</prism:PrismApplication>
 
 
 <!--
-    
     1.安装Prism.Unity
     
     2.页面引入:xmlns:prism="http://prismlibrary.com/"
     prism:ViewModelLocator.AutoWireViewModel="True"  自动绑定vm
     
+    APP 改成prism:PrismApplication
     
-    
-    
+    StartupUri="Views/v1/LG/MYWin.xaml" 这个要去掉，要不有2个一样启动页面
 -->
+
+
+<!--
+
+
+原语句备份
+<Application x:Class="PrismDemo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PrismDemo"
+             StartupUri="Views/v1/LG/MYWin.xaml">
+    <Application.Resources />
+</Application>-->
+
+
