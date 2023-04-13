@@ -76,6 +76,19 @@
       <DependentUpon>ModelData.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataDemo\VM\ModelDataVM.cs" />
+    <Compile Include="EventDemo\EventMainPage.xaml.cs">
+      <DependentUpon>EventMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventDemo\EventMainPageViewModel.cs" />
+    <Compile Include="EventDemo\Model\MyMessage.cs" />
+    <Compile Include="EventDemo\UC\UserControlLeft.xaml.cs">
+      <DependentUpon>UserControlLeft.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventDemo\UC\UserControlLeftViewModel.cs" />
+    <Compile Include="EventDemo\UC\UserControlTop.xaml.cs">
+      <DependentUpon>UserControlTop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventDemo\UC\UserControlTopViewModel.cs" />
     <Compile Include="MyView\ModuleABC\UserData.xaml.cs">
       <DependentUpon>UserData.xaml</DependentUpon>
     </Compile>
@@ -109,6 +122,18 @@
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
     <Page Include="DataDemo\View\ModelData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventDemo\EventMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventDemo\UC\UserControlLeft.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventDemo\UC\UserControlTop.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
