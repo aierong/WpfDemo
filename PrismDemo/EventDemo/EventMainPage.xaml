@@ -4,11 +4,41 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:PrismDemo.EventDemo"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:myuc="clr-namespace:PrismDemo.EventDemo.UC"
+        xmlns:prism="http://prismlibrary.com/"
         Title="EventMainPage"
         Width="800"
         Height="450"
+        d:DataContext="{d:DesignInstance local:EventMainPageViewModel,
+                                         IsDesignTimeCreatable=True}"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
-    <Grid>
-        <!--  11  -->
+    
+    <Grid ShowGridLines="True">
+        <!--  2行2列的表格  -->
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0">
+            <myuc:UserControlLeft />
+        </StackPanel>
+        <StackPanel Grid.Row="0"
+                    Grid.Column="1">
+            <myuc:UserControlTop />
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0" />
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1">
+            <TextBox Text="{Binding Title}" />
+
+        </StackPanel>
     </Grid>
 </Window>

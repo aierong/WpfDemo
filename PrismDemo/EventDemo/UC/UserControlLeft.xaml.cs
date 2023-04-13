@@ -23,6 +23,10 @@ namespace PrismDemo.EventDemo.UC
         public UserControlLeft ()
         {
             InitializeComponent();
+
+
+
+            //this.DataContext = new UserControlLeftViewModel();
         }
     }
 }

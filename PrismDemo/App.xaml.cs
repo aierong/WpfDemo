@@ -34,13 +34,22 @@ namespace PrismDemo
             //return Container.Resolve<Views.Window2>();
 
 
+
             //手动指定模块绑定
             //return Container.Resolve<MyView.WinOne>();
             //return Container.Resolve<MyView.ModuleABC.UserData>();
 
 
-            //模型demo 
-            return Container.Resolve<DataDemo.View.ModelData>();
+
+            //模型命令demo 
+            //return Container.Resolve<DataDemo.View.ModelData>();
+
+
+
+            // 事件消息
+            return Container.Resolve<EventDemo.EventMainPage>();
+
+
 
             //return Container.Resolve<Views.Window1>();
         }
@@ -64,6 +73,14 @@ namespace PrismDemo
 
             ViewModelLocationProvider.Register<Views.Window1 , ViewModels.vm1>();
             ViewModelLocationProvider.Register( typeof( Views.Window2 ).ToString() , typeof( ViewModels.vm.classtwo ) );
+
+
+
+            //消息事件
+            ViewModelLocationProvider.Register<EventDemo.EventMainPage , EventDemo.EventMainPageViewModel>();
+            ViewModelLocationProvider.Register<EventDemo.UC.UserControlLeft, EventDemo.UC.UserControlLeftViewModel>();
+            ViewModelLocationProvider.Register<EventDemo.UC.UserControlTop , EventDemo.UC.UserControlTopViewModel>();
+           
 
 
             ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver( ( viewType ) =>

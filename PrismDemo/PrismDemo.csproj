@@ -81,6 +81,8 @@
     </Compile>
     <Compile Include="EventDemo\EventMainPageViewModel.cs" />
     <Compile Include="EventDemo\Model\MyMessage.cs" />
+    <Compile Include="EventDemo\SentDataEvent.cs" />
+    <Compile Include="EventDemo\SentEvent.cs" />
     <Compile Include="EventDemo\UC\UserControlLeft.xaml.cs">
       <DependentUpon>UserControlLeft.xaml</DependentUpon>
     </Compile>

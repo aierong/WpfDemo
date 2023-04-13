@@ -23,7 +23,7 @@ namespace PrismDemo.EventDemo
         {
             InitializeComponent();
 
-            this.DataContext = new EventMainPageViewModel();
+            //this.DataContext = new EventMainPageViewModel();
         }
     }
 }

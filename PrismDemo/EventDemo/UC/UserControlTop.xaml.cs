@@ -23,6 +23,8 @@ namespace PrismDemo.EventDemo.UC
         public UserControlTop ()
         {
             InitializeComponent();
+
+            //this.DataContext = new UserControlTopViewModel();
         }
     }
 }
