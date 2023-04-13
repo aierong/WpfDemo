@@ -36,8 +36,11 @@ namespace PrismDemo
 
             //手动指定模块绑定
             //return Container.Resolve<MyView.WinOne>();
-            return Container.Resolve<MyView.ModuleABC.UserData>();
+            //return Container.Resolve<MyView.ModuleABC.UserData>();
 
+
+            //模型demo 
+            return Container.Resolve<DataDemo.View.ModelData>();
 
             //return Container.Resolve<Views.Window1>();
         }
@@ -72,6 +75,9 @@ namespace PrismDemo
                 var viewModelName = $"{viewName}VM, {viewAssemblyName}";
                 return Type.GetType( viewModelName );
             } );
+
+
+ 
 
 
             //base.ConfigureViewModelLocator();
