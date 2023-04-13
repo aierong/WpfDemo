@@ -1,0 +1,31 @@
+﻿<Window x:Class="PrismDemo.MyView.ModuleABC.UserData"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:PrismDemo.MyView.ModuleABC"
+        xmlns:localvm="clr-namespace:PrismDemo.MyVm.ModuleABC"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://prismlibrary.com/"
+        Title="用户数据"
+        Width="800"
+        Height="450"
+        d:DataContext="{d:DesignInstance localvm:UserDataVM,
+                                         IsDesignTimeCreatable=True}"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
+    <!--
+        我们在App.cs代码已经指定了这个view与vm的绑定，所以这里不要再指定 :prism:ViewModelLocator.AutoWireViewModel="True"
+    -->
+    <Grid>
+        <StackPanel>
+
+            <TextBox Width="100"
+                     Text="{Binding TextS}" />
+            <TextBox Width="100"
+                     Text="{Binding NameABC}" />
+            <Button Width="100"
+                    Height="20"
+                    Content="qq" />
+        </StackPanel>
+    </Grid>
+</Window>
