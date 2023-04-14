@@ -25,16 +25,20 @@ namespace PrismDemo.NavigationDemo.Parameters
 
             Par1ButtonClickCommand = new DelegateCommand( () =>
             {
+                //传递2个参数
                 var param = new NavigationParameters();
-                param.Add( "P1" , "str1" );
+                param.Add( "ptitle" , "str1" );
+                param.Add( "num" , 12345 );
+                param.Add( "listdata" , new List<string>() { "a111" , "b222" , "c333" } );
 
                 //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字,第3个是传达的参数
-                this._regionManager.RequestNavigate( "ContentRegion" , "AUserControl" , param );
+                this._regionManager.RequestNavigate( "ContentRegion" , "UC111" , param );
             } );
 
             Par2ButtonClickCommand = new DelegateCommand( () =>
             {
-                this._regionManager.RequestNavigate( "ContentRegion" , "BUserControl" );
+                //也可以使用类似web querystring 那样传递参数
+                this._regionManager.RequestNavigate( "ContentRegion" , "UC222?p1=srt222&p2=123" );
             } );
         }
 

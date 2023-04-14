@@ -7,7 +7,24 @@
              d:DesignHeight="450"
              d:DesignWidth="800"
              mc:Ignorable="d">
-    <Grid>
-        <!--  11  -->
+    <Grid Background="Yellow"
+          ShowGridLines="True">
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Text="我是页面1" />
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Text="{Binding Title}" />
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Text="{Binding Num}" />
+        </StackPanel>
     </Grid>
 </UserControl>
