@@ -11,7 +11,7 @@ https://www.cnblogs.com/aierong
 
 <fieldset><legend>本系列文章导航</legend>
 <ol>
-<li><a href="../aierong/p/17300066.html" target="_blank" rel="noopener">https://www.cnblogs.com/aierong/p/17300066.html</a></li>
+<li><a href="https://www.cnblogs.com/aierong/p/17300066.html" target="_blank" rel="noopener">https://www.cnblogs.com/aierong/p/17300066.html</a></li>
 <li><a href="https://github.com/aierong/WpfDemo" target="_blank" rel="noopener">https://github.com/aierong/WpfDemo (自我Demo地址)</a></li>
 </ol>
 
@@ -37,9 +37,43 @@ CommunityToolkit.Mvvm8.1 viewmodel源生成器写法(3)
 https://www.cnblogs.com/aierong/p/17305990.html
 
 CommunityToolkit.Mvvm8.1 消息通知(4)
-CommunityToolkit.Mvvm8.1 IOC(5)
+https://www.cnblogs.com/aierong/p/17318525.html
+
+CommunityToolkit.Mvvm8.1 IOC依赖注入控制反转(5)
+
+
+
+
+
+
+CommunityToolkit.Mvvm8.1 IOC依赖注入控制反转(5)
+CommunityToolkit.Mvvm包不提供ioc功能,但是官方建议使用:Microsoft.Extensions.DependencyInjection使用IOC
+
+
+
+自我Demo地址:
+https://github.com/aierong/WpfDemo/tree/main/WpfDemoNet6/IOCDemo
+
+
 
 CommunityToolkit.Mvvm8.1 消息通知(4)
+	为了应用程序的不同模块分离,减少模块之间引用，CommunityToolkit.Mvvm提供了消息通知功能，可以方便模块之间数据传递。
+	
+发布消息
+方法：WeakReferenceMessenger.Default.Send
+
+发送一个对象
+
+
+请求响应
+
+	
+
+自我Demo地址:
+https://github.com/aierong/WpfDemo/tree/main/WpfDemoNet6/MessengerDemo
+
+
+
 
 
 
