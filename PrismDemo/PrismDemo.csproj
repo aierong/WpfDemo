@@ -99,6 +99,16 @@
     </Compile>
     <Compile Include="MyVm\ModuleABC\UserDataVM.cs" />
     <Compile Include="MyVm\WinOneVM.cs" />
+    <Compile Include="NavigationDemo\Basic\BaseNavigation.xaml.cs">
+      <DependentUpon>BaseNavigation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationDemo\Basic\BaseNavigationViewModel.cs" />
+    <Compile Include="NavigationDemo\Basic\UC\AUserControl.xaml.cs">
+      <DependentUpon>AUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationDemo\Basic\UC\BUserControl.xaml.cs">
+      <DependentUpon>BUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegionDemo\UC\UserControlContent.xaml.cs">
       <DependentUpon>UserControlContent.xaml</DependentUpon>
     </Compile>
@@ -154,6 +164,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyView\WinOne.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NavigationDemo\Basic\BaseNavigation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NavigationDemo\Basic\UC\AUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NavigationDemo\Basic\UC\BUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

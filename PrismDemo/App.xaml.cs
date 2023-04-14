@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Unity;
@@ -52,8 +53,12 @@ namespace PrismDemo
 
 
             //区域 
-            return Container.Resolve<RegionDemo.View.RegionDemo1>();
+            //return Container.Resolve<RegionDemo.View.RegionDemo1>();
 
+
+
+            //导航
+            return Container.Resolve<NavigationDemo.Basic.BaseNavigation>();
 
 
             //return Container.Resolve<Views.Window1>();
@@ -63,7 +68,13 @@ namespace PrismDemo
 
         protected override void RegisterTypes ( IContainerRegistry containerRegistry )
         {
+            //注册导航
 
+            //添加 并且起个别名 "AUserControl"
+            containerRegistry.RegisterForNavigation<NavigationDemo.Basic.UC.AUserControl>( "AUserControl" );
+            containerRegistry.RegisterForNavigation<NavigationDemo.Basic.UC.BUserControl>( "BUserControl" );
+
+             
         }
 
 
@@ -90,6 +101,11 @@ namespace PrismDemo
 
             //区域 
             ViewModelLocationProvider.Register<RegionDemo.View.RegionDemo1, RegionDemo.ViewModel.RegionDemo1ViewModel>();
+
+
+
+            //导航
+            ViewModelLocationProvider.Register<NavigationDemo.Basic.BaseNavigation, NavigationDemo.Basic.BaseNavigationViewModel>();
 
 
 
