@@ -27,16 +27,16 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Orientation="Horizontal">
-            <Button Width="120"
+            <Button Width="148"
                     Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding Par1ButtonClickCommand}"
                     Content="加载并且传递参数" />
-            <Button Width="80"
+            <Button Width="148"
                     Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding Par2ButtonClickCommand}"
-                    Content="加载B" />
+                    Content="加载并且传递参数" />
         </StackPanel>
     </Grid>
 </Window>

@@ -40,6 +40,8 @@ CommunityToolkit.Mvvm8.1 消息通知(4)
 https://www.cnblogs.com/aierong/p/17318525.html
 
 CommunityToolkit.Mvvm8.1 IOC依赖注入控制反转(5)
+https://www.cnblogs.com/aierong/p/17318614.html
+
 
 
 
