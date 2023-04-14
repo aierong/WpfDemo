@@ -88,8 +88,8 @@ namespace PrismDemo
 
 
 
-            //RegionDemo1
-            //ViewModelLocationProvider.Register<EventDemo.UC.UserControlTop , EventDemo.UC.UserControlTopViewModel>();
+            //区域 
+            ViewModelLocationProvider.Register<RegionDemo.View.RegionDemo1, RegionDemo.ViewModel.RegionDemo1ViewModel>();
 
 
 

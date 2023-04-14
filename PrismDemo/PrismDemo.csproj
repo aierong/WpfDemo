@@ -99,6 +99,13 @@
     </Compile>
     <Compile Include="MyVm\ModuleABC\UserDataVM.cs" />
     <Compile Include="MyVm\WinOneVM.cs" />
+    <Compile Include="RegionDemo\UC\UserControlContent.xaml.cs">
+      <DependentUpon>UserControlContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegionDemo\UC\UserControlHeader.xaml.cs">
+      <DependentUpon>UserControlHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegionDemo\ViewModel\RegionDemo1ViewModel.cs" />
     <Compile Include="RegionDemo\View\RegionDemo1.xaml.cs">
       <DependentUpon>RegionDemo1.xaml</DependentUpon>
     </Compile>
@@ -147,6 +154,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyView\WinOne.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegionDemo\UC\UserControlContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegionDemo\UC\UserControlHeader.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -218,8 +233,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="RegionDemo\ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
