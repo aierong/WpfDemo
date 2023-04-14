@@ -28,7 +28,7 @@ namespace PrismDemo.NavigationDemo.Basic
 
             BButtonClickCommand = new DelegateCommand( () =>
             {
-                this._regionManager.RequestNavigate( "ContentRegion" , "BUserControl" );
+                this._regionManager.RequestNavigate( "ContentRegion" , "BUserControl" );                
             } );
         }
 
