@@ -14,6 +14,10 @@ namespace PrismDemo.NavigationDemo.Basic
     {
         IRegionManager _regionManager;
 
+        /// <summary>
+        /// IRegionManager依赖注入
+        /// </summary>
+        /// <param name="regionManager"></param>
         public BaseNavigationViewModel ( IRegionManager regionManager )
         {
             this._regionManager = regionManager;

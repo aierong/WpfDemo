@@ -58,7 +58,10 @@ namespace PrismDemo
 
 
             //导航
-            return Container.Resolve<NavigationDemo.Basic.BaseNavigation>();
+            //return Container.Resolve<NavigationDemo.Basic.BaseNavigation>();
+            //导航传递参数 
+            return Container.Resolve<NavigationDemo.Parameters.ParametersNavigation>();
+
 
 
             //return Container.Resolve<Views.Window1>();
@@ -74,7 +77,10 @@ namespace PrismDemo
             containerRegistry.RegisterForNavigation<NavigationDemo.Basic.UC.AUserControl>( "AUserControl" );
             containerRegistry.RegisterForNavigation<NavigationDemo.Basic.UC.BUserControl>( "BUserControl" );
 
-             
+
+            containerRegistry.RegisterForNavigation<NavigationDemo.Parameters.UC.UserControl111>( "UC111" );
+            containerRegistry.RegisterForNavigation<NavigationDemo.Parameters.UC.UserControl222>( "UC222" );
+
         }
 
 
@@ -94,18 +100,22 @@ namespace PrismDemo
 
             //消息事件
             ViewModelLocationProvider.Register<EventDemo.EventMainPage , EventDemo.EventMainPageViewModel>();
-            ViewModelLocationProvider.Register<EventDemo.UC.UserControlLeft, EventDemo.UC.UserControlLeftViewModel>();
+            ViewModelLocationProvider.Register<EventDemo.UC.UserControlLeft , EventDemo.UC.UserControlLeftViewModel>();
             ViewModelLocationProvider.Register<EventDemo.UC.UserControlTop , EventDemo.UC.UserControlTopViewModel>();
 
 
 
             //区域 
-            ViewModelLocationProvider.Register<RegionDemo.View.RegionDemo1, RegionDemo.ViewModel.RegionDemo1ViewModel>();
+            ViewModelLocationProvider.Register<RegionDemo.View.RegionDemo1 , RegionDemo.ViewModel.RegionDemo1ViewModel>();
 
 
 
             //导航
-            ViewModelLocationProvider.Register<NavigationDemo.Basic.BaseNavigation, NavigationDemo.Basic.BaseNavigationViewModel>();
+            ViewModelLocationProvider.Register<NavigationDemo.Basic.BaseNavigation , NavigationDemo.Basic.BaseNavigationViewModel>();
+            //导航传递参数
+            ViewModelLocationProvider.Register<NavigationDemo.Parameters.ParametersNavigation , NavigationDemo.Parameters.ParametersNavigationViewModel>();
+            ViewModelLocationProvider.Register<NavigationDemo.Parameters.UC.UserControl111 , NavigationDemo.Parameters.UC.UserControl111ViewModel>();
+            ViewModelLocationProvider.Register<NavigationDemo.Parameters.UC.UserControl222 , NavigationDemo.Parameters.UC.UserControl222ViewModel>();
 
 
 
@@ -120,7 +130,7 @@ namespace PrismDemo
             } );
 
 
- 
+
 
 
             //base.ConfigureViewModelLocator();
