@@ -10,24 +10,15 @@ namespace PrismDemo.NavigationDemo.Parameters.UC
 {
     public class UserControl111ViewModel : BindableBase, INavigationAware
     {
-
-
-
-        public bool IsNavigationTarget ( NavigationContext navigationContext )
-        {
-            return true;
-        }
-
-
-
         /// <summary>
-        /// 导航离开当前页时触发
+        /// 
         /// </summary>
         /// <param name="navigationContext"></param>
-        /// <exception cref="NotImplementedException"></exception>
-        public void OnNavigatedFrom ( NavigationContext navigationContext )
+        /// <returns></returns>
+        public bool IsNavigationTarget ( NavigationContext navigationContext )
         {
-
+            //默认用true
+            return true;
         }
 
 
@@ -39,7 +30,6 @@ namespace PrismDemo.NavigationDemo.Parameters.UC
         /// <exception cref="NotImplementedException"></exception>
         public void OnNavigatedTo ( NavigationContext navigationContext )
         {
-
             if ( navigationContext.Parameters["ptitle"] != null )
             {
                 //框架提供方便获取值的方法：GetValue
@@ -71,6 +61,21 @@ namespace PrismDemo.NavigationDemo.Parameters.UC
                 //var list = ( List<string> ) navigationContext.Parameters["listdata"];
             }
         }
+
+
+
+        /// <summary>
+        /// 导航离开当前页时触发
+        /// </summary>
+        /// <param name="navigationContext"></param>
+        /// <exception cref="NotImplementedException"></exception>
+        public void OnNavigatedFrom ( NavigationContext navigationContext )
+        {
+            //导航离开当前页时触发
+
+            return;
+        }
+
 
 
 
