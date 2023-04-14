@@ -109,6 +109,18 @@
     <Compile Include="NavigationDemo\Basic\UC\BUserControl.xaml.cs">
       <DependentUpon>BUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NavigationDemo\Parameters\ParametersNavigation.xaml.cs">
+      <DependentUpon>ParametersNavigation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationDemo\Parameters\ParametersNavigationViewModel.cs" />
+    <Compile Include="NavigationDemo\Parameters\UC\UserControl111.xaml.cs">
+      <DependentUpon>UserControl111.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationDemo\Parameters\UC\UserControl111ViewModel.cs" />
+    <Compile Include="NavigationDemo\Parameters\UC\UserControl222.xaml.cs">
+      <DependentUpon>UserControl222.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationDemo\Parameters\UC\UserControl222ViewModel.cs" />
     <Compile Include="RegionDemo\UC\UserControlContent.xaml.cs">
       <DependentUpon>UserControlContent.xaml</DependentUpon>
     </Compile>
@@ -176,6 +188,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="NavigationDemo\Basic\UC\BUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NavigationDemo\Parameters\ParametersNavigation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NavigationDemo\Parameters\UC\UserControl111.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NavigationDemo\Parameters\UC\UserControl222.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
