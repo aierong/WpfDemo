@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Prism.Regions;
 
 namespace PrismDemo.RegionDemo.View
 {
@@ -22,6 +23,11 @@ namespace PrismDemo.RegionDemo.View
         public RegionDemo1 ()
         {
             InitializeComponent();
+
+            //代码指定区域名字
+            //RegionManager.SetRegionName( cct , "ContentRegion" );
+
+
         }
     }
 }
