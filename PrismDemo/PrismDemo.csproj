@@ -99,6 +99,9 @@
     </Compile>
     <Compile Include="MyVm\ModuleABC\UserDataVM.cs" />
     <Compile Include="MyVm\WinOneVM.cs" />
+    <Compile Include="RegionDemo\View\RegionDemo1.xaml.cs">
+      <DependentUpon>RegionDemo1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\vm1.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\v1\LG\MYWinViewModel.cs" />
@@ -144,6 +147,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyView\WinOne.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegionDemo\View\RegionDemo1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -211,6 +218,8 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="RegionDemo\ViewModel\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

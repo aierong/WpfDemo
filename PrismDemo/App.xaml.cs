@@ -47,7 +47,12 @@ namespace PrismDemo
 
 
             // 事件消息
-            return Container.Resolve<EventDemo.EventMainPage>();
+            //return Container.Resolve<EventDemo.EventMainPage>();
+
+
+
+            //区域 
+            return Container.Resolve<RegionDemo.View.RegionDemo1>();
 
 
 
@@ -80,7 +85,12 @@ namespace PrismDemo
             ViewModelLocationProvider.Register<EventDemo.EventMainPage , EventDemo.EventMainPageViewModel>();
             ViewModelLocationProvider.Register<EventDemo.UC.UserControlLeft, EventDemo.UC.UserControlLeftViewModel>();
             ViewModelLocationProvider.Register<EventDemo.UC.UserControlTop , EventDemo.UC.UserControlTopViewModel>();
-           
+
+
+
+            //RegionDemo1
+            //ViewModelLocationProvider.Register<EventDemo.UC.UserControlTop , EventDemo.UC.UserControlTopViewModel>();
+
 
 
             ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver( ( viewType ) =>

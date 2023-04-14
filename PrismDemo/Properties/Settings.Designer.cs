@@ -43,5 +43,14 @@ namespace PrismDemo.Properties {
                 return ((bool)(this["app1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public string app2 {
+            get {
+                return ((string)(this["app2"]));
+            }
+        }
     }
 }

@@ -1,0 +1,42 @@
+﻿<Window x:Class="PrismDemo.RegionDemo.View.RegionDemo1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:PrismDemo.RegionDemo.View"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://prismlibrary.com/"
+        Title="区域"
+        Width="800"
+        Height="450"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0"
+                    Orientation="Horizontal">
+            <Button Width="100"
+                    Margin="10,10,10,10"
+                    Content="加载A" />
+            <Button Width="100"
+                    Margin="10,10,10,10"
+                    Content="加载B" />
+        </StackPanel>
+
+        <!--
+            RegionManager.RegionName就是给这个区域起一个名称
+        -->
+        <ContentControl Grid.Row="1"
+                        Grid.Column="0"
+                        prism:RegionManager.RegionName="ContentRegion" />
+    </Grid>
+</Window>
+
+

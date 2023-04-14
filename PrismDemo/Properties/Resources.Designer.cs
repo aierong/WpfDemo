@@ -77,5 +77,14 @@ namespace PrismDemo.Properties {
                 return ResourceManager.GetString("String1", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   查詢類似 2 的當地語系化字串。
+        /// </summary>
+        internal static string String2 {
+            get {
+                return ResourceManager.GetString("String2", resourceCulture);
+            }
+        }
     }
 }
