@@ -49,8 +49,10 @@ namespace PrismDemo.EventDemo.UC
                 //发送消息
                 _eventAggregator.GetEvent<SentEvent>().Publish( "UserControlLeftViewModel发来的qq1" );
 
-                _eventAggregator.GetEvent<SentDataEvent>().Publish( new Model.MyMessage() { Ids = 1 , Datas = "11" } );
-                _eventAggregator.GetEvent<SentDataEvent>().Publish( new Model.MyMessage() { Ids = 2 , Datas = "22" } );
+                _eventAggregator.GetEvent<SentDataEvent<Model.MyMessage>>().Publish( new Model.MyMessage() { Ids = 123 , Datas = "name1" } );
+
+                _eventAggregator.GetEvent<SentDataEvent<Model.MyMessage>>().Publish( new Model.MyMessage() { Ids = 1 , Datas = "11" } );
+                _eventAggregator.GetEvent<SentDataEvent<Model.MyMessage>>().Publish( new Model.MyMessage() { Ids = 2 , Datas = "22" } );
 
             } );
         }

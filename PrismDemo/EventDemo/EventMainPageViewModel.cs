@@ -25,11 +25,13 @@ namespace PrismDemo.EventDemo
             }
         }
 
+
+
         //IEventAggregator依赖注入
         public EventMainPageViewModel ( IEventAggregator ea )
         {
             //Subscribe的第2个参数是写一个过滤器:可以根据需求把需要的数据接收进来，返回true
-            ea.GetEvent<SentDataEvent>().Subscribe( ( Model.MyMessage message ) =>
+            ea.GetEvent<SentDataEvent<Model.MyMessage>>().Subscribe( ( Model.MyMessage message ) =>
             {
                 Title = Title + "  收到msg:" + message.Datas;
             } , ( Model.MyMessage message ) =>

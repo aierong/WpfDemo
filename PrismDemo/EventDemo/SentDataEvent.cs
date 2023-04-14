@@ -7,7 +7,7 @@ using Prism.Events;
 
 namespace PrismDemo.EventDemo
 {
-    public class SentDataEvent : PubSubEvent<Model.MyMessage>
+    public class SentDataEvent<T> : PubSubEvent<T>
     {
     }
 }
