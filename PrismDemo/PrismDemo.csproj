@@ -118,6 +118,14 @@
     <Compile Include="NavigationDemo\Basic\UC\BUserControl.xaml.cs">
       <DependentUpon>BUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NavigationDemo\ConfirmNavigation\ConfirmNavigationPage.xaml.cs">
+      <DependentUpon>ConfirmNavigationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationDemo\ConfirmNavigation\ConfirmNavigationPageViewModel.cs" />
+    <Compile Include="NavigationDemo\ConfirmNavigation\UC\UserControlAAA.xaml.cs">
+      <DependentUpon>UserControlAAA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationDemo\ConfirmNavigation\UC\UserControlAAAViewModel.cs" />
     <Compile Include="NavigationDemo\Parameters\ParametersNavigation.xaml.cs">
       <DependentUpon>ParametersNavigation.xaml</DependentUpon>
     </Compile>
@@ -205,6 +213,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="NavigationDemo\Basic\UC\BUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NavigationDemo\ConfirmNavigation\ConfirmNavigationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NavigationDemo\ConfirmNavigation\UC\UserControlAAA.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
