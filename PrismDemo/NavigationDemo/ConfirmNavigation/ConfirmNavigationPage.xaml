@@ -2,11 +2,43 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrismDemo.NavigationDemo.ConfirmNavigation"
-        mc:Ignorable="d"
-        Title="ConfirmNavigationPage" Height="450" Width="800">
-    <Grid>
-        
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://prismlibrary.com/"
+        Title="导航确认"
+        Width="800"
+        Height="450"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!--  这里定义一个区域来加载导航  -->
+        <ContentControl Grid.Row="0"
+                        Grid.Column="0"
+                        prism:RegionManager.RegionName="ContentRegion" />
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <Button Width="80"
+                    Height="30"
+                    Margin="10,10,10,10"
+                    Command="{Binding AButtonClickCommand}"
+                    Content="加载A" />
+            <Button Width="80"
+                    Height="30"
+                    Margin="10,10,10,10"
+                    Command="{Binding BButtonClickCommand}"
+                    Content="加载B" />
+        </StackPanel>
     </Grid>
 </Window>

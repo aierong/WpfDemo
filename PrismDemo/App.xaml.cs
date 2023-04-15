@@ -61,11 +61,12 @@ namespace PrismDemo
             //return Container.Resolve<NavigationDemo.Basic.BaseNavigation>();
             //导航传递参数 
             //return Container.Resolve<NavigationDemo.Parameters.ParametersNavigation>();
-
+            //确定导航
+            return Container.Resolve<NavigationDemo.ConfirmNavigation.ConfirmNavigationPage>();
 
 
             //对话框
-            return Container.Resolve<DialogDemo.DialogWindow>();
+            //return Container.Resolve<DialogDemo.DialogWindow>();
 
 
 
@@ -85,6 +86,9 @@ namespace PrismDemo
 
             containerRegistry.RegisterForNavigation<NavigationDemo.Parameters.UC.UserControl111>( "UC111" );
             containerRegistry.RegisterForNavigation<NavigationDemo.Parameters.UC.UserControl222>( "UC222" );
+
+
+            containerRegistry.RegisterForNavigation<NavigationDemo.ConfirmNavigation.UC.UserControlAAA>( "Navigation1" );
 
 
 
@@ -127,6 +131,10 @@ namespace PrismDemo
             ViewModelLocationProvider.Register<NavigationDemo.Parameters.ParametersNavigation , NavigationDemo.Parameters.ParametersNavigationViewModel>();
             ViewModelLocationProvider.Register<NavigationDemo.Parameters.UC.UserControl111 , NavigationDemo.Parameters.UC.UserControl111ViewModel>();
             ViewModelLocationProvider.Register<NavigationDemo.Parameters.UC.UserControl222 , NavigationDemo.Parameters.UC.UserControl222ViewModel>();
+            //确定导航
+            ViewModelLocationProvider.Register<NavigationDemo.ConfirmNavigation.UC.UserControlAAA, NavigationDemo.ConfirmNavigation.UC.UserControlAAAViewModel>();
+            ViewModelLocationProvider.Register<NavigationDemo.ConfirmNavigation.ConfirmNavigationPage, NavigationDemo.ConfirmNavigation.ConfirmNavigationPageViewModel>();
+
 
 
             //弹窗
