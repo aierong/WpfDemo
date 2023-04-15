@@ -60,7 +60,12 @@ namespace PrismDemo
             //导航
             //return Container.Resolve<NavigationDemo.Basic.BaseNavigation>();
             //导航传递参数 
-            return Container.Resolve<NavigationDemo.Parameters.ParametersNavigation>();
+            //return Container.Resolve<NavigationDemo.Parameters.ParametersNavigation>();
+
+
+
+            //对话框
+            return Container.Resolve<DialogDemo.DialogWindow>();
 
 
 
@@ -80,6 +85,12 @@ namespace PrismDemo
 
             containerRegistry.RegisterForNavigation<NavigationDemo.Parameters.UC.UserControl111>( "UC111" );
             containerRegistry.RegisterForNavigation<NavigationDemo.Parameters.UC.UserControl222>( "UC222" );
+
+
+
+            //注册对话框
+            //并且给对话框起名
+            containerRegistry.RegisterDialog<DialogDemo.Dialogs.UserDialog , DialogDemo.Dialogs.UserDialogViewModel>("mydlgone");
 
         }
 
@@ -116,6 +127,11 @@ namespace PrismDemo
             ViewModelLocationProvider.Register<NavigationDemo.Parameters.ParametersNavigation , NavigationDemo.Parameters.ParametersNavigationViewModel>();
             ViewModelLocationProvider.Register<NavigationDemo.Parameters.UC.UserControl111 , NavigationDemo.Parameters.UC.UserControl111ViewModel>();
             ViewModelLocationProvider.Register<NavigationDemo.Parameters.UC.UserControl222 , NavigationDemo.Parameters.UC.UserControl222ViewModel>();
+
+
+            //弹窗
+            ViewModelLocationProvider.Register<DialogDemo.DialogWindow, DialogDemo.DialogWindowViewModel>();
+            ViewModelLocationProvider.Register<DialogDemo.Dialogs.UserDialog, DialogDemo.Dialogs.UserDialogViewModel>();
 
 
 

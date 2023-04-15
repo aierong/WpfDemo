@@ -84,6 +84,7 @@
       <DependentUpon>DialogWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DialogDemo\DialogWindowViewModel.cs" />
+    <Compile Include="DialogDemo\Models\People.cs" />
     <Compile Include="EventDemo\EventMainPage.xaml.cs">
       <DependentUpon>EventMainPage.xaml</DependentUpon>
     </Compile>

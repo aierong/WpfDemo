@@ -4,11 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:PrismDemo.DialogDemo"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="DialogWindow"
+        Title="对话框demo"
         Width="800"
         Height="450"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
         mc:Ignorable="d">
     <Grid>
-        <!--  11  -->
+        <StackPanel>
+            <Button Width="75"
+                    Height="25"
+                    Margin="0,10,0,0"
+                    Command="{Binding ButtonClickCommand}"
+                    Content="弹窗" />
+            <TextBlock Margin="0,20,0,0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="18"
+                       FontWeight="Bold"
+                       Foreground="#FFE60B0B"
+                       Text="{Binding MyMsg}" />
+        </StackPanel>
     </Grid>
 </Window>
