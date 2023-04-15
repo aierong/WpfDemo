@@ -76,6 +76,14 @@
       <DependentUpon>ModelData.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataDemo\VM\ModelDataVM.cs" />
+    <Compile Include="DialogDemo\Dialogs\UserDialog.xaml.cs">
+      <DependentUpon>UserDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DialogDemo\Dialogs\UserDialogViewModel.cs" />
+    <Compile Include="DialogDemo\DialogWindow.xaml.cs">
+      <DependentUpon>DialogWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DialogDemo\DialogWindowViewModel.cs" />
     <Compile Include="EventDemo\EventMainPage.xaml.cs">
       <DependentUpon>EventMainPage.xaml</DependentUpon>
     </Compile>
@@ -156,6 +164,14 @@
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
     <Page Include="DataDemo\View\ModelData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DialogDemo\Dialogs\UserDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DialogDemo\DialogWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
