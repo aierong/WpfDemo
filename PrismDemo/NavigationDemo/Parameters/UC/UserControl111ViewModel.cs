@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 using Prism.Mvvm;
 using Prism.Regions;
 
+/*
+INavigationAware接口3个方法:
+
+OnNavigatedFrom：导航之前触发(导航离开当前页时触发),一般用于保存该页面的数据
+OnNavigatedTo：导航后目的页面触发，一般用于初始化或者接受上页面的传递参数
+IsNavigationTarget：True则重用该View实例，Flase则每一次导航到该页面都会实例化一次
+*/
+
 namespace PrismDemo.NavigationDemo.Parameters.UC
 {
     public class UserControl111ViewModel : BindableBase, INavigationAware
@@ -28,7 +36,7 @@ namespace PrismDemo.NavigationDemo.Parameters.UC
 
 
         /// <summary>
-        /// 导航完成前,接收用户传递参数或者是否允许导航等控制
+        /// 导航完成前,接收用户传递参数或者一些初始化工作
         /// </summary>
         /// <param name="navigationContext"></param>
         /// <exception cref="NotImplementedException"></exception>

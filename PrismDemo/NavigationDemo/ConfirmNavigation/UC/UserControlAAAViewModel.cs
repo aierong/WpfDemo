@@ -7,7 +7,11 @@ using System.Windows;
 using Prism.Mvvm;
 using Prism.Regions;
 
-//IConfirmNavigationRequest是继承INavigationAware的
+/*
+IConfirmNavigationRequest是继承INavigationAware
+
+ConfirmNavigationRequest方法:导航准备离开页面时,触发这个事件 可以做一些判断,阻止导航
+*/
 
 namespace PrismDemo.NavigationDemo.ConfirmNavigation.UC
 {
