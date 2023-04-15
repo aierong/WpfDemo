@@ -41,14 +41,14 @@ namespace PrismDemo.NavigationDemo.ConfirmNavigation.UC
 
         public void OnNavigatedFrom ( NavigationContext navigationContext )
         {
-             
+
         }
 
 
 
         public void OnNavigatedTo ( NavigationContext navigationContext )
         {
-             //可以获取一些参数等等
+            //可以获取一些参数等等
 
         }
     }

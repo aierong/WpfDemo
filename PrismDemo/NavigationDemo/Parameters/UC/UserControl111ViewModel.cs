@@ -17,7 +17,11 @@ namespace PrismDemo.NavigationDemo.Parameters.UC
         /// <returns></returns>
         public bool IsNavigationTarget ( NavigationContext navigationContext )
         {
-            //默认用true
+            //IsNavigationTarget配置是否重用现有视图
+            // 导航离开后,再回来这个页面,视图是否重用现有视图
+
+            //默认用true,就是重用之前的视图,之前的操作等数据都还在
+            //false,就是重新初始化一个新的视图
             return true;
         }
 
