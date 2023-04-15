@@ -55,7 +55,12 @@ namespace PrismDemo.DialogDemo.Dialogs
             //判断一下,是否存在
             if ( parameters.ContainsKey( "p1" ) )
             {
-                var val = parameters.GetValue<string>( "p1" );
+                var val1 = parameters.GetValue<string>( "p1" );
+            }
+
+            if ( parameters.ContainsKey( "p2" ) )
+            {
+                var val2 = parameters.GetValue<string>( "p2" );
             }
 
             if ( parameters.ContainsKey( "pobj" ) )

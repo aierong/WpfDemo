@@ -62,11 +62,11 @@ namespace PrismDemo
             //导航传递参数 
             //return Container.Resolve<NavigationDemo.Parameters.ParametersNavigation>();
             //确定导航
-            return Container.Resolve<NavigationDemo.ConfirmNavigation.ConfirmNavigationPage>();
+            //return Container.Resolve<NavigationDemo.ConfirmNavigation.ConfirmNavigationPage>();
 
 
             //对话框
-            //return Container.Resolve<DialogDemo.DialogWindow>();
+            return Container.Resolve<DialogDemo.DialogWindow>();
 
 
 

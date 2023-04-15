@@ -48,7 +48,8 @@ namespace PrismDemo.DialogDemo
             {
                 //打开对话框之前,可以定义一些参数传递过去
                 DialogParameters pars = new DialogParameters();
-                pars.Add( "p1" , "qq" );
+                pars.Add( "p1" , "qq1" );
+                pars.Add( "p2" , "qq2" );
                 //传递一个对象过去
                 pars.Add( "pobj" , new People()
                 {
@@ -82,6 +83,16 @@ namespace PrismDemo.DialogDemo
                     }
 
                 } );
+
+
+
+                //如果要传递的参数简单,也可以使用类似web querystring 那样传递参数
+                //DialogParameters _Parameters = new DialogParameters( "p1=qq1&p2=qq2" );
+                //this._dialogService.ShowDialog( "mydlgone" , _Parameters , ( IDialogResult ir ) =>
+                //{
+                //    //相关逻辑代码
+
+                //} );
 
             } );
         }

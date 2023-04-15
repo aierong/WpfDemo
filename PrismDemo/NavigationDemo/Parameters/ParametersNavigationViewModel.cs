@@ -37,7 +37,7 @@ namespace PrismDemo.NavigationDemo.Parameters
 
             Par2ButtonClickCommand = new DelegateCommand( () =>
             {
-                //也可以使用类似web querystring 那样传递参数
+                //如果要传递的参数简单,也可以使用类似web querystring 那样传递参数
                 this._regionManager.RequestNavigate( "ContentRegion" , "UC222?p1=srt222&p2=123" );
             } );
         }
