@@ -9,5 +9,11 @@
              mc:Ignorable="d">
     <Grid>
         <!--  11  -->
+        <StackPanel>
+            <TextBox Width="100"
+                     Text="" />
+            <Button Width="100"
+                    Content="保存" />
+        </StackPanel>
     </Grid>
 </UserControl>

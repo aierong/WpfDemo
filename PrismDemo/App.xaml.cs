@@ -88,13 +88,12 @@ namespace PrismDemo
             containerRegistry.RegisterForNavigation<NavigationDemo.Parameters.UC.UserControl222>( "UC222" );
 
 
-            containerRegistry.RegisterForNavigation<NavigationDemo.ConfirmNavigation.UC.UserControlAAA>( "Navigation1" );
-
-
+            containerRegistry.RegisterForNavigation<NavigationDemo.ConfirmNavigation.UC.UserControlAAA>( "NavigationAAA" );
+            containerRegistry.RegisterForNavigation<NavigationDemo.ConfirmNavigation.UC.UserControlBBB>( "NavigationBBB" );
 
             //注册对话框
             //并且给对话框起名
-            containerRegistry.RegisterDialog<DialogDemo.Dialogs.UserDialog , DialogDemo.Dialogs.UserDialogViewModel>("mydlgone");
+            containerRegistry.RegisterDialog<DialogDemo.Dialogs.UserDialog , DialogDemo.Dialogs.UserDialogViewModel>( "mydlgone" );
 
         }
 
@@ -132,14 +131,14 @@ namespace PrismDemo
             ViewModelLocationProvider.Register<NavigationDemo.Parameters.UC.UserControl111 , NavigationDemo.Parameters.UC.UserControl111ViewModel>();
             ViewModelLocationProvider.Register<NavigationDemo.Parameters.UC.UserControl222 , NavigationDemo.Parameters.UC.UserControl222ViewModel>();
             //确定导航
-            ViewModelLocationProvider.Register<NavigationDemo.ConfirmNavigation.UC.UserControlAAA, NavigationDemo.ConfirmNavigation.UC.UserControlAAAViewModel>();
-            ViewModelLocationProvider.Register<NavigationDemo.ConfirmNavigation.ConfirmNavigationPage, NavigationDemo.ConfirmNavigation.ConfirmNavigationPageViewModel>();
+            ViewModelLocationProvider.Register<NavigationDemo.ConfirmNavigation.UC.UserControlAAA , NavigationDemo.ConfirmNavigation.UC.UserControlAAAViewModel>();
+            ViewModelLocationProvider.Register<NavigationDemo.ConfirmNavigation.ConfirmNavigationPage , NavigationDemo.ConfirmNavigation.ConfirmNavigationPageViewModel>();
 
 
 
             //弹窗
-            ViewModelLocationProvider.Register<DialogDemo.DialogWindow, DialogDemo.DialogWindowViewModel>();
-            ViewModelLocationProvider.Register<DialogDemo.Dialogs.UserDialog, DialogDemo.Dialogs.UserDialogViewModel>();
+            ViewModelLocationProvider.Register<DialogDemo.DialogWindow , DialogDemo.DialogWindowViewModel>();
+            ViewModelLocationProvider.Register<DialogDemo.Dialogs.UserDialog , DialogDemo.Dialogs.UserDialogViewModel>();
 
 
 
