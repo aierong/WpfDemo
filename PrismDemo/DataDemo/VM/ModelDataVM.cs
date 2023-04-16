@@ -20,6 +20,7 @@ namespace PrismDemo.DataDemo.VM
             }
             set
             {
+                //SetProperty就是设置值,并且通知属性改变
                 SetProperty( ref _Title , value );
 
                 //通知某个属性改变RaisePropertyChanged
@@ -66,8 +67,6 @@ namespace PrismDemo.DataDemo.VM
 
                 //通知某个命令
                 ButtonClickCommand.RaiseCanExecuteChanged();
-
-
                 ButtonClickCommandNew.RaiseCanExecuteChanged();
             }
         }
@@ -78,15 +77,16 @@ namespace PrismDemo.DataDemo.VM
             get; private set;
         }
 
-        private DelegateCommand _ButtonClickCommand;
+
 
 
 
         //下面是另外一种写法,这样写,不用去构造函数中初始化命令
+        private DelegateCommand _ButtonClickCommand;
         public DelegateCommand ButtonClickCommandNew => _ButtonClickCommand ?? ( _ButtonClickCommand = new DelegateCommand( Submit , CanSubmit ) );
         //public DelegateCommand ButtonClickCommandNew => _ButtonClickCommand ?? ( _ButtonClickCommand = new DelegateCommand( Submit  ).ObservesCanExecute( () => IsEnabled ) );
 
-
+        //带参数的
         private DelegateCommand<double> _getCurrentTimeCommand;
         public DelegateCommand<double> GetCurrentTimeCommand => _getCurrentTimeCommand ?? ( _getCurrentTimeCommand = new DelegateCommand<double>( ( double val ) =>
         {
