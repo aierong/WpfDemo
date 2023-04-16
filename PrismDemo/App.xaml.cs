@@ -43,7 +43,7 @@ namespace PrismDemo
 
 
             //模型命令demo 
-            //return Container.Resolve<DataDemo.View.ModelData>();
+            return Container.Resolve<DataDemo.View.ModelData>();
 
 
 
@@ -66,7 +66,7 @@ namespace PrismDemo
 
 
             //对话框
-            return Container.Resolve<DialogDemo.DialogWindow>();
+            //return Container.Resolve<DialogDemo.DialogWindow>();
 
 
 

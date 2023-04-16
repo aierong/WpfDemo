@@ -67,6 +67,8 @@ namespace PrismDemo.DataDemo.VM
                 //通知某个命令
                 ButtonClickCommand.RaiseCanExecuteChanged();
 
+
+                ButtonClickCommandNew.RaiseCanExecuteChanged();
             }
         }
 
@@ -75,6 +77,28 @@ namespace PrismDemo.DataDemo.VM
         {
             get; private set;
         }
+
+        private DelegateCommand _ButtonClickCommand;
+
+
+
+        //下面是另外一种写法,这样写,不用去构造函数中初始化命令
+        public DelegateCommand ButtonClickCommandNew => _ButtonClickCommand ?? ( _ButtonClickCommand = new DelegateCommand( Submit , CanSubmit ) );
+        //public DelegateCommand ButtonClickCommandNew => _ButtonClickCommand ?? ( _ButtonClickCommand = new DelegateCommand( Submit  ).ObservesCanExecute( () => IsEnabled ) );
+
+
+        private DelegateCommand<double> _getCurrentTimeCommand;
+        public DelegateCommand<double> GetCurrentTimeCommand => _getCurrentTimeCommand ?? ( _getCurrentTimeCommand = new DelegateCommand<double>( ( double val ) =>
+        {
+            //一些逻辑
+
+        } , ( double val ) =>
+        {
+            //一些逻辑
+            return true;
+        } ) );
+
+
 
         public DelegateCommand ButtonClickCommandTwo
         {

@@ -14,6 +14,7 @@
                                          IsDesignTimeCreatable=True}"
         prism:ViewModelLocator.AutoWireViewModel="False"
         WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
         mc:Ignorable="d">
     <!--
         prism:ViewModelLocator.AutoWireViewModel="True"
@@ -72,7 +73,6 @@
                        Foreground="Green"
                        Text="loading......"
                        Visibility="{Binding Path=IsLoadData, Converter={StaticResource myboolconvert}}" />
-
             <Button Width="100"
                     Height="30"
                     Command="{Binding AsyncButtonParClickCommand}"
@@ -85,7 +85,6 @@
                        Foreground="Green"
                        Text="loading......"
                        Visibility="{Binding Path=IsLoadParData, Converter={StaticResource myboolconvert}}" />
-
         </StackPanel>
     </Grid>
 </Window>
