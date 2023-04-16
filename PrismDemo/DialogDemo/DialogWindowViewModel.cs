@@ -39,7 +39,6 @@ namespace PrismDemo.DialogDemo
         /// </summary>
         public DelegateCommand ButtonClickCommand => _ButtonClickCommand ?? ( _ButtonClickCommand = new DelegateCommand( () =>
         {
-
             //打开对话框之前,可以定义一些参数传递过去
             DialogParameters pars = new DialogParameters();
             pars.Add( "p1" , "qq1" );
@@ -53,14 +52,15 @@ namespace PrismDemo.DialogDemo
 
             //ShowDialog方法
             //第1个参数是:App.xaml中注册对话框起的名字 mydlgone
-            //第2个参数是:传递参数给对话框
-            //第3个参数是:传递参数给对话框
+            //第2个参数是:传递的参数
+            //第3个参数是:对话框返回的结果(一个回调函数,可以在这里接收一些对话框返回的结果)
             this._dialogService.ShowDialog( "mydlgone" , pars , ( IDialogResult ir ) =>
             {
                 //先判断,返回的状态
                 if ( ir.Result == ButtonResult.OK )
                 {
                     //这里再接收一下返回的参数
+                    //先判断一下
                     if ( ir.Parameters.ContainsKey( "Result1" ) )
                     {
                         var val1 = ir.Parameters.GetValue<string>( "Result1" );
