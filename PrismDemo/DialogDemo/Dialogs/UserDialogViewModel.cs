@@ -14,7 +14,7 @@ IDialogAware接口说明:
 
 CanCloseDialog()函数是决定窗体是否关闭
 OnDialogClosed()函数是窗体关闭时触发，触发条件取决于CanCloseDialog()函数
-OnDialogOpened()函数时窗体打开时触发，比窗体Loaded事件早触发
+OnDialogOpened()函数时窗体打开时触发，比窗体Loaded事件早触发(这个函数中可以接收参数)
 Title为窗体的标题
 RequestClose为关闭事件，可由此控制窗体的关闭
 */
