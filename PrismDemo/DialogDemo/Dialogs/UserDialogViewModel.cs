@@ -133,21 +133,30 @@ namespace PrismDemo.DialogDemo.Dialogs
             {
 
                 DialogParameters pars = new DialogParameters();
-                pars.Add( "Result1" , "qq" );
+                pars.Add( "Result1" , "qq1" );
+                pars.Add( "Result2" , "qq2" );
+
                 //返回一个对象过去
-                pars.Add( "Result1obj" , new People()
+                pars.Add( "Resultobj" , new People()
                 {
                     Name = this.Name ,
                     Address = this.Address
                 } );
 
+                //调用RequestClose就会关闭弹窗
                 //DialogResult第1个参数是返回状态,第2个参数是返回的值(如果没有也可以不带参数)
                 RequestClose?.Invoke( new DialogResult( ButtonResult.OK, pars ) );
+
+
+                //如果要传递的参数简单,也可以使用类似web querystring 那样传递参数
+                //DialogParameters _Parameters = new DialogParameters( "Result1=qq1&Result2=qq2" );
+                //RequestClose?.Invoke( new DialogResult( ButtonResult.OK , _Parameters ) );
             } );
 
             //取消操作
             CancelClickCommand = new DelegateCommand( () =>
             {
+                //调用RequestClose就会关闭弹窗
                 RequestClose?.Invoke( new DialogResult( ButtonResult.Cancel ) );
             } );
         }

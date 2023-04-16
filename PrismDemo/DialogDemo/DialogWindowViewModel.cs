@@ -69,11 +69,17 @@ namespace PrismDemo.DialogDemo
                         //这里再接收一下返回的参数
                         if ( ir.Parameters.ContainsKey( "Result1" ) )
                         {
-                            var val = ir.Parameters.GetValue<string>( "Result1" );
+                            var val1 = ir.Parameters.GetValue<string>( "Result1" );
                         }
-                        if ( ir.Parameters.ContainsKey( "Result1obj" ) )
+
+                        if ( ir.Parameters.ContainsKey( "Result2" ) )
                         {
-                            var _People = ir.Parameters.GetValue<People>( "Result1obj" );
+                            var val2 = ir.Parameters.GetValue<string>( "Result2" );
+                        }
+
+                        if ( ir.Parameters.ContainsKey( "Resultobj" ) )
+                        {
+                            var _People = ir.Parameters.GetValue<People>( "Resultobj" );
                             this.MyMsg = string.Format( "弹窗给我返回:Name:{0} Address:{1}" , _People.Name , _People.Address );
                         }
                     }
