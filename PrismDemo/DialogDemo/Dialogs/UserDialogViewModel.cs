@@ -10,7 +10,7 @@ using PrismDemo.DialogDemo.Models;
 
 
 /*
-IDialogAware接口
+IDialogAware接口说明:
 
 CanCloseDialog()函数是决定窗体是否关闭
 OnDialogClosed()函数是窗体关闭时触发，触发条件取决于CanCloseDialog()函数
