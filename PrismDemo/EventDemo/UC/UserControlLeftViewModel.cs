@@ -26,35 +26,29 @@ namespace PrismDemo.EventDemo.UC
         }
 
 
-        public DelegateCommand ButtonClickCommand
+        private DelegateCommand _ButtonClickCommand;
+        public DelegateCommand ButtonClickCommand => _ButtonClickCommand ?? ( _ButtonClickCommand = new DelegateCommand( () =>
         {
-            get; private set;
-        }
+            //点击按钮,修改标题
+            Name = "hello(Left改)";
+
+            //发送消息
+            this._eventAggregator.GetEvent<SentEvent>().Publish( "UserControlLeftViewModel发来的qq1" );
+
+            this._eventAggregator.GetEvent<SentDataEvent<Model.MyMessage>>().Publish( new Model.MyMessage() { Ids = 123 , Datas = "name1" } );
+
+            this._eventAggregator.GetEvent<SentDataEvent<Model.MyMessage>>().Publish( new Model.MyMessage() { Ids = 1 , Datas = "11" } );
+            this._eventAggregator.GetEvent<SentDataEvent<Model.MyMessage>>().Publish( new Model.MyMessage() { Ids = 2 , Datas = "22" } );
+
+
+        } ) );
 
         IEventAggregator _eventAggregator;
 
         //IEventAggregator依赖注入
         public UserControlLeftViewModel ( IEventAggregator ea )
         {
-            _eventAggregator = ea;
-
-
-
-            ButtonClickCommand = new DelegateCommand( () =>
-            {
-                //点击按钮,修改标题
-                Name = "hello(Left改)";
-
-
-                //发送消息
-                _eventAggregator.GetEvent<SentEvent>().Publish( "UserControlLeftViewModel发来的qq1" );
-
-                _eventAggregator.GetEvent<SentDataEvent<Model.MyMessage>>().Publish( new Model.MyMessage() { Ids = 123 , Datas = "name1" } );
-
-                _eventAggregator.GetEvent<SentDataEvent<Model.MyMessage>>().Publish( new Model.MyMessage() { Ids = 1 , Datas = "11" } );
-                _eventAggregator.GetEvent<SentDataEvent<Model.MyMessage>>().Publish( new Model.MyMessage() { Ids = 2 , Datas = "22" } );
-
-            } );
+            this._eventAggregator = ea;
         }
 
 
