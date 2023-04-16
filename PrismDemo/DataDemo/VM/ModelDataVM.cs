@@ -72,6 +72,9 @@ namespace PrismDemo.DataDemo.VM
         }
 
 
+        /// <summary>
+        /// 定义命令
+        /// </summary>
         public DelegateCommand ButtonClickCommand
         {
             get; private set;
@@ -105,6 +108,9 @@ namespace PrismDemo.DataDemo.VM
             get; private set;
         }
 
+        /// <summary>
+        /// 定义命令(带参数)
+        /// </summary>
         public DelegateCommand<double?> ButtonClickParCommand
         {
             get; private set;
@@ -155,6 +161,7 @@ namespace PrismDemo.DataDemo.VM
 
         public ModelDataVM ()
         {
+            //构造函数中,初始化命令
             ButtonClickCommand = new DelegateCommand( Submit , CanSubmit );
 
             //这个可以上面一样效果，但是不用IsEnabled通知，简单一些
@@ -169,7 +176,6 @@ namespace PrismDemo.DataDemo.VM
                 {
                     Title = $"hello(改):{val}";
                 }
-
             } );
 
             AsyncButtonClickCommand = new DelegateCommand( AsyncButtonClick , () =>
