@@ -90,8 +90,9 @@ namespace PrismDemo
             //注册对话框
             //并且给对话框起名
             containerRegistry.RegisterDialog<DialogDemo.Dialogs.UserDialog , DialogDemo.Dialogs.UserDialogViewModel>( "mydlgone" );
-
+             
         }
+        
 
 
 
