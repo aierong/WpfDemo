@@ -7,13 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove=".gitattributes" />
-    <None Remove=".gitignore" />
+    <Compile Remove="CommunityToolkit.Mvvm官方示例\**" />
+    <Compile Remove="SourceCode1\**" />
+    <Compile Remove="SourceCode2\**" />
+    <Compile Remove="微软官方WPF示例\**" />
+    <EmbeddedResource Remove="CommunityToolkit.Mvvm官方示例\**" />
+    <EmbeddedResource Remove="SourceCode1\**" />
+    <EmbeddedResource Remove="SourceCode2\**" />
+    <EmbeddedResource Remove="微软官方WPF示例\**" />
+    <None Remove="CommunityToolkit.Mvvm官方示例\**" />
+    <None Remove="SourceCode1\**" />
+    <None Remove="SourceCode2\**" />
+    <None Remove="微软官方WPF示例\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CommunityToolkit.Mvvm官方示例\" />
-    <Folder Include="微软官方WPF示例\" />
+    <None Remove=".gitattributes" />
+    <None Remove=".gitignore" />
   </ItemGroup>
 
 </Project>
