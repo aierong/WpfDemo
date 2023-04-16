@@ -12,10 +12,6 @@ using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Unity;
 
-
-
-
-
 namespace PrismDemo
 {
     /// <summary>
@@ -48,7 +44,7 @@ namespace PrismDemo
 
 
             // 事件消息
-            return Container.Resolve<EventDemo.EventMainPage>();
+            //return Container.Resolve<EventDemo.EventMainPage>();
 
 
 
@@ -66,7 +62,7 @@ namespace PrismDemo
 
 
             //对话框
-            //return Container.Resolve<DialogDemo.DialogWindow>();
+            return Container.Resolve<DialogDemo.DialogWindow>();
 
 
 

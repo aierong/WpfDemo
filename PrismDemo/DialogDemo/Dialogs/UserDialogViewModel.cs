@@ -116,49 +116,46 @@ namespace PrismDemo.DialogDemo.Dialogs
             }
         }
 
-        public DelegateCommand SaveClickCommand
+        private DelegateCommand _SaveClickCommand;
+        /// <summary>
+        /// 确定操作
+        /// </summary>
+        public DelegateCommand SaveClickCommand => _SaveClickCommand ?? ( _SaveClickCommand = new DelegateCommand( () =>
         {
-            get; private set;
-        }
+            DialogParameters pars = new DialogParameters();
+            pars.Add( "Result1" , "qq1" );
+            pars.Add( "Result2" , "qq2" );
 
-        public DelegateCommand CancelClickCommand
-        {
-            get; private set;
-        }
-
-        public UserDialogViewModel()
-        {
-            //确定操作
-            SaveClickCommand = new DelegateCommand( () =>
+            //返回一个对象过去
+            pars.Add( "Resultobj" , new People()
             {
-
-                DialogParameters pars = new DialogParameters();
-                pars.Add( "Result1" , "qq1" );
-                pars.Add( "Result2" , "qq2" );
-
-                //返回一个对象过去
-                pars.Add( "Resultobj" , new People()
-                {
-                    Name = this.Name ,
-                    Address = this.Address
-                } );
-
-                //调用RequestClose就会关闭弹窗
-                //DialogResult第1个参数是返回状态,第2个参数是返回的值(如果没有也可以不带参数)
-                RequestClose?.Invoke( new DialogResult( ButtonResult.OK, pars ) );
-
-
-                //如果要传递的参数简单,也可以使用类似web querystring 那样传递参数
-                //DialogParameters _Parameters = new DialogParameters( "Result1=qq1&Result2=qq2" );
-                //RequestClose?.Invoke( new DialogResult( ButtonResult.OK , _Parameters ) );
+                Name = this.Name ,
+                Address = this.Address
             } );
 
-            //取消操作
-            CancelClickCommand = new DelegateCommand( () =>
-            {
-                //调用RequestClose就会关闭弹窗
-                RequestClose?.Invoke( new DialogResult( ButtonResult.Cancel ) );
-            } );
-        }
+            //调用RequestClose就会关闭弹窗
+            //DialogResult第1个参数是返回状态,第2个参数是返回的值(如果没有也可以不带参数)
+            RequestClose?.Invoke( new DialogResult( ButtonResult.OK , pars ) );
+
+
+            //如果要传递的参数简单,也可以使用类似web querystring 那样传递参数
+            //DialogParameters _Parameters = new DialogParameters( "Result1=qq1&Result2=qq2" );
+            //////RequestClose?.Invoke( new DialogResult( ButtonResult.OK , _Parameters ) );
+        } ) );
+
+
+        private DelegateCommand _CancelClickCommand;
+        /// <summary>
+        /// 取消操作
+        /// </summary>
+        public DelegateCommand CancelClickCommand => _CancelClickCommand ?? ( _CancelClickCommand = new DelegateCommand( () =>
+        {
+            //调用RequestClose就会关闭弹窗
+            RequestClose?.Invoke( new DialogResult( ButtonResult.Cancel ) );
+        } ) );
+
+       
+
+        
     }
 }
