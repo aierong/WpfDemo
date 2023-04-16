@@ -34,11 +34,13 @@ namespace PrismDemo.EventDemo.UC
         //IEventAggregator依赖注入
         public UserControlTopViewModel ( IEventAggregator ea )
         {
+            //订阅接收,接收的数据是一个字符串
             ea.GetEvent<SentEvent>().Subscribe( ( string message ) =>
             {
                 Name = Name + "  收到msg:" + message;
             } );
 
+            //订阅接收,接收的数据是一个对象
             ea.GetEvent<SentDataEvent<Model.MyMessage>>().Subscribe( ( Model.MyMessage message ) =>
             {
                 Name = Name + "  收到msg:" + message.Datas;
