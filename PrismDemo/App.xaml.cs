@@ -35,7 +35,7 @@ namespace PrismDemo
 
             //手动指定模块绑定
             //return Container.Resolve<MyView.WinOne>();
-            return Container.Resolve<MyView.ModuleABC.UserData>();
+            //return Container.Resolve<MyView.ModuleABC.UserData>();
 
 
 
@@ -57,7 +57,7 @@ namespace PrismDemo
             //导航
             //return Container.Resolve<NavigationDemo.Basic.BaseNavigation>();
             //导航传递参数 
-            //return Container.Resolve<NavigationDemo.Parameters.ParametersNavigation>();
+            return Container.Resolve<NavigationDemo.Parameters.ParametersNavigation>();
             //确定导航
             //return Container.Resolve<NavigationDemo.ConfirmNavigation.ConfirmNavigationPage>();
 

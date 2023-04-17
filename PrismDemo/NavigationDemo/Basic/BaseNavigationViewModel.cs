@@ -32,7 +32,18 @@ namespace PrismDemo.NavigationDemo.Basic
 
             BButtonClickCommand = new DelegateCommand( () =>
             {
-                this._regionManager.RequestNavigate( "ContentRegion" , "BUserControl" );                
+                //this._regionManager.RequestNavigate( "ContentRegion" , "BUserControl" );
+
+                //RequestNavigate方法第3个参数:可以定义一个回调，得到导航完成通知
+                this._regionManager.RequestNavigate( "ContentRegion" , 
+                                                            "BUserControl" , 
+                                                           ( NavigationResult result ) =>
+                                                            {
+                                                                if ( result.Result != null )
+                                                                {
+                                                                                                                                      
+                                                                }
+                                                            } );
             } );
         }
 
