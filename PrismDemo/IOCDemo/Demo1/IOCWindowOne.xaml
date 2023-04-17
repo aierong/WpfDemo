@@ -25,14 +25,10 @@
                      Width="190"
                      Height="30"
                      Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}" />
-
-
             <Button Width="100"
                     Height="30"
                     Command="{Binding ButtonClickCommand}"
-                    Content="改变值" />
-
-
+                    Content="获取值" />
         </StackPanel>
     </Grid>
 </Window>

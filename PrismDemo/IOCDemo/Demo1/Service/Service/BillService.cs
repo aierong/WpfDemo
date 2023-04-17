@@ -22,10 +22,6 @@ namespace PrismDemo.IOCDemo.Demo1.Service.Service
             return _IRepositoryBill.GetData ( name );
         }
 
-        public bool IsExistId ( string name )
-        {
-            //return name == "qq";
-            return _IRepositoryBill.IsExistId ( name );
-        }
+        
     }
 }

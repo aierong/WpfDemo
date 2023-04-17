@@ -13,9 +13,6 @@ namespace PrismDemo.IOCDemo.Demo1.Service.Repository
             return string.Format( "name:{0} 现在时间:{1}" , name , DateTime.Now.ToLongTimeString() );
         }
 
-        public bool IsExistId ( string name )
-        {
-            return name == "qq";
-        }
+        
     }
 }

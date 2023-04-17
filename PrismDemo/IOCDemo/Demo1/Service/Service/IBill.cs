@@ -8,7 +8,7 @@ namespace PrismDemo.IOCDemo.Demo1.Service.Service
 {
     public interface IBill
     {
-        bool IsExistId ( string name );
+        
 
         string  GetData ( string name );
     }
