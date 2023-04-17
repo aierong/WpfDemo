@@ -108,7 +108,6 @@
     <Compile Include="IOCDemo\Demo1\Service\Repository\IBill.cs" />
     <Compile Include="IOCDemo\Demo1\Service\Service\BillService.cs" />
     <Compile Include="IOCDemo\Demo1\Service\Service\IBill.cs" />
-    <Compile Include="IOCDemo\zw.cs" />
     <Compile Include="MyView\ModuleABC\UserData.xaml.cs">
       <DependentUpon>UserData.xaml</DependentUpon>
     </Compile>
