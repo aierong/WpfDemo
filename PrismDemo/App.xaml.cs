@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using Microsoft.Win32;
 using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Unity;
@@ -101,9 +102,11 @@ namespace PrismDemo
         /// </summary>
         protected override void ConfigureViewModelLocator ()
         {
-            //手动指定一个view与vm绑定关系
+            
             base.ConfigureViewModelLocator();
 
+            //手动指定一个view与vm绑定关系
+            //Register方法指定的第1个类型是视图名，第2哥类型是VM名
             ViewModelLocationProvider.Register<Views.Window1 , ViewModels.vm1>();
             ViewModelLocationProvider.Register( typeof( Views.Window2 ).ToString() , typeof( ViewModels.vm.classtwo ) );
 
@@ -149,18 +152,7 @@ namespace PrismDemo
                 return Type.GetType( viewModelName );
             } );
 
-
-
-
-
-            //base.ConfigureViewModelLocator();
-            //ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver( ( viewType ) =>
-            //{
-            //    var viewName = viewType.FullName.Replace( ".Viewsb." , ".ViewModelsa.OhMyGod." );
-            //    var viewAssemblyName = viewType.GetTypeInfo().Assembly.FullName;
-            //    var viewModelName = $"{viewName}Test, {viewAssemblyName}";
-            //    return Type.GetType( viewModelName );
-            //} );
+                       
         }
 
 
