@@ -11,7 +11,7 @@ namespace PrismDemo.ViewModels.vm
 {
     public class classtwo : BindableBase
     {
-        private string _texts = "init123";
+        private string _texts = "initclasstwo";
 
         public string TextS
         {

@@ -28,7 +28,7 @@ namespace PrismDemo
             //return Container.Resolve<Views.MainWindow>();
             //return Container.Resolve<TestWindow>();
             //return Container.Resolve<Views.v1.LG.MYWin>();
-            //return Container.Resolve<Views.Window2>();
+            return Container.Resolve<Views.Window2>();
 
 
 
@@ -62,7 +62,7 @@ namespace PrismDemo
 
 
             //对话框
-            return Container.Resolve<DialogDemo.DialogWindow>();
+            //return Container.Resolve<DialogDemo.DialogWindow>();
 
 
 

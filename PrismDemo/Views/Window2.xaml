@@ -6,12 +6,13 @@
         xmlns:localvm="clr-namespace:PrismDemo.ViewModels.vm"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
-        Title="Window2"
-        Width="800"
-        Height="450"
+        Title="自己指定绑定"
+        Width="400"
+        Height="250"
         d:DataContext="{d:DesignInstance localvm:classtwo,
                                          IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
         mc:Ignorable="d">
     <Grid>
         <StackPanel>
@@ -19,7 +20,7 @@
             <TextBox Width="100"
                      HorizontalAlignment="Left"
                      Text="{Binding TextS}" />
-             
+
             <Button Width="100"
                     Height="30"
                     HorizontalAlignment="Left"
