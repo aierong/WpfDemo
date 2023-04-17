@@ -100,6 +100,7 @@
       <DependentUpon>UserControlTop.xaml</DependentUpon>
     </Compile>
     <Compile Include="EventDemo\UC\UserControlTopViewModel.cs" />
+    <Compile Include="IOCDemo\zw.cs" />
     <Compile Include="MyView\ModuleABC\UserData.xaml.cs">
       <DependentUpon>UserData.xaml</DependentUpon>
     </Compile>
@@ -319,8 +320,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="IOCDemo\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
