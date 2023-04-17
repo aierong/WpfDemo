@@ -100,6 +100,10 @@
       <DependentUpon>UserControlTop.xaml</DependentUpon>
     </Compile>
     <Compile Include="EventDemo\UC\UserControlTopViewModel.cs" />
+    <Compile Include="IOCDemo\Demo1\IOCWindowOne.xaml.cs">
+      <DependentUpon>IOCWindowOne.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IOCDemo\Demo1\IOCWindowOneViewModel.cs" />
     <Compile Include="IOCDemo\Demo1\Service\Repository\BillService.cs" />
     <Compile Include="IOCDemo\Demo1\Service\Repository\IBill.cs" />
     <Compile Include="IOCDemo\Demo1\Service\Service\BillService.cs" />
@@ -201,6 +205,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EventDemo\UC\UserControlTop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IOCDemo\Demo1\IOCWindowOne.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

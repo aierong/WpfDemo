@@ -10,7 +10,7 @@ namespace PrismDemo.IOCDemo.Demo1.Service.Repository
     {
         public string GetData ( string name )
         {
-            return string.Format( "name:{0} now:{1}" , name , DateTime.Now.ToLongTimeString() );
+            return string.Format( "name:{0} 现在时间:{1}" , name , DateTime.Now.ToLongTimeString() );
         }
 
         public bool IsExistId ( string name )

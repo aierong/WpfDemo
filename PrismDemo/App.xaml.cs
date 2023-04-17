@@ -28,6 +28,8 @@ namespace PrismDemo
         /// <returns></returns>
         protected override Window CreateShell ()
         {
+            //return Container.Resolve<Views.Window1>();
+
             //return Container.Resolve<Views.MainWindow>();
             //return Container.Resolve<TestWindow>();
             //return Container.Resolve<Views.v1.LG.MYWin>();
@@ -64,12 +66,18 @@ namespace PrismDemo
             //return Container.Resolve<NavigationDemo.ConfirmNavigation.ConfirmNavigationPage>();
 
 
+
             //对话框
-            return Container.Resolve<DialogDemo.DialogWindow>();
+            //return Container.Resolve<DialogDemo.DialogWindow>();
 
 
 
-            //return Container.Resolve<Views.Window1>();
+            //ioc
+            return Container.Resolve<IOCDemo.Demo1.IOCWindowOne>();
+
+
+
+            
         }
 
 
@@ -146,6 +154,11 @@ namespace PrismDemo
             //弹窗
             ViewModelLocationProvider.Register<DialogDemo.DialogWindow , DialogDemo.DialogWindowViewModel>();
             ViewModelLocationProvider.Register<DialogDemo.Dialogs.UserDialog , DialogDemo.Dialogs.UserDialogViewModel>();
+
+
+
+            //ioc  
+            ViewModelLocationProvider.Register<IOCDemo.Demo1.IOCWindowOne, IOCDemo.Demo1.IOCWindowOneViewModel>();
 
 
 
