@@ -9,7 +9,7 @@ namespace PrismDemo.MyVm
 {
     public class WinOneVM : BindableBase
     {
-        private string _texts = "init———vm";
+        private string _texts = "init—vm";
 
         public string TextS
         {

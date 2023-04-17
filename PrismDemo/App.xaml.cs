@@ -29,13 +29,13 @@ namespace PrismDemo
             //return Container.Resolve<Views.MainWindow>();
             //return Container.Resolve<TestWindow>();
             //return Container.Resolve<Views.v1.LG.MYWin>();
-            return Container.Resolve<Views.Window2>();
+            //return Container.Resolve<Views.Window2>();
 
 
 
             //手动指定模块绑定
             //return Container.Resolve<MyView.WinOne>();
-            //return Container.Resolve<MyView.ModuleABC.UserData>();
+            return Container.Resolve<MyView.ModuleABC.UserData>();
 
 
 
@@ -142,12 +142,15 @@ namespace PrismDemo
 
 
 
+            //我们可以指定view存放在某个文件夹,VM存放在某个文件夹，并且指定2者的命名规则
             ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver( ( viewType ) =>
             {
                 //视图在MyView文件夹，viewmodel在MyVm文件夹
                 var viewName = viewType.FullName.Replace( ".MyView." , ".MyVm." );
                 var viewAssemblyName = viewType.GetTypeInfo().Assembly.FullName;
                 //viewmodel的名字是视图名字后面加VM
+                //例如:WinOne.xaml会自动绑定WinOneVM.cs
+                //例如:ModuleABC目录下UserData.xaml会自动绑定ModuleABC目录下UserDataVM.cs
                 var viewModelName = $"{viewName}VM, {viewAssemblyName}";
                 return Type.GetType( viewModelName );
             } );

@@ -9,17 +9,17 @@ namespace PrismDemo.MyVm.ModuleABC
 {
     public class UserDataVM : BindableBase
     {
-        private string _texts = "init———vm";
+        private string _TextABC = "init—vm";
 
-        public string TextS
+        public string TextABC
         {
             get
             {
-                return _texts;
+                return _TextABC;
             }
             set
             {
-                SetProperty( ref _texts , value );
+                SetProperty( ref _TextABC , value );
             }
         }
 

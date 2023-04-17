@@ -7,11 +7,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
         Title="用户数据"
-        Width="800"
-        Height="450"
+        Width="400"
+        Height="360"
         d:DataContext="{d:DesignInstance localvm:UserDataVM,
                                          IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
         mc:Ignorable="d">
     <!--
         我们在App.cs代码已经指定了这个view与vm的绑定，所以这里不要再指定 :prism:ViewModelLocator.AutoWireViewModel="True"
@@ -20,7 +21,7 @@
         <StackPanel>
 
             <TextBox Width="100"
-                     Text="{Binding TextS}" />
+                     Text="{Binding TextABC}" />
             <TextBox Width="100"
                      Text="{Binding NameABC}" />
             <Button Width="100"

@@ -6,12 +6,13 @@
         xmlns:localvm="clr-namespace:PrismDemo.MyVm"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
-        Title="WinOne"
-        Width="800"
-        Height="450"
+        Title="手工指定绑定关系"
+        Width="400"
+        Height="360"
         d:DataContext="{d:DesignInstance localvm:WinOneVM,
                                          IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
         mc:Ignorable="d">
     <!--
         我们在App.cs代码已经指定了这个view与vm的绑定，所以这里不要再指定 :prism:ViewModelLocator.AutoWireViewModel="True"
