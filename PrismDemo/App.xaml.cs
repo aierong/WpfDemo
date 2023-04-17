@@ -13,6 +13,8 @@ using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Unity;
 
+
+
 namespace PrismDemo
 {
     /// <summary>
@@ -57,13 +59,13 @@ namespace PrismDemo
             //导航
             //return Container.Resolve<NavigationDemo.Basic.BaseNavigation>();
             //导航传递参数 
-            return Container.Resolve<NavigationDemo.Parameters.ParametersNavigation>();
+            //return Container.Resolve<NavigationDemo.Parameters.ParametersNavigation>();
             //确定导航
             //return Container.Resolve<NavigationDemo.ConfirmNavigation.ConfirmNavigationPage>();
 
 
             //对话框
-            //return Container.Resolve<DialogDemo.DialogWindow>();
+            return Container.Resolve<DialogDemo.DialogWindow>();
 
 
 
@@ -80,20 +82,25 @@ namespace PrismDemo
             containerRegistry.RegisterForNavigation<NavigationDemo.Basic.UC.AUserControl>( "AUserControl" );
             containerRegistry.RegisterForNavigation<NavigationDemo.Basic.UC.BUserControl>( "BUserControl" );
 
-
             containerRegistry.RegisterForNavigation<NavigationDemo.Parameters.UC.UserControl111>( "UC111" );
             containerRegistry.RegisterForNavigation<NavigationDemo.Parameters.UC.UserControl222>( "UC222" );
-
 
             containerRegistry.RegisterForNavigation<NavigationDemo.ConfirmNavigation.UC.UserControlAAA>( "NavigationAAA" );
             containerRegistry.RegisterForNavigation<NavigationDemo.ConfirmNavigation.UC.UserControlBBB>( "NavigationBBB" );
 
+
+
             //注册对话框
             //并且给对话框起名
             containerRegistry.RegisterDialog<DialogDemo.Dialogs.UserDialog , DialogDemo.Dialogs.UserDialogViewModel>( "mydlgone" );
-             
+
+
+
+            //ioc
+            containerRegistry.RegisterSingleton<IOCDemo.Demo1.Service.Service.IBill , IOCDemo.Demo1.Service.Service.BillService>();
+            containerRegistry.RegisterSingleton<IOCDemo.Demo1.Service.Repository.IBill , IOCDemo.Demo1.Service.Repository.BillService>();
         }
-        
+
 
 
 
@@ -102,7 +109,7 @@ namespace PrismDemo
         /// </summary>
         protected override void ConfigureViewModelLocator ()
         {
-            
+
             base.ConfigureViewModelLocator();
 
             //手动指定一个view与vm绑定关系
@@ -155,7 +162,7 @@ namespace PrismDemo
                 return Type.GetType( viewModelName );
             } );
 
-                       
+
         }
 
 
