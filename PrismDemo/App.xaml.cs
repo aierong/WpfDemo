@@ -54,7 +54,7 @@ namespace PrismDemo
 
 
             //区域 
-            //return Container.Resolve<RegionDemo.View.RegionDemo1>();
+            return Container.Resolve<RegionDemo.View.RegionDemo1>();
 
 
 
@@ -73,14 +73,12 @@ namespace PrismDemo
 
 
             //ioc
-            return Container.Resolve<IOCDemo.Demo1.IOCWindowOne>();
+            //return Container.Resolve<IOCDemo.Demo1.IOCWindowOne>();
 
 
 
             //日志
             //return Container.Resolve<LogDemo.LogWindow>();
-
-
         }
 
 

@@ -1,6 +1,7 @@
 ﻿<Window x:Class="PrismDemo.RegionDemo.View.RegionDemo1"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:common="clr-namespace:PrismDemo.Common"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:PrismDemo.RegionDemo.View"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -28,7 +29,7 @@
         </StackPanel>
 
         <!--
-            RegionManager.RegionName就是给这个区域起一个名称
+             
             
             注意不是任意一个控件都支持区域：
             Prism提供了许多内置得RegionAdapter
@@ -42,12 +43,15 @@
             
             如果不满足要求，我们得自己写区域适配器
         -->
-      
+
+        <!--<ContentControl Grid.Row="1"
+                        Grid.Column="0"
+                        prism:RegionManager.RegionName="ContentRegion" />-->
+
+        <!--  区域名称绑定一个静态变量，比较好  -->
         <ContentControl Grid.Row="1"
                         Grid.Column="0"
-                        prism:RegionManager.RegionName="ContentRegion" />
-       
-
+                        prism:RegionManager.RegionName="{x:Static common:Common.ContentRegionName}" />
         <!--
         定义一个名称，可以后台代码指定区域名字：RegionManager.SetRegionName( cct , "ContentRegion" );
         <ContentControl x:Name="cct"

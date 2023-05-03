@@ -71,6 +71,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Common\Common.cs" />
     <Compile Include="DataDemo\convert\BooleanToVisibilityConverter.cs" />
     <Compile Include="DataDemo\View\ModelData.xaml.cs">
       <DependentUpon>ModelData.xaml</DependentUpon>

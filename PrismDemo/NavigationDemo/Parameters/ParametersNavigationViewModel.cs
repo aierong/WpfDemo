@@ -25,7 +25,7 @@ namespace PrismDemo.NavigationDemo.Parameters
 
             Par1ButtonClickCommand = new DelegateCommand( () =>
             {
-                //传递2个参数
+                //传递3个参数
                 var param = new NavigationParameters();
                 param.Add( "ptitle" , "str1" );
                 param.Add( "num" , 12345 );

@@ -26,8 +26,6 @@ namespace PrismDemo.RegionDemo.View
 
             //代码指定区域名字
             //RegionManager.SetRegionName( cct , "ContentRegion" );
-
-
         }
     }
 }

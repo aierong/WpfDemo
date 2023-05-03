@@ -8,11 +8,13 @@ using Prism.Mvvm;
 using Prism.Regions;
 using PrismDemo.RegionDemo.UC;
 
+
+
 namespace PrismDemo.RegionDemo.ViewModel
 {
     public class RegionDemo1ViewModel : BindableBase
     {
-         
+
 
         IRegionManager _regionManager;
 
@@ -20,9 +22,10 @@ namespace PrismDemo.RegionDemo.ViewModel
         {
             this._regionManager = regionManager;
 
-            //把内容的用户控件加载到ContentRegion区域
-            this._regionManager.RegisterViewWithRegion( "ContentRegion" , typeof( UserControlContent ) );
+            //把用户控件加载到区域
             this._regionManager.RegisterViewWithRegion( "HeaderRegion" , typeof( UserControlHeader ) );
+            //this._regionManager.RegisterViewWithRegion( "ContentRegion" , typeof( UserControlContent ) );
+            this._regionManager.RegisterViewWithRegion( Common.Common.ContentRegionName , typeof( UserControlContent ) );
         }
 
 
