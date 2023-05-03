@@ -9,5 +9,7 @@ namespace PrismDemo.Common
     public static  class Common
     {
         public static string ContentRegionName = "ContentRegion";
+
+        public static string NavigationRegionName = "NavigationRegion";
     }
 }

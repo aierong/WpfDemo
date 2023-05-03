@@ -36,6 +36,20 @@ namespace PrismDemo.NavigationDemo.Parameters.UC
 
 
         /// <summary>
+        /// 导航离开当前页时触发
+        /// </summary>
+        /// <param name="navigationContext"></param>
+        /// <exception cref="NotImplementedException"></exception>
+        public void OnNavigatedFrom ( NavigationContext navigationContext )
+        {
+            //导航离开当前页时触发
+
+            return;
+        }
+
+
+
+        /// <summary>
         /// 导航完成前,接收用户传递参数或者一些初始化工作
         /// </summary>
         /// <param name="navigationContext"></param>
@@ -76,17 +90,7 @@ namespace PrismDemo.NavigationDemo.Parameters.UC
 
 
 
-        /// <summary>
-        /// 导航离开当前页时触发
-        /// </summary>
-        /// <param name="navigationContext"></param>
-        /// <exception cref="NotImplementedException"></exception>
-        public void OnNavigatedFrom ( NavigationContext navigationContext )
-        {
-            //导航离开当前页时触发
 
-            return;
-        }
 
 
 

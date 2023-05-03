@@ -54,12 +54,12 @@ namespace PrismDemo
 
 
             //区域 
-            return Container.Resolve<RegionDemo.View.RegionDemo1>();
+            //return Container.Resolve<RegionDemo.View.RegionDemo1>();
 
 
 
             //导航
-            //return Container.Resolve<NavigationDemo.Basic.BaseNavigation>();
+            return Container.Resolve<NavigationDemo.Basic.BaseNavigation>();
             //导航传递参数 
             //return Container.Resolve<NavigationDemo.Parameters.ParametersNavigation>();
             //确定导航
@@ -99,12 +99,12 @@ namespace PrismDemo
 
             //注册导航
 
-            //添加 并且起个别名 "AUserControl"
-            containerRegistry.RegisterForNavigation<NavigationDemo.Basic.UC.AUserControl>( "AUserControl" );
-            containerRegistry.RegisterForNavigation<NavigationDemo.Basic.UC.BUserControl>( "BUserControl" );
+            //添加 并且起个别名  
+            containerRegistry.RegisterForNavigation<NavigationDemo.Basic.UC.AUserControl>( "ANavigation" );
+            containerRegistry.RegisterForNavigation<NavigationDemo.Basic.UC.BUserControl>( "BNavigation" );
 
-            containerRegistry.RegisterForNavigation<NavigationDemo.Parameters.UC.UserControl111>( "UC111" );
-            containerRegistry.RegisterForNavigation<NavigationDemo.Parameters.UC.UserControl222>( "UC222" );
+            containerRegistry.RegisterForNavigation<NavigationDemo.Parameters.UC.UserControl111>( "Navigation111" );
+            containerRegistry.RegisterForNavigation<NavigationDemo.Parameters.UC.UserControl222>( "Navigation222" );
 
             containerRegistry.RegisterForNavigation<NavigationDemo.ConfirmNavigation.UC.UserControlAAA>( "NavigationAAA" );
             containerRegistry.RegisterForNavigation<NavigationDemo.ConfirmNavigation.UC.UserControlBBB>( "NavigationBBB" );

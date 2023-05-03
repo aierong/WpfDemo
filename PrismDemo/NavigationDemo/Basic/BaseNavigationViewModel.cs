@@ -21,45 +21,35 @@ namespace PrismDemo.NavigationDemo.Basic
         public BaseNavigationViewModel ( IRegionManager regionManager )
         {
             this._regionManager = regionManager;
-
-
-
-            AButtonClickCommand = new DelegateCommand( () =>
-            {
-                //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
-                this._regionManager.RequestNavigate( "ContentRegion" , "AUserControl" );
-            } );
-
-            BButtonClickCommand = new DelegateCommand( () =>
-            {
-                //this._regionManager.RequestNavigate( "ContentRegion" , "BUserControl" );
-
-                //RequestNavigate方法第3个参数:可以定义一个回调，得到导航完成通知
-                this._regionManager.RequestNavigate( "ContentRegion" , 
-                                                            "BUserControl" , 
-                                                           ( NavigationResult result ) =>
-                                                            {
-                                                                if ( result.Result != null )
-                                                                {
-                                                                                                                                      
-                                                                }
-                                                            } );
-            } );
         }
 
 
 
-        public DelegateCommand AButtonClickCommand
+        private DelegateCommand _AButtonClickCommand;
+        public DelegateCommand AButtonClickCommand => _AButtonClickCommand ?? ( _AButtonClickCommand = new DelegateCommand( () =>
         {
-            get; private set;
-        }
+            //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
+            this._regionManager.RequestNavigate( "ContentRegion" , "ANavigation" );
+        } ) );
 
 
 
-        public DelegateCommand BButtonClickCommand
+        private DelegateCommand _BButtonClickCommand;
+        public DelegateCommand BButtonClickCommand => _BButtonClickCommand ?? ( _BButtonClickCommand = new DelegateCommand( () =>
         {
-            get; private set;
-        }
+            //this._regionManager.RequestNavigate( "ContentRegion" , "BUserControl" );
+
+            //RequestNavigate方法第3个参数:可以定义一个回调，得到导航完成通知
+            this._regionManager.RequestNavigate( "ContentRegion" ,
+                                                        "BNavigation" ,
+                                                       ( NavigationResult result ) =>
+                                                       {
+                                                           if ( result.Result != null )
+                                                           {
+
+                                                           }
+                                                       } );
+        } ) );
 
 
 
