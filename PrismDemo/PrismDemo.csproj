@@ -108,8 +108,14 @@
     <Compile Include="IOCDemo\Demo1\Service\Repository\IBill.cs" />
     <Compile Include="IOCDemo\Demo1\Service\Service\BillService.cs" />
     <Compile Include="IOCDemo\Demo1\Service\Service\IBill.cs" />
-    <Compile Include="Log\LogWindow.xaml.cs">
+    <Compile Include="LogDemo\LogWindow.xaml.cs">
       <DependentUpon>LogWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogDemo\UC\AAAUserControl.xaml.cs">
+      <DependentUpon>AAAUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogDemo\UC\BBBUserControl.xaml.cs">
+      <DependentUpon>BBBUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyView\ModuleABC\UserData.xaml.cs">
       <DependentUpon>UserData.xaml</DependentUpon>
@@ -214,7 +220,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Log\LogWindow.xaml">
+    <Page Include="LogDemo\LogWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogDemo\UC\AAAUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogDemo\UC\BBBUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -345,8 +359,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Log\UC\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
