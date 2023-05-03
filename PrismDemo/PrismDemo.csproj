@@ -111,9 +111,11 @@
     <Compile Include="LogDemo\LogWindow.xaml.cs">
       <DependentUpon>LogWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LogDemo\LogWindowViewModel.cs" />
     <Compile Include="LogDemo\UC\AAAUserControl.xaml.cs">
       <DependentUpon>AAAUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LogDemo\UC\AAAUserControlViewModel.cs" />
     <Compile Include="LogDemo\UC\BBBUserControl.xaml.cs">
       <DependentUpon>BBBUserControl.xaml</DependentUpon>
     </Compile>
@@ -327,7 +329,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="IOCDemo\Demo1.7z" />
     <None Include="nlog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

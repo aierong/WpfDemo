@@ -6,7 +6,15 @@
              xmlns:local="clr-namespace:PrismDemo.LogDemo.UC"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+    <Grid Background="Green"
+          ShowGridLines="True">
+        <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="48"
+                   FontStyle="Italic"
+                   FontWeight="Bold"
+                   Text="这里是B的内容"
+                   TextDecorations="Underline" />
+
     </Grid>
 </UserControl>

@@ -73,11 +73,14 @@ namespace PrismDemo
 
 
             //ioc
-            return Container.Resolve<IOCDemo.Demo1.IOCWindowOne>();
+            //return Container.Resolve<IOCDemo.Demo1.IOCWindowOne>();
 
 
 
-            
+            //日志
+            return Container.Resolve<LogDemo.LogWindow>();
+
+
         }
 
 
@@ -116,6 +119,11 @@ namespace PrismDemo
             //ioc
             containerRegistry.RegisterSingleton<IOCDemo.Demo1.Service.Service.IBill , IOCDemo.Demo1.Service.Service.BillService>();
             containerRegistry.RegisterSingleton<IOCDemo.Demo1.Service.Repository.IBill , IOCDemo.Demo1.Service.Repository.BillService>();
+
+
+            // 日志
+            containerRegistry.RegisterForNavigation<LogDemo.UC.AAAUserControl>( "AAAUC" );
+            containerRegistry.RegisterForNavigation<LogDemo.UC.BBBUserControl>( "BBBUC" );
         }
 
 
@@ -168,6 +176,11 @@ namespace PrismDemo
 
             //ioc  
             ViewModelLocationProvider.Register<IOCDemo.Demo1.IOCWindowOne, IOCDemo.Demo1.IOCWindowOneViewModel>();
+
+
+            //日志
+            ViewModelLocationProvider.Register<LogDemo.UC.AAAUserControl, LogDemo.UC.AAAUserControlViewModel>();
+            ViewModelLocationProvider.Register<LogDemo.LogWindow, LogDemo.LogWindowViewModel>();
 
 
 
