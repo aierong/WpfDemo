@@ -84,6 +84,15 @@ namespace PrismDemo
 
         protected override void RegisterTypes ( IContainerRegistry containerRegistry )
         {
+
+            var factory = new NLog.Extensions.Logging.NLogLoggerFactory();
+            Microsoft.Extensions.Logging.ILogger logger = factory.CreateLogger( "" );
+            //下面这个是加载指定名字
+            //Microsoft.Extensions.Logging.ILogger logger = factory.CreateLogger( "mylognameabc" );
+            containerRegistry.RegisterInstance( logger );
+
+
+
             //注册导航
 
             //添加 并且起个别名 "AUserControl"
