@@ -108,6 +108,9 @@
     <Compile Include="IOCDemo\Demo1\Service\Repository\IBill.cs" />
     <Compile Include="IOCDemo\Demo1\Service\Service\BillService.cs" />
     <Compile Include="IOCDemo\Demo1\Service\Service\IBill.cs" />
+    <Compile Include="Log\LogWindow.xaml.cs">
+      <DependentUpon>LogWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyView\ModuleABC\UserData.xaml.cs">
       <DependentUpon>UserData.xaml</DependentUpon>
     </Compile>
@@ -208,6 +211,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="IOCDemo\Demo1\IOCWindowOne.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Log\LogWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -339,7 +346,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Log\" />
+    <Folder Include="Log\UC\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
