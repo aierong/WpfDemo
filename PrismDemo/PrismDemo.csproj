@@ -104,6 +104,7 @@
       <DependentUpon>IOCWindowOne.xaml</DependentUpon>
     </Compile>
     <Compile Include="IOCDemo\Demo1\IOCWindowOneViewModel.cs" />
+    <Compile Include="IOCDemo\Demo1\Service\Person.cs" />
     <Compile Include="IOCDemo\Demo1\Service\Repository\BillService.cs" />
     <Compile Include="IOCDemo\Demo1\Service\Repository\IBill.cs" />
     <Compile Include="IOCDemo\Demo1\Service\Service\BillService.cs" />

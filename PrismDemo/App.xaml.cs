@@ -73,12 +73,12 @@ namespace PrismDemo
 
 
             //ioc
-            //return Container.Resolve<IOCDemo.Demo1.IOCWindowOne>();
+            return Container.Resolve<IOCDemo.Demo1.IOCWindowOne>();
 
 
 
             //日志
-            return Container.Resolve<LogDemo.LogWindow>();
+            //return Container.Resolve<LogDemo.LogWindow>();
 
 
         }
@@ -87,10 +87,13 @@ namespace PrismDemo
 
         protected override void RegisterTypes ( IContainerRegistry containerRegistry )
         {
+            /*
+            安装：NLog.Extensions.Logging
+            */
 
             var factory = new NLog.Extensions.Logging.NLogLoggerFactory();
             Microsoft.Extensions.Logging.ILogger logger = factory.CreateLogger( "" );
-            //下面这个是加载指定名字
+            //下面这个是加载指定名字  nlog.config里面：    <logger name="mylognameabc" level="Info" writeTo="mylogfileabc"/>
             //Microsoft.Extensions.Logging.ILogger logger = factory.CreateLogger( "mylognameabc" );
             containerRegistry.RegisterInstance( logger );
 
@@ -119,6 +122,16 @@ namespace PrismDemo
             //ioc
             containerRegistry.RegisterSingleton<IOCDemo.Demo1.Service.Service.IBill , IOCDemo.Demo1.Service.Service.BillService>();
             containerRegistry.RegisterSingleton<IOCDemo.Demo1.Service.Repository.IBill , IOCDemo.Demo1.Service.Repository.BillService>();
+
+
+            //同一个接口，多个服务实现
+            //分别起一个名字，这样注入时，我们可以区分
+            containerRegistry.RegisterSingleton<IOCDemo.Demo1.Service.IPerson, IOCDemo.Demo1.Service.Man>("man");
+            containerRegistry.RegisterSingleton<IOCDemo.Demo1.Service.IPerson , IOCDemo.Demo1.Service.Woman>("woman");
+
+            //通过实例的方式注册的对象属于单例
+            //containerRegistry.RegisterInstance<IOCDemo.Demo1.Service.IPerson>( new IOCDemo.Demo1.Service.Man() { Name ="qq" } );
+            //containerRegistry.RegisterInstance<IOCDemo.Demo1.Service.IPerson>( new IOCDemo.Demo1.Service.Man() { Name = "qq" } ,"man");
 
 
             // 日志
@@ -175,12 +188,12 @@ namespace PrismDemo
 
 
             //ioc  
-            ViewModelLocationProvider.Register<IOCDemo.Demo1.IOCWindowOne, IOCDemo.Demo1.IOCWindowOneViewModel>();
+            ViewModelLocationProvider.Register<IOCDemo.Demo1.IOCWindowOne , IOCDemo.Demo1.IOCWindowOneViewModel>();
 
 
             //日志
-            ViewModelLocationProvider.Register<LogDemo.UC.AAAUserControl, LogDemo.UC.AAAUserControlViewModel>();
-            ViewModelLocationProvider.Register<LogDemo.LogWindow, LogDemo.LogWindowViewModel>();
+            ViewModelLocationProvider.Register<LogDemo.UC.AAAUserControl , LogDemo.UC.AAAUserControlViewModel>();
+            ViewModelLocationProvider.Register<LogDemo.LogWindow , LogDemo.LogWindowViewModel>();
 
 
 
