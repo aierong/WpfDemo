@@ -19,11 +19,11 @@
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
-            <RowDefinition />
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
-            <ColumnDefinition />
+
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Row="0"
@@ -56,6 +56,17 @@
                 </Button.CommandParameter>
             </Button>
 
+
+            <TextBox Width="190"
+                     Height="30"
+                     Margin="0,50,0,0"
+                     Text="{Binding Title2, UpdateSourceTrigger=PropertyChanged}">
+                <TextBox.InputBindings>
+                    <!--  CommandParameter="" 可以传递参数  -->
+                    <KeyBinding Key="Enter"
+                                Command="{Binding EnterCommand}" />
+                </TextBox.InputBindings>
+            </TextBox>
         </StackPanel>
     </Grid>
 </Window>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using WpfApp.Views.BaseCommand;
 
 namespace WpfApp.Views.CommandDemo.demo1
@@ -13,6 +14,7 @@ namespace WpfApp.Views.CommandDemo.demo1
         {
             Name = "Name_init";
             Title = "Titleinit";
+            Title2 = "Titleinit2";
 
             SaveDataCommand = new MyObjCommand( ( object obj ) =>
             {
@@ -30,12 +32,29 @@ namespace WpfApp.Views.CommandDemo.demo1
                 Title = "gai le title";
 
             } );
+
+            EnterCommand = new MyCommand( () =>
+            {
+
+                MessageBox.Show( "EnterCommand Command:" + Title2 );
+            } );
         }
+
+
 
         public MyObjCommand SaveDataCommand
         {
             get; set;
         }
+
+
+
+        public MyCommand EnterCommand
+        {
+            get; set;
+        }
+
+
 
         private string name;
 
@@ -72,6 +91,28 @@ namespace WpfApp.Views.CommandDemo.demo1
             set
             {
                 title = value;
+
+                //通知数据已经变化
+                OnPropertyChanged();
+
+            }
+        }
+
+
+
+        private string title2;
+
+
+        /// <summary>
+        /// 标题
+        /// </summary>
+        public string Title2
+        {
+            get => title2;
+
+            set
+            {
+                title2 = value;
 
                 //通知数据已经变化
                 OnPropertyChanged();
