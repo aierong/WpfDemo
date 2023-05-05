@@ -13,32 +13,30 @@
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
-
         </Grid.RowDefinitions>
         <ScrollViewer>
             <TabControl TabStripPlacement="Left">
                 <TabItem Header="最基本的样式">
                     <uc:BaseUserControl />
                 </TabItem>
-
                 <TabItem Header="样式 Demo">
                     <uc:StyleDemoUserControl />
                 </TabItem>
-                
-                <TabItem Header="Tag列表(添加,删除) Demo" />
-                <TabItem Header="HC版本TextBox Demo" />
-
-                <TabItem Header="日志记录">
-                    <!--<Grid>
-                    <demo:LoggerDemo x:Name="MyLogger"/>
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
-                        <Button Content="添加日志" Click="BtnLogger_Click"/>
-                    </StackPanel>
-                </Grid>-->
+                <TabItem Header="属性触发器 Demo">
+                    <uc:sxUserControl />
                 </TabItem>
-
-
+                <TabItem Header="数据触发器 Demo">
+                    <uc:dataUserControl1 />
+                </TabItem>
+                <TabItem Header="事件触发器 Demo">
+                    <uc:sjUserControl1 />
+                </TabItem>
+                <TabItem Header="  Demo">
+                    <uc:MultiUserControl1  />
+                </TabItem>
             </TabControl>
         </ScrollViewer>
     </Grid>
 </Window>
+
+

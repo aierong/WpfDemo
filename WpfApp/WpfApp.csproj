@@ -187,8 +187,20 @@
     <Compile Include="Views\StyleDemo\UC\BaseUserControl.xaml.cs">
       <DependentUpon>BaseUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\StyleDemo\UC\dataUserControl1.xaml.cs">
+      <DependentUpon>dataUserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StyleDemo\UC\MultiUserControl1.xaml.cs">
+      <DependentUpon>MultiUserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StyleDemo\UC\sjUserControl1.xaml.cs">
+      <DependentUpon>sjUserControl1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\StyleDemo\UC\StyleDemoUserControl.xaml.cs">
       <DependentUpon>StyleDemoUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StyleDemo\UC\sxUserControl.xaml.cs">
+      <DependentUpon>sxUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControlDemo\demo1\Demo1.xaml.cs">
       <DependentUpon>Demo1.xaml</DependentUpon>
@@ -401,7 +413,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\StyleDemo\UC\dataUserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StyleDemo\UC\MultiUserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StyleDemo\UC\sjUserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\StyleDemo\UC\StyleDemoUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StyleDemo\UC\sxUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
