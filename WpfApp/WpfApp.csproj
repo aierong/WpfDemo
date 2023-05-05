@@ -181,6 +181,15 @@
     <Compile Include="Views\StyleDemo\StyleDemo1.xaml.cs">
       <DependentUpon>StyleDemo1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\StyleDemo\StyleMain.xaml.cs">
+      <DependentUpon>StyleMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StyleDemo\UC\BaseUserControl.xaml.cs">
+      <DependentUpon>BaseUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StyleDemo\UC\StyleDemoUserControl.xaml.cs">
+      <DependentUpon>StyleDemoUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControlDemo\demo1\Demo1.xaml.cs">
       <DependentUpon>Demo1.xaml</DependentUpon>
     </Compile>
@@ -381,6 +390,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\StyleDemo\StyleDemo1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StyleDemo\StyleMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StyleDemo\UC\BaseUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StyleDemo\UC\StyleDemoUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

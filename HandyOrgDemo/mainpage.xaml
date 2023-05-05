@@ -48,17 +48,8 @@
                     <localuc:HCTextBox />
                 </TabItem>
 
-                <TabItem Header="日志记录">
-                    <!--<Grid>
-                    <demo:LoggerDemo x:Name="MyLogger"/>
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
-                        <Button Content="添加日志" Click="BtnLogger_Click"/>
-                    </StackPanel>
-                </Grid>-->
-                </TabItem>
-                <!--<TabItem Header="PopupWindow Demo">
-                <Button Content="显示自动关闭的窗体" />
-            </TabItem>-->
+
+
 
             </TabControl>
 
@@ -78,11 +69,11 @@
 
 
         <!--
-           特别说明:
-        一般只要在母窗体(mainpage.xaml)定义xaml即可，这样每个子窗体都可以调用
-        最好使用指定Token模式的
+            特别说明:
+            一般只要在母窗体(mainpage.xaml)定义xaml即可，这样每个子窗体都可以调用
+            最好使用指定Token模式的
         -->
-        
+
         <ScrollViewer Grid.Row="1"
                       HorizontalAlignment="Right"
                       VerticalAlignment="Top"

@@ -1,0 +1,44 @@
+﻿<Window x:Class="WpfApp.Views.StyleDemo.StyleMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp.Views.StyleDemo"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:uc="clr-namespace:WpfApp.Views.StyleDemo.UC"
+        Title="样式主页"
+        Width="800"
+        Height="450"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+
+        </Grid.RowDefinitions>
+        <ScrollViewer>
+            <TabControl TabStripPlacement="Left">
+                <TabItem Header="最基本的样式">
+                    <uc:BaseUserControl />
+                </TabItem>
+
+                <TabItem Header="样式 Demo">
+                    <uc:StyleDemoUserControl />
+                </TabItem>
+                
+                <TabItem Header="Tag列表(添加,删除) Demo" />
+                <TabItem Header="HC版本TextBox Demo" />
+
+                <TabItem Header="日志记录">
+                    <!--<Grid>
+                    <demo:LoggerDemo x:Name="MyLogger"/>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
+                        <Button Content="添加日志" Click="BtnLogger_Click"/>
+                    </StackPanel>
+                </Grid>-->
+                </TabItem>
+
+
+            </TabControl>
+        </ScrollViewer>
+    </Grid>
+</Window>
