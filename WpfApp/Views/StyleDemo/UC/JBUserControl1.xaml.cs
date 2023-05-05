@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp.Views.StyleDemo
+namespace WpfApp.Views.StyleDemo.UC
 {
     /// <summary>
-    /// StyleDemo1.xaml 的互動邏輯
+    /// JBUserControl1.xaml 的互動邏輯
     /// </summary>
-    public partial class StyleDemo1 : Window
+    public partial class JBUserControl1 : UserControl
     {
-        public StyleDemo1 ()
+        public JBUserControl1 ()
         {
             InitializeComponent();
         }

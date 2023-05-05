@@ -1,20 +1,20 @@
-﻿<Window x:Class="WpfApp.Views.StyleDemo.StyleDemo1"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:WpfApp.Views.StyleDemo"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="StyleDemo1"
-        Width="800"
-        Height="450"
-        mc:Ignorable="d">
-    <Window.Resources>
+﻿<UserControl x:Class="WpfApp.Views.StyleDemo.UC.JBUserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WpfApp.Views.StyleDemo.UC"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             mc:Ignorable="d">
+    <UserControl.Resources>
         <!--
             这是基础的模板其他控件可以引用
             x:Key是指定一个名字
             TargetType是指定一个控件类型
         -->
-        <Style x:Key="BaseText" TargetType="TextBox">
+        <Style x:Key="BaseText"
+               TargetType="TextBox">
             <Setter Property="FontSize" Value="10" />
             <Setter Property="Background" Value="LightBlue" />
         </Style>
@@ -25,7 +25,8 @@
             <Setter Property="Text" Value="请输入文本值" />
         </Style>
         <!--  这是一个button控件样式  -->
-        <Style x:Key="clickButton" TargetType="Button">
+        <Style x:Key="clickButton"
+               TargetType="Button">
             <Setter Property="FontSize" Value="18" />
             <Setter Property="Content" Value="查询" />
             <Setter Property="Foreground" Value="White" />
@@ -33,8 +34,7 @@
             <Setter Property="Width" Value=" 100" />
             <Setter Property="Height" Value=" 50" />
         </Style>
-
-    </Window.Resources>
+    </UserControl.Resources>
     <Grid>
         <StackPanel>
             <Label>33</Label>
@@ -54,4 +54,4 @@
                     Style="{StaticResource clickButton}" />
         </StackPanel>
     </Grid>
-</Window>
+</UserControl>

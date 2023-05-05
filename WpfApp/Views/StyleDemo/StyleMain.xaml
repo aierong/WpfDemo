@@ -19,6 +19,9 @@
                 <TabItem Header="最基本的样式">
                     <uc:BaseUserControl />
                 </TabItem>
+                <TabItem Header="demo">
+                    <uc:JBUserControl1 />
+                </TabItem>
                 <TabItem Header="样式 Demo">
                     <uc:StyleDemoUserControl />
                 </TabItem>
@@ -32,7 +35,7 @@
                     <uc:sjUserControl1 />
                 </TabItem>
                 <TabItem Header="  Demo">
-                    <uc:MultiUserControl1  />
+                    <uc:MultiUserControl1 />
                 </TabItem>
             </TabControl>
         </ScrollViewer>

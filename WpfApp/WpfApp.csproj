@@ -178,9 +178,6 @@
     <Compile Include="Views\ResourceDemo\Views\ResourceWindow.xaml.cs">
       <DependentUpon>ResourceWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\StyleDemo\StyleDemo1.xaml.cs">
-      <DependentUpon>StyleDemo1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\StyleDemo\StyleMain.xaml.cs">
       <DependentUpon>StyleMain.xaml</DependentUpon>
     </Compile>
@@ -189,6 +186,9 @@
     </Compile>
     <Compile Include="Views\StyleDemo\UC\dataUserControl1.xaml.cs">
       <DependentUpon>dataUserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StyleDemo\UC\JBUserControl1.xaml.cs">
+      <DependentUpon>JBUserControl1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StyleDemo\UC\MultiUserControl1.xaml.cs">
       <DependentUpon>MultiUserControl1.xaml</DependentUpon>
@@ -401,10 +401,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\StyleDemo\StyleDemo1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\StyleDemo\StyleMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -414,6 +410,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\StyleDemo\UC\dataUserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StyleDemo\UC\JBUserControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
