@@ -37,7 +37,6 @@
                 <TabItem Header="PopupWindow Demo">
                     <localuc:PopupWindowDemoUserControl />
                 </TabItem>
-
                 <TabItem Header="Tag Demo">
                     <localuc:TagDemo />
                 </TabItem>
@@ -47,7 +46,9 @@
                 <TabItem Header="HC版本TextBox Demo">
                     <localuc:HCTextBox />
                 </TabItem>
-
+                <TabItem Header="Loading Demo">
+                    <localuc:LoadingUserControl1 />
+                </TabItem>
 
 
 
