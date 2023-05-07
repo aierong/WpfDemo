@@ -17,9 +17,12 @@ namespace HandyOrgDemo.ViewModels.UserControls
 
             //Debug.WriteLine( "ButtonClick" );
 
-
+            IsRun = !IsRun;
         }
 
+
+        [ObservableProperty]
+        private bool isRun = false;
 
     }
 }

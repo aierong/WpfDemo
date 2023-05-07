@@ -46,11 +46,14 @@
                     Grid.Column="0"
                     Margin="10"
                     VerticalAlignment="Center">
-
+            <!--IsEnabled="{Binding IsRun}"-->
+            <hc:LoadingCircle  Visibility="Hidden"   />
             <hc:LoadingLine Margin="0,30"
                             Foreground="BlueViolet"
+                            IsRunning="{Binding IsRun}"
                             Style="{StaticResource LoadingLineLarge}" />
-            <Button Content="显示隐藏" />
+            <Button Command="{Binding ButtonClickCommand}"
+                    Content="显示隐藏" />
         </StackPanel>
     </Grid>
 </UserControl>
