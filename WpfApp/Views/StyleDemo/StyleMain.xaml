@@ -16,9 +16,7 @@
         </Grid.RowDefinitions>
         <ScrollViewer>
             <TabControl TabStripPlacement="Left">
-                <TabItem Header="最基本的样式">
-                    <uc:BaseUserControl />
-                </TabItem>
+
                 <TabItem Header="demo">
                     <uc:JBUserControl1 />
                 </TabItem>

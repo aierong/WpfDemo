@@ -39,8 +39,7 @@
         <StackPanel>
             <Label>33</Label>
             <!--
-                控件样式实现方式
-                调用资源里面定义好的
+                控件样式:调用资源里面定义的
             -->
             <TextBox Style="{StaticResource inputText}" />
             <Button Style="{StaticResource clickButton}" />
