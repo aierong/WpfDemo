@@ -8,7 +8,7 @@ using Prism.Mvvm;
 using Prism.Regions;
 using Microsoft.Extensions.Logging;
 
-
+//写日志
 
 namespace PrismDemo.LogDemo
 {
