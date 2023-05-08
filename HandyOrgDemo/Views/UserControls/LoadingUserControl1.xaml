@@ -4,6 +4,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:hc="https://handyorg.github.io/handycontrol"
              xmlns:local="clr-namespace:HandyOrgDemo.Views.UserControls"
+             xmlns:localcv="clr-namespace:HandyOrgDemo.Converters"
              xmlns:localviewmodel="clr-namespace:HandyOrgDemo.ViewModels.UserControls"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              d:DataContext="{d:DesignInstance localviewmodel:LoadingViewModel,
@@ -11,6 +12,15 @@
              d:DesignHeight="450"
              d:DesignWidth="800"
              mc:Ignorable="d">
+    <!--  引用转换器  -->
+    <UserControl.Resources>
+        <!--
+            引用转换器,并且传递一个参数
+        -->
+        <localcv:BooleanToVisibilityConverter x:Key="myconvert"
+                                              FalseUseHidden="False" />
+
+    </UserControl.Resources>
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -46,14 +56,15 @@
                     Grid.Column="0"
                     Margin="10"
                     VerticalAlignment="Center">
-            <!--IsEnabled="{Binding IsRun}"-->
-            <hc:LoadingCircle  Visibility="Hidden"   />
-            <hc:LoadingLine Margin="0,30"
-                            Foreground="BlueViolet"
-                            IsRunning="{Binding IsRun}"
-                            Style="{StaticResource LoadingLineLarge}" />
-            <Button Command="{Binding ButtonClickCommand}"
-                    Content="显示隐藏" />
+            <!--
+                IsEnabled属性并不是隐藏进度条，我们需要用Visibility
+            -->
+            <hc:LoadingCircle Foreground="Green"
+                              Visibility="{Binding IsRun, Mode=OneWay, Converter={StaticResource myconvert}}" />
+
+            <Button Margin="0,25,0,0"
+                    Command="{Binding ButtonClickCommand}"
+                    Content="显示或隐藏" />
         </StackPanel>
     </Grid>
 </UserControl>
