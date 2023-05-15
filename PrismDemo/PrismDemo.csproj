@@ -349,9 +349,6 @@
     <PackageReference Include="Prism.Unity">
       <Version>8.1.97</Version>
     </PackageReference>
-    <PackageReference Include="Refit">
-      <Version>6.3.2</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
