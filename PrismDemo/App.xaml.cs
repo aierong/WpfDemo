@@ -59,7 +59,7 @@ namespace PrismDemo
 
 
             //导航
-            return Container.Resolve<NavigationDemo.Basic.BaseNavigation>();
+            //return Container.Resolve<NavigationDemo.Basic.BaseNavigation>();
             //导航传递参数 
             //return Container.Resolve<NavigationDemo.Parameters.ParametersNavigation>();
             //确定导航
@@ -68,7 +68,7 @@ namespace PrismDemo
 
 
             //对话框
-            //return Container.Resolve<DialogDemo.DialogWindow>();
+            return Container.Resolve<DialogDemo.DialogWindow>();
 
 
 

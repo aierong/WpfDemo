@@ -79,7 +79,17 @@ namespace PrismDemo.DialogDemo
                 }
                 else
                 {
-                    MessageBox.Show( "点击了取消按钮" );
+                    if ( ir.Result == ButtonResult.Cancel )
+                    {
+                        MessageBox.Show( "点击了取消按钮" );
+                    }
+
+
+                    if ( ir.Result == ButtonResult.None )
+                    {
+                        //用户自己关闭窗体的 点(X)
+                        MessageBox.Show( "操作者自己关闭弹窗(点(X))" );
+                    }
                 }
 
             } );

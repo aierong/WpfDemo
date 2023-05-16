@@ -14,9 +14,14 @@
         <Style TargetType="Window">
             <!--  居中显示  -->
             <Setter Property="prism:Dialog.WindowStartupLocation" Value="CenterScreen" />
-            <!--  关闭最大,最小等按钮  -->
-            <Setter Property="WindowStyle" Value="None" />
+           
             <Setter Property="SizeToContent" Value="WidthAndHeight" />
+
+
+            <!--  关闭最大,最小等按钮  -->
+            <!--<Setter Property="WindowStyle" Value="None" />-->
+
+            <Setter Property="WindowStyle"  Value="ToolWindow"   />
         </Style>
     </prism:Dialog.WindowStyle>
 
