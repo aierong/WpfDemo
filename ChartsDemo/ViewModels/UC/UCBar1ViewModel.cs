@@ -8,6 +8,7 @@ using LiveChartsCore;
 using Prism.Mvvm;
 using LiveChartsCore.SkiaSharpView.Painting;
 using SkiaSharp;
+using System.Windows.Ink;
 
 namespace ChartsDemo.ViewModels.UC
 {
@@ -22,12 +23,26 @@ namespace ChartsDemo.ViewModels.UC
         new ColumnSeries<double>
         {
             Name = "Mary姐姐",
-            Values = new double[] { 2, 5, 4 }
+            Values = new double[] { 2, 5, 4 },
+
+            //指定颜色，如果不指定，系统自动分配
+             Fill = new SolidColorPaint(SKColors.Red),
+             //可以指定最大宽度
+             //MaxBarWidth = 10
+            MaxBarWidth = double.MaxValue,
+
+            GroupPadding = 10
         },
         new ColumnSeries<double>
         {
             Name = "Ana",
-            Values = new double[] { 3, 1, 6 }
+            Values = new double[] { 3, 1, 6 },
+
+            Fill = new SolidColorPaint(SKColors.Green  ),
+
+            MaxBarWidth = double.MaxValue,
+
+             GroupPadding = 10
         }
     };
 
