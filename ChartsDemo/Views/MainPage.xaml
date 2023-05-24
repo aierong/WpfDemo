@@ -49,6 +49,10 @@
                     Content="Bar" />
             <Button Height="30"
                     Margin="10,10,10,10"
+                    Command="{Binding BarLine1ButtonClickCommand}"
+                    Content="Bar和line" />
+            <Button Height="30"
+                    Margin="10,10,10,10"
                     Command="{Binding Pie1ButtonClickCommand}"
                     Content="pie" />
             <Button Height="30"

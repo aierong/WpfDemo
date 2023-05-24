@@ -40,6 +40,7 @@ namespace ChartsDemo.ViewModels.UC
             new Axis
             {
                 Labels = new string[] { "组1" , "组2" , "Category3" },
+                //旋转角度
                 LabelsRotation = 0,
                 SeparatorsPaint = new SolidColorPaint(new SKColor(200, 200, 200)),
                 SeparatorsAtCenter = false,
