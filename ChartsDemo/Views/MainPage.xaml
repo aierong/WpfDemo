@@ -5,7 +5,7 @@
         xmlns:local="clr-namespace:ChartsDemo.Views"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
-        Title="MainPage"
+        Title="主页"
         Width="800"
         Height="450"
         prism:ViewModelLocator.AutoWireViewModel="True"
@@ -34,6 +34,7 @@
             <Button Width="80"
                     Height="30"
                     Margin="10,10,10,10"
+                    Command="{Binding AButtonClickCommand}"
                     Content="加载A" />
             <Button Width="80"
                     Height="30"
