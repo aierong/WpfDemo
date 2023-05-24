@@ -13,6 +13,8 @@ using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Unity;
 
+
+
 namespace ChartsDemo
 {
     /// <summary>
@@ -27,8 +29,9 @@ namespace ChartsDemo
         protected override Window CreateShell ()
         {
 
-            return Container.Resolve<Views.Window1>();
+            return Container.Resolve<Views.MainPage>();
         }
+
 
 
         protected override void RegisterTypes ( IContainerRegistry containerRegistry )
