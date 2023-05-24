@@ -35,11 +35,12 @@
                     Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding AButtonClickCommand}"
-                    Content="加载A" />
+                    Content="基本" />
             <Button Width="80"
                     Height="30"
                     Margin="10,10,10,10"
-                    Content="加载B" />
+                    Command="{Binding LineButtonClickCommand}"
+                    Content="Line" />
         </StackPanel>
     </Grid>
 </Window>

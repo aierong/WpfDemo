@@ -48,7 +48,7 @@ namespace ChartsDemo
             //注册对话框
             //添加 并且起个别名  
             containerRegistry.RegisterForNavigation<UserControlDemo1>( "UserControlDemo1" );
-            //containerRegistry.RegisterForNavigation<NavigationDemo.Basic.UC.BUserControl>( "BNavigation" );
+            containerRegistry.RegisterForNavigation<UserControlLine1>( "UserControlLine1" );
 
 
         }
