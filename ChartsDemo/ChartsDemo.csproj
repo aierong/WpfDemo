@@ -58,6 +58,7 @@
     </ApplicationDefinition>
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\UC\UCBar1ViewModel.cs" />
+    <Compile Include="ViewModels\UC\UCDongTai1ViewModel.cs" />
     <Compile Include="ViewModels\UC\UCPie1ViewModel.cs" />
     <Compile Include="ViewModels\UC\UserControlDemo1ViewModel.cs" />
     <Compile Include="ViewModels\UC\UserControlLine1ViewModel.cs" />
@@ -71,6 +72,9 @@
     </Compile>
     <Compile Include="Views\UC\UCBar1.xaml.cs">
       <DependentUpon>UCBar1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC\UCDongTai1.xaml.cs">
+      <DependentUpon>UCDongTai1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UC\UCPie1.xaml.cs">
       <DependentUpon>UCPie1.xaml</DependentUpon>
@@ -89,6 +93,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UC\UCBar1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC\UCDongTai1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -24,6 +24,7 @@ namespace ChartsDemo.ViewModels.UC
                     Values = new double[] { 2, 1, 3, 5, 3, 4, 6 },
                     Fill = null,
 
+                    //格式化，Tooltip
                     TooltipLabelFormatter =
         (chartPoint) => $"项目{chartPoint.Context.Series.Name}:{chartPoint.PrimaryValue}"
                 }

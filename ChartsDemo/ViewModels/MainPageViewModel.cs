@@ -18,12 +18,15 @@ namespace ChartsDemo.ViewModels
             this._regionManager = regionManager;
         }
 
+
+
         private DelegateCommand _AButtonClickCommand;
         public DelegateCommand AButtonClickCommand => _AButtonClickCommand ?? ( _AButtonClickCommand = new DelegateCommand( () =>
         {
             //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
             this._regionManager.RequestNavigate( "ContentRegion" , "UserControlDemo1" );
         } ) );
+
 
 
         private DelegateCommand _LineButtonClickCommand;
@@ -34,12 +37,14 @@ namespace ChartsDemo.ViewModels
         } ) );
 
 
+
         private DelegateCommand _LineDuoButtonClickCommand;
         public DelegateCommand LineDuoButtonClickCommand => _LineDuoButtonClickCommand ?? ( _LineDuoButtonClickCommand = new DelegateCommand( () =>
         {
             //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
             this._regionManager.RequestNavigate( "ContentRegion" , "UserControlLineDuo" );
         } ) );
+
 
 
         private DelegateCommand _Bar1ButtonClickCommand;
@@ -49,12 +54,25 @@ namespace ChartsDemo.ViewModels
             this._regionManager.RequestNavigate( "ContentRegion" , "UCBar1" );
         } ) );
 
+
+
         private DelegateCommand _Pie1ButtonClickCommand;
         public DelegateCommand Pie1ButtonClickCommand => _Pie1ButtonClickCommand ?? ( _Pie1ButtonClickCommand = new DelegateCommand( () =>
         {
             //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
             this._regionManager.RequestNavigate( "ContentRegion" , "UCPie1" );
         } ) );
+
+
+
+        private DelegateCommand _DongTai1ButtonClickCommand;
+        public DelegateCommand DongTai1ButtonClickCommand => _DongTai1ButtonClickCommand ?? ( _DongTai1ButtonClickCommand = new DelegateCommand( () =>
+        {
+            //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
+            this._regionManager.RequestNavigate( "ContentRegion" , "UCDongTai1" );
+        } ) );
+
+
 
     }
 }

@@ -19,11 +19,20 @@ namespace ChartsDemo.ViewModels.UC
             get; set;
         } = new ISeries[]
             {
-                 new PieSeries<double> { Values = new double[] { 2 }, Name = "Slice 1" },
-                 new PieSeries<double> { Values = new double[] { 4 } , Name = "Slice 2" },
-                 new PieSeries<double> { Values = new double[] { 1 } , Name = "Slice 3" },
-                 new PieSeries<double> { Values = new double[] { 4 } , Name = "类型4" },
-                 new PieSeries<double> { Values = new double[] { 3 } , Name = "类型5" }
+                 new PieSeries<double> { Values = new double[] { 2 }, Name = "Slice 1"   },
+                 new PieSeries<double> { Values = new double[] { 4 } , Name = "Slice 2"   },
+                 new PieSeries<double> { Values = new double[] { 1 } , Name = "Slice 3"   },
+                 new PieSeries<double> { Values = new double[] { 13 } , Name = "类型4"   },
+                 new PieSeries<double> { Values = new double[] { 3 } , Name = "类型5"  }
+
+
+
+                 //Pushout是配置推出尺寸
+                 //new PieSeries<double> { Values = new double[] { 2 }, Name = "Slice 1" ,Pushout = 1 },
+                 //new PieSeries<double> { Values = new double[] { 4 } , Name = "Slice 2" ,Pushout = 1 },
+                 //new PieSeries<double> { Values = new double[] { 1 } , Name = "Slice 3" ,Pushout = 1 },
+                 //new PieSeries<double> { Values = new double[] { 13 } , Name = "类型4" ,Pushout = 2 },
+                 //new PieSeries<double> { Values = new double[] { 3 } , Name = "类型5" ,Pushout = 1 }
             };
 
         public LabelVisual Title
@@ -64,14 +73,7 @@ namespace ChartsDemo.ViewModels.UC
         public UCPie1ViewModel ()
         {
 
-            //Series = new ISeries[]
-            //{
-            //     new PieSeries<double> { Values = new double[] { 2 }, Name = "Slice 1" },
-            //     new PieSeries<double> { Values = new double[] { 4 }, Name = "Slice 2" },
-            //     new PieSeries<double> { Values = new double[] { 1 }, Name = "Slice 3" },
-            //     new PieSeries<double> { Values = new double[] { 4 }, Name = "Slice 4" },
-            //     new PieSeries<double> { Values = new double[] { 3 }, Name = "Slice 5" }
-            //};
+            
         }
     }
 }

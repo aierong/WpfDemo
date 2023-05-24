@@ -51,6 +51,10 @@
                     Margin="10,10,10,10"
                     Command="{Binding Pie1ButtonClickCommand}"
                     Content="pie" />
+            <Button Height="30"
+                    Margin="10,10,10,10"
+                    Command="{Binding DongTai1ButtonClickCommand}"
+                    Content="动态" />
         </StackPanel>
     </Grid>
 </Window>
