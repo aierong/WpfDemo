@@ -6,8 +6,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
         Title="主页"
-        Width="800"
-        Height="450"
+        Width="990"
+        Height="550"
         prism:ViewModelLocator.AutoWireViewModel="True"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
@@ -43,6 +43,14 @@
                     Margin="10,10,10,10"
                     Command="{Binding LineDuoButtonClickCommand}"
                     Content="Line(多个)" />
+            <Button Height="30"
+                    Margin="10,10,10,10"
+                    Command="{Binding Bar1ButtonClickCommand}"
+                    Content="Bar" />
+            <Button Height="30"
+                    Margin="10,10,10,10"
+                    Command="{Binding Pie1ButtonClickCommand}"
+                    Content="pie" />
         </StackPanel>
     </Grid>
 </Window>
