@@ -31,16 +31,18 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Orientation="Horizontal">
-            <Button Width="80"
-                    Height="30"
+            <Button Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding AButtonClickCommand}"
                     Content="基本" />
-            <Button Width="80"
-                    Height="30"
+            <Button Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding LineButtonClickCommand}"
                     Content="Line" />
+            <Button Height="30"
+                    Margin="10,10,10,10"
+                    Command="{Binding LineDuoButtonClickCommand}"
+                    Content="Line(多个)" />
         </StackPanel>
     </Grid>
 </Window>

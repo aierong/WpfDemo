@@ -20,6 +20,8 @@ using Prism.Unity;
 xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"
 
 
+不支持显示中文：需要设置属性才行
+SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
 
 */
 
@@ -49,6 +51,8 @@ namespace ChartsDemo
             //添加 并且起个别名  
             containerRegistry.RegisterForNavigation<UserControlDemo1>( "UserControlDemo1" );
             containerRegistry.RegisterForNavigation<UserControlLine1>( "UserControlLine1" );
+            containerRegistry.RegisterForNavigation<UserControlLineDuo>( "UserControlLineDuo" );
+            //
 
 
         }

@@ -17,14 +17,10 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <!--<StackPanel Grid.Row="0"
-                    Grid.Column="0">
 
-        </StackPanel>-->
         <lvc:CartesianChart Grid.Row="0"
                             Grid.Column="0"
                             Series="{Binding Series}"
-                             
                             TooltipTextPaint="{Binding TooltipTextPaint}">
             <!--  1  -->
         </lvc:CartesianChart>
