@@ -52,6 +52,8 @@ namespace ChartsDemo
             containerRegistry.RegisterForNavigation<UserControlDemo1>( "UserControlDemo1" );
             containerRegistry.RegisterForNavigation<UserControlLine1>( "UserControlLine1" );
             containerRegistry.RegisterForNavigation<UserControlLineDuo>( "UserControlLineDuo" );
+            //UCBar0
+            containerRegistry.RegisterForNavigation<UCBar0>( "UCBar0" );
             containerRegistry.RegisterForNavigation<UCBar1>( "UCBar1" );
             containerRegistry.RegisterForNavigation<UCPie1>( "UCPie1" );
             containerRegistry.RegisterForNavigation<UCDongTai1>( "UCDongTai1" );

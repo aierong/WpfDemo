@@ -47,6 +47,16 @@ namespace ChartsDemo.ViewModels
 
 
 
+        private DelegateCommand _Bar0ButtonClickCommand;
+        public DelegateCommand Bar0ButtonClickCommand => _Bar0ButtonClickCommand ?? ( _Bar0ButtonClickCommand = new DelegateCommand( () =>
+        {
+            //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
+            this._regionManager.RequestNavigate( "ContentRegion" , "UCBar0" );
+        } ) );
+
+
+
+
         private DelegateCommand _Bar1ButtonClickCommand;
         public DelegateCommand Bar1ButtonClickCommand => _Bar1ButtonClickCommand ?? ( _Bar1ButtonClickCommand = new DelegateCommand( () =>
         {

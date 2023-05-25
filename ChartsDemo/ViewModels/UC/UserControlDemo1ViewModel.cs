@@ -25,8 +25,7 @@ namespace ChartsDemo.ViewModels.UC
                     Fill = null,
 
                     //格式化，Tooltip
-                    TooltipLabelFormatter =
-        (chartPoint) => $"项目{chartPoint.Context.Series.Name}:{chartPoint.PrimaryValue}"
+                    TooltipLabelFormatter =         (chartPoint) => $"项目{chartPoint.Context.Series.Name}:{chartPoint.PrimaryValue}"
                 }
             };
 

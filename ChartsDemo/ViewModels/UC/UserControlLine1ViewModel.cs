@@ -42,7 +42,16 @@ namespace ChartsDemo.ViewModels.UC
                 new LineSeries<double>
                 {
                     Values = new double[] { 2, 1, 3, 5, 3, 4, 6 },
-                    Fill = null
+
+                    Fill = null,
+
+
+
+                    // 参考：https://lvcharts.com/docs/WPF/2.0.0-beta.710/samples.design.linearGradients
+                    // 设置渐变颜色
+                    Stroke = new LinearGradientPaint(new[]{ new SKColor(45, 64, 89), new SKColor(255, 212, 96)}) { StrokeThickness = 10 },
+                    GeometryStroke = new LinearGradientPaint(new[]{ new SKColor(45, 64, 89), new SKColor(255, 212, 96)}) { StrokeThickness = 10 },
+
                 }
         };
 

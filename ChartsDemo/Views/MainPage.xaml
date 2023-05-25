@@ -45,8 +45,12 @@
                     Content="Line(多个)" />
             <Button Height="30"
                     Margin="10,10,10,10"
-                    Command="{Binding Bar1ButtonClickCommand}"
+                    Command="{Binding Bar0ButtonClickCommand}"
                     Content="Bar" />
+            <Button Height="30"
+                    Margin="10,10,10,10"
+                    Command="{Binding Bar1ButtonClickCommand}"
+                    Content="Bar(多个)" />
             <Button Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding BarLine1ButtonClickCommand}"
