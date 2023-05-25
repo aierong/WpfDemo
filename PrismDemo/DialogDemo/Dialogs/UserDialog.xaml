@@ -5,6 +5,8 @@
              xmlns:local="clr-namespace:PrismDemo.DialogDemo.Dialogs"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:prism="http://prismlibrary.com/"
+             Width="250"
+             Height="150"
              d:DesignHeight="450"
              d:DesignWidth="800"
              mc:Ignorable="d">
@@ -14,27 +16,26 @@
         <Style TargetType="Window">
             <!--  居中显示  -->
             <Setter Property="prism:Dialog.WindowStartupLocation" Value="CenterScreen" />
-           
+
             <Setter Property="SizeToContent" Value="WidthAndHeight" />
 
 
             <!--  关闭最大,最小等按钮  -->
             <!--<Setter Property="WindowStyle" Value="None" />-->
 
-            <Setter Property="WindowStyle"  Value="ToolWindow"   />
+            <Setter Property="WindowStyle" Value="ToolWindow" />
         </Style>
     </prism:Dialog.WindowStyle>
 
     <Grid Margin="5">
         <Grid.RowDefinitions>
-            <RowDefinition Height="128" />
+            <RowDefinition />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250" />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0">
-
             <TextBlock HorizontalAlignment="Stretch"
                        VerticalAlignment="Stretch"
                        Text="{Binding Message}" />
@@ -51,17 +52,16 @@
                     Orientation="Horizontal">
             <Button Width="75"
                     Height="25"
-                    Margin="0,10,0,0"
+                    Margin="10,10,10,10"
                     HorizontalAlignment="Right"
                     Command="{Binding SaveClickCommand}"
                     Content="确定" />
             <Button Width="75"
                     Height="25"
-                    Margin="0,10,0,0"
+                    Margin="10,10,10,10"
                     HorizontalAlignment="Right"
                     Command="{Binding CancelClickCommand}"
                     Content="取消" />
         </StackPanel>
-
     </Grid>
 </UserControl>

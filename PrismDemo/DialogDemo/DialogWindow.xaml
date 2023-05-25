@@ -5,7 +5,7 @@
         xmlns:local="clr-namespace:PrismDemo.DialogDemo"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="对话框demo"
-        Width="600"
+        Width="450"
         Height="250"
         WindowStartupLocation="CenterScreen"
         WindowStyle="ToolWindow"
