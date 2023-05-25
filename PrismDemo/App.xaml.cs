@@ -93,7 +93,7 @@ namespace PrismDemo
         protected override void OnInitialized ()
         {
             /* 参考:
-            https://blog.csdn.net/u010197227/article/details/126029393?spm=1001.2101.3001.6650.3&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-3-126029393-blog-89508437.235%5Ev36%5Epc_relevant_default_base3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-3-126029393-blog-89508437.235%5Ev36%5Epc_relevant_default_base3&utm_relevant_index=4
+            https://blog.csdn.net/u010197227/article/details/126029393
 
             */
 
@@ -266,9 +266,7 @@ namespace PrismDemo
 
 
 
-            //测试登录窗体 demo1
-            ViewModelLocationProvider.Register<LoginDemo.Demo1.LoginWindow , LoginDemo.Demo1.LoginWindowViewModel >();
-            ViewModelLocationProvider.Register<LoginDemo.Demo1.MainPage, LoginDemo.Demo1.MainPageViewModel>();
+           
             //测试登录窗体 demo2
             ViewModelLocationProvider.Register<LoginDemo.Demo2.MainIndex, LoginDemo.Demo2.MainIndexViewModel>();
             ViewModelLocationProvider.Register<LoginDemo.Demo2.UCLogin , LoginDemo.Demo2.UCLoginViewModel>();

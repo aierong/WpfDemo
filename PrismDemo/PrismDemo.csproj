@@ -121,14 +121,6 @@
     <Compile Include="LogDemo\UC\BBBUserControl.xaml.cs">
       <DependentUpon>BBBUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LoginDemo\Demo1\LoginWindow.xaml.cs">
-      <DependentUpon>LoginWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="LoginDemo\Demo1\LoginWindowViewModel.cs" />
-    <Compile Include="LoginDemo\Demo1\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="LoginDemo\Demo1\MainPageViewModel.cs" />
     <Compile Include="LoginDemo\Demo2\MainIndex.xaml.cs">
       <DependentUpon>MainIndex.xaml</DependentUpon>
     </Compile>
@@ -258,14 +250,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="LogDemo\UC\BBBUserControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="LoginDemo\Demo1\LoginWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="LoginDemo\Demo1\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
