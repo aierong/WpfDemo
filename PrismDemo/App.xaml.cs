@@ -69,7 +69,7 @@ namespace PrismDemo
 
 
             //对话框
-            //return Container.Resolve<DialogDemo.DialogWindow>();
+            return Container.Resolve<DialogDemo.DialogWindow>();
 
 
 
@@ -82,62 +82,61 @@ namespace PrismDemo
             //return Container.Resolve<LogDemo.LogWindow>();
 
 
-            //测试登录  LoginDemo.Demo1.LoginWindow LoginDemo.Demo1.MainPage
-            //return Container.Resolve<LoginDemo.Demo1.LoginWindow>();
-            //MainIndex
-            return Container.Resolve<LoginDemo.Demo2.MainIndex>();
+            //测试登录  
+            // 记得，如果使用下面的登录，请把下面屏蔽的OnInitialized代码打开
+            //return Container.Resolve<LoginDemo.Demo2.MainIndex>();
         }
 
 
 
-        protected override void OnInitialized ()
-        {
-            /* 参考:
-            https://blog.csdn.net/u010197227/article/details/126029393
+        //protected override void OnInitialized ()
+        //{
+        //    /* 参考:
+        //    https://blog.csdn.net/u010197227/article/details/126029393
 
-            */
+        //    */
 
-            var dialog = Container.Resolve<IDialogService>();
+        //    var dialog = Container.Resolve<IDialogService>();
 
-            //systemlogin
-            dialog.ShowDialog( "systemlogin" , ( IDialogResult callback ) =>
-            {
-                if ( callback.Result != ButtonResult.OK )
-                {
-                    Environment.Exit( 0 );
+        //    //systemlogin
+        //    dialog.ShowDialog( "systemlogin" , ( IDialogResult callback ) =>
+        //    {
+        //        if ( callback.Result != ButtonResult.OK )
+        //        {
+        //            Environment.Exit( 0 );
 
-                    return;
-                }
+        //            return;
+        //        }
 
-                var userid = string.Empty;
-                var username = string.Empty;
+        //        var userid = string.Empty;
+        //        var username = string.Empty;
 
-                //这里，可以收到弹窗返回的值
-                if ( callback.Parameters.ContainsKey( "userid" ) )
-                {
-                    userid = callback.Parameters.GetValue<string>( "userid" );
-                }
+        //        //这里，可以收到弹窗返回的值
+        //        if ( callback.Parameters.ContainsKey( "userid" ) )
+        //        {
+        //            userid = callback.Parameters.GetValue<string>( "userid" );
+        //        }
 
-                if ( callback.Parameters.ContainsKey( "username" ) )
-                {
-                    username = callback.Parameters.GetValue<string>( "username" );
-                }
+        //        if ( callback.Parameters.ContainsKey( "username" ) )
+        //        {
+        //            username = callback.Parameters.GetValue<string>( "username" );
+        //        }
 
-                //给主窗体传值
-                base.OnInitialized();
+        //        //给主窗体传值
+        //        base.OnInitialized();
 
 
 
-                //给主窗体传递值：1.可以用静态变量  2.用Prism的消息发送数据
+        //        //给主窗体传递值：1.可以用静态变量  2.用Prism的消息发送数据
 
-                var _eventAggregator = Container.Resolve<IEventAggregator>();
-                //发送消息
-                _eventAggregator.GetEvent<LoginDemo.Demo2.SentEvent>().Publish( "123" );
+        //        var _eventAggregator = Container.Resolve<IEventAggregator>();
+        //        //发送消息
+        //        _eventAggregator.GetEvent<LoginDemo.Demo2.SentEvent>().Publish( "123" );
 
-            } );
+        //    } );
 
-            
-        }
+
+        //}
 
 
 
