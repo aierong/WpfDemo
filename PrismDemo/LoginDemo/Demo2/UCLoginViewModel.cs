@@ -11,7 +11,7 @@ namespace PrismDemo.LoginDemo.Demo2
 {
     public class UCLoginViewModel : BindableBase, IDialogAware
     {
-        //public string Title => throw new NotImplementedException();
+         
         private string _title = "请登录";
         public string Title
         {
@@ -65,7 +65,6 @@ namespace PrismDemo.LoginDemo.Demo2
                 RequestClose?.Invoke( new DialogResult( ButtonResult.OK  ) );
             }
              
-
         } ) );
     }
 }

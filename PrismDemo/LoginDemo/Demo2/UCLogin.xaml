@@ -25,18 +25,12 @@
     </prism:Dialog.WindowStyle>
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
-
             <RowDefinition Height="80" />
-
             <RowDefinition Height="80" />
-
             <RowDefinition Height="80" />
         </Grid.RowDefinitions>
-
         <Grid.ColumnDefinitions>
-
             <ColumnDefinition Width="250" />
-
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0"
                     Grid.Column="0"
@@ -46,7 +40,6 @@
             <Label Width="50"
                    Height="30"
                    Content="名称" />
-
             <TextBox Width="50"
                      Height="30" />
         </StackPanel>
@@ -58,7 +51,6 @@
             <Label Width="50"
                    Height="30"
                    Content="密码" />
-
             <TextBox Width="50"
                      Height="30" />
         </StackPanel>
@@ -72,8 +64,6 @@
                     Command="{Binding LoginClickCommand}"
                     Content="登录">
             </Button>
-
         </StackPanel>
     </Grid>
-
 </UserControl>

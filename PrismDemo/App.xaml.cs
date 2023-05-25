@@ -100,13 +100,13 @@ namespace PrismDemo
                 if ( callback.Result != ButtonResult.OK )
                 {
                     Environment.Exit( 0 );
+
                     return;
                 }
 
                 //给主窗体传值
                 base.OnInitialized();
             } );
-
 
             //base.OnInitialized();
         }
