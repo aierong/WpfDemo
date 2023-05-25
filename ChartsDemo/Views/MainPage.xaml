@@ -62,7 +62,11 @@
             <Button Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding DongTai1ButtonClickCommand}"
-                    Content="动态" />
+                    Content="动态line" />
+            <Button Height="30"
+                    Margin="10,10,10,10"
+                    Command="{Binding DongTaiBar1ButtonClickCommand}"
+                    Content="动态bar" />
         </StackPanel>
     </Grid>
 </Window>

@@ -9,6 +9,7 @@ using Prism.Mvvm;
 using LiveChartsCore.SkiaSharpView.Painting;
 using LiveChartsCore.SkiaSharpView.VisualElements;
 using SkiaSharp;
+using System.Collections.ObjectModel;
 
 namespace ChartsDemo.ViewModels.UC
 {
@@ -54,6 +55,15 @@ namespace ChartsDemo.ViewModels.UC
 
                 }
         };
+
+
+
+        public UserControlLine1ViewModel()
+        {
+             
+        }
+
+
 
 
     };
