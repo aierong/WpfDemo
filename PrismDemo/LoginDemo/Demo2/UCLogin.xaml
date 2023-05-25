@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="PrismDemo.LoginDemo.Demo2.UCLogin"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:PrismDemo.LoginDemo.Demo2"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:prism="http://prismlibrary.com/"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             mc:Ignorable="d">
+    <!--  配置弹窗的样式  -->
+    <prism:Dialog.WindowStyle>
+        <Style TargetType="Window">
+            <!--  居中显示  -->
+            <Setter Property="prism:Dialog.WindowStartupLocation" Value="CenterScreen" />
+
+            <Setter Property="SizeToContent" Value="WidthAndHeight" />
+
+
+            <!--  关闭最大,最小等按钮  -->
+            <!--<Setter Property="WindowStyle" Value="None" />-->
+
+            <Setter Property="WindowStyle" Value="ToolWindow" />
+        </Style>
+    </prism:Dialog.WindowStyle>
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="80" />
+
+            <RowDefinition Height="80" />
+
+            <RowDefinition Height="80" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="250" />
+
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <Label Width="50"
+                   Height="30"
+                   Content="名称" />
+
+            <TextBox Width="50"
+                     Height="30" />
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <Label Width="50"
+                   Height="30"
+                   Content="密码" />
+
+            <TextBox Width="50"
+                     Height="30" />
+        </StackPanel>
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <Button Width="50"
+                    Height="30"
+                    Command="{Binding LoginClickCommand}"
+                    Content="登录">
+            </Button>
+
+        </StackPanel>
+    </Grid>
+
+</UserControl>

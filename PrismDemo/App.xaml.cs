@@ -11,6 +11,7 @@ using System.Windows.Controls;
 using Microsoft.Win32;
 using Prism.Ioc;
 using Prism.Mvvm;
+using Prism.Services.Dialogs;
 using Prism.Unity;
 
 
@@ -68,7 +69,7 @@ namespace PrismDemo
 
 
             //对话框
-            return Container.Resolve<DialogDemo.DialogWindow>();
+            //return Container.Resolve<DialogDemo.DialogWindow>();
 
 
 
@@ -79,6 +80,35 @@ namespace PrismDemo
 
             //日志
             //return Container.Resolve<LogDemo.LogWindow>();
+
+
+            //测试登录  LoginDemo.Demo1.LoginWindow LoginDemo.Demo1.MainPage
+            //return Container.Resolve<LoginDemo.Demo1.LoginWindow>();
+            //MainIndex
+            return Container.Resolve<LoginDemo.Demo2.MainIndex>();
+        }
+
+
+
+        protected override void OnInitialized ()
+        {
+            var dialog = Container.Resolve<IDialogService>();
+
+            //systemlogin
+            dialog.ShowDialog( "systemlogin" , callback =>
+            {
+                if ( callback.Result != ButtonResult.OK )
+                {
+                    Environment.Exit( 0 );
+                    return;
+                }
+
+                //给主窗体传值
+                base.OnInitialized();
+            } );
+
+
+            //base.OnInitialized();
         }
 
 
@@ -135,6 +165,13 @@ namespace PrismDemo
             // 日志
             containerRegistry.RegisterForNavigation<LogDemo.UC.AAAUserControl>( "AAAUC" );
             containerRegistry.RegisterForNavigation<LogDemo.UC.BBBUserControl>( "BBBUC" );
+
+
+
+
+            //
+            containerRegistry.RegisterDialog<LoginDemo.Demo2.UCLogin, LoginDemo.Demo2.UCLoginViewModel>( "systemlogin" );
+
         }
 
 
@@ -192,6 +229,19 @@ namespace PrismDemo
             //日志
             ViewModelLocationProvider.Register<LogDemo.UC.AAAUserControl , LogDemo.UC.AAAUserControlViewModel>();
             ViewModelLocationProvider.Register<LogDemo.LogWindow , LogDemo.LogWindowViewModel>();
+
+
+
+
+
+
+            //测试登录窗体 demo1
+            ViewModelLocationProvider.Register<LoginDemo.Demo1.LoginWindow , LoginDemo.Demo1.LoginWindowViewModel >();
+            ViewModelLocationProvider.Register<LoginDemo.Demo1.MainPage, LoginDemo.Demo1.MainPageViewModel>();
+            //测试登录窗体 demo2
+            ViewModelLocationProvider.Register<LoginDemo.Demo2.MainIndex, LoginDemo.Demo2.MainIndexViewModel>();
+            ViewModelLocationProvider.Register<LoginDemo.Demo2.UCLogin , LoginDemo.Demo2.UCLoginViewModel>();
+
 
 
 
