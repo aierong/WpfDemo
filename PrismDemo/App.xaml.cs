@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Win32;
+using Prism.Events;
 using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Services.Dialogs;
 using Prism.Unity;
-
-
+ 
 
 namespace PrismDemo
 {
@@ -92,10 +92,15 @@ namespace PrismDemo
 
         protected override void OnInitialized ()
         {
+            /* 参考:
+            https://blog.csdn.net/u010197227/article/details/126029393?spm=1001.2101.3001.6650.3&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-3-126029393-blog-89508437.235%5Ev36%5Epc_relevant_default_base3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-3-126029393-blog-89508437.235%5Ev36%5Epc_relevant_default_base3&utm_relevant_index=4
+
+            */
+
             var dialog = Container.Resolve<IDialogService>();
 
             //systemlogin
-            dialog.ShowDialog( "systemlogin" , callback =>
+            dialog.ShowDialog( "systemlogin" , ( IDialogResult callback ) =>
             {
                 if ( callback.Result != ButtonResult.OK )
                 {
@@ -104,11 +109,34 @@ namespace PrismDemo
                     return;
                 }
 
+                var userid = string.Empty;
+                var username = string.Empty;
+
+                //这里，可以收到弹窗返回的值
+                if ( callback.Parameters.ContainsKey( "userid" ) )
+                {
+                    userid = callback.Parameters.GetValue<string>( "userid" );
+                }
+
+                if ( callback.Parameters.ContainsKey( "username" ) )
+                {
+                    username = callback.Parameters.GetValue<string>( "username" );
+                }
+
                 //给主窗体传值
                 base.OnInitialized();
+
+
+
+                //给主窗体传递值：1.可以用静态变量  2.用Prism的消息发送数据
+
+                var _eventAggregator = Container.Resolve<IEventAggregator>();
+                //发送消息
+                _eventAggregator.GetEvent<LoginDemo.Demo2.SentEvent>().Publish( "123" );
+
             } );
 
-            //base.OnInitialized();
+            
         }
 
 

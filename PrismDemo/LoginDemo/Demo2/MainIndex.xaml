@@ -31,10 +31,12 @@
                     VerticalAlignment="Center"
                     Orientation="Horizontal">
 
-            <Label Width="50"
+            <Label Width="136"
                    Height="30"
                    Content="{Binding TextTitle}" />
-
+            <Label Width="136"
+                   Height="30"
+                   Content="{Binding UserTxt}" />
         </StackPanel>
 
         <!--  这里定义一个区域来加载导航  -->

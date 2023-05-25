@@ -63,6 +63,12 @@
                     Height="30"
                     Command="{Binding LoginClickCommand}"
                     Content="登录">
+
+            </Button>
+            <Button Width="50"
+                    Height="30"
+                    Command="{Binding CancelClickCommand}"
+                    Content="取消">
             </Button>
         </StackPanel>
     </Grid>

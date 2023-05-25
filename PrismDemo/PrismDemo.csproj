@@ -133,6 +133,7 @@
       <DependentUpon>MainIndex.xaml</DependentUpon>
     </Compile>
     <Compile Include="LoginDemo\Demo2\MainIndexViewModel.cs" />
+    <Compile Include="LoginDemo\Demo2\SentEvent.cs" />
     <Compile Include="LoginDemo\Demo2\UCLogin.xaml.cs">
       <DependentUpon>UCLogin.xaml</DependentUpon>
     </Compile>

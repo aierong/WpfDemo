@@ -43,10 +43,12 @@ namespace PrismDemo.LoginDemo.Demo2
         }
 
 
+
         public UCLoginViewModel()
         {
             
         }
+
 
 
         private DelegateCommand _LoginClickCommand;
@@ -61,10 +63,28 @@ namespace PrismDemo.LoginDemo.Demo2
 
             if ( isvalid )
             {
+                DialogParameters _Parameters = new DialogParameters( "userid=123&username=qq" );
                 //弹窗返回值
-                RequestClose?.Invoke( new DialogResult( ButtonResult.OK  ) );
+                RequestClose?.Invoke( new DialogResult( ButtonResult.OK , _Parameters ) );
             }
              
         } ) );
+
+
+
+        private DelegateCommand _CancelClickCommand;
+        /// <summary>
+        /// 登录操作
+        /// </summary>
+        public DelegateCommand CancelClickCommand => _CancelClickCommand ?? ( _CancelClickCommand = new DelegateCommand( () =>
+        {
+
+            //  
+            RequestClose?.Invoke( new DialogResult( ButtonResult.Cancel ) );
+
+        } ) );
+
+
+
     }
 }
