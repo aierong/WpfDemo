@@ -153,5 +153,8 @@ namespace ChartsDemo.ViewModels.UC
             _observableValues.Add( new ObservableValue( _random.Next( 1 , 5 ) ) );
             _observableValues.Add( new ObservableValue( _random.Next( 1 , 10 ) ) );
         } ) );
+
+
+
     }
 }

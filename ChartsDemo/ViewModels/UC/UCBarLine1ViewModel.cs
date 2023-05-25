@@ -59,13 +59,7 @@ namespace ChartsDemo.ViewModels.UC
             {
                 Name = "Sales amount",
                 NamePadding = new LiveChartsCore.Drawing.Padding(0, 15),
-                //Labeler = Labelers.Currency,
-                //LabelsPaint = new SolidColorPaint
-                //{
-                //    Color = SKColors.Blue,
-                //    //FontFamily = "Times New Roman",
-                //    SKFontStyle = new SKFontStyle(SKFontStyleWeight.ExtraBold, SKFontStyleWidth.Normal, SKFontStyleSlant.Italic)
-                //},
+                
             }
         };
 

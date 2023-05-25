@@ -18,7 +18,6 @@ namespace ChartsDemo.ViewModels.UC
             get; set;
         } =     {
          
-
         new ColumnSeries<double>
         {
              

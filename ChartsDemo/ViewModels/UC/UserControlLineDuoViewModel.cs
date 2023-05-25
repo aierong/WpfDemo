@@ -25,6 +25,8 @@ namespace ChartsDemo.ViewModels.UC
             {
                 Values = new double[] { 5, 0, 5, 0, 5, 0 },
                 Fill = null,
+
+                //GeometrySize是配置线中间每个小圆点尺寸大小，配置为0就不显示
                 GeometrySize = 0,
             
                 // LineSmoothness
@@ -34,7 +36,9 @@ namespace ChartsDemo.ViewModels.UC
             {
                 Values = new double[] { 7, 2, 7, 2, 7, 2 },
                 Fill = null,
-                GeometrySize = 0,
+
+                //GeometrySize = 0,
+
                 LineSmoothness = 1
             }
         };
