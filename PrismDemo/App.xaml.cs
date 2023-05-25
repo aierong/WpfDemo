@@ -139,6 +139,9 @@ namespace PrismDemo
             containerRegistry.RegisterForNavigation<NavigationDemo.ConfirmNavigation.UC.UserControlAAA>( "NavigationAAA" );
             containerRegistry.RegisterForNavigation<NavigationDemo.ConfirmNavigation.UC.UserControlBBB>( "NavigationBBB" );
 
+            containerRegistry.RegisterForNavigation<LoginDemo.Demo2.UC.UCChild1>( "NavigationChild1" );
+            containerRegistry.RegisterForNavigation<LoginDemo.Demo2.UC.UCChild2>( "NavigationChild2" );
+
 
 
             //注册对话框
@@ -241,6 +244,8 @@ namespace PrismDemo
             //测试登录窗体 demo2
             ViewModelLocationProvider.Register<LoginDemo.Demo2.MainIndex, LoginDemo.Demo2.MainIndexViewModel>();
             ViewModelLocationProvider.Register<LoginDemo.Demo2.UCLogin , LoginDemo.Demo2.UCLoginViewModel>();
+            ViewModelLocationProvider.Register<LoginDemo.Demo2.UC.UCChild1, LoginDemo.Demo2.UC.UCChild1VM>();
+            ViewModelLocationProvider.Register<LoginDemo.Demo2.UC.UCChild2, LoginDemo.Demo2.UC.UCChild2VM>();
 
 
 

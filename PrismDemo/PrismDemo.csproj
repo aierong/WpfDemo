@@ -140,9 +140,11 @@
     <Compile Include="LoginDemo\Demo2\UC\UCChild1.xaml.cs">
       <DependentUpon>UCChild1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LoginDemo\Demo2\UC\UCChild1VM.cs" />
     <Compile Include="LoginDemo\Demo2\UC\UCChild2.xaml.cs">
       <DependentUpon>UCChild2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LoginDemo\Demo2\UC\UCChild2VM.cs" />
     <Compile Include="MyView\ModuleABC\UserData.xaml.cs">
       <DependentUpon>UserData.xaml</DependentUpon>
     </Compile>
