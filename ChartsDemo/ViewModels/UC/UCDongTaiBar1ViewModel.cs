@@ -11,11 +11,12 @@ using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
 using Prism.Commands;
 using Prism.Mvvm;
+using Prism.Regions;
 using SkiaSharp;
 
 namespace ChartsDemo.ViewModels.UC
 {
-    public  class UCDongTaiBar1ViewModel : BindableBase
+    public  class UCDongTaiBar1ViewModel : BindableBase, INavigationAware
     {
 
         private readonly ObservableCollection<ObservableValue> _observableValues;
@@ -104,8 +105,21 @@ namespace ChartsDemo.ViewModels.UC
             }
         };
 
+        public void OnNavigatedTo ( NavigationContext navigationContext )
+        {
+            //throw new NotImplementedException();
+        }
 
+        public bool IsNavigationTarget ( NavigationContext navigationContext )
+        {
+            //throw new NotImplementedException();
+            //IsNavigationTarget：True则重用该View实例，Flase则每一次导航到该页面都会实例化一次
+            return false;
+        }
 
-
+        public void OnNavigatedFrom ( NavigationContext navigationContext )
+        {
+            //throw new NotImplementedException();
+        }
     }
 }
