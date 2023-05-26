@@ -71,7 +71,7 @@ namespace ChartsDemo.ViewModels.UC
 
             _observableValues.Add( new ObservableValue( _random.Next( 1 , 20 ) ) );
             _observableValues.Add( new ObservableValue( _random.Next( 1 , 5 ) ) );
-            _observableValues.Add( new ObservableValue( _random.Next( 1 , 10 ) ) );
+            _observableValues.Add( new ObservableValue( _random.Next( 8 , 10 ) ) );
 
             
          } ) );
@@ -104,6 +104,12 @@ namespace ChartsDemo.ViewModels.UC
                 }
             }
         };
+
+
+
+
+
+
 
         public void OnNavigatedTo ( NavigationContext navigationContext )
         {
