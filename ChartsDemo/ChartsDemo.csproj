@@ -91,6 +91,9 @@
     <Compile Include="Views\UC\UCPie1.xaml.cs">
       <DependentUpon>UCPie1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UC\UCPieDontTai1.xaml.cs">
+      <DependentUpon>UCPieDontTai1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UC\UserControlDemo1.xaml.cs">
       <DependentUpon>UserControlDemo1.xaml</DependentUpon>
     </Compile>
@@ -125,6 +128,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UC\UCPie1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC\UCPieDontTai1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

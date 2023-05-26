@@ -35,6 +35,8 @@ namespace ChartsDemo.ViewModels.UC
                  //new PieSeries<double> { Values = new double[] { 3 } , Name = "类型5" ,Pushout = 1 }
             };
 
+
+
         public LabelVisual Title
         {
             get; set;
@@ -50,6 +52,8 @@ namespace ChartsDemo.ViewModels.UC
                 SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
             }
         };
+
+
 
         public SolidColorPaint TooltipTextPaint
         {
@@ -69,6 +73,8 @@ namespace ChartsDemo.ViewModels.UC
             Color = SKColors.Black ,
             SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
         };
+
+
 
         public UCPie1ViewModel ()
         {
