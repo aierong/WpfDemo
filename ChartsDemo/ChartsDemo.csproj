@@ -63,6 +63,7 @@
     <Compile Include="ViewModels\UC\UCDongTai1ViewModel.cs" />
     <Compile Include="ViewModels\UC\UCDongTaiBar1ViewModel.cs" />
     <Compile Include="ViewModels\UC\UCPie1ViewModel.cs" />
+    <Compile Include="ViewModels\UC\UCPieDontTai1ViewModel.cs" />
     <Compile Include="ViewModels\UC\UserControlDemo1ViewModel.cs" />
     <Compile Include="ViewModels\UC\UserControlLine1ViewModel.cs" />
     <Compile Include="ViewModels\UC\UserControlLineDuoViewModel.cs" />
