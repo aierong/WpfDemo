@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Markup;
 using LiveChartsCore;
 using LiveChartsCore.Defaults;
 using LiveChartsCore.SkiaSharpView;
@@ -18,7 +19,7 @@ namespace ChartsDemo.ViewModels.UC
     public class UCPieDontTai1ViewModel : BindableBase, INavigationAware
     {
 
-        ObservableCollection<ISeries> _Series;
+        ObservableCollection<ISeries> _Series = new ObservableCollection<ISeries>() { };
 
         public ObservableCollection<ISeries> Series
         {
@@ -33,40 +34,76 @@ namespace ChartsDemo.ViewModels.UC
             }
         }
 
+        SolidColorPaint _LegendTextPaint =
+               new SolidColorPaint
+               {
+                   Color = SKColors.Black , 
+                   SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
+               };
+
+        public SolidColorPaint LegendTextPaint
+        {
+            get
+            {
+                return _LegendTextPaint;
+            }
+            set
+            {
+                //SetProperty就是设置值,并且通知属性改变
+                SetProperty( ref _LegendTextPaint , value );
+            }
+        }
+
+    
+
+
+        void createdata (int counts)
+        {
+            Random _random = new Random();
+
+            this.Series.Clear();
+
+            for ( int i = 1 ; i < counts ; i++ )
+            {
+                this.Series.Add( new PieSeries<ObservableValue>
+                {
+
+                    Values = new[] { new ObservableValue( _random.Next( 1 , 30 ) ) } ,
+                    Name = "系列:" + i.ToString (),
+                    //文字朝向
+                    DataLabelsRotation = LiveCharts.CotangentAngle , //  
+
+                    DataLabelsPaint = new SolidColorPaint( SKColors.Black ) ,
+                    //DataLabelsSize = 22,
+
+                    //DataLabelsFormatter = point => point.PrimaryValue.ToString( "N2" )
+                } );
+            }
+
+
+
+
+
+
+            //SolidColorPaint 要重新赋值，要不，更新后，不显示
+            LegendTextPaint = new SolidColorPaint
+            {
+                Color = SKColors.Black ,
+                SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
+            };
+
+          
+
+            return;
+             
+
+        }
+
 
 
         public UCPieDontTai1ViewModel ()
         {
-
-            Series = new ObservableCollection<ISeries>
-            {
-                // Use the ObservableValue or ObservablePoint types to let the chart listen for property changes // mark
-                // or use any INotifyPropertyChanged implementation // mark
-                new PieSeries<ObservableValue> { Values = new[] { new ObservableValue(2) } ,
-                DataLabelsPaint = new SolidColorPaint(SKColors.Black),
-        DataLabelsSize = 22,
-        // for more information about available positions see:
-        // https://lvcharts.com/api/2.0.0-beta.710/LiveChartsCore.Measure.PolarLabelsPosition
-        DataLabelsPosition = LiveChartsCore.Measure.PolarLabelsPosition.Middle,
-        DataLabelsFormatter = point => point.PrimaryValue.ToString("N2") + " elements"
-                },
-                new PieSeries<ObservableValue> { Values = new[] { new ObservableValue(5) } ,  DataLabelsPaint = new SolidColorPaint(SKColors.Black),
-        DataLabelsSize = 22,
-        // for more information about available positions see:
-        // https://lvcharts.com/api/2.0.0-beta.710/LiveChartsCore.Measure.PolarLabelsPosition
-        DataLabelsPosition = LiveChartsCore.Measure.PolarLabelsPosition.Middle,
-        DataLabelsFormatter = point => point.PrimaryValue.ToString("N2") + " elements" },
-                new PieSeries<ObservableValue> { Values = new[] { new ObservableValue(3) } , DataLabelsPaint = new SolidColorPaint(SKColors.Black),
-        DataLabelsSize = 22,
-        // for more information about available positions see:
-        // https://lvcharts.com/api/2.0.0-beta.710/LiveChartsCore.Measure.PolarLabelsPosition
-        DataLabelsPosition = LiveChartsCore.Measure.PolarLabelsPosition.Middle,
-        DataLabelsFormatter = point => point.PrimaryValue.ToString("N2") + " elements"},
-
-            };
-
-
-
+            this.createdata  ( new Random().Next( 3 , 4 ) );
         }
 
 
@@ -74,40 +111,19 @@ namespace ChartsDemo.ViewModels.UC
         private DelegateCommand _RestClickCommand;
         public DelegateCommand RestClickCommand => _RestClickCommand ?? ( _RestClickCommand = new DelegateCommand( () =>
         {
-            Random _random = new Random();
+         
+            //饼图的数量变化，name也变化了
 
-            this.Series.Clear();
-
-            Series.Add(
-           new PieSeries<ObservableValue>
-           {
-               Values = new[] { new ObservableValue( _random.Next( 1 , 10 ) ) } ,
-               //Name = "SliceA"
-           } );
-
-            Series.Add(
-           new PieSeries<ObservableValue>
-           {
-               Values = new[] { new ObservableValue( _random.Next( 1 , 10 ) ) } ,
-               //Name = "SliceB"
-           } );
-
-            Series.Add(
-           new PieSeries<ObservableValue>
-           {
-               Values = new[] { new ObservableValue( _random.Next( 1 , 10 ) ) } ,
-               //Name = "Slicec"
-           } );
-
-            //  Series.Add(
-            //new PieSeries<ObservableValue>
-            //{
-            //    Values = new[] { new ObservableValue( _random.Next( 1 , 10 ) ) } ,
-            //    Name = "Sliced"
-            //} );
-
+            this.createdata( new Random().Next( 5 , 7 ) );
+            return;
 
         } ) );
+
+
+
+
+
+
 
         public void OnNavigatedTo ( NavigationContext navigationContext )
         {
