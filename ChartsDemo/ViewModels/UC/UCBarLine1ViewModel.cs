@@ -21,7 +21,7 @@ namespace ChartsDemo.ViewModels.UC
            {
                 new ColumnSeries<double> { Values = new double[] { 426, 583, 104 } },
                 new LineSeries<double>   { Values = new double[] { 200, 558, 458 }, Fill = null },
-            
+
             };
 
 
@@ -59,7 +59,11 @@ namespace ChartsDemo.ViewModels.UC
             {
                 Name = "Sales amount",
                 NamePadding = new LiveChartsCore.Drawing.Padding(0, 15),
-                
+
+                //使用货币格式
+                //Labeler = Labelers.Currency,
+                // 用户还可以构建自己的格式化
+                Labeler = (value) => "$" + value,
             }
         };
 

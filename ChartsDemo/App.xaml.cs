@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using ChartsDemo.Views.UC;
+using LiveChartsCore;
+using LiveChartsCore.SkiaSharpView;
 using Microsoft.Win32;
 using Prism.Ioc;
 using Prism.Mvvm;
@@ -42,6 +44,31 @@ namespace ChartsDemo
             return Container.Resolve<Views.MainPage>();
         }
 
+
+
+        //protected override void OnStartup ( StartupEventArgs e )
+        //{
+        //    base.OnStartup( e );
+
+
+        //    //配置主题
+        //    LiveCharts.Configure( config =>
+        //        config
+        //            // registers SkiaSharp as the library backend
+        //            // REQUIRED unless you build your own
+        //            .AddSkiaSharp()
+
+        //            //// adds the default supported types
+        //            //// OPTIONAL but highly recommend
+        //            .AddDefaultMappers()
+
+        //            // select a theme, default is Light
+        //            // OPTIONAL
+        //            .AddDarkTheme()
+        //            //.AddLightTheme()
+                                         
+        //        );
+        //}
 
 
         protected override void RegisterTypes ( IContainerRegistry containerRegistry )
