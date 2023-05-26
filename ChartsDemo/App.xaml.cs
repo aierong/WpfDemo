@@ -88,10 +88,13 @@ namespace ChartsDemo
             containerRegistry.RegisterForNavigation<UCDongTaiBar1>( "UCDongTaiBar1" );
             containerRegistry.RegisterForNavigation<UCPieDontTai1>( "UCPieDontTai1" );
             
-            //
+             
 
 
         }
+
+
+
 
 
     }
