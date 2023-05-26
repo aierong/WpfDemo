@@ -17,11 +17,10 @@ namespace ChartsDemo.ViewModels.UC
         public ISeries[] Series
         {
             get; set;
-        } =
-           {
+        } =    
+            {
                 new ColumnSeries<double> { Values = new double[] { 426, 583, 104 } },
                 new LineSeries<double>   { Values = new double[] { 200, 558, 458 }, Fill = null },
-
             };
 
 
@@ -64,6 +63,9 @@ namespace ChartsDemo.ViewModels.UC
                 //Labeler = Labelers.Currency,
                 // 用户还可以构建自己的格式化
                 Labeler = (value) => "$" + value,
+
+                //标签旋转角度 
+                LabelsRotation = 45
             }
         };
 
