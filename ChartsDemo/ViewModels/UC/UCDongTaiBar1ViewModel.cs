@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Dynamic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -59,6 +60,14 @@ namespace ChartsDemo.ViewModels.UC
         }
 
 
+        void createdata (int counts)
+        {
+            for ( int i = 1 ; i <= counts ; i++ )
+            {
+
+            }
+        }
+
 
 
         private DelegateCommand _ResetButtonClickCommand;
@@ -72,17 +81,33 @@ namespace ChartsDemo.ViewModels.UC
             _observableValues.Add( new ObservableValue( _random.Next( 1 , 20 ) ) );
             _observableValues.Add( new ObservableValue( _random.Next( 1 , 5 ) ) );
             _observableValues.Add( new ObservableValue( _random.Next( 8 , 10 ) ) );
+            _observableValues.Add( new ObservableValue( _random.Next( 8 , 10 ) ) );
+            _observableValues.Add( new ObservableValue( _random.Next( 8 , 10 ) ) );
 
-            
-         } ) );
+            XAxess.Clear();
+            XAxess.Add( new Axis
+            {
+                Labels = new string[] { "组1" , "组2" , "组3" , "组4" , "组5" } ,
+                //旋转角度
+                LabelsRotation = 0 ,
+                SeparatorsPaint = new SolidColorPaint( new SKColor( 200 , 200 , 200 ) ) ,
+                SeparatorsAtCenter = false ,
+                TicksPaint = new SolidColorPaint( new SKColor( 35 , 35 , 35 ) ) ,
+                TicksAtCenter = true ,
+                LabelsPaint = new SolidColorPaint
+                {
+                    Color = SKColors.Black ,
 
+                    SKTypeface = SKFontManager.Default.MatchCharacter( '汉' ) // 汉语 
+                    // SKTypeface = SKFontManager.Default.MatchCharacter('أ'), // Arab
+                    // SKTypeface = SKFontManager.Default.MatchCharacter('あ'), // Japanese
+                    // SKTypeface = SKFontManager.Default.MatchCharacter('Ж'), // Russian
+                }
+            } );
 
+        } ) );
 
-
-        public Axis[] XAxes
-        {
-            get; set;
-        } =
+        ObservableCollection<Axis> _XAxess=new ObservableCollection<Axis>() {
         {
             new Axis
             {
@@ -103,7 +128,47 @@ namespace ChartsDemo.ViewModels.UC
                     // SKTypeface = SKFontManager.Default.MatchCharacter('Ж'), // Russian
                 }
             }
-        };
+        }};
+
+        public ObservableCollection<Axis> XAxess
+        {
+            get
+            {
+                return _XAxess;
+            }
+            set
+            {
+                //SetProperty就是设置值,并且通知属性改变
+                SetProperty( ref _XAxess , value );
+            }
+        }
+
+
+        //public Axis[] XAxes
+        //{
+        //    get; set;
+        //} =
+        //{
+        //    new Axis
+        //    {
+        //        Labels = new string[] { "组1" , "组2" , "组3" },
+        //        //旋转角度
+        //        LabelsRotation = 0,
+        //        SeparatorsPaint = new SolidColorPaint(new SKColor(200, 200, 200)),
+        //        SeparatorsAtCenter = false,
+        //        TicksPaint = new SolidColorPaint(new SKColor(35, 35, 35)),
+        //        TicksAtCenter = true,
+        //        LabelsPaint = new SolidColorPaint
+        //        {
+        //            Color = SKColors.Black,
+
+        //            SKTypeface = SKFontManager.Default.MatchCharacter('汉') // 汉语 
+        //            // SKTypeface = SKFontManager.Default.MatchCharacter('أ'), // Arab
+        //            // SKTypeface = SKFontManager.Default.MatchCharacter('あ'), // Japanese
+        //            // SKTypeface = SKFontManager.Default.MatchCharacter('Ж'), // Russian
+        //        }
+        //    }
+        //};
 
 
 

@@ -63,7 +63,7 @@ namespace ChartsDemo.ViewModels.UC
 
             this.Series.Clear();
 
-            for ( int i = 1 ; i < counts ; i++ )
+            for ( int i = 1 ; i <= counts ; i++ )
             {
                 this.Series.Add( new PieSeries<ObservableValue>
                 {
