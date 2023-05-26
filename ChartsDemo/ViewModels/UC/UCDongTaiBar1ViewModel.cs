@@ -17,10 +17,10 @@ using SkiaSharp;
 
 namespace ChartsDemo.ViewModels.UC
 {
-    public  class UCDongTaiBar1ViewModel : BindableBase, INavigationAware
+    public class UCDongTaiBar1ViewModel : BindableBase, INavigationAware
     {
 
-        private readonly ObservableCollection<ObservableValue> _observableValues;
+        private readonly ObservableCollection<ObservableValue> _observableValues = new ObservableCollection<ObservableValue>() { };
 
         ObservableCollection<ISeries> _Series;
 
@@ -38,18 +38,9 @@ namespace ChartsDemo.ViewModels.UC
         }
 
 
-        public UCDongTaiBar1ViewModel()
+
+        public UCDongTaiBar1ViewModel ()
         {
-            _observableValues = new ObservableCollection<ObservableValue>
-            {
-                new ObservableValue(2),
-                new ObservableValue(4),
-                new ObservableValue(3),
-            
-
-                //new(5), //  (C# 9 可以这样写)
-            };
-
             Series = new ObservableCollection<ISeries>
             {
                 new ColumnSeries<ObservableValue>
@@ -57,37 +48,30 @@ namespace ChartsDemo.ViewModels.UC
                     Values = _observableValues
                 }
             };
-        }
 
-
-        void createdata (int counts)
-        {
-            for ( int i = 1 ; i <= counts ; i++ )
-            {
-
-            }
+            this.createdata( 3 );
         }
 
 
 
-        private DelegateCommand _ResetButtonClickCommand;
-        public DelegateCommand ResetButtonClickCommand => _ResetButtonClickCommand ?? ( _ResetButtonClickCommand = new DelegateCommand( () =>
+        void createdata ( int counts )
         {
-            //this.Series[0].Values.
             _observableValues.Clear();
 
             Random _random = new Random();
+            List<string> listname = new List<string>() { };
 
-            _observableValues.Add( new ObservableValue( _random.Next( 1 , 20 ) ) );
-            _observableValues.Add( new ObservableValue( _random.Next( 1 , 5 ) ) );
-            _observableValues.Add( new ObservableValue( _random.Next( 8 , 10 ) ) );
-            _observableValues.Add( new ObservableValue( _random.Next( 8 , 10 ) ) );
-            _observableValues.Add( new ObservableValue( _random.Next( 8 , 10 ) ) );
+            for ( int i = 1 ; i <= counts ; i++ )
+            {
+                _observableValues.Add( new ObservableValue( _random.Next( 1 , 20 ) ) );
+                listname.Add( "组" + i.ToString() );
+            }
 
             XAxess.Clear();
             XAxess.Add( new Axis
             {
-                Labels = new string[] { "组1" , "组2" , "组3" , "组4" , "组5" } ,
+                //Labels = new string[] { "组1" , "组2" , "组3" , "组4" , "组5" } ,
+                Labels = listname ,
                 //旋转角度
                 LabelsRotation = 0 ,
                 SeparatorsPaint = new SolidColorPaint( new SKColor( 200 , 200 , 200 ) ) ,
@@ -104,31 +88,21 @@ namespace ChartsDemo.ViewModels.UC
                     // SKTypeface = SKFontManager.Default.MatchCharacter('Ж'), // Russian
                 }
             } );
+        }
+
+
+
+        private DelegateCommand _ResetButtonClickCommand;
+        public DelegateCommand ResetButtonClickCommand => _ResetButtonClickCommand ?? ( _ResetButtonClickCommand = new DelegateCommand( () =>
+        {
+
+            this.createdata( new Random().Next( 5 , 7 ) );
+            return;
+
 
         } ) );
 
-        ObservableCollection<Axis> _XAxess=new ObservableCollection<Axis>() {
-        {
-            new Axis
-            {
-                Labels = new string[] { "组1" , "组2" , "组3" },
-                //旋转角度
-                LabelsRotation = 0,
-                SeparatorsPaint = new SolidColorPaint(new SKColor(200, 200, 200)),
-                SeparatorsAtCenter = false,
-                TicksPaint = new SolidColorPaint(new SKColor(35, 35, 35)),
-                TicksAtCenter = true,
-                LabelsPaint = new SolidColorPaint
-                {
-                    Color = SKColors.Black,
-
-                    SKTypeface = SKFontManager.Default.MatchCharacter('汉') // 汉语 
-                    // SKTypeface = SKFontManager.Default.MatchCharacter('أ'), // Arab
-                    // SKTypeface = SKFontManager.Default.MatchCharacter('あ'), // Japanese
-                    // SKTypeface = SKFontManager.Default.MatchCharacter('Ж'), // Russian
-                }
-            }
-        }};
+        ObservableCollection<Axis> _XAxess = new ObservableCollection<Axis>() { };
 
         public ObservableCollection<Axis> XAxess
         {
@@ -142,6 +116,7 @@ namespace ChartsDemo.ViewModels.UC
                 SetProperty( ref _XAxess , value );
             }
         }
+
 
 
         //public Axis[] XAxes
