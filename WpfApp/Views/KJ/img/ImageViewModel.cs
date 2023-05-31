@@ -19,8 +19,7 @@ namespace WpfApp.Views.KJ.img
         public ImageViewModel ()
         {
             ImgName = "/Imgs/zhonghe1.png";
-            NetImgName = "\\\\10.12.0.151\\misfile\\test\\images\\BQC.jpg";
-
+            
 
             UpdateImgCommand = new MyCommand( () =>
             {
@@ -59,24 +58,6 @@ namespace WpfApp.Views.KJ.img
         }
 
 
-        private string netimgname;
-
-        /// <summary>
-        /// 名字
-        /// </summary>
-        public string NetImgName
-        {
-            get
-            {
-                return netimgname;
-            }
-            set
-            {
-                netimgname = value;
-
-                //通知数据已经变化
-                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "NetImgName" ) );
-            }
-        }
+       
     }
 }

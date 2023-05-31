@@ -19,5 +19,10 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
+        <Image Grid.Row="0"
+               Grid.Column="0"
+               Width="100"
+               Height="100"
+               Source="{Binding NetImgName}" />
     </Grid>
 </UserControl>
