@@ -526,6 +526,9 @@
     <Resource Include="Imgs\VER.png" />
     <Resource Include="Imgs\zhonghe1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Views\KJ\img\images\BQC.jpg" />
+    <Resource Include="Views\KJ\img\images\zhonghe1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

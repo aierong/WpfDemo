@@ -9,6 +9,10 @@ using Microsoft.Win32;
 using System.Windows.Media.Imaging;
 using WpfApp.Views.BaseCommand;
 
+//本demo中使用图片，在本目录images中有
+
+
+
 namespace WpfApp.Views.KJ.img
 {
     public class Img2ViewModel : INotifyPropertyChanged
@@ -58,7 +62,7 @@ namespace WpfApp.Views.KJ.img
 
         public Img2ViewModel ()
         {
-
+            //本demo中使用图片，在本目录images中有
             NetImgName = "\\\\10.12.0.151\\misfile\\test\\images\\BQC.jpg";
 
 
@@ -66,6 +70,7 @@ namespace WpfApp.Views.KJ.img
             {
                 Debug.WriteLine( "UpdateImgCommand:" );
 
+                //改变图片
                 NetImgName = "\\\\10.12.0.151\\misfile\\test\\images\\zhonghe1.png";
             } );
 

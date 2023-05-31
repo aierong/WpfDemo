@@ -25,6 +25,7 @@ namespace WpfApp.Views.KJ.img
             {
                 Debug.WriteLine( "UpdateImgCommand:" );
 
+                //改变图片
                 ImgName = "/Imgs/VER.png";
             } );
         }
