@@ -9,6 +9,8 @@ using Microsoft.Win32;
 using System.Windows.Media.Imaging;
 using WpfApp.Views.BaseCommand;
 
+//参考:https://wpf-tutorial.com/zh/493/%E5%9F%BA%E6%9C%AC%E6%8E%A7%E5%88%B6%E9%A0%85/image%E6%8E%A7%E4%BB%B6/
+
 //本demo中使用图片，在本目录images中有
 
 
@@ -78,6 +80,7 @@ namespace WpfApp.Views.KJ.img
             {
                 Debug.WriteLine( "SelectImgCommand:" );
 
+                //弹窗选择图片
                 OpenFileDialog openFileDialog = new OpenFileDialog();
                 if ( openFileDialog.ShowDialog() == true )
                 {

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using WpfApp.Views.BaseCommand;
 
-
+//参考: https://wpf-tutorial.com/zh/493/%E5%9F%BA%E6%9C%AC%E6%8E%A7%E5%88%B6%E9%A0%85/image%E6%8E%A7%E4%BB%B6/
 
 namespace WpfApp.Views.KJ.img
 {
