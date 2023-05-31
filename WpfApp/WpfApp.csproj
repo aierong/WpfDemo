@@ -159,6 +159,10 @@
       <DependentUpon>ImageUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\KJ\img\ImageViewModel.cs" />
+    <Compile Include="Views\KJ\img\Img2.xaml.cs">
+      <DependentUpon>Img2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KJ\img\Img2ViewModel.cs" />
     <Compile Include="Views\KJ\ItemsControl\ItemsControlUserControl.xaml.cs">
       <DependentUpon>ItemsControlUserControl.xaml</DependentUpon>
     </Compile>
@@ -375,6 +379,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\KJ\img\ImageUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KJ\img\Img2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
