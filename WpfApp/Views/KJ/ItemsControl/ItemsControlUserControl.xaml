@@ -18,7 +18,9 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <!--  一个最基本的demo  -->
+        <!--
+            一个最基本的demo,绑定一个字符串列表
+        -->
         <ItemsControl Grid.Row="0"
                       Grid.Column="0"
                       ItemsSource="{Binding StudentList}">
@@ -29,7 +31,9 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-        <!--  绑定一个对象  -->
+        <!--
+            绑定一个对象
+        -->
         <ItemsControl Grid.Row="0"
                       Grid.Column="1"
                       Margin="10"
@@ -52,9 +56,10 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-        <!--  奇偶行样式  
-        AlternationCount就是配置几条数据一组
-        AlternationCount="2",所以每组数据的索引就是0,1   0,1    0,1
+        <!--
+            奇偶行样式
+            AlternationCount就是配置几条数据一组
+            AlternationCount="2",所以每组数据的索引就是0,1   0,1    0,1
         -->
         <ItemsControl Grid.Row="1"
                       Grid.Column="0"
@@ -67,9 +72,9 @@
                                Text="{Binding Path=.}" />
                     <DataTemplate.Triggers>
                         <!--
-                        因为上面AlternationCount="2",所以每组数据的索引就是0,1 
-                        
-                        下面索引等于1的,我们就变颜色
+                            因为上面AlternationCount="2",所以每组数据的索引就是0,1
+                            
+                            下面索引等于1的,我们就变颜色
                         -->
                         <Trigger Property="ItemsControl.AlternationIndex" Value="1">
                             <Setter TargetName="tblock" Property="Background" Value="#FFC8C8F2" />
@@ -79,5 +84,46 @@
 
             </ItemsControl.ItemTemplate>
         </ItemsControl>
+
+        <ScrollViewer Grid.Row="1"
+                      Grid.Column="1"
+                      HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto">
+            <ItemsControl>
+
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #1" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #2" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #3" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #4" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #5" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #6" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #7" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #8" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #9" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #10" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #11" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #12" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #13" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #14" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #15" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #16 ItemsControl Item #16 ItemsControl Item #16" />
+            </ItemsControl>
+        </ScrollViewer>
     </Grid>
 </UserControl>
