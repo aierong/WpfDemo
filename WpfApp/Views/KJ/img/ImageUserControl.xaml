@@ -23,10 +23,14 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <!--  可以这样加载网络上图片  -->
-        <!--<Image Grid.Row="0"
+     
+        <!--
+        Image可以加载网络上图片  
+        
+        <Image Grid.Row="0"
                Grid.Column="0"
-               Source="https://upload.wikimedia.org/wikipedia/commons/3/30/Googlelogo.png" />-->
+               Source="https://upload.wikimedia.org/wikipedia/commons/3/30/Googlelogo.png" />
+        -->
 
 
         <Image Grid.Row="0"
