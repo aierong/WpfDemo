@@ -10,11 +10,8 @@
         mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
-
             <RowDefinition Height="40" />
-
             <RowDefinition />
-
         </Grid.RowDefinitions>
 
         <WrapPanel Grid.Row="0"
@@ -25,12 +22,10 @@
                     Click="btnNav_Click"
                     Content="Border"
                     Tag="/Views/KJ/border/BorderUserControl.xaml" />
-
             <Button Margin="5"
                     Click="btnNav_Click"
                     Content="Image"
                     Tag="/Views/KJ/img/ImageUserControl.xaml" />
-
             <Button Margin="5"
                     Click="btnNav_Click"
                     Content="TabControl"
@@ -39,7 +34,6 @@
                     Click="btnNav_Click"
                     Content="TabControl2"
                     Tag="/Views/KJ/Tab/Tab2UserControl.xaml" />
-
             <Button Margin="5"
                     Click="btnNav_Click"
                     Content="ItemsControl"

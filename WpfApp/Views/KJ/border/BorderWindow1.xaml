@@ -20,7 +20,9 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <!--  背景(Background)  边界刷(BorderBrush)  边界宽度(BorderThickness)  -->
+        <!--
+            背景(Background)  边界刷(BorderBrush)  边界宽度(BorderThickness)
+        -->
         <Border Grid.Row="0"
                 Grid.Column="0"
                 Margin="10,10,10,10"
