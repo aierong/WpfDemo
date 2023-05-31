@@ -47,6 +47,12 @@
                Height="100"
                Source="/Imgs/VER.png" />
 
+        <!--<Image Grid.Row="3"
+               Grid.Column="0"
+               Width="100"
+               Height="100"
+               Source="{Binding NetImgName}" />-->
+
         <!--
             Stretch属性:
             
