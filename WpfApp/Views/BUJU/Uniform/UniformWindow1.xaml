@@ -16,8 +16,10 @@
             Columns：获取或设置网格中的列数
             Rows：获取或设置网格中的行数
         -->
+
         <UniformGrid Columns="3"
                      Rows="3">
+            <!--  按照先来后到的顺序，先行后列的放入到行列单元格  -->
             <Button Content="Btn1" />
             <Button Content="Btn2" />
             <Button Content="Btn3" />
