@@ -22,12 +22,19 @@
 
         <StackPanel Grid.Row="0"
                     Grid.Column="0">
+            <!--
+                FontFamily的2种引用方式
+                最后都是固定这个：#iconfont
+            -->
+            <TextBlock FontFamily="/assets/font1/#iconfont"
+                       Text="&#xe6d4;">
+            </TextBlock>
             <TextBlock FontFamily="pack://application:,,,/assets/font1/#iconfont"
                        Text="&#xe6d4;">
             </TextBlock>
-            <TextBlock Height="50"
-                       Margin="10"
-                       FontFamily="pack://application:,,,/assets/font1/#iconfont"
+
+            <!--  可以配置颜色和大小  -->
+            <TextBlock FontFamily="pack://application:,,,/assets/font1/#iconfont"
                        FontSize="50"
                        Foreground="Lime"
                        Text="&#xe6d4;">
@@ -37,7 +44,6 @@
                      FontSize="50"
                      Foreground="Red"
                      Text="&#xe70b;" />
-
             </TextBlock>
         </StackPanel>
 
