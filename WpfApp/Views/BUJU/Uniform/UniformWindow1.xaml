@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp.Views.BUJU.Uniform.UniformWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp.Views.BUJU.Uniform"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="UniformGrid Demo"
+        Width="800"
+        Height="450"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
+    <Grid>
+        <!--
+            UniformGrid面板的特点是每个单元格始终保持一致的大小
+            
+            Columns：获取或设置网格中的列数
+            Rows：获取或设置网格中的行数
+        -->
+        <UniformGrid Columns="3"
+                     Rows="3">
+            <Button Content="Btn1" />
+            <Button Content="Btn2" />
+            <Button Content="Btn3" />
+            <Button Content="Btn4" />
+            <Button Content="Btn5" />
+            <Button Content="Btn6" />
+            <Button Content="Btn7" />
+            <Button Content="Btn8" />
+            <Button Content="Btn9" />
+        </UniformGrid>
+
+
+    </Grid>
+</Window>

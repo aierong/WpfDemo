@@ -10,6 +10,8 @@
     StartupUri="/Views/CommandDemo/demo1/duo.XAML"
     
     StartupUri="/Views/StyleDemo/StyleMain.XAML"
+    
+    StartupUri="/Views/BUJU/Uniform/UniformWindow1.XAML"
 -->
 
 
@@ -18,7 +20,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WpfApp"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             StartupUri="/Views/KJ/mainpage.XAML">
+             StartupUri="/Views/BUJU/Uniform/UniformWindow1.XAML">
 
     <!--  Application.Resources是定义整个程序级别的资源，每个窗体都可以访问到  -->
     <Application.Resources>
