@@ -140,6 +140,9 @@
     <Compile Include="Views\ConverterDemo\demo1\Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\fonts\fontWindow1.xaml.cs">
+      <DependentUpon>fontWindow1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\FormatDemo\Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
@@ -369,6 +372,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\fonts\fontWindow1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\FormatDemo\Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -498,6 +505,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="assets\font1\iconfont.json" />
+    <Resource Include="assets\font1\iconfont.ttf" />
+    <None Include="assets\font1\iconfont.woff" />
+    <None Include="assets\font1\iconfont.woff2" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -536,6 +547,12 @@
   <ItemGroup>
     <Resource Include="Views\KJ\img\images\BQC.jpg" />
     <Resource Include="Views\KJ\img\images\zhonghe1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\font1\demo.css" />
+    <Content Include="assets\font1\demo_index.html" />
+    <Content Include="assets\font1\iconfont.css" />
+    <Content Include="assets\font1\iconfont.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
