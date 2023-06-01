@@ -11,12 +11,12 @@
         mc:Ignorable="d">
     <Grid>
         <!--
-            UniformGrid面板的特点是每个单元格始终保持一致的大小
+            UniformGrid面板的特点是每个单元格始终保持一致的大小。
+            通过设置行列数量来分割布局。元素通过放入的前后顺序被分配到不同的位置。
             
             Columns：获取或设置网格中的列数
             Rows：获取或设置网格中的行数
         -->
-
         <UniformGrid Columns="3"
                      Rows="3">
             <!--  按照先来后到的顺序，先行后列的放入到行列单元格  -->
@@ -30,7 +30,5 @@
             <Button Content="Btn8" />
             <Button Content="Btn9" />
         </UniformGrid>
-
-
     </Grid>
 </Window>
