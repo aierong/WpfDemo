@@ -5,27 +5,5 @@
     <Setting Name="str1" Type="System.String" Scope="User">
       <Value Profile="(Default)">vv</Value>
     </Setting>
-    <Setting Name="str2" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">vv2</Value>
-    </Setting>
-    <Setting Name="bl1" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
-    </Setting>
-    <Setting Name="date1" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)">2020-01-01</Value>
-    </Setting>
-    <Setting Name="int1" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">11</Value>
-    </Setting>
-    <Setting Name="con" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;ConnectionString&gt;dataeeee&lt;/ConnectionString&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">dataeeee</Value>
-    </Setting>
-    <Setting Name="设置1" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
   </Settings>
 </SettingsFile>
