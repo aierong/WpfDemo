@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -23,12 +24,18 @@ namespace PrismDemo
     /// </summary>
     public partial class App : PrismApplication
     {
+        //启动的执行顺序: PrismApplication_Startup ConfigureViewModelLocator RegisterTypes CreateShell OnInitialized 
+
         /// <summary>
         /// 设置启动起始页
         /// </summary>
         /// <returns></returns>
         protected override Window CreateShell ()
         {
+            Debug.WriteLine( "CreateShell" );
+
+
+
             //return Container.Resolve<Views.Window1>();
 
             //return Container.Resolve<Views.MainWindow>();
@@ -89,6 +96,28 @@ namespace PrismDemo
 
 
 
+        private void PrismApplication_Exit ( object sender , ExitEventArgs e )
+        {
+            Debug.WriteLine( "PrismApplication_Exit" );
+        }
+
+
+
+        private void PrismApplication_Startup ( object sender , StartupEventArgs e )
+        {
+            Debug.WriteLine( "PrismApplication_Startup" );
+        }
+
+
+
+        //protected override void OnInitialized ()
+        //{
+        //    base.OnInitialized();
+
+        //    Debug.WriteLine( "OnInitialized" );
+        //}
+
+
         //protected override void OnInitialized ()
         //{
         //    /* 参考:
@@ -142,6 +171,10 @@ namespace PrismDemo
 
         protected override void RegisterTypes ( IContainerRegistry containerRegistry )
         {
+            Debug.WriteLine( "RegisterTypes" );
+
+
+
             /*
             安装：NLog.Extensions.Logging
             */
@@ -212,6 +245,9 @@ namespace PrismDemo
         /// </summary>
         protected override void ConfigureViewModelLocator ()
         {
+            Debug.WriteLine( "ConfigureViewModelLocator" );
+
+
 
             base.ConfigureViewModelLocator();
 
@@ -291,7 +327,7 @@ namespace PrismDemo
 
         }
 
-
+        
 
     }
 }
