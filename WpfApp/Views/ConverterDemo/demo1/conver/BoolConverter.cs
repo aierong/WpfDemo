@@ -26,6 +26,9 @@ namespace WpfApp.Views.ConverterDemo.demo1.conver
             //viewmodel中的值，转换为view中的值 
 
             //parameter可以收到xaml中ConverterParameter传递的值
+            if ( parameter != null )
+            {
+            }
 
             object obj = value;
             if ( obj is bool )
