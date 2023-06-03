@@ -1,7 +1,15 @@
-﻿<Application x:Class="WpfDemoNet6.App"
+﻿
+<!--
+    StartupUri="Demo/DataWindow2.XAML"
+    
+    StartupUri="IOCDemo/Views/Window1.XAML"
+-->
+
+<Application x:Class="WpfDemoNet6.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WpfDemoNet6"
-             StartupUri="Demo/DataWindow2.XAML">
-    <Application.Resources />
+             StartupUri="IOCDemo/Views/Window1.XAML">
+    <Application.Resources>
+    </Application.Resources>
 </Application>
