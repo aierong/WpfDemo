@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-
+using Microsoft.Extensions.DependencyInjection;
 
 namespace WpfDemoNet6.IOCDemo.ViewModels
 {
@@ -41,6 +41,11 @@ namespace WpfDemoNet6.IOCDemo.ViewModels
             {
                 Title = "qq";
             }
+
+
+            ////我们也可以这样,调用
+            //var ser = App.Current.Services.GetService<IOCDemo.Service.Service.IBill>();
+            //var str1 = ser?.GetData( "app" );
         }
 
         bool CanButton ()

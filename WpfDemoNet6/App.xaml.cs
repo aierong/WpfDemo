@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
@@ -32,6 +33,8 @@ namespace WpfDemoNet6
 
         public App ()
         {
+            Debug.WriteLine( "App" );
+
             Services = ConfigureServices();
 
             this.InitializeComponent();
@@ -39,6 +42,8 @@ namespace WpfDemoNet6
 
         private static IServiceProvider ConfigureServices ()
         {
+            Debug.WriteLine( "ConfigureServices" );
+
             var services = new ServiceCollection();
 
             //    注册Services
@@ -54,5 +59,43 @@ namespace WpfDemoNet6
 
             return services.BuildServiceProvider();
         }
+
+
+
+        protected override void OnStartup ( StartupEventArgs e )
+        {
+            base.OnStartup( e );
+
+            Debug.WriteLine( "OnStartup" );
+
+            //这里调用,注入的方法
+            var ser = App.Current.Services.GetService<IOCDemo.Service.Service.IBill>();
+            var str1 = ser?.GetData( "app" );
+        }
+
+
+
+        private void Application_Exit ( object sender , ExitEventArgs e )
+        {
+            Debug.WriteLine( "Application_Exit" );
+        }
+
+
+
+        //private void Application_Startup ( object sender , StartupEventArgs e )
+        //{
+        //    //特别注意:CommunityToolkit.Mvvm中不要使用Application_Startup,好像会运行2次,请使用override OnStartup
+
+        //    Debug.WriteLine( "Application_Startup" );
+
+
+
+        //    //这里调用,注入的方法
+        //    //var ser = App.Current.Services.GetService<IOCDemo.Service.Service.IBill>();
+        //    //var str1 = ser?.GetData( "app" );
+        //}
+
+
+
     }
 }
