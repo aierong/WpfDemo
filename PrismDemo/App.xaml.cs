@@ -24,7 +24,9 @@ namespace PrismDemo
     /// </summary>
     public partial class App : PrismApplication
     {
-        //启动的执行顺序: PrismApplication_Startup ConfigureViewModelLocator RegisterTypes CreateShell OnInitialized 
+        //Application启动执行顺序: PrismApplication_Startup   ConfigureViewModelLocator   RegisterTypes   CreateShell   OnInitialized 
+
+
 
         /// <summary>
         /// 设置启动起始页
