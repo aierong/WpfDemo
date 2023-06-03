@@ -23,7 +23,10 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WpfApp"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib" Startup="Application_Startup"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             Activated="Application_Activated"
+             Exit="Application_Exit"
+             Startup="Application_Startup"
              StartupUri="/Views/StyleDemo/StyleMain.XAML">
 
     <!--  Application.Resources是定义整个程序级别的资源，每个窗体都可以访问到  -->
