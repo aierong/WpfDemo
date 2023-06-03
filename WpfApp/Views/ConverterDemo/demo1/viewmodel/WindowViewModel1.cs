@@ -38,7 +38,7 @@ namespace WpfApp.Views.ConverterDemo.demo1.viewmodel
             Name = "改了";
             IsFlag = !IsFlag;
 
-            MessageBox.Show( "show Command" );
+            //MessageBox.Show( "show Command" );
         }
 
 
