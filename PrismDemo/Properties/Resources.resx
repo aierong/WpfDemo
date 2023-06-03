@@ -121,11 +121,4 @@
     <value>abc</value>
     <comment>zhushi</comment>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="String2" xml:space="preserve">
-    <value>2</value>
-    <comment>222</comment>
-  </data>
 </root>
