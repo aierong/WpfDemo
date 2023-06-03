@@ -522,7 +522,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="README.md" />
-    <None Include="WpfApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\BUJU\ZhongHeDemo\zhonghe1.png" />
