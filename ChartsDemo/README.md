@@ -1,4 +1,4 @@
-本项目主要是Mvvm的演示demo
+本项目主要是LiveCharts2的演示demo
 
 
 
