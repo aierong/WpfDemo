@@ -13,14 +13,27 @@
                                          IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
-    <!--  引用转换器   -->
+    <!--  引用转换器  -->
     <Window.Resources>
-        <localcv:BoolConverter x:Key="myboolconvert" />
-        <!--   
-        引用转换器,并且传递一个参数  
+        <!--
+            wpf系统提供的转换器:BooleanToVisibilityConverter
+            https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.controls.booleantovisibilityconverter?view=windowsdesktop-7.0
         -->
-        <localcv:BooleanToVisibilityConverter x:Key="myconvert"
-                                              FalseUseHidden="True" />
+        <!-- BooleanToVisibilityConverter只在下面2个状态之间切换
+        Collapsed	不显示元素，并且不在布局中为它保留空间。
+
+        Visible	显示元素。
+        -->
+        <BooleanToVisibilityConverter x:Key="SystemConverter">
+        </BooleanToVisibilityConverter>
+
+        <localcv:BoolConverter x:Key="myboolconvert" />
+        <!--
+            引用转换器,并且传递一个参数
+        -->
+        <localcv:BooleanToVisibilityConverter2 x:Key="myconvert"
+                                               FalseUseHidden="True">
+        </localcv:BooleanToVisibilityConverter2>
     </Window.Resources>
     <Grid ShowGridLines="True">
         <!--  3行2列的表格  -->
@@ -39,6 +52,21 @@
             <TextBox Width="190"
                      Height="30"
                      Text="{Binding IsFlag, Converter={StaticResource myboolconvert}}" />
+
+            <!--
+                这里使用的是系统自带的转换器BooleanToVisibilityConverter
+            -->
+            <TextBlock HorizontalAlignment="Center"
+                       FontSize="20"
+                       FontStyle="Italic"
+                       FontWeight="Bold"
+                       Foreground="Green"
+                       Text="loading......"
+                       Visibility="{Binding IsFlag, Mode=OneWay, Converter={StaticResource SystemConverter}}" />
+
+            <!--
+                这里使用的是我们自己写的转换器BooleanToVisibilityConverter2
+            -->
             <TextBlock HorizontalAlignment="Center"
                        FontSize="20"
                        FontStyle="Italic"

@@ -11,7 +11,7 @@ using System.Windows.Data;
 
 namespace WpfApp.Views.ConverterDemo.demo1.conver
 {
-    public class BooleanToVisibilityConverter : IValueConverter
+    public class BooleanToVisibilityConverter2 : IValueConverter
     {
 
 

@@ -12,19 +12,13 @@ namespace WpfApp.Views.CommandDemo.demo1
 {
     public class ObjectConvert : IMultiValueConverter
     {
-        public object Convert ( object[] values ,
-            Type targetType ,
-            object parameter ,
-            CultureInfo culture )
+        public object Convert ( object[] values , Type targetType , object parameter , CultureInfo culture )
         {
             //把数据Clone返回
             return values.Clone();
         }
 
-        public object[] ConvertBack ( object value ,
-            Type[] targetTypes ,
-            object parameter ,
-            CultureInfo culture )
+        public object[] ConvertBack ( object value , Type[] targetTypes , object parameter , CultureInfo culture )
         {
             //反向不管 没有用
             throw new NotImplementedException();

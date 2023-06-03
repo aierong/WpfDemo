@@ -68,7 +68,7 @@ namespace WpfApp.Views.ConverterDemo.demo1.viewmodel
 
 
         /// <summary>
-        ///  
+        /// 标识
         /// </summary>
         public bool IsFlag
         {
