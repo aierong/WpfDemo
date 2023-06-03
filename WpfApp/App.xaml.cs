@@ -15,7 +15,7 @@ namespace WpfApp
     {
         private void Application_Startup ( object sender , StartupEventArgs e )
         {
-            //xaml中Startup = "Application_Startup"
+            //xaml中注册Startup = "Application_Startup"
 
             var a = 1;
 
@@ -24,10 +24,12 @@ namespace WpfApp
             Debug.WriteLine( "Application_Startup" );
         }
 
-        // Application_Startup   OnStartup
+        
 
         protected override void OnStartup ( StartupEventArgs e )
         {
+            // Application_Startup 在  OnStartup 前运行
+
             base.OnStartup( e );
 
             var a = 1;
@@ -41,7 +43,7 @@ namespace WpfApp
 
         private void Application_Exit ( object sender , ExitEventArgs e )
         {
-            //xaml中Exit="Application_Exit"
+            //xaml中注册Exit="Application_Exit"
             //在应用程序关闭之前发生
             var a = 1;
 
@@ -52,7 +54,7 @@ namespace WpfApp
 
         private void Application_Activated ( object sender , EventArgs e )
         {
-            //xaml中Activated="Application_Activated"
+            //xaml中注册Activated="Application_Activated"
             //当应用程序成为前台应用程序时发生。 会多次发生
             var a = 1;
 
