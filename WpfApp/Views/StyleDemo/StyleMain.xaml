@@ -35,6 +35,9 @@
                 <TabItem Header="  Demo">
                     <uc:MultiUserControl1 />
                 </TabItem>
+                <TabItem Header="动画demo">
+                    <uc:DHUserControl />
+                </TabItem>
             </TabControl>
         </ScrollViewer>
     </Grid>

@@ -194,6 +194,9 @@
     <Compile Include="Views\StyleDemo\UC\dataUserControl1.xaml.cs">
       <DependentUpon>dataUserControl1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\StyleDemo\UC\DHUserControl.xaml.cs">
+      <DependentUpon>DHUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\StyleDemo\UC\JBUserControl1.xaml.cs">
       <DependentUpon>JBUserControl1.xaml</DependentUpon>
     </Compile>
@@ -425,6 +428,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\StyleDemo\UC\dataUserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StyleDemo\UC\DHUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
