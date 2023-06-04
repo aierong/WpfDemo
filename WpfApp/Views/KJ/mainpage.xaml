@@ -30,6 +30,12 @@
                     Click="btnNav_Click"
                     Content="Image 2"
                     Tag="/Views/KJ/img/Img2.xaml" />
+
+            <Button Margin="5"
+                    Click="btnNav_Click"
+                    Content="TextBlock"
+                    Tag="/Views/KJ/txt/UCTxt1.xaml" />
+            
             <Button Margin="5"
                     Click="btnNav_Click"
                     Content="TabControl"
@@ -42,6 +48,8 @@
                     Click="btnNav_Click"
                     Content="ItemsControl"
                     Tag="/Views/KJ/ItemsControl/ItemsControlUserControl.xaml" />
+            
+            
         </WrapPanel>
 
         <Frame Name="frmMain"

@@ -184,6 +184,9 @@
       <DependentUpon>TabUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\KJ\Tab\TabViewModel.cs" />
+    <Compile Include="Views\KJ\txt\UCTxt1.xaml.cs">
+      <DependentUpon>UCTxt1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ResourceDemo\ViewModels\ResourceWindowViewModel.cs" />
     <Compile Include="Views\ResourceDemo\Views\ResourceWindow.xaml.cs">
       <DependentUpon>ResourceWindow.xaml</DependentUpon>
@@ -416,6 +419,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\KJ\Tab\TabUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KJ\txt\UCTxt1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
