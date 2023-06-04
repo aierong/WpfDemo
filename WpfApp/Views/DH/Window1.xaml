@@ -1,0 +1,59 @@
+﻿<Window x:Class="WpfApp.Views.DH.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp.Views.DH"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="Window1"
+        Width="800"
+        Height="450"
+        d:DataContext="{d:DesignInstance local:Window1ViewModel,
+                                         IsDesignTimeCreatable=True}"
+        mc:Ignorable="d">
+    <!--
+    参考:https://www.cnblogs.com/moonsk/p/15056259.html
+    -->
+    <Grid>
+        <StackPanel>
+            <TextBlock FontSize="30"
+                       Text="{Binding Title}"
+                       TextAlignment="Center">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush StartPoint="0.5 0" EndPoint="0.5 1">
+                        <GradientStop Offset="0" Color="Yellow" />
+                        <GradientStop Offset="1" Color="Blue" />
+
+                        <!--
+                        <GradientStop Offset="0" Color="Orange" />
+                        <GradientStop Offset="1" Color="Green" />
+                        -->
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="2" />
+                </TextBlock.Effect>
+
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <EventTrigger.Actions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation AutoReverse="True"
+                                                    RepeatBehavior="Forever"
+                                                    Storyboard.TargetProperty="Foreground.GradientStops[1].Color"
+                                                    To="Red"
+                                                    Duration="0:0:1" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger.Actions>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+
+            <Button Width="50"
+                    Margin="0,20,0,20"
+                    Command="{Binding ShowCommand}"
+                    Content="改变" />
+        </StackPanel>
+    </Grid>
+</Window>

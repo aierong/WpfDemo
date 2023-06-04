@@ -1,0 +1,84 @@
+﻿<Window x:Class="WpfApp.Views.DH.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp.Views.DH"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="Window3"
+        Width="800"
+        Height="450"
+        mc:Ignorable="d">
+
+
+
+    <!--  参考:https://blog.csdn.net/qq_43024228/article/details/112558840  -->
+
+
+
+    <Grid>
+        <StackPanel>
+            <Ellipse Width="20"
+                     Height="20"
+                     Margin="0,20,0,0"
+                     Fill="#FF6666">
+                <Ellipse.Effect>
+                    <DropShadowEffect BlurRadius="20"
+                                      Direction="10"
+                                      Opacity="1"
+                                      ShadowDepth="0"
+                                      Color="#FF6666">
+                    </DropShadowEffect>
+                </Ellipse.Effect>
+
+                <Ellipse.Triggers>
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                        <!--<BeginStoryboard Storyboard="{StaticResource OnLoaded}" />-->
+                        <BeginStoryboard>
+                            <Storyboard AutoReverse="True"
+                                        RepeatBehavior="Forever">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                                    <EasingColorKeyFrame KeyTime="0:0:1"
+                                                         Value="#990033" />
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Ellipse.Triggers>
+
+
+            </Ellipse>
+
+            <Ellipse Width="20"
+                     Height="20"
+                     Margin="0,20,0,0"
+                     Fill="#FF4ED74E">
+                <Ellipse.Effect>
+                    <DropShadowEffect BlurRadius="20"
+                                      Direction="10"
+                                      Opacity="1"
+                                      ShadowDepth="0"
+                                      Color="#FF4ED74E">
+                    </DropShadowEffect>
+                </Ellipse.Effect>
+
+                <Ellipse.Triggers>
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                        <!--<BeginStoryboard Storyboard="{StaticResource OnLoaded}" />-->
+                        <BeginStoryboard>
+                            <Storyboard AutoReverse="True"
+                                        RepeatBehavior="Forever">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                                    <EasingColorKeyFrame KeyTime="0:0:1"
+                                                         Value="Green" />
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Ellipse.Triggers>
+
+
+            </Ellipse>
+
+        </StackPanel>
+    </Grid>
+</Window>

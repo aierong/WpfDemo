@@ -19,6 +19,8 @@
     StartupUri="/Views/fonts/fontWindow1.XAML"
     
     StartupUri="/Views/ConverterDemo/demo1/Window1.XAML"  转换器
+    
+    StartupUri="/Views/DH/Window1.XAML"
 -->
 
 
@@ -30,7 +32,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/KJ/grid/tiaojianxianshi/gridWindow1.XAML">
+             StartupUri="/Views/DH/Window5.XAML">
 
     <!--  Application.Resources是定义整个程序级别的资源，每个窗体都可以访问到  -->
     <Application.Resources>
