@@ -180,6 +180,7 @@
     <Compile Include="Views\BaseCommand\MyParCommand.cs" />
     <Compile Include="Views\KJ\grid\demo1\Models\Student.cs" />
     <Compile Include="Views\KJ\grid\StudentDataNew.cs" />
+    <Compile Include="Views\KJ\grid\tiaojianxianshi\BooleanToVisibilityConverterNew.cs" />
     <Compile Include="Views\KJ\grid\tiaojianxianshi\gdWindow1.xaml.cs">
       <DependentUpon>gdWindow1.xaml</DependentUpon>
     </Compile>

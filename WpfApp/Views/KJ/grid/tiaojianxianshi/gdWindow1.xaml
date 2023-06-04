@@ -10,6 +10,11 @@
         d:DataContext="{d:DesignInstance local:gdWindow1ViewModel,
                                          IsDesignTimeCreatable=True}"
         mc:Ignorable="d">
+
+    <Window.Resources>
+        <local:BooleanToVisibilityConverterNew x:Key="myboolconvert">
+        </local:BooleanToVisibilityConverterNew>
+    </Window.Resources>
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -40,14 +45,18 @@
                     <DataGridTextColumn Width="80"
                                         Binding="{Binding IsChengRen}"
                                         Header="年龄" />
-                    <DataGridTemplateColumn Width="160"
-                                            Header="年龄图">
+                    <DataGridTemplateColumn Width="90"
+                                            Header="年龄图1">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock  Margin="10,0,0,0"
+                                    <!--
+                                        解释说明:这里我们定义2个TextBlock,根据条件我们隐藏其中一个
+                                    -->
+                                    <TextBlock Margin="10,0,0,0"
                                                Foreground="Green"
-                                               Text="{Binding Age}">
+                                               Text="{Binding Age}"
+                                               Visibility="{Binding IsChengRen, Mode=OneWay, Converter={StaticResource myboolconvert}, ConverterParameter=1}">
 
                                         <TextBlock.Triggers>
                                             <EventTrigger RoutedEvent="FrameworkElement.Loaded">
@@ -68,9 +77,10 @@
                                         </TextBlock.Triggers>
                                     </TextBlock>
 
-                                    <TextBlock  Margin="10,0,0,0"
+                                    <TextBlock Margin="10,0,0,0"
                                                Foreground="#ED4646"
-                                               Text="{Binding Age}">
+                                               Text="{Binding Age}"
+                                               Visibility="{Binding IsChengRen, Mode=OneWay, Converter={StaticResource myboolconvert}, ConverterParameter=0}">
 
                                         <TextBlock.Triggers>
                                             <EventTrigger RoutedEvent="FrameworkElement.Loaded">
@@ -94,7 +104,75 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Width="90"
+                                            Header="年龄图2">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
 
+                                    <!--
+                                        解释说明:这里我们定义2个Border,根据条件我们隐藏其中一个
+                                    -->
+                                    <Border Width="15"
+                                            Height="15"
+                                            Margin="10,0,0,0"
+                                            CornerRadius="25"
+                                            Visibility="{Binding IsChengRen, Mode=OneWay, Converter={StaticResource myboolconvert}, ConverterParameter=0}">
+                                        <Border.Style>
+                                            <Style TargetType="{x:Type Border}">
+                                                <Setter Property="Background" Value="#FF3BA245" />
+
+                                                <Style.Triggers>
+                                                    <EventTrigger RoutedEvent="Window.Loaded">
+                                                        <BeginStoryboard>
+                                                            <Storyboard AutoReverse="True"
+                                                                        RepeatBehavior="Forever">
+                                                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Background.(SolidColorBrush.Color)">
+                                                                    <EasingColorKeyFrame KeyTime="0"
+                                                                                         Value="#555555" />
+                                                                    <EasingColorKeyFrame KeyTime="00:00:0.2"
+                                                                                         Value="Red" />
+                                                                </ColorAnimationUsingKeyFrames>
+                                                            </Storyboard>
+                                                        </BeginStoryboard>
+                                                    </EventTrigger>
+
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+                                    </Border>
+                                    <Border Width="15"
+                                            Height="15"
+                                            Margin="10,0,0,0"
+                                            CornerRadius="25"
+                                            Visibility="{Binding IsChengRen, Mode=OneWay, Converter={StaticResource myboolconvert}, ConverterParameter=1}">
+                                        <Border.Style>
+                                            <Style TargetType="{x:Type Border}">
+                                                <Setter Property="Background" Value="#FF3BA245" />
+
+                                                <Style.Triggers>
+                                                    <EventTrigger RoutedEvent="Window.Loaded">
+                                                        <BeginStoryboard>
+                                                            <Storyboard AutoReverse="True"
+                                                                        RepeatBehavior="Forever">
+                                                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Background.(SolidColorBrush.Color)">
+                                                                    <EasingColorKeyFrame KeyTime="0"
+                                                                                         Value="#555555" />
+                                                                    <EasingColorKeyFrame KeyTime="00:00:0.2"
+                                                                                         Value="Green" />
+                                                                </ColorAnimationUsingKeyFrames>
+                                                            </Storyboard>
+                                                        </BeginStoryboard>
+                                                    </EventTrigger>
+
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+                                    </Border>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                     <DataGridTemplateColumn Width="160"
                                             Header="性别文本">
                         <DataGridTemplateColumn.CellTemplate>
