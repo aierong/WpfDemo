@@ -17,7 +17,7 @@
         <StackPanel>
 
 
-            <TextBlock x:Name="TextBlockRecording"
+            <TextBlock Margin="0,20,0,20"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
                        FontSize="48"
@@ -31,7 +31,6 @@
                                         RepeatBehavior="Forever"
                                         Duration="0:0:2">
                                 <ColorAnimation RepeatBehavior="Forever"
-                                                Storyboard.TargetName="TextBlockRecording"
                                                 Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
                                                 From="#ED4646"
                                                 To="#F0F2F7"
@@ -42,6 +41,33 @@
                     </EventTrigger>
                 </TextBlock.Triggers>
             </TextBlock>
+
+
+            <TextBlock Margin="0,20,0,20"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="48"
+                       Foreground="Green"
+                       Text="{Binding Title}">
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard AutoReverse="True"
+                                        BeginTime="0:0:0"
+                                        RepeatBehavior="Forever"
+                                        Duration="0:0:2">
+                                <ColorAnimation RepeatBehavior="Forever"
+                                                Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                From="#FFB0F2B0"
+                                                To="Green"
+                                                Duration="0:0:2">
+                                </ColorAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+
 
             <Button Width="50"
                     Margin="0,20,0,20"

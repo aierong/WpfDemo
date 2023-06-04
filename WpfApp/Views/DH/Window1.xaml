@@ -11,22 +11,19 @@
                                          IsDesignTimeCreatable=True}"
         mc:Ignorable="d">
     <!--
-    参考:https://www.cnblogs.com/moonsk/p/15056259.html
+        参考:https://www.cnblogs.com/moonsk/p/15056259.html
     -->
     <Grid>
         <StackPanel>
-            <TextBlock FontSize="30"
+            <!--  第1个  -->
+            <TextBlock Margin="0,10,0,10"
+                       FontSize="30"
                        Text="{Binding Title}"
                        TextAlignment="Center">
                 <TextBlock.Foreground>
                     <LinearGradientBrush StartPoint="0.5 0" EndPoint="0.5 1">
                         <GradientStop Offset="0" Color="Yellow" />
                         <GradientStop Offset="1" Color="Blue" />
-
-                        <!--
-                        <GradientStop Offset="0" Color="Orange" />
-                        <GradientStop Offset="1" Color="Green" />
-                        -->
                     </LinearGradientBrush>
                 </TextBlock.Foreground>
                 <TextBlock.Effect>
@@ -49,7 +46,37 @@
                     </EventTrigger>
                 </TextBlock.Triggers>
             </TextBlock>
+            <!--  第2个  -->
+            <TextBlock Margin="0,10,0,10"
+                       FontSize="30"
+                       Text="{Binding Title}"
+                       TextAlignment="Center">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush StartPoint="0.5 0" EndPoint="0.5 1">
+                        <GradientStop Offset="0" Color="#FFB0F691" />
+                        <GradientStop Offset="1" Color="#FF022802" />
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="2" />
+                </TextBlock.Effect>
 
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <EventTrigger.Actions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation AutoReverse="True"
+                                                    RepeatBehavior="Forever"
+                                                    Storyboard.TargetProperty="Foreground.GradientStops[1].Color"
+                                                    To="Green"
+                                                    Duration="0:0:1" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger.Actions>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
             <Button Width="50"
                     Margin="0,20,0,20"
                     Command="{Binding ShowCommand}"

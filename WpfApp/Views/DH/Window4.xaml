@@ -51,10 +51,50 @@
                 </Ellipse.Fill>
             </Ellipse>
 
+
+            <Ellipse Width="30"
+                     Height="30"
+                     Margin="0,40,0,40"
+                     RenderTransformOrigin="0.5,0.5">
+                <Ellipse.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard RepeatBehavior="Forever">
+                                <DoubleAnimation BeginTime="0"
+                                                 Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
+                                                 From="1"
+                                                 To="5"
+                                                 Duration="00:00:01" />
+                                <DoubleAnimation BeginTime="0"
+                                                 Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
+                                                 From="1"
+                                                 To="5"
+                                                 Duration="00:00:01" />
+                                <DoubleAnimation BeginTime="0"
+                                                 Storyboard.TargetProperty="(UIElement.Opacity)"
+                                                 From="1"
+                                                 To="0"
+                                                 Duration="00:00:01" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Ellipse.Triggers>
+                <Ellipse.RenderTransform>
+                    <ScaleTransform />
+                </Ellipse.RenderTransform>
+                <Ellipse.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#00FF0000" />
+                        <GradientStop Offset="0.25" Color="Green" />
+                        <GradientStop Offset="0.5" Color="#00FF0000" />
+                        <GradientStop Offset="0.75" Color="Green" />
+                        <GradientStop Offset="1" Color="#00FF0000" />
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
         </StackPanel>
 
 
     </Grid>
 </Window>
 
-    

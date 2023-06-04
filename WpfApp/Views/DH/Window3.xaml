@@ -17,6 +17,7 @@
 
     <Grid>
         <StackPanel>
+            <!--  第1个  -->
             <Ellipse Width="20"
                      Height="20"
                      Margin="0,20,0,0"
@@ -44,10 +45,10 @@
                         </BeginStoryboard>
                     </EventTrigger>
                 </Ellipse.Triggers>
-
-
             </Ellipse>
 
+
+            <!--  第2个  -->
             <Ellipse Width="20"
                      Height="20"
                      Margin="0,20,0,0"
