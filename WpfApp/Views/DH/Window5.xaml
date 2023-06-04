@@ -26,7 +26,7 @@
                             <DataTrigger Binding="{Binding IsAnimation}"
                                          Value="True">
                                 <DataTrigger.EnterActions>
-                                    <BeginStoryboard x:Name="stateAnimation">
+                                    <BeginStoryboard>
                                         <Storyboard AutoReverse="True"
                                                     RepeatBehavior="Forever">
                                             <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Background.(SolidColorBrush.Color)">
@@ -47,6 +47,7 @@
                 </Border.Style>
             </Border>
 
+            <!--  第2个是没有绑定  -->
             <Border Width="25"
                     Height="25"
                     Margin="0,10,0,10"
@@ -54,26 +55,22 @@
                 <Border.Style>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="Background" Value="#FF3BA245" />
+
                         <Style.Triggers>
-                            <DataTrigger Binding="{Binding IsAnimation}"
-                                         Value="True">
-                                <DataTrigger.EnterActions>
-                                    <BeginStoryboard x:Name="stateAnimation">
-                                        <Storyboard AutoReverse="True"
-                                                    RepeatBehavior="Forever">
-                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Background.(SolidColorBrush.Color)">
-                                                <EasingColorKeyFrame KeyTime="0"
-                                                                     Value="#555555" />
-                                                <EasingColorKeyFrame KeyTime="00:00:0.2"
-                                                                     Value="Green" />
-                                            </ColorAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </DataTrigger.EnterActions>
-                                <DataTrigger.ExitActions>
-                                    <StopStoryboard BeginStoryboardName="stateAnimation" />
-                                </DataTrigger.ExitActions>
-                            </DataTrigger>
+                            <EventTrigger RoutedEvent="Window.Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard AutoReverse="True"
+                                                RepeatBehavior="Forever">
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Background.(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="#555555" />
+                                            <EasingColorKeyFrame KeyTime="00:00:0.2"
+                                                                 Value="Green" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+
                         </Style.Triggers>
                     </Style>
                 </Border.Style>
