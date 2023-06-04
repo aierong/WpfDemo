@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 
-namespace WpfApp.Views.KJ.grid.tiaojianxianshi
+namespace WpfApp.Views.KJ.grid
 {
-    public class StudentData : INotifyPropertyChanged
+    public  class StudentDataNew : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -86,20 +86,37 @@ namespace WpfApp.Views.KJ.grid.tiaojianxianshi
             }
         }
 
-        //public bool IsChengRen
-        //{
-        //    get
-        //    {
-        //        return Age >= 18;
-        //    }
-        //}
+        public bool IsChengRen
+        {
+            get
+            {
+                return Age >= 18;
+            }
+        }
 
         //public Brush agecolor1
         //{
         //    get
         //    {
-                
-        //        return IsChengRen? Brushes.Green : Brushes.Red ;
+
+        //        return IsChengRen ? Brushes.Green : Brushes.Red;
+        //    }
+        //}
+
+        //private Brush _agecolor1;
+
+        //public Brush agecolor1
+        //{
+        //    get
+        //    {
+        //        return _agecolor1;
+        //    }
+        //    set
+        //    {
+        //        _agecolor1 = value;
+
+        //        //通知数据已经变化
+        //        PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "agecolor1" ) );
         //    }
         //}
 

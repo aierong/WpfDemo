@@ -179,6 +179,11 @@
     <Compile Include="Views\KJ\grid\demo1\DataWindowViewModel1.cs" />
     <Compile Include="Views\BaseCommand\MyParCommand.cs" />
     <Compile Include="Views\KJ\grid\demo1\Models\Student.cs" />
+    <Compile Include="Views\KJ\grid\StudentDataNew.cs" />
+    <Compile Include="Views\KJ\grid\tiaojianxianshi\gdWindow1.xaml.cs">
+      <DependentUpon>gdWindow1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KJ\grid\tiaojianxianshi\gdWindow1ViewModel.cs" />
     <Compile Include="Views\KJ\grid\tiaojianxianshi\gridWindow1.xaml.cs">
       <DependentUpon>gridWindow1.xaml</DependentUpon>
     </Compile>
@@ -438,6 +443,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\KJ\grid\demo1\DataWindow1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KJ\grid\tiaojianxianshi\gdWindow1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

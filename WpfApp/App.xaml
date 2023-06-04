@@ -5,6 +5,7 @@
     
     StartupUri="/Views/KJ/grid/demo1/DataWindow1.XAML"   表格
     StartupUri="/Views/KJ/grid/tiaojianxianshi/gridWindow1.XAML"   表格
+    StartupUri="/Views/KJ/grid/tiaojianxianshi/gdWindow1.XAML"   表格
     
     StartupUri="/Views/ValidationData/demo1/view/datawindow.XAML"
     
@@ -32,7 +33,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/DH/Window5.XAML">
+             StartupUri="/Views/KJ/grid/tiaojianxianshi/gdWindow1.XAML">
 
     <!--  Application.Resources是定义整个程序级别的资源，每个窗体都可以访问到  -->
     <Application.Resources>
