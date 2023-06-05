@@ -7,6 +7,7 @@
         Title="Window3"
         Width="800"
         Height="450"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
 
 

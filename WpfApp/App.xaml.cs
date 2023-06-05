@@ -32,11 +32,54 @@ namespace WpfApp
 
             base.OnStartup( e );
 
+
+            //捕捉未处理的异常
+            this.DispatcherUnhandledException += App_DispatcherUnhandledException;
+
+
             var a = 1;
 
             var b = 2;
 
             Debug.WriteLine( "OnStartup" );
+        }
+
+
+
+        private void App_DispatcherUnhandledException ( object sender , System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e )
+        {
+            //https://blog.csdn.net/wode17/article/details/106603707
+
+            try
+            {
+                e.Handled = true;
+
+                if ( e.Exception.InnerException == null )
+                {
+                    MessageBox.Show( "（1）发生了一个错误！请联系开发人员！" + Environment.NewLine
+                                       + "（2）错误源：" + e.Exception.Source + Environment.NewLine
+                                       + "（3）详细信息：" + e.Exception.Message + Environment.NewLine );
+                    //+ "（4）报错区域：" + e.Exception.StackTrace);
+                }
+                else
+                {
+                    MessageBox.Show( "（1）发生了一个错误！请联系开发人员！" + Environment.NewLine
+                                        + "（2）错误源：" + e.Exception.InnerException.Source + Environment.NewLine
+                                        + "（3）错误信息：" + e.Exception.Message + Environment.NewLine
+                                        + "（4）详细信息：" + e.Exception.InnerException.Message + Environment.NewLine
+                                        + "（5）报错区域：" + e.Exception.InnerException.StackTrace );
+                }
+
+            }
+            catch ( Exception e2 )
+            {
+                //此时程序出现严重异常，将强制结束退出
+                MessageBox.Show( "程序发生致命错误，将终止，请联系运营商！" );
+            }
+            finally
+            {
+
+            }
         }
 
 

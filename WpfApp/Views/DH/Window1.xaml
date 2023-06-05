@@ -9,6 +9,7 @@
         Height="450"
         d:DataContext="{d:DesignInstance local:Window1ViewModel,
                                          IsDesignTimeCreatable=True}"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <!--
         参考:https://www.cnblogs.com/moonsk/p/15056259.html

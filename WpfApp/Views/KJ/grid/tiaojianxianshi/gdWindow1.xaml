@@ -9,6 +9,7 @@
         Height="450"
         d:DataContext="{d:DesignInstance local:gdWindow1ViewModel,
                                          IsDesignTimeCreatable=True}"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
 
     <Window.Resources>
