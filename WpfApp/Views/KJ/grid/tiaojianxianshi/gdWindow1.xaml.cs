@@ -24,6 +24,10 @@ namespace WpfApp.Views.KJ.grid.tiaojianxianshi
             InitializeComponent();
 
             this.DataContext = new gdWindow1ViewModel();
+
+            //var i = 0;
+
+            //var m = 100 / i;
         }
     }
 }

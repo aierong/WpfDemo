@@ -32,15 +32,9 @@ namespace WpfApp
 
             base.OnStartup( e );
 
-
             //捕捉未处理的异常
             this.DispatcherUnhandledException += App_DispatcherUnhandledException;
-
-
-            var a = 1;
-
-            var b = 2;
-
+            
             Debug.WriteLine( "OnStartup" );
         }
 
@@ -52,7 +46,7 @@ namespace WpfApp
 
             try
             {
-                e.Handled = true;
+                e.Handled = true; //标识异常已经处理
 
                 if ( e.Exception.InnerException == null )
                 {
