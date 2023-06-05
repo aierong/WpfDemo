@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 using System.Windows;
 
 namespace WpfApp
@@ -24,7 +25,7 @@ namespace WpfApp
             Debug.WriteLine( "Application_Startup" );
         }
 
-        
+
 
         protected override void OnStartup ( StartupEventArgs e )
         {
@@ -34,10 +35,35 @@ namespace WpfApp
 
             //捕捉未处理的异常
             this.DispatcherUnhandledException += App_DispatcherUnhandledException;
-            
+
             Debug.WriteLine( "OnStartup" );
+
+
+
+            //bool initiallyOwned = true;
+            //bool isCreated;
+            //Mutex m = new Mutex( initiallyOwned , "动画" , out isCreated );
+            //if ( isCreated != true )
+            //{
+            //    MessageBox.Show( "已经有相同的实例在运行。" , "提示" );
+
+            //    Shutdown();
+
+            //    return;
+            //}
+
+            //System.Threading.Mutex mutex = null;
+            //bool isExists = System.Threading.Mutex.TryOpenExisting( GlobalMutexName , out mutex );
+            //if ( isExists && null != mutex )
+            //{
+            //    //表示互斥体已经存在，即已经打开了一个程序，这里提示用户
+            //    MessageBox.Show( "程序已经在运行" );
+            //    return;
+            //}
         }
 
+
+        const string GlobalMutexName = "WpfApp";
 
 
         private void App_DispatcherUnhandledException ( object sender , System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e )
