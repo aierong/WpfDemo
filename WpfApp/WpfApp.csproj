@@ -609,6 +609,9 @@
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf">
       <Version>1.1.39</Version>
     </PackageReference>
+    <PackageReference Include="WpfAnimatedGif">
+      <Version>2.0.2</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imgs\VER.png" />
@@ -623,6 +626,9 @@
     <Content Include="assets\font1\demo_index.html" />
     <Content Include="assets\font1\iconfont.css" />
     <Content Include="assets\font1\iconfont.js" />
+    <Resource Include="Imgs\8.gif" />
+    <Resource Include="Imgs\9.gif" />
+    <Resource Include="Imgs\g1.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
