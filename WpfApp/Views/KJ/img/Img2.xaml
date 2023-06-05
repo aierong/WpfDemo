@@ -97,12 +97,14 @@
                     <Image Width="100"
                            Height="100"
                            gif:ImageBehavior.AnimatedSource="/Imgs/g1.gif" />
-                    <Image Width="100"
+                    <!--<Image Width="100"
                            Height="100"
                            gif:ImageBehavior.AnimatedSource="/Imgs/9.gif" />
                     <Image Width="100"
                            Height="100"
-                           gif:ImageBehavior.AnimatedSource="/Imgs/8.gif" />
+                           gif:ImageBehavior.AnimatedSource="/Imgs/8.gif" />-->
+
+                    <Image gif:ImageBehavior.AnimatedSource="/Imgs/car.gif" />
                 </StackPanel>
 
 

@@ -626,6 +626,7 @@
     <Content Include="assets\font1\demo_index.html" />
     <Content Include="assets\font1\iconfont.css" />
     <Content Include="assets\font1\iconfont.js" />
+    <Resource Include="Imgs\car.gif" />
     <Resource Include="Imgs\8.gif" />
     <Resource Include="Imgs\9.gif" />
     <Resource Include="Imgs\g1.gif" />
