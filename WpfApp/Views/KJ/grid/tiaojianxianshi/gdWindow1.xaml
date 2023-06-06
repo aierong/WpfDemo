@@ -210,10 +210,18 @@
 
         </StackPanel>
         <StackPanel Grid.Row="1"
-                    Grid.Column="0">
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
             <Button Width="100"
                     Margin="10,10,10,10"
-                    Content="qc" />
+                    Command="{Binding AddCommand}"
+                    Content="添加数据" />
+            <Button Width="100"
+                    Margin="10,10,10,10"
+                    Command="{Binding ReCommand}"
+                    Content="清空再添加" />
         </StackPanel>
     </Grid>
 </Window>
