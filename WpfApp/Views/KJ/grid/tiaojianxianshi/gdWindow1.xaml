@@ -19,7 +19,7 @@
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -208,6 +208,12 @@
             </DataGrid>
 
 
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0">
+            <Button Width="100"
+                    Margin="10,10,10,10"
+                    Content="qc" />
         </StackPanel>
     </Grid>
 </Window>

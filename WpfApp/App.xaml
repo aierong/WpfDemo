@@ -29,7 +29,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/KJ/mainpage.XAML">
+             StartupUri="/Views/KJ/grid/tiaojianxianshi/gdWindow1.XAML" >
 
     <!--  Application.Resources是定义整个程序级别的资源，每个窗体都可以访问到  -->
     <Application.Resources>
