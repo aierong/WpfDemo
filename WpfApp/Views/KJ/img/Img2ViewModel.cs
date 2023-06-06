@@ -22,7 +22,10 @@ namespace WpfApp.Views.KJ.img
         public event PropertyChangedEventHandler PropertyChanged;
 
 
-        private string netimgname;
+
+        private string netimgname = string.Empty;
+
+
 
         /// <summary>
         /// 名字
@@ -41,6 +44,7 @@ namespace WpfApp.Views.KJ.img
                 PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "NetImgName" ) );
             }
         }
+
 
 
         private System.Windows.Media.ImageSource imgdata = null;
@@ -64,8 +68,9 @@ namespace WpfApp.Views.KJ.img
 
         public Img2ViewModel ()
         {
+
             //本demo中使用图片，在本目录images中有
-            NetImgName = "\\\\10.12.0.151\\misfile\\test\\images\\BQC.jpg";
+            //NetImgName = "\\\\10.12.0.151\\misfile\\test\\images\\BQC.jpg";          //防止报错，暂时屏蔽了，需要可以打开
 
 
             UpdateImgCommand = new MyCommand( () =>
@@ -73,7 +78,7 @@ namespace WpfApp.Views.KJ.img
                 Debug.WriteLine( "UpdateImgCommand:" );
 
                 //改变图片
-                NetImgName = "\\\\10.12.0.151\\misfile\\test\\images\\zhonghe1.png";
+                // NetImgName = "\\\\10.12.0.151\\misfile\\test\\images\\zhonghe1.png";      //防止报错，暂时屏蔽了，需要可以打开
             } );
 
             SelectImgCommand = new MyCommand( () =>
@@ -91,6 +96,7 @@ namespace WpfApp.Views.KJ.img
         }
 
 
+
         /// <summary>
         /// 命令
         /// </summary>
@@ -100,6 +106,7 @@ namespace WpfApp.Views.KJ.img
         }
 
 
+
         /// <summary>
         /// 命令
         /// </summary>
@@ -107,5 +114,8 @@ namespace WpfApp.Views.KJ.img
         {
             get; set;
         }
+
+
+
     }
 }
