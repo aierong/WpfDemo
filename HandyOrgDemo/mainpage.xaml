@@ -49,7 +49,9 @@
                 <TabItem Header="Loading Demo">
                     <localuc:LoadingUserControl1 />
                 </TabItem>
-
+                <TabItem Header="翻页时种">
+                    <localuc:UserControlFK />
+                </TabItem>
 
 
             </TabControl>
