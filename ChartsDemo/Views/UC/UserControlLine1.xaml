@@ -20,7 +20,7 @@
 
         <lvc:CartesianChart Title="{Binding Title}"
                             Grid.Row="0"
-                            Grid.Column="0"
+                            Grid.Column="0"  XAxes="{Binding XAxes}"
                             Series="{Binding Series}">
             <!--  1  -->
         </lvc:CartesianChart>

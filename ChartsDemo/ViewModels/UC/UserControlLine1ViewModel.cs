@@ -24,7 +24,7 @@ namespace ChartsDemo.ViewModels.UC
             get; set;
         } = new LabelVisual
         {
-            Text = "My chart 标题" ,
+            Text = "My chart 标题(x轴是文字)" ,
 
             TextSize = 25 ,
             Padding = new LiveChartsCore.Drawing.Padding( 15 ) ,
@@ -36,13 +36,14 @@ namespace ChartsDemo.ViewModels.UC
         };
 
 
+
         public ISeries[] Series
         {
             get; set;
         } =     {
                 new LineSeries<double>
                 {
-                    Values = new double[] { 2, 1, 3, 5, 3, 4, 6 },
+                    Values = new double[] { 2, 1, 3, 5, 9, 14  },
 
                     Fill = null,
 
@@ -58,9 +59,33 @@ namespace ChartsDemo.ViewModels.UC
 
 
 
-        public UserControlLine1ViewModel()
+        public Axis[] XAxes
         {
-             
+            get; set;
+        } =
+        {
+            new Axis
+            {
+                //Name = "Salesman/woman",
+                Labels = new string[] { "王", "赵", "张", "a", "b", "c" },
+                LabelsPaint = new SolidColorPaint
+                {
+                    Color = SKColors.Black,
+
+                    SKTypeface = SKFontManager.Default.MatchCharacter('汉') // 汉语 
+                    // SKTypeface = SKFontManager.Default.MatchCharacter('أ'), // Arab
+                    // SKTypeface = SKFontManager.Default.MatchCharacter('あ'), // Japanese
+                    // SKTypeface = SKFontManager.Default.MatchCharacter('Ж'), // Russian
+                                 
+                }
+            }
+        };
+
+
+
+        public UserControlLine1ViewModel ()
+        {
+
         }
 
 
