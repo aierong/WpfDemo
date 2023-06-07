@@ -27,7 +27,12 @@ namespace ChartsDemo.ViewModels
             this._regionManager.RequestNavigate( "ContentRegion" , "UserControlDemo1" );
         } ) );
 
-
+        private DelegateCommand _CYButtonClickCommand;
+        public DelegateCommand CYButtonClickCommand => _CYButtonClickCommand ?? ( _CYButtonClickCommand = new DelegateCommand( () =>
+        {
+            //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
+            this._regionManager.RequestNavigate( "ContentRegion" , "UserControl123" );
+        } ) );
 
         private DelegateCommand _LineButtonClickCommand;
         public DelegateCommand LineButtonClickCommand => _LineButtonClickCommand ?? ( _LineButtonClickCommand = new DelegateCommand( () =>

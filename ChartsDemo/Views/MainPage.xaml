@@ -35,34 +35,47 @@
                     Margin="10,10,10,10"
                     Command="{Binding AButtonClickCommand}"
                     Content="基本" />
+
+            <Button Height="30"
+                    Margin="10,10,10,10"
+                    Command="{Binding CYButtonClickCommand}"
+                    Content="一些常用属性" />
+
             <Button Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding LineButtonClickCommand}"
                     Content="Line" />
+
             <Button Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding LineDuoButtonClickCommand}"
                     Content="Line(多个)" />
+
             <Button Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding Bar0ButtonClickCommand}"
                     Content="Bar" />
+
             <Button Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding Bar1ButtonClickCommand}"
                     Content="Bar(多个)" />
+
             <Button Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding BarLine1ButtonClickCommand}"
                     Content="Bar和line" />
+
             <Button Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding Pie1ButtonClickCommand}"
                     Content="pie" />
+
             <Button Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding DongTai1ButtonClickCommand}"
                     Content="动态line" />
+
             <Button Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding DongTaiBar1ButtonClickCommand}"
