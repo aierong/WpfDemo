@@ -134,7 +134,7 @@ namespace ChartsDemo.ViewModels.UC
                 //显示分割线
                 //ShowSeparatorLines = false,
 
-                //格式化y轴文本
+                //格式化y轴文本,这个好像只对y轴有效
                 Labeler = (value) => value.ToString( ) +"qq",
 
                 LabelsPaint = new SolidColorPaint
