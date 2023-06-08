@@ -17,15 +17,18 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
+            <!--<ColumnDefinition />-->
         </Grid.ColumnDefinitions>
 
         <!--
             LegendTextSize="16"
+            
+            LegendTextSize="12"
+            LegendPosition="{Binding POS}"
+            LegendTextPaint="{Binding LegendTextPaint}"
         -->
         <lvc:PieChart Grid.Row="0"
                       Grid.Column="0"
-                      LegendPosition="Bottom"
-                      LegendTextPaint="{Binding LegendTextPaint}"
                       Series="{Binding Series}">
             <!--  1  -->
         </lvc:PieChart>

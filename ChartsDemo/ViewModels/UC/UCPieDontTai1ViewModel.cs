@@ -4,9 +4,11 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Ink;
 using System.Windows.Markup;
 using LiveChartsCore;
 using LiveChartsCore.Defaults;
+using LiveChartsCore.Measure;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
 using Prism.Commands;
@@ -37,7 +39,7 @@ namespace ChartsDemo.ViewModels.UC
         SolidColorPaint _LegendTextPaint =
                new SolidColorPaint
                {
-                   Color = SKColors.Black , 
+                   Color = SKColors.Black ,
                    SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
                };
 
@@ -54,48 +56,87 @@ namespace ChartsDemo.ViewModels.UC
             }
         }
 
-    
+        LiveChartsCore.Measure.LegendPosition _POS = LegendPosition.Top;
+        public LiveChartsCore.Measure.LegendPosition POS
+        {
+            get
+            {
+                return _POS;
+            }
+            set
+            {
+                //SetProperty就是设置值,并且通知属性改变
+                SetProperty( ref _POS , value );
+            }
+        }
 
 
-        void createdata (int counts)
+        void createdata ( int counts )
         {
             Random _random = new Random();
+            //LegendTextPaint = null;
+
+
+            ////SolidColorPaint 要重新赋值，要不，更新后，不显示
+            //LegendTextPaint = new SolidColorPaint
+            //{
+            //    Color = SKColors.Black ,
+            //    SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
+            //};
+
 
             this.Series.Clear();
 
             for ( int i = 1 ; i <= counts ; i++ )
             {
-                this.Series.Add( new PieSeries<ObservableValue>
+                var num = _random.Next( 1 , i == 1 ? 2 : 20 );
+
+                this.Series.Add( new PieSeries<double>
                 {
 
-                    Values = new[] { new ObservableValue( _random.Next( 1 , 30 ) ) } ,
-                    Name = "系列:" + i.ToString (),
+                    Values = new List<double>() { num } ,
+                    Name = "系列:" + num.ToString() ,
                     //文字朝向
-                    DataLabelsRotation = LiveCharts.CotangentAngle , //  
+                    DataLabelsRotation = LiveCharts.CotangentAngle ,
 
-                    DataLabelsPaint = new SolidColorPaint( SKColors.Black ) ,
-                    //DataLabelsSize = 22,
+                    //DataLabelsPaint = new SolidColorPaint( SKColors.Black ),
+                    DataLabelsSize = 15 ,
+                    DataLabelsPaint = new SolidColorPaint()
+                    {
+                        Color = SKColors.Black ,
+                        SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
+                    } ,
+                    DataLabelsFormatter = point => point.PrimaryValue.ToString( "N2" ) + "系列:" + num.ToString()
+                    //MaxOuterRadius = 0.8,
+                    //DataPadding =  new LiveChartsCore.Drawing.LvcPoint (0,0),
 
-                    //DataLabelsFormatter = point => point.PrimaryValue.ToString( "N2" )
+                    //InnerRadius = 50
+                    //Fill= new SolidColorPaint( SKColors.Yellow ),
+                    //Stroke = new SolidColorPaint( SKColors.Red ) { StrokeThickness = 4 } ,
                 } );
             }
 
 
+            POS = LegendPosition.Hidden;
+            POS = LegendPosition.Bottom;
 
-
+            LegendTextPaint = null;
 
 
             //SolidColorPaint 要重新赋值，要不，更新后，不显示
             LegendTextPaint = new SolidColorPaint
             {
-                Color = SKColors.Black ,
+                Color = SKColors.Orange ,
+                //IsFill = true ,
+                // ZIndex = 0 ,
+                StrokeThickness = 2 ,
                 SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
             };
 
-          
+
 
             return;
-             
+
 
         }
 
@@ -103,7 +144,7 @@ namespace ChartsDemo.ViewModels.UC
 
         public UCPieDontTai1ViewModel ()
         {
-            this.createdata  ( new Random().Next( 3 , 4 ) );
+            this.createdata( new Random().Next( 3 , 4 ) );
         }
 
 
@@ -111,10 +152,10 @@ namespace ChartsDemo.ViewModels.UC
         private DelegateCommand _RestClickCommand;
         public DelegateCommand RestClickCommand => _RestClickCommand ?? ( _RestClickCommand = new DelegateCommand( () =>
         {
-         
+
             //饼图的数量变化，name也变化了
 
-            this.createdata( new Random().Next( 5 , 7 ) );
+            this.createdata( new Random().Next( 3 , 6 ) );
             return;
 
         } ) );
