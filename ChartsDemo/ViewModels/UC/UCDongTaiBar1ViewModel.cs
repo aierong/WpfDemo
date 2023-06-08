@@ -119,31 +119,7 @@ namespace ChartsDemo.ViewModels.UC
 
 
 
-        //public Axis[] XAxes
-        //{
-        //    get; set;
-        //} =
-        //{
-        //    new Axis
-        //    {
-        //        Labels = new string[] { "组1" , "组2" , "组3" },
-        //        //旋转角度
-        //        LabelsRotation = 0,
-        //        SeparatorsPaint = new SolidColorPaint(new SKColor(200, 200, 200)),
-        //        SeparatorsAtCenter = false,
-        //        TicksPaint = new SolidColorPaint(new SKColor(35, 35, 35)),
-        //        TicksAtCenter = true,
-        //        LabelsPaint = new SolidColorPaint
-        //        {
-        //            Color = SKColors.Black,
-
-        //            SKTypeface = SKFontManager.Default.MatchCharacter('汉') // 汉语 
-        //            // SKTypeface = SKFontManager.Default.MatchCharacter('أ'), // Arab
-        //            // SKTypeface = SKFontManager.Default.MatchCharacter('あ'), // Japanese
-        //            // SKTypeface = SKFontManager.Default.MatchCharacter('Ж'), // Russian
-        //        }
-        //    }
-        //};
+   
 
 
 
