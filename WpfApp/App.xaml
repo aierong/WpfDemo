@@ -13,7 +13,11 @@
     
     StartupUri="/Views/StyleDemo/StyleMain.XAML"
     
-    StartupUri="/Views/BUJU/Uniform/UniformWindow1.XAML"
+    
+    StartupUri="/Views/BUJU/StackPanel/cuizhi.XAML"       布局
+    StartupUri="/Views/BUJU/Uniform/UniformWindow1.XAML"  布局
+    StartupUri="/Views/BUJU/WrapPanel/Horizontal.XAML"    布局
+    
     
     StartupUri="/Views/fonts/fontWindow1.XAML"
     
@@ -29,7 +33,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/BUJU/Uniform/UniformWindow1.XAML">
+             StartupUri="/Views/BUJU/StackPanel/cuizhi.XAML">
 
     <!--  Application.Resources是定义整个程序级别的资源，每个窗体都可以访问到  -->
     <Application.Resources>
