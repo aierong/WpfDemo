@@ -17,10 +17,14 @@ namespace ChartsDemo.ViewModels.UC
         public ISeries[] Series
         {
             get; set;
-        } =    
+        } =
             {
-                new ColumnSeries<double> { Values = new double[] { 426, 583, 104 } },
-                new LineSeries<double>   { Values = new double[] { 200, 558, 458 }, Fill = null },
+                new ColumnSeries<double> {
+                    Values = new double[] { 426, 583, 104 }
+                },
+                new LineSeries<double>   {
+                    Values = new double[] { 200, 558, 458 }, Fill = null
+                },
             };
 
 
