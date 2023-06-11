@@ -12,7 +12,6 @@
     <StackPanel x:Name="stackpanel"
                 Margin="0"
                 Orientation="Horizontal">
-
         <Button Content="第一个" />
         <Button Content="第二个" />
         <Button Content="第三个" />

@@ -8,8 +8,10 @@
         Width="500"
         Height="450"
         mc:Ignorable="d">
-    <!--当Orientation属性的值设置为 Horizontal：元素是从左向右排列的，然后自上至下自动换行。
-    当Orientation属性的值设置为Vertical：元素是从上向下排列的，然后从左至右自动换行。-->
+    <!--
+        当Orientation属性的值设置为 Horizontal：元素是从左向右排列的，然后自上至下自动换行。
+        当Orientation属性的值设置为Vertical：元素是从上向下排列的，然后从左至右自动换行。
+    -->
     <WrapPanel Orientation="Horizontal">
         <Button Width="100">按钮1</Button>
         <Button Width="100">按钮2</Button>

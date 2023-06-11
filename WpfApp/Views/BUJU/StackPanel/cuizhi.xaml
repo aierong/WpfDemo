@@ -8,7 +8,9 @@
         Width="800"
         Height="450"
         mc:Ignorable="d">
-    <!--  垂直方向排列   Margin属性用于使元素之间产生一定得间隔 -->
+    <!--  
+    垂直方向排列   Margin属性用于使元素之间产生一定得间隔  
+    -->
     <StackPanel x:Name="stackpanel"
                 Margin="0"
                 Orientation="Vertical">
