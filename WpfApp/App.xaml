@@ -33,7 +33,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/BUJU/StackPanel/cuizhi.XAML">
+             StartupUri="/Views/KJ/mainpage.XAML">
 
     <!--  Application.Resources是定义整个程序级别的资源，每个窗体都可以访问到  -->
     <Application.Resources>

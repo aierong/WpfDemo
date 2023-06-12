@@ -70,15 +70,15 @@ namespace WpfApp.Views.KJ.img
         {
 
             //本demo中使用图片，在本目录images中有
-            //NetImgName = "\\\\10.12.0.151\\misfile\\test\\images\\BQC.jpg";          //防止报错，暂时屏蔽了，需要可以打开
-
+            //NetImgName = @"\\10.12.0.151\misfile\test\images\BQC.jpg";          //防止报错，暂时屏蔽了，需要可以打开
+            //ImgData = new BitmapImage( new Uri( @"\\10.12.0.151\misfile\test\images\BQC.jpg" ) );
 
             UpdateImgCommand = new MyCommand( () =>
             {
                 Debug.WriteLine( "UpdateImgCommand:" );
 
                 //改变图片
-                // NetImgName = "\\\\10.12.0.151\\misfile\\test\\images\\zhonghe1.png";      //防止报错，暂时屏蔽了，需要可以打开
+                //NetImgName = @"\\10.12.0.151\misfile\test\images\zhonghe1.png";      //防止报错，暂时屏蔽了，需要可以打开
             } );
 
             SelectImgCommand = new MyCommand( () =>
