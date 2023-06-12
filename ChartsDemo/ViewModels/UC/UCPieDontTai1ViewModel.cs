@@ -36,53 +36,17 @@ namespace ChartsDemo.ViewModels.UC
             }
         }
 
-        SolidColorPaint _LegendTextPaint =
-               new SolidColorPaint
-               {
-                   Color = SKColors.Black ,
-                   SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
-               };
+      
 
-        public SolidColorPaint LegendTextPaint
-        {
-            get
-            {
-                return _LegendTextPaint;
-            }
-            set
-            {
-                //SetProperty就是设置值,并且通知属性改变
-                SetProperty( ref _LegendTextPaint , value );
-            }
-        }
+    
 
-        LiveChartsCore.Measure.LegendPosition _POS = LegendPosition.Top;
-        public LiveChartsCore.Measure.LegendPosition POS
-        {
-            get
-            {
-                return _POS;
-            }
-            set
-            {
-                //SetProperty就是设置值,并且通知属性改变
-                SetProperty( ref _POS , value );
-            }
-        }
+    
 
 
         void createdata ( int counts )
         {
             Random _random = new Random();
-            //LegendTextPaint = null;
-
-
-            ////SolidColorPaint 要重新赋值，要不，更新后，不显示
-            //LegendTextPaint = new SolidColorPaint
-            //{
-            //    Color = SKColors.Black ,
-            //    SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
-            //};
+            
 
 
             this.Series.Clear();
@@ -117,21 +81,10 @@ namespace ChartsDemo.ViewModels.UC
             }
 
 
-            POS = LegendPosition.Hidden;
-            POS = LegendPosition.Bottom;
-
-            LegendTextPaint = null;
+             
 
 
-            //SolidColorPaint 要重新赋值，要不，更新后，不显示
-            LegendTextPaint = new SolidColorPaint
-            {
-                Color = SKColors.Orange ,
-                //IsFill = true ,
-                // ZIndex = 0 ,
-                StrokeThickness = 2 ,
-                SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
-            };
+          
 
 
 

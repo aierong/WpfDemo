@@ -21,10 +21,10 @@
         </Grid.ColumnDefinitions>
 
         <!--
-            LegendTextSize="16"
+            
             
             LegendTextSize="12"
-            LegendPosition="{Binding POS}"
+            LegendPosition="Bottom"
             LegendTextPaint="{Binding LegendTextPaint}"
         -->
         <lvc:PieChart Grid.Row="0"
