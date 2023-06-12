@@ -8,10 +8,18 @@
              d:DesignHeight="450"
              d:DesignWidth="800"
              mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="SysConverter">
+        </BooleanToVisibilityConverter>
+    </UserControl.Resources>
+
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <!--<RowDefinition Height="auto" />-->
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -26,7 +34,58 @@
                       Series="{Binding Series}">
 
         </lvc:PieChart>
-        <StackPanel Grid.Row="1"
+
+        <WrapPanel Grid.Row="1"
+                   Grid.Column="1"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+            <Border Width="14"
+                    Height="14"
+                    Margin="3,0"
+                    Background="Red"
+                    Visibility="{Binding IsAoi1, Mode=OneWay, Converter={StaticResource SysConverter}}" />
+            <TextBlock Margin="0,0,10,0"
+                       VerticalAlignment="Center"
+                       FontSize="14"
+                       Foreground="Black"
+                       Text="{Binding AoiTxt1}"
+                       Visibility="{Binding IsAoi1, Mode=OneWay, Converter={StaticResource SysConverter}}" />
+            <Border Width="14"
+                    Height="14"
+                    Margin="3,0"
+                    Background="Yellow"
+                    Visibility="{Binding IsAoi2, Mode=OneWay, Converter={StaticResource SysConverter}}" />
+            <TextBlock Margin="0,0,10,0"
+                       VerticalAlignment="Center"
+                       FontSize="14"
+                       Foreground="Black"
+                       Text="{Binding AoiTxt2}"
+                       Visibility="{Binding IsAoi2, Mode=OneWay, Converter={StaticResource SysConverter}}" />
+            <Border Width="14"
+                    Height="14"
+                    Margin="3,0"
+                    Background="Blue"
+                    Visibility="{Binding IsAoi3, Mode=OneWay, Converter={StaticResource SysConverter}}" />
+            <TextBlock Margin="0,0,10,0"
+                       VerticalAlignment="Center"
+                       FontSize="14"
+                       Foreground="Black"
+                       Text="{Binding AoiTxt3}"
+                       Visibility="{Binding IsAoi3, Mode=OneWay, Converter={StaticResource SysConverter}}" />
+            <Border Width="14"
+                    Height="14"
+                    Margin="3,0"
+                    Background="Green"
+                    Visibility="{Binding IsAoi4, Mode=OneWay, Converter={StaticResource SysConverter}}" />
+            <TextBlock Margin="0,0,10,0"
+                       VerticalAlignment="Center"
+                       FontSize="14"
+                       Foreground="Black"
+                       Text="{Binding AoiTxt4}"
+                       Visibility="{Binding IsAoi4, Mode=OneWay, Converter={StaticResource SysConverter}}" />
+        </WrapPanel>
+
+        <StackPanel Grid.Row="2"
                     Grid.Column="1"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"

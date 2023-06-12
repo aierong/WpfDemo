@@ -60,10 +60,12 @@ namespace ChartsDemo.ViewModels.UC
 
                     Values = new List<double>() { num } ,
                     Name = "系列:" + num.ToString() ,
+
+                    //为了避免Legend里面的文本位置错乱,我把文本显示在饼图中
+
                     //文字朝向
                     DataLabelsRotation = LiveCharts.CotangentAngle ,
-
-                    //DataLabelsPaint = new SolidColorPaint( SKColors.Black ),
+                                         
                     DataLabelsSize = 15 ,
                     DataLabelsPaint = new SolidColorPaint()
                     {
@@ -71,12 +73,9 @@ namespace ChartsDemo.ViewModels.UC
                         SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
                     } ,
                     DataLabelsFormatter = point => point.PrimaryValue.ToString( "N2" ) + "系列:" + num.ToString()
-                    //MaxOuterRadius = 0.8,
-                    //DataPadding =  new LiveChartsCore.Drawing.LvcPoint (0,0),
 
-                    //InnerRadius = 50
-                    //Fill= new SolidColorPaint( SKColors.Yellow ),
-                    //Stroke = new SolidColorPaint( SKColors.Red ) { StrokeThickness = 4 } ,
+
+
                 } );
             }
 

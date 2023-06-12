@@ -21,12 +21,15 @@
         </Grid.ColumnDefinitions>
 
         <!--
-            
-            
             LegendTextSize="12"
             LegendPosition="Bottom"
             LegendTextPaint="{Binding LegendTextPaint}"
         -->
+
+        <!--
+            为了避免Legend里面的文本位置错乱,我把文本显示在饼图中
+        -->
+
         <lvc:PieChart Grid.Row="0"
                       Grid.Column="0"
                       Series="{Binding Series}">
