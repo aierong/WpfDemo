@@ -36,17 +36,17 @@ namespace ChartsDemo.ViewModels.UC
             }
         }
 
-      
 
-    
 
-    
+
+
+
 
 
         void createdata ( int counts )
         {
             Random _random = new Random();
-            
+
 
 
             this.Series.Clear();
@@ -81,16 +81,8 @@ namespace ChartsDemo.ViewModels.UC
             }
 
 
-             
-
-
-          
-
-
 
             return;
-
-
         }
 
 
@@ -109,6 +101,7 @@ namespace ChartsDemo.ViewModels.UC
             //饼图的数量变化，name也变化了
 
             this.createdata( new Random().Next( 3 , 6 ) );
+
             return;
 
         } ) );
