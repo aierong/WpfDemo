@@ -83,8 +83,12 @@
 
             <Button Height="30"
                     Margin="10,10,10,10"
+                    Command="{Binding PieDontTai0ButtonClickCommand}"
+                    Content="动态pie demo0" />
+            <Button Height="30"
+                    Margin="10,10,10,10"
                     Command="{Binding PieDontTai1ButtonClickCommand}"
-                    Content="动态pie" />
+                    Content="动态pie demo1" />
         </StackPanel>
     </Grid>
 </Window>

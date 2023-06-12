@@ -106,6 +106,14 @@ namespace ChartsDemo.ViewModels
         } ) );
 
 
+        
+        private DelegateCommand _PieDontTai0ButtonClickCommand;
+        public DelegateCommand PieDontTai0ButtonClickCommand => _PieDontTai0ButtonClickCommand ?? ( _PieDontTai0ButtonClickCommand = new DelegateCommand( () =>
+        {
+            //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
+            this._regionManager.RequestNavigate( "ContentRegion" , "UCPieDontTai0" );
+        } ) );
+
 
         private DelegateCommand _PieDontTai1ButtonClickCommand;
         public DelegateCommand PieDontTai1ButtonClickCommand => _PieDontTai1ButtonClickCommand ?? ( _PieDontTai1ButtonClickCommand = new DelegateCommand( () =>

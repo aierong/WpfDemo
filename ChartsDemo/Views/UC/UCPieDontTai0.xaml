@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="ChartsDemo.Views.UC.UCPieDontTai0"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:ChartsDemo.Views.UC"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!--
+            特别提示：每次重新刷新数据后，Legend里面的文本位置会错乱   官网github，好像有提到会在后续版本修复
+        -->
+        <lvc:PieChart Grid.Row="0"
+                      Grid.Column="0"
+                      LegendPosition="Bottom"
+                      LegendTextPaint="{Binding LegendTextPaint}"
+                      LegendTextSize="12"
+                      Series="{Binding Series}">
+            <!--  1  -->
+        </lvc:PieChart>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <Button Height="30"
+                    Margin="10,10,10,10"
+                    Command="{Binding RestClickCommand}"
+                    Content="重置" />
+
+        </StackPanel>
+    </Grid>
+</UserControl>
