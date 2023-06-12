@@ -15,7 +15,7 @@ using SkiaSharp;
 
 namespace ChartsDemo.ViewModels.UC
 {
-    public  class UCPieDontTai0ViewModel : BindableBase, INavigationAware
+    public class UCPieDontTai0ViewModel : BindableBase, INavigationAware
     {
         ObservableCollection<ISeries> _Series = new ObservableCollection<ISeries>() { };
 
@@ -52,33 +52,13 @@ namespace ChartsDemo.ViewModels.UC
             }
         }
 
-        LiveChartsCore.Measure.LegendPosition _POS = LegendPosition.Top;
-        public LiveChartsCore.Measure.LegendPosition POS
-        {
-            get
-            {
-                return _POS;
-            }
-            set
-            {
-                //SetProperty就是设置值,并且通知属性改变
-                SetProperty( ref _POS , value );
-            }
-        }
+
 
 
         void createdata ( int counts )
         {
             Random _random = new Random();
-            //LegendTextPaint = null;
 
-
-            ////SolidColorPaint 要重新赋值，要不，更新后，不显示
-            //LegendTextPaint = new SolidColorPaint
-            //{
-            //    Color = SKColors.Black ,
-            //    SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
-            //};
 
 
             this.Series.Clear();
@@ -92,33 +72,23 @@ namespace ChartsDemo.ViewModels.UC
 
                     Values = new List<double>() { num } ,
                     Name = "系列:" + num.ToString() ,
-                    //文字朝向
-                    DataLabelsRotation = LiveCharts.CotangentAngle ,
 
-                    //DataLabelsPaint = new SolidColorPaint( SKColors.Black ),
+
+                    DataLabelsPaint = new SolidColorPaint( SKColors.Black ) ,
                     DataLabelsSize = 15 ,
-                    DataLabelsPaint = new SolidColorPaint()
-                    {
-                        Color = SKColors.Black ,
-                        SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
-                    } ,
-                    DataLabelsFormatter = point => point.PrimaryValue.ToString( "N2" ) + "系列:" + num.ToString()
-                    //MaxOuterRadius = 0.8,
-                    //DataPadding =  new LiveChartsCore.Drawing.LvcPoint (0,0),
 
-                    //InnerRadius = 50
-                    //Fill= new SolidColorPaint( SKColors.Yellow ),
-                    //Stroke = new SolidColorPaint( SKColors.Red ) { StrokeThickness = 4 } ,
+                    DataLabelsFormatter = point => point.PrimaryValue.ToString( "N2" )
+
                 } );
             }
 
 
-            POS = LegendPosition.Hidden;
-            POS = LegendPosition.Bottom;
+
 
             LegendTextPaint = null;
 
 
+            //特别提示：每次重新刷新数据后，Legend里面的文本位置会错乱   官网github，好像有提到会在后续版本修复
             //SolidColorPaint 要重新赋值，要不，更新后，不显示
             LegendTextPaint = new SolidColorPaint
             {

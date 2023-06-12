@@ -27,7 +27,7 @@
                       LegendTextPaint="{Binding LegendTextPaint}"
                       LegendTextSize="12"
                       Series="{Binding Series}">
-            <!--  1  -->
+
         </lvc:PieChart>
         <StackPanel Grid.Row="1"
                     Grid.Column="0"
