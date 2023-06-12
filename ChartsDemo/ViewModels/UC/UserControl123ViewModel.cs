@@ -50,11 +50,12 @@ namespace ChartsDemo.ViewModels.UC
 
                     //距离x,y轴的距离
                     //下面这样就没有距离了
-                    //DataPadding =  new LiveChartsCore.Drawing.LvcPoint (0,0),
                     DataPadding =  new LiveChartsCore.Drawing.LvcPoint (0,0.5),
 
                     //给线,或者柱子指定颜色和粗细
+                    //如果是饼图，请使用：Fill
                     Stroke = new SolidColorPaint(SKColors.Red) { StrokeThickness = 1 },
+                    //Fill = new SolidColorPaint( SKColors.Red ) ,
 
                     
                     //中间节点,圆圈的颜色和粗细
