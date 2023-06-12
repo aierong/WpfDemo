@@ -28,6 +28,7 @@ namespace ChartsDemo.ViewModels.UC
 
             TextSize = 25 ,
             Padding = new LiveChartsCore.Drawing.Padding( 15 ) ,
+
             Paint = new SolidColorPaint()
             {
                 Color = SKColors.Blue ,
@@ -83,10 +84,10 @@ namespace ChartsDemo.ViewModels.UC
         {
             new Axis
             {
-                //Name = "Salesman/woman",
+                //定义x轴值
                 Labels = new string[] { "08-10", "10-12", "12-14", "14-16", "16-18", "18-20", "20-22", "22-24" },
 
-                
+               
 
                 //标签字体大小
                 //TextSize =8,
@@ -96,17 +97,12 @@ namespace ChartsDemo.ViewModels.UC
 
                 //标签的内边距
                 Padding = new LiveChartsCore.Drawing.Padding(0, 0),
-
-                 
-                //MinStep = 1,
-                //SeparatorsPaint = new SolidColorPaint(SKColors.LightSlateGray) { StrokeThickness = 0 },
+                                
 
                 LabelsPaint = new SolidColorPaint
                 {
                     //x轴文本颜色
                     Color = SKColors.Orange,
-
-
 
                     SKTypeface = SKFontManager.Default.MatchCharacter('汉') // 汉语 
                     // SKTypeface = SKFontManager.Default.MatchCharacter('أ'), // Arab
@@ -126,7 +122,9 @@ namespace ChartsDemo.ViewModels.UC
         {
             new Axis
             {
+                //名字
                 //Name = "Sales amount",
+                //名字，显示边距
                 //NamePadding = new LiveChartsCore.Drawing.Padding(0, 22),
 
 
@@ -143,8 +141,6 @@ namespace ChartsDemo.ViewModels.UC
                     Color = SKColors.Orange,
 
                 }
-
-
 
             }
         };
