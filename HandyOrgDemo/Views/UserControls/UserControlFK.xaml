@@ -18,7 +18,7 @@
                 官网提到要用：Viewbox控制大小
             -->
             <!--
-                Stretch="Fill"
+                Stretch="Fill" 可以填充
             -->
             <Viewbox Width="250"
                      Height="250">
