@@ -23,7 +23,9 @@
     
     StartupUri="/Views/ConverterDemo/demo1/Window1.XAML"  转换器
     
-    StartupUri="/Views/DH/Window1.XAML"
+    StartupUri="/Views/DH/Window1.XAML"  动画
+    
+    StartupUri="/Views/BindData/ListData/Views/ListData.XAML"    列表
 -->
 <Application x:Class="WpfApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -33,7 +35,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/KJ/mainpage.XAML">
+             StartupUri="/Views/BindData/ListData/Views/ListData.XAML">
 
     <!--  Application.Resources是定义整个程序级别的资源，每个窗体都可以访问到  -->
     <Application.Resources>

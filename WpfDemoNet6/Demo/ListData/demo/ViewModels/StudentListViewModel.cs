@@ -44,7 +44,6 @@ namespace WpfDemoNet6.Demo.ListData.demo.ViewModels
 
 
 
-
         /// <summary>
         /// 总计
         /// </summary>
