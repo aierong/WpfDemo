@@ -14,12 +14,14 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel>
-            <!--  Stretch="Fill" 
-            官网提到要用：Viewbox控制大小
+            <!--
+                官网提到要用：Viewbox控制大小
             -->
-            <Viewbox Name="viewbox1"
-                     Width="100"
-                     Height="100">
+            <!--
+                Stretch="Fill"
+            -->
+            <Viewbox Width="250"
+                     Height="250">
                 <hc:FlipClock />
             </Viewbox>
 
