@@ -26,9 +26,17 @@
                 FontFamily的2种引用方式
                 最后都是固定这个：#iconfont
             -->
+
+            <!--
+            /       代表文件所在的根目录
+            ../     代表文件所在的父级目录
+            -->
             <TextBlock FontFamily="/assets/font1/#iconfont"
                        Text="&#xe6d4;">
+                 
             </TextBlock>
+            <TextBlock FontFamily="../../assets/font1/#iconfont"
+                       Text="&#xe6d4;"></TextBlock>
             <TextBlock FontFamily="pack://application:,,,/assets/font1/#iconfont"
                        Text="&#xe6d4;">
             </TextBlock>
