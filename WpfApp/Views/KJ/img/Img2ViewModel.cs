@@ -47,6 +47,29 @@ namespace WpfApp.Views.KJ.img
 
 
 
+        private int _Num = 0;
+
+
+
+        /// <summary>
+        /// 名字
+        /// </summary>
+        public int Num
+        {
+            get
+            {
+                return _Num;
+            }
+            set
+            {
+                _Num = value;
+
+                //通知数据已经变化
+                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Num" ) );
+            }
+        }
+
+
         private System.Windows.Media.ImageSource imgdata = null;
 
         public System.Windows.Media.ImageSource ImgData
@@ -71,10 +94,13 @@ namespace WpfApp.Views.KJ.img
 
             //本demo中使用图片，在本目录images中有
             //NetImgName = @"\\10.12.0.151\misfile\test\images\BQC.jpg";          //防止报错，暂时屏蔽了，需要可以打开
+
             //ImgData = new BitmapImage( new Uri( @"\\10.12.0.151\misfile\test\images\BQC.jpg" ) );
 
             UpdateImgCommand = new MyCommand( () =>
             {
+                Random _random = new Random();
+
                 Debug.WriteLine( "UpdateImgCommand:" );
 
                 //改变图片
