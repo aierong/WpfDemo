@@ -4,10 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WpfApp.Views.KJ"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="mainpage"
+        Title="控件"
         Width="800"
         Height="650"
-        mc:Ignorable="d">
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        mc:Ignorable="d" WindowState="Maximized" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
@@ -35,7 +37,7 @@
                     Click="btnNav_Click"
                     Content="TextBlock"
                     Tag="/Views/KJ/txt/UCTxt1.xaml" />
-            
+
             <Button Margin="5"
                     Click="btnNav_Click"
                     Content="TabControl"
@@ -48,8 +50,8 @@
                     Click="btnNav_Click"
                     Content="ItemsControl"
                     Tag="/Views/KJ/ItemsControl/ItemsControlUserControl.xaml" />
-            
-            
+
+
         </WrapPanel>
 
         <Frame Name="frmMain"
