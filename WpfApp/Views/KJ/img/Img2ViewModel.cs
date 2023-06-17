@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.Win32;
 using System.Windows.Media.Imaging;
 using WpfApp.Views.BaseCommand;
+using System.IO;
 
 //参考:https://wpf-tutorial.com/zh/493/%E5%9F%BA%E6%9C%AC%E6%8E%A7%E5%88%B6%E9%A0%85/image%E6%8E%A7%E4%BB%B6/
 
@@ -42,6 +43,30 @@ namespace WpfApp.Views.KJ.img
 
                 //通知数据已经变化
                 PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "NetImgName" ) );
+            }
+        }
+
+
+
+        private string _CopyImgName = string.Empty;
+
+
+
+        /// <summary>
+        /// 名字
+        /// </summary>
+        public string CopyImgName
+        {
+            get
+            {
+                return _CopyImgName;
+            }
+            set
+            {
+                _CopyImgName = value;
+
+                //通知数据已经变化
+                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "CopyImgName" ) );
             }
         }
 
@@ -95,7 +120,7 @@ namespace WpfApp.Views.KJ.img
             //本demo中使用图片，在本目录images中有
             //NetImgName = @"\\10.12.0.151\misfile\test\images\BQC.jpg";          //防止报错，暂时屏蔽了，需要可以打开
 
-            //ImgData = new BitmapImage( new Uri( @"\\10.12.0.151\misfile\test\images\BQC.jpg" ) );
+            ImgData = new BitmapImage( new Uri( @"\\10.12.0.151\misfile\test\images\BQC.jpg" ) );
 
             UpdateImgCommand = new MyCommand( () =>
             {
@@ -106,6 +131,8 @@ namespace WpfApp.Views.KJ.img
                 //改变图片
                 //NetImgName = @"\\10.12.0.151\misfile\test\images\zhonghe1.png";      //防止报错，暂时屏蔽了，需要可以打开
             } );
+
+
 
             SelectImgCommand = new MyCommand( () =>
             {
@@ -118,6 +145,35 @@ namespace WpfApp.Views.KJ.img
                     Uri fileUri = new Uri( openFileDialog.FileName );
                     ImgData = new BitmapImage( fileUri );
                 }
+            } );
+
+
+
+            CopyImgCommand = new MyCommand( () =>
+            {
+                Debug.WriteLine( "CopyImgCommand:" );
+
+                string path = Environment.CurrentDirectory + @"\" + @"pic\day";
+
+                bool bl = Directory.Exists( path );
+
+                if ( !bl )
+                {
+                    Directory.CreateDirectory ( path );
+                }
+
+                //File.Copy
+                var netfile = @"\\10.12.0.151\misfile\test\images\VBQ.jpg";
+                //File.Copy( netfile ,)
+                var localfile = path + @"\VBQ.jpg";
+
+                if ( !File.Exists( localfile ) )
+                {
+                    File.Copy( netfile , localfile );
+                }
+
+                CopyImgName = localfile;
+
             } );
         }
 
@@ -143,5 +199,9 @@ namespace WpfApp.Views.KJ.img
 
 
 
+        public MyCommand CopyImgCommand
+        {
+            get; set;
+        }
     }
 }

@@ -7,13 +7,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              d:DataContext="{d:DesignInstance local:Img2ViewModel,
                                               IsDesignTimeCreatable=True}"
-             d:DesignHeight="450"
+             d:DesignHeight="650"
              d:DesignWidth="800"
              mc:Ignorable="d">
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
 
+            <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -98,8 +99,8 @@
                            Height="100"
                            gif:ImageBehavior.AnimatedSource="/Imgs/g1.gif" />
 
-                    <Image Width="100"
-                           Height="100"
+                    <Image Width="50"
+                           Height="50"
                            gif:ImageBehavior.AnimatedSource="/Imgs/9.gif" />
                     <!--
                     <Image Width="100"
@@ -113,6 +114,31 @@
                 </StackPanel>
 
 
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0">
+            <Grid ShowGridLines="True">
+                <!--  dd  -->
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row="0"
+                       Grid.Column="0"
+                       Width="100"
+                       Height="100"
+                       Source="{Binding CopyImgName}" />
+                
+                <Button Grid.Row="1"
+                        Grid.Column="0"
+                        Height="30"
+                        Command="{Binding CopyImgCommand}"
+                        Content="网络copy图片显示" />
             </Grid>
         </StackPanel>
     </Grid>
