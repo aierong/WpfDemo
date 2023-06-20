@@ -77,9 +77,7 @@ namespace ChartsDemo.ViewModels.UC
 
 
         public UCPie1ViewModel ()
-        {
-
-            
+        {      
         }
     }
 }
