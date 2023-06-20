@@ -22,23 +22,25 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-
-
         <!--
             参考:https://zhuanlan.zhihu.com/p/397179000
         -->
-
         <StackPanel Grid.Row="0"
                     Grid.Column="0">
+            <!--
+                这个字体支持数字和英文字母led
+                英文字母都是用大写显示了
+            -->
             <TextBlock FontFamily="/assets/font2/#Seven Segment"
                        FontSize="35"
                        Foreground="Green"
-                       Text="0123456789abcdefghijklmnopqrstuvwxyz">
+                       Text="0123456789abcdefghijklmnopqrstuvwxyz%">
             </TextBlock>
+            <!--  中文也可以正常显示  -->
             <TextBlock FontFamily="{DynamicResource 7SegFontFamily}"
                        FontSize="35"
                        Foreground="OrangeRed"
-                       Text="WELCOME">
+                       Text="WELCOME英文字母都是用大写显示了-参考">
             </TextBlock>
             <TextBlock FontSize="25"
                        Text="0123456789abcdefghijklmnopqrstuvwxyz">

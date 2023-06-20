@@ -26,6 +26,7 @@
     
     StartupUri="/Views/DH/Window1.XAML"  动画
     
+    
     StartupUri="/Views/BindData/ListData/Views/ListData.XAML"    列表
 -->
 <Application x:Class="WpfApp.App"
@@ -36,7 +37,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/fonts/font2Window.XAML">
+             StartupUri="/Views/DH/Window1.XAML">
 
 
 
