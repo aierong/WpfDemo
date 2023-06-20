@@ -78,6 +78,73 @@
                     </EventTrigger>
                 </TextBlock.Triggers>
             </TextBlock>
+
+            <!--
+                第3个
+                参考: https://www.freesion.com/article/8993999627/
+            -->
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="30"
+                       Text="{Binding Title}">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush SpreadMethod="Repeat">
+                        <LinearGradientBrush.Transform>
+                            <TranslateTransform x:Name="LinearGradientBrushTranslate" />
+                        </LinearGradientBrush.Transform>
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Offset="0.00" Color="Red" />
+                            <GradientStop Offset="0.14" Color="Yellow" />
+                            <GradientStop Offset="0.28" Color="Blue" />
+                            <GradientStop Offset="0.42" Color="Green" />
+                            <GradientStop Offset="0.42" Color="Purple" />
+
+                            <!--
+                            这是一组颜色效果
+                            <GradientStop Offset="0.00" Color="#FFFF2B88" />
+                            <GradientStop Offset="0.14" Color="#FFFF9B6A" />
+                            <GradientStop Offset="0.28" Color="#FFF3D64E" />
+                            <GradientStop Offset="0.42" Color="#FFDCFF93" />
+                            <GradientStop Offset="0.56" Color="#FFB8F1CC" />
+                            <GradientStop Offset="0.70" Color="#FFD9B8F1" />
+                            <GradientStop Offset="0.85" Color="#FFCA7497" />
+                            <GradientStop Offset="1.00" Color="#FFFF2B88" />
+                            -->
+
+                            <!--
+                            这是一组颜色效果
+                            <GradientStop Offset="0.00" Color="#FFFF2B88" />
+                            <GradientStop Offset="0.14" Color="#FFFF9B6A" />
+                            <GradientStop Offset="0.85" Color="#FFCA7497" />
+                            -->
+
+                            <!--
+                            这是一组颜色效果
+                            <GradientStop Offset="0.00" Color="Green"  />
+                            <GradientStop Offset="0.42" Color="#FFDCFF93" />
+                            <GradientStop Offset="0.56" Color="#FFB8F1CC" />
+                            -->
+
+
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="TextBlock.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <!--  DoubleAnimation中的Duration可以调整速度  -->
+                                <DoubleAnimation RepeatBehavior="Forever"
+                                                 Storyboard.TargetName="LinearGradientBrushTranslate"
+                                                 Storyboard.TargetProperty="X"
+                                                 From="0"
+                                                 To="700"
+                                                 Duration="0:0:12" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
             <Button Width="50"
                     Margin="0,20,0,20"
                     Command="{Binding ShowCommand}"

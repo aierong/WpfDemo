@@ -24,12 +24,7 @@ namespace WpfApp.Views.DH
 
         public void Show ()
         {
-
-            Title = "gai le title" + DateTime.Now.ToLongTimeString();
-
-            //var i = 0;
-
-            //var m = 100 / i;
+            Title = "gang gang gai le title time:" + DateTime.Now.ToLongTimeString();
         }
 
 
