@@ -20,7 +20,7 @@
     
     
     StartupUri="/Views/fonts/fontWindow1.XAML"    图标
-    
+    StartupUri="/Views/fonts/font2Window.XAML"
     
     StartupUri="/Views/ConverterDemo/demo1/Window1.XAML"  转换器
     
@@ -36,7 +36,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/KJ/mainpage.XAML">
+             StartupUri="/Views/fonts/font2Window.XAML">
 
 
 
@@ -60,5 +60,5 @@
     </Application.Resources>
 
 </Application>
-    
-    
+
+

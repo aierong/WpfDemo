@@ -158,6 +158,9 @@
       <DependentUpon>Window5.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DH\Window5ViewModel.cs" />
+    <Compile Include="Views\fonts\font2Window.xaml.cs">
+      <DependentUpon>font2Window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\fonts\fontWindow1.xaml.cs">
       <DependentUpon>fontWindow1.xaml</DependentUpon>
     </Compile>
@@ -427,6 +430,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\fonts\font2Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\fonts\fontWindow1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -580,6 +587,7 @@
     <Resource Include="assets\font1\iconfont.ttf" />
     <None Include="assets\font1\iconfont.woff" />
     <None Include="assets\font1\iconfont.woff2" />
+    <Resource Include="assets\font2\Seven Segment.ttf" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
