@@ -85,14 +85,14 @@ namespace ChartsDemo.ViewModels.UC
 
 
 
-            LegendTextPaint = null;
+            //LegendTextPaint = null;
 
 
             //特别提示：每次重新刷新数据后，Legend里面的文本位置会错乱   官网github，好像有提到会在后续版本修复
             //SolidColorPaint 要重新赋值，要不，更新后，不显示
             LegendTextPaint = new SolidColorPaint
             {
-                Color = SKColors.Orange ,
+                Color = SKColors.Black ,
                 //IsFill = true ,
                 // ZIndex = 0 ,
                 StrokeThickness = 2 ,
@@ -121,7 +121,7 @@ namespace ChartsDemo.ViewModels.UC
 
             //饼图的数量变化，name也变化了
 
-            this.createdata( new Random().Next( 3 , 6 ) );
+            this.createdata( new Random().Next( 2 , 6 ) );
             return;
 
         } ) );
