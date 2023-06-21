@@ -12,11 +12,10 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
 
-    <Grid ShowGridLines="True">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="auto" />
-
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -31,68 +30,92 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Orientation="Horizontal">
-            <Button Height="30"
-                    Margin="10,10,10,10"
-                    Command="{Binding AButtonClickCommand}"
-                    Content="基本" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
 
-            <Button Height="30"
-                    Margin="10,10,10,10"
-                    Command="{Binding CYButtonClickCommand}"
-                    Content="一些常用属性" />
+                <StackPanel Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Orientation="Horizontal">
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding AButtonClickCommand}"
+                            Content="基本" />
 
-            <Button Height="30"
-                    Margin="10,10,10,10"
-                    Command="{Binding LineButtonClickCommand}"
-                    Content="Line" />
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding CYButtonClickCommand}"
+                            Content="一些常用属性" />
 
-            <Button Height="30"
-                    Margin="10,10,10,10"
-                    Command="{Binding LineDuoButtonClickCommand}"
-                    Content="Line(多个)" />
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding LineButtonClickCommand}"
+                            Content="Line" />
 
-            <Button Height="30"
-                    Margin="10,10,10,10"
-                    Command="{Binding Bar0ButtonClickCommand}"
-                    Content="Bar" />
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding LineDuoButtonClickCommand}"
+                            Content="Line(多个)" />
 
-            <Button Height="30"
-                    Margin="10,10,10,10"
-                    Command="{Binding Bar1ButtonClickCommand}"
-                    Content="Bar(多个)" />
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding Bar0ButtonClickCommand}"
+                            Content="Bar" />
 
-            <Button Height="30"
-                    Margin="10,10,10,10"
-                    Command="{Binding BarLine1ButtonClickCommand}"
-                    Content="Bar和line" />
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding Bar1ButtonClickCommand}"
+                            Content="Bar(多个)" />
 
-            <Button Height="30"
-                    Margin="10,10,10,10"
-                    Command="{Binding Pie1ButtonClickCommand}"
-                    Content="pie" />
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding BarLine1ButtonClickCommand}"
+                            Content="Bar和line" />
 
-            <Button Height="30"
-                    Margin="10,10,10,10"
-                    Command="{Binding DongTai1ButtonClickCommand}"
-                    Content="动态line" />
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding Pie1ButtonClickCommand}"
+                            Content="pie" />
+                </StackPanel>
+                <StackPanel Grid.Row="1"
+                            Grid.Column="0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Orientation="Horizontal">
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding DongTai1ButtonClickCommand}"
+                            Content="动态line" />
 
-            <Button Height="30"
-                    Margin="10,10,10,10"
-                    Command="{Binding DongTaiBar1ButtonClickCommand}"
-                    Content="动态bar" />
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding DongTaiBar1ButtonClickCommand}"
+                            Content="动态bar" />
 
-            <Button Height="30"
-                    Margin="10,10,10,10"
-                    Command="{Binding PieDontTai0ButtonClickCommand}"
-                    Content="动态pie demo0" />
-            <Button Height="30"
-                    Margin="10,10,10,10"
-                    Command="{Binding PieDontTai1ButtonClickCommand}"
-                    Content="动态pie demo1" />
-            <Button Height="30"
-                    Margin="10,10,10,10"
-                    Command="{Binding PieDontTaiPlusButtonClickCommand}"
-                    Content="动态pie demoplus" />
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding PieDontTai0ButtonClickCommand}"
+                            Content="动态pie demo0" />
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding PieDontTai1ButtonClickCommand}"
+                            Content="动态pie demo1" />
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding PieDontTaiPlusButtonClickCommand}"
+                            Content="动态pie demoplus" />
+                </StackPanel>
+            </Grid>
+
+
+
         </StackPanel>
     </Grid>
 </Window>
