@@ -9,12 +9,11 @@ using Prism.Mvvm;
 using LiveChartsCore.SkiaSharpView.Painting;
 using SkiaSharp;
 using System.Windows.Ink;
-
-
+using Prism.Regions;
 
 namespace ChartsDemo.ViewModels.UC
 {
-    public class UCBar1ViewModel : BindableBase
+    public class UCBar1ViewModel : BindableBase, INavigationAware
     {
         public ISeries[] Series
         {
@@ -101,8 +100,27 @@ namespace ChartsDemo.ViewModels.UC
             SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
         };
 
-        
 
+
+
+
+
+        public void OnNavigatedTo ( NavigationContext navigationContext )
+        {
+            //throw new NotImplementedException();
+        }
+
+        public bool IsNavigationTarget ( NavigationContext navigationContext )
+        {
+            //throw new NotImplementedException();
+            //IsNavigationTarget：True则重用该View实例，Flase则每一次导航到该页面都会实例化一次
+            return false;
+        }
+
+        public void OnNavigatedFrom ( NavigationContext navigationContext )
+        {
+            //throw new NotImplementedException();
+        }
 
     }
 }

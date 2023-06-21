@@ -8,10 +8,11 @@ using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore;
 using Prism.Mvvm;
 using SkiaSharp;
+using Prism.Regions;
 
 namespace ChartsDemo.ViewModels.UC
 {
-    public  class UCBar0ViewModel : BindableBase
+    public  class UCBar0ViewModel : BindableBase, INavigationAware
     {
         public ISeries[] Series
         {
@@ -81,9 +82,24 @@ namespace ChartsDemo.ViewModels.UC
 
 
 
-        
 
 
+        public void OnNavigatedTo ( NavigationContext navigationContext )
+        {
+            //throw new NotImplementedException();
+        }
+
+        public bool IsNavigationTarget ( NavigationContext navigationContext )
+        {
+            //throw new NotImplementedException();
+            //IsNavigationTarget：True则重用该View实例，Flase则每一次导航到该页面都会实例化一次
+            return false;
+        }
+
+        public void OnNavigatedFrom ( NavigationContext navigationContext )
+        {
+            //throw new NotImplementedException();
+        }
 
     }
 }
