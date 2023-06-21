@@ -107,7 +107,7 @@
                     <Button Height="30"
                             Margin="10,10,10,10"
                             Command="{Binding UCBarRow1DongTaiButtonClickCommand}"
-                            Content="动态bar2" />
+                            Content="动态bar(赛跑模式)" />
 
                     <Button Height="30"
                             Margin="10,10,10,10"

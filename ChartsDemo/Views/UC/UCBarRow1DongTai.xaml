@@ -33,7 +33,7 @@
             <Button Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding BButtonClickCommand}"
-                    Content="改变一下" />
+                    Content="改变一下(赛跑模式)" />
 
 
 
