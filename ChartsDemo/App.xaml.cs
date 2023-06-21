@@ -92,6 +92,7 @@ namespace ChartsDemo
             containerRegistry.RegisterForNavigation<PieDontTaiPlus>( "PieDontTaiPlus" );
 
             containerRegistry.RegisterForNavigation<UserControl123>( "UserControl123" );
+            containerRegistry.RegisterForNavigation<UCBarRow1>( "UCBarRow1" );
 
 
         }

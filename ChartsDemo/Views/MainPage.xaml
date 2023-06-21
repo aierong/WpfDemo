@@ -81,6 +81,11 @@
 
                     <Button Height="30"
                             Margin="10,10,10,10"
+                            Command="{Binding BarRow1ButtonClickCommand}"
+                            Content="Bar横向" />
+                    
+                    <Button Height="30"
+                            Margin="10,10,10,10"
                             Command="{Binding Pie1ButtonClickCommand}"
                             Content="pie" />
                 </StackPanel>
