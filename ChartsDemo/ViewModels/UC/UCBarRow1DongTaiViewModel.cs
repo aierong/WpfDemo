@@ -14,6 +14,9 @@ using LiveChartsCore.Defaults;
 using LiveChartsCore.Drawing;
 using Prism.Commands;
 using Prism.Regions;
+using Newtonsoft.Json.Linq;
+using System.Windows.Ink;
+using System.Xml.Linq;
 
 namespace ChartsDemo.ViewModels.UC
 {
@@ -62,7 +65,7 @@ namespace ChartsDemo.ViewModels.UC
                 Values = new[] { new ObservableValue(11) },
                 Name = "s1",
                 Stroke = null,
-                MaxBarWidth = 25,
+                //MaxBarWidth = 25,
                 DataLabelsPaint = new SolidColorPaint(new SKColor(245, 245, 245)),
                 DataLabelsPosition = DataLabelsPosition.End,
                 DataLabelsTranslate = new LvcPoint(-1, 0),
@@ -73,7 +76,7 @@ namespace ChartsDemo.ViewModels.UC
                 Values = new[] { new ObservableValue(9) },
                 Name = "s2",
                 Stroke = null,
-                MaxBarWidth = 25,
+                //MaxBarWidth = 25,
                 DataLabelsPaint = new SolidColorPaint(new SKColor(245, 245, 245)),
                 DataLabelsPosition = DataLabelsPosition.End,
                 DataLabelsTranslate = new LvcPoint(-1, 0),
@@ -84,7 +87,7 @@ namespace ChartsDemo.ViewModels.UC
                 Values = new[] { new ObservableValue(7) },
                 Name = "s3",
                 Stroke = null,
-                MaxBarWidth = 25,
+                //MaxBarWidth = 25,
                 DataLabelsPaint = new SolidColorPaint(new SKColor(245, 245, 245)),
                 DataLabelsPosition = DataLabelsPosition.End,
                 DataLabelsTranslate = new LvcPoint(-1, 0),
@@ -95,7 +98,7 @@ namespace ChartsDemo.ViewModels.UC
                 Values = new[] { new ObservableValue(3) },
                 Name = "s4",
                 Stroke = null,
-                MaxBarWidth = 25,
+                //MaxBarWidth = 25,
                 DataLabelsPaint = new SolidColorPaint(new SKColor(245, 245, 245)),
                 DataLabelsPosition = DataLabelsPosition.End,
                 DataLabelsTranslate = new LvcPoint(-1, 0),
@@ -106,7 +109,7 @@ namespace ChartsDemo.ViewModels.UC
                 Values = new[] { new ObservableValue(2) },
                 Name = "s5",
                 Stroke = null,
-                MaxBarWidth = 25,
+                //MaxBarWidth = 25,
                 DataLabelsPaint = new SolidColorPaint(new SKColor(245, 245, 245)),
                 DataLabelsPosition = DataLabelsPosition.End,
                 DataLabelsTranslate = new LvcPoint(-1, 0),
@@ -114,15 +117,27 @@ namespace ChartsDemo.ViewModels.UC
             },
                new RowSeries<ObservableValue>()
             {
-                Values = new[] { new ObservableValue(0) },
+                Values = new[] { new ObservableValue(1) },
                 Name = "s6",
                 Stroke = null,
-                MaxBarWidth = 25,
+                //MaxBarWidth = 25,
                 DataLabelsPaint = new SolidColorPaint(new SKColor(245, 245, 245)),
                 DataLabelsPosition = DataLabelsPosition.End,
                 DataLabelsTranslate = new LvcPoint(-1, 0),
                 DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.PrimaryValue}"
-            }
+            },
+               new RowSeries<ObservableValue>()
+            {
+                Values = new[] { new ObservableValue(1) },
+                Name = "s7",
+                Stroke = null,
+                //MaxBarWidth = 25,
+                DataLabelsPaint = new SolidColorPaint(new SKColor(245, 245, 245)),
+                DataLabelsPosition = DataLabelsPosition.End,
+                DataLabelsTranslate = new LvcPoint(-1, 0),
+                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.PrimaryValue}"
+            },
+
         };
 
 
@@ -169,10 +184,20 @@ namespace ChartsDemo.ViewModels.UC
                 i.Value += _random.Next( 0 , 20 );
             }
 
-            
+            Series.Add( new RowSeries<ObservableValue>()
+            {
+                Values = new[] { new ObservableValue( 7 ) } ,
+                Name = "snew7" ,
+                Stroke = null ,
+                MaxBarWidth = 25 ,
+                DataLabelsPaint = new SolidColorPaint( new SKColor( 245 , 245 , 245 ) ) ,
+                DataLabelsPosition = DataLabelsPosition.End ,
+                DataLabelsTranslate = new LvcPoint( -1 , 0 ) ,
+                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.PrimaryValue}"
+            } );
 
             //排序一下
-            Series = Series.OrderByDescending( item => ( ( ObservableValue[] ) item.Values )[0].Value ).ToList ();
+            Series = Series.OrderByDescending( item => ( ( ObservableValue[] ) item.Values )[0].Value ).ToList();
 
         } ) );
 

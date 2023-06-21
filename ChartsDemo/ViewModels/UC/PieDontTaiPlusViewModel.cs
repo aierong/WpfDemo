@@ -209,6 +209,8 @@ namespace ChartsDemo.ViewModels.UC
         public PieDontTaiPlusViewModel ()
         {
             this.createdata( new Random().Next( 2 , 5 ) );
+
+             
         }
 
 
