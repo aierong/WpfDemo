@@ -17,6 +17,7 @@ using Prism.Regions;
 using Newtonsoft.Json.Linq;
 using System.Windows.Ink;
 using System.Xml.Linq;
+using System.ComponentModel;
 
 namespace ChartsDemo.ViewModels.UC
 {
@@ -184,27 +185,25 @@ namespace ChartsDemo.ViewModels.UC
                 i.Value += _random.Next( 0 , 20 );
             }
 
-            Series.Add( new RowSeries<ObservableValue>()
-            {
-                Values = new[] { new ObservableValue( 7 ) } ,
-                Name = "snew7" ,
-                Stroke = null ,
-                MaxBarWidth = 25 ,
-                DataLabelsPaint = new SolidColorPaint( new SKColor( 245 , 245 , 245 ) ) ,
-                DataLabelsPosition = DataLabelsPosition.End ,
-                DataLabelsTranslate = new LvcPoint( -1 , 0 ) ,
-                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.PrimaryValue}"
-            } );
+            //好像加一个也可以
+            //Series.Add( new RowSeries<ObservableValue>()
+            //{
+            //    Values = new[] { new ObservableValue( 7 ) } ,
+            //    Name = "snew7" ,
+            //    Stroke = null ,
+            //    MaxBarWidth = 25 ,
+            //    DataLabelsPaint = new SolidColorPaint( new SKColor( 245 , 245 , 245 ) ) ,
+            //    DataLabelsPosition = DataLabelsPosition.End ,
+            //    DataLabelsTranslate = new LvcPoint( -1 , 0 ) ,
+            //    DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.PrimaryValue}"
+            //} );
 
             //排序一下
             Series = Series.OrderByDescending( item => ( ( ObservableValue[] ) item.Values )[0].Value ).ToList();
 
+
+
         } ) );
-
-
-
-
-
 
 
 
