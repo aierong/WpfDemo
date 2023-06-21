@@ -85,7 +85,7 @@ namespace ChartsDemo
             containerRegistry.RegisterForNavigation<Pie1>( "Pie1" );
             containerRegistry.RegisterForNavigation<UCDongTai1>( "UCDongTai1" );
             containerRegistry.RegisterForNavigation<UCBarLine1>( "UCBarLine1" );
-            containerRegistry.RegisterForNavigation<UCDongTaiBar1>( "UCDongTaiBar1" );
+            containerRegistry.RegisterForNavigation<BarDongTai1>( "BarDongTai1" );
 
             containerRegistry.RegisterForNavigation<PieDontTai1>( "PieDontTai1" );
             containerRegistry.RegisterForNavigation<PieDontTai2>( "PieDontTai2" );

@@ -17,7 +17,7 @@ using SkiaSharp;
 
 namespace ChartsDemo.ViewModels.UC
 {
-    public class UCDongTaiBar1ViewModel : BindableBase, INavigationAware
+    public class BarDongTai1ViewModel : BindableBase, INavigationAware
     {
 
         private readonly ObservableCollection<ObservableValue> _observableValues = new ObservableCollection<ObservableValue>() { };
@@ -39,7 +39,7 @@ namespace ChartsDemo.ViewModels.UC
 
 
 
-        public UCDongTaiBar1ViewModel ()
+        public BarDongTai1ViewModel ()
         {
             Series = new ObservableCollection<ISeries>
             {
