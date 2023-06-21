@@ -11,6 +11,32 @@
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <lvc:CartesianChart Grid.Row="0"
+                            Grid.Column="0"
+                            Series="{Binding Series}"
+                            TooltipPosition="Hidden"
+                            XAxes="{Binding XAxes}"
+                            YAxes="{Binding YAxes}">
+        </lvc:CartesianChart>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <Button Height="30"
+                    Margin="10,10,10,10"
+                    Command="{Binding BButtonClickCommand}"
+                    Content="改变一下" />
 
+
+
+        </StackPanel>
     </Grid>
 </UserControl>
