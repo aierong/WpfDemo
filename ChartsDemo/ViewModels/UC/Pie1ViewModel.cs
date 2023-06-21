@@ -12,7 +12,7 @@ using SkiaSharp;
 
 namespace ChartsDemo.ViewModels.UC
 {
-    public class UCPie1ViewModel : BindableBase
+    public class Pie1ViewModel : BindableBase
     {
         public IEnumerable<ISeries> Series
         {
@@ -76,7 +76,7 @@ namespace ChartsDemo.ViewModels.UC
 
 
 
-        public UCPie1ViewModel ()
+        public Pie1ViewModel ()
         {      
         }
     }

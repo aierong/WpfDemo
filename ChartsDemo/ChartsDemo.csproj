@@ -62,7 +62,7 @@
     <Compile Include="ViewModels\UC\UCBarLine1ViewModel.cs" />
     <Compile Include="ViewModels\UC\UCDongTai1ViewModel.cs" />
     <Compile Include="ViewModels\UC\UCDongTaiBar1ViewModel.cs" />
-    <Compile Include="ViewModels\UC\UCPie1ViewModel.cs" />
+    <Compile Include="ViewModels\UC\Pie1ViewModel.cs" />
     <Compile Include="ViewModels\UC\PieDontTai1ViewModel.cs" />
     <Compile Include="ViewModels\UC\PieDontTai2ViewModel.cs" />
     <Compile Include="ViewModels\UC\PieDontTaiPlusViewModel.cs" />
@@ -92,8 +92,8 @@
     <Compile Include="Views\UC\UCDongTaiBar1.xaml.cs">
       <DependentUpon>UCDongTaiBar1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\UC\UCPie1.xaml.cs">
-      <DependentUpon>UCPie1.xaml</DependentUpon>
+    <Compile Include="Views\UC\Pie1.xaml.cs">
+      <DependentUpon>Pie1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UC\PieDontTai1.xaml.cs">
       <DependentUpon>PieDontTai1.xaml</DependentUpon>
@@ -140,7 +140,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\UC\UCPie1.xaml">
+    <Page Include="Views\UC\Pie1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
