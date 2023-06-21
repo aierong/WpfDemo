@@ -18,9 +18,9 @@ namespace ChartsDemo.Views.UC
     /// <summary>
     /// UCDongTai1.xaml 的互動邏輯
     /// </summary>
-    public partial class UCDongTai1 : UserControl
+    public partial class LineDongTai1 : UserControl
     {
-        public UCDongTai1 ()
+        public LineDongTai1 ()
         {
             InitializeComponent();
         }

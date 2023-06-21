@@ -15,7 +15,7 @@ using Prism.Regions;
 
 namespace ChartsDemo.ViewModels.UC
 {
-    public class UCDongTai1ViewModel : BindableBase, INavigationAware
+    public class LineDongTai1ViewModel : BindableBase, INavigationAware
     {
         ObservableCollection<ISeries> _Series;
 
@@ -32,7 +32,7 @@ namespace ChartsDemo.ViewModels.UC
             }
         }
 
-        public UCDongTai1ViewModel ()
+        public LineDongTai1ViewModel ()
         {
             _observableValues = new ObservableCollection<ObservableValue>
             {

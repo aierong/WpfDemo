@@ -96,7 +96,7 @@
                             Orientation="Horizontal">
                     <Button Height="30"
                             Margin="10,10,10,10"
-                            Command="{Binding DongTai1ButtonClickCommand}"
+                            Command="{Binding LineDongTai1ButtonClickCommand}"
                             Content="动态line" />
 
                     <Button Height="30"

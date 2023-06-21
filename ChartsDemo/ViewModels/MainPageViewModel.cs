@@ -11,11 +11,11 @@ using Prism.Regions;
 
 namespace ChartsDemo.ViewModels
 {
-    public  class MainPageViewModel : BindableBase
+    public class MainPageViewModel : BindableBase
     {
         IRegionManager _regionManager;
 
-        public MainPageViewModel( IRegionManager regionManager )
+        public MainPageViewModel ( IRegionManager regionManager )
         {
             this._regionManager = regionManager;
         }
@@ -92,11 +92,11 @@ namespace ChartsDemo.ViewModels
 
 
 
-        private DelegateCommand _DongTai1ButtonClickCommand;
-        public DelegateCommand DongTai1ButtonClickCommand => _DongTai1ButtonClickCommand ?? ( _DongTai1ButtonClickCommand = new DelegateCommand( () =>
+        private DelegateCommand _LineDongTai1ButtonClickCommand;
+        public DelegateCommand LineDongTai1ButtonClickCommand => _LineDongTai1ButtonClickCommand ?? ( _LineDongTai1ButtonClickCommand = new DelegateCommand( () =>
         {
             //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
-            this._regionManager.RequestNavigate( "ContentRegion" , "UCDongTai1" );
+            this._regionManager.RequestNavigate( "ContentRegion" , "LineDongTai1" );
         } ) );
 
 
@@ -109,7 +109,7 @@ namespace ChartsDemo.ViewModels
         } ) );
 
 
-        
+
         private DelegateCommand _PieDontTai0ButtonClickCommand;
         public DelegateCommand PieDontTai0ButtonClickCommand => _PieDontTai0ButtonClickCommand ?? ( _PieDontTai0ButtonClickCommand = new DelegateCommand( () =>
         {
@@ -127,7 +127,7 @@ namespace ChartsDemo.ViewModels
         } ) );
 
 
-      
+
         private DelegateCommand _PieDontTaiPlusButtonClickCommand;
         public DelegateCommand PieDontTaiPlusButtonClickCommand => _PieDontTaiPlusButtonClickCommand ?? ( _PieDontTaiPlusButtonClickCommand = new DelegateCommand( () =>
         {
@@ -143,5 +143,8 @@ namespace ChartsDemo.ViewModels
             //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
             this._regionManager.RequestNavigate( "ContentRegion" , "UCBarRow1" );
         } ) );
+
+
+
     }
 }
