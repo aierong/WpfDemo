@@ -14,7 +14,7 @@ using SkiaSharp;
 
 namespace ChartsDemo.ViewModels.UC
 {
-    public class UCPieDontTaiPlusViewModel : BindableBase, INavigationAware
+    public class PieDontTaiPlusViewModel : BindableBase, INavigationAware
     {
         ObservableCollection<ISeries> _Series = new ObservableCollection<ISeries>() { };
 
@@ -206,7 +206,7 @@ namespace ChartsDemo.ViewModels.UC
 
 
 
-        public UCPieDontTaiPlusViewModel ()
+        public PieDontTaiPlusViewModel ()
         {
             this.createdata( new Random().Next( 2 , 5 ) );
         }

@@ -18,9 +18,9 @@ namespace ChartsDemo.Views.UC
     /// <summary>
     /// UCPieDontTaiPlus.xaml 的互動邏輯
     /// </summary>
-    public partial class UCPieDontTaiPlus : UserControl
+    public partial class PieDontTaiPlus : UserControl
     {
-        public UCPieDontTaiPlus ()
+        public PieDontTaiPlus ()
         {
             InitializeComponent();
         }
