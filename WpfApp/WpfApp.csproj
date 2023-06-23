@@ -250,6 +250,10 @@
     <Compile Include="Views\StyleDemo\UC\sxUserControl.xaml.cs">
       <DependentUpon>sxUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\svgdemo\svgViewModel.cs" />
+    <Compile Include="Views\svgdemo\svgWindow1.xaml.cs">
+      <DependentUpon>svgWindow1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControlDemo\demo1\Demo1.xaml.cs">
       <DependentUpon>Demo1.xaml</DependentUpon>
     </Compile>
@@ -533,6 +537,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\svgdemo\svgWindow1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\UserControlDemo\demo1\Demo1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -624,6 +632,9 @@
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf">
       <Version>1.1.39</Version>
     </PackageReference>
+    <PackageReference Include="SharpVectors.Wpf">
+      <Version>1.8.1</Version>
+    </PackageReference>
     <PackageReference Include="WpfAnimatedGif">
       <Version>2.0.2</Version>
     </PackageReference>
@@ -641,6 +652,11 @@
     <Content Include="assets\font1\demo_index.html" />
     <Content Include="assets\font1\iconfont.css" />
     <Content Include="assets\font1\iconfont.js" />
+    <Resource Include="assets\svg\baogao.svg" />
+    <Resource Include="assets\svg\juzhong.svg" />
+    <Resource Include="assets\svg\2-22.svg" />
+    <Resource Include="assets\svg\hantianyuan.svg" />
+    <Resource Include="assets\svg\juhua.svg" />
     <Resource Include="Imgs\car.gif" />
     <Resource Include="Imgs\8.gif" />
     <Resource Include="Imgs\9.gif" />
