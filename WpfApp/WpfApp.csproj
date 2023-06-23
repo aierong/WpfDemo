@@ -140,6 +140,9 @@
     <Compile Include="Views\ConverterDemo\demo1\Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DH\dhWindow6.xaml.cs">
+      <DependentUpon>dhWindow6.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DH\Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
@@ -407,6 +410,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConverterDemo\demo1\Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DH\dhWindow6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
