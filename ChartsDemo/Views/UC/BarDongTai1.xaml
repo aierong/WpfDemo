@@ -17,6 +17,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
         <lvc:CartesianChart Grid.Row="0"
@@ -33,6 +34,24 @@
             <Button Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding ResetButtonClickCommand}"
+                    Content="重置" />
+
+        </StackPanel>
+
+        <lvc:CartesianChart Grid.Row="0"
+                            Grid.Column="2"
+                            Series="{Binding dtSeries}"
+                            XAxes="{Binding dtXAxess}">
+            <!--  1  -->
+        </lvc:CartesianChart>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <Button Height="30"
+                    Margin="10,10,10,10"
+                    Command="{Binding ResetButton222ClickCommand}"
                     Content="重置" />
 
         </StackPanel>

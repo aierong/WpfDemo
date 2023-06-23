@@ -18,10 +18,10 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
+        <!--  TooltipPosition="Hidden"  -->
         <lvc:CartesianChart Grid.Row="0"
                             Grid.Column="0"
                             Series="{Binding Series}"
-                            TooltipPosition="Hidden"
                             XAxes="{Binding XAxes}"
                             YAxes="{Binding YAxes}">
         </lvc:CartesianChart>

@@ -131,7 +131,6 @@ namespace ChartsDemo.ViewModels.UC
             var fors = _random.Next( 2 , 8 );
 
             _observableValues.Clear();
-            //清除x轴的值，随机产生6个x轴的值
             _observableValues_x_val.Clear();
             for ( int i = 1 ; i <= fors ; i++ )
             {
