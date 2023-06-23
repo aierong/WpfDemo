@@ -29,6 +29,7 @@
     
     StartupUri="/Views/svgdemo/svgWindow1.XAML"  svg
     
+    
     StartupUri="/Views/BindData/ListData/Views/ListData.XAML"    列表
 -->
 <Application x:Class="WpfApp.App"
