@@ -57,6 +57,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\UC\LineDongTai2ViewModel.cs" />
     <Compile Include="ViewModels\UC\UCBar0ViewModel.cs" />
     <Compile Include="ViewModels\UC\UCBar1ViewModel.cs" />
     <Compile Include="ViewModels\UC\UCBarLine1ViewModel.cs" />
@@ -78,6 +79,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\UC\LineDongTai2.xaml.cs">
+      <DependentUpon>LineDongTai2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UC\UCBar0.xaml.cs">
       <DependentUpon>UCBar0.xaml</DependentUpon>
@@ -125,6 +129,10 @@
       <DependentUpon>UserControlLineDuo.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC\LineDongTai2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

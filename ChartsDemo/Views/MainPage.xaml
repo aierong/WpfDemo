@@ -12,7 +12,7 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
 
-    <Grid>
+    <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="auto" />
@@ -20,6 +20,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
+        
         <!--  这里定义一个区域来加载导航  -->
         <ContentControl Grid.Row="0"
                         Grid.Column="0"
@@ -83,7 +84,7 @@
                             Margin="10,10,10,10"
                             Command="{Binding BarRow1ButtonClickCommand}"
                             Content="Bar横向" />
-                    
+
                     <Button Height="30"
                             Margin="10,10,10,10"
                             Command="{Binding Pie1ButtonClickCommand}"
@@ -98,7 +99,12 @@
                             Margin="10,10,10,10"
                             Command="{Binding LineDongTai1ButtonClickCommand}"
                             Content="动态line" />
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding LineDongTai2ButtonClickCommand}"
+                            Content="动态line___" />
 
+                    
                     <Button Height="30"
                             Margin="10,10,10,10"
                             Command="{Binding DongTaiBar1ButtonClickCommand}"
@@ -123,8 +129,6 @@
                             Content="动态pie demoplus" />
                 </StackPanel>
             </Grid>
-
-
 
         </StackPanel>
     </Grid>
