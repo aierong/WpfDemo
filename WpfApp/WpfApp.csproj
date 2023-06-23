@@ -603,6 +603,9 @@
     <None Include="assets\font1\iconfont.woff" />
     <None Include="assets\font1\iconfont.woff2" />
     <Resource Include="assets\font2\Seven Segment.ttf" />
+    <Resource Include="assets\lottie\ph.json" />
+    <Resource Include="assets\lottie\datas.json" />
+    <Resource Include="assets\lottie\huibao.json" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -629,6 +632,9 @@
     <None Include="Resources\icon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="LottieSharp">
+      <Version>1.1.3</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf">
       <Version>1.1.39</Version>
     </PackageReference>
