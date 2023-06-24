@@ -1,0 +1,97 @@
+﻿<Window x:Class="WpfApp.Views.KJ.grid.tiaojianxianshi.BuTonggridWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp.Views.KJ.grid.tiaojianxianshi"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="BuTonggridWindow1"
+        Width="800"
+        Height="450"
+        d:DataContext="{d:DesignInstance local:BuTonggridWindow1ViewModel,
+                                         IsDesignTimeCreatable=True}"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0">
+            <DataGrid AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      IsReadOnly="True"
+                      ItemsSource="{Binding Students}">
+
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn Width="100"
+                                        Binding="{Binding Id}"
+                                        Header="ID" />
+                    <DataGridTextColumn Width="100"
+                                        Binding="{Binding Name}"
+                                        Header="学生姓名" />
+                    <DataGridTextColumn Width="200"
+                                        Binding="{Binding Age}"
+                                        Header="年龄" />
+                    <DataGridTemplateColumn Width="160"
+                                            Header="性别文本">
+
+
+                        <DataGridTemplateColumn.CellTemplateSelector>
+                            <local:StudentTemplateSelector>
+
+
+                                <local:StudentTemplateSelector.NanTemplate>
+                                    <DataTemplate>
+                                        <!--  不同TemplateSelector中的DataTemplate里面可以包含不同的控件  -->
+                                        <TextBox IsReadOnly="False"
+                                                 Text="我是男性" />
+                                    </DataTemplate>
+                                </local:StudentTemplateSelector.NanTemplate>
+
+                                <local:StudentTemplateSelector.NvTemplate>
+                                    <DataTemplate>
+                                        <StackPanel HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    Orientation="Horizontal">
+                                            <TextBlock Foreground="#FFED0606"
+                                                       Text="{Binding IsMan}">
+                                            </TextBlock>
+                                            <TextBox IsReadOnly="False"
+                                                     Text="我是女性" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </local:StudentTemplateSelector.NvTemplate>
+                            </local:StudentTemplateSelector>
+                        </DataGridTemplateColumn.CellTemplateSelector>
+
+
+
+
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+
+
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <Button Width="100"
+                    Margin="10,10,10,10"
+                    Command="{Binding AddCommand}"
+                    Content="添加数据" />
+            <Button Width="100"
+                    Margin="10,10,10,10"
+                    Command="{Binding ReCommand}"
+                    Content="清空再添加" />
+        </StackPanel>
+    </Grid>
+</Window>

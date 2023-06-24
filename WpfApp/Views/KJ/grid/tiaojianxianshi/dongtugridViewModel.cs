@@ -9,7 +9,7 @@ using WpfApp.Views.BaseCommand;
 
 namespace WpfApp.Views.KJ.grid.tiaojianxianshi
 {
-    public class gdWindow1ViewModel : INotifyPropertyChanged
+    public class dongtugridViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -18,7 +18,7 @@ namespace WpfApp.Views.KJ.grid.tiaojianxianshi
             get; set;
         } = new ObservableCollection<StudentDataNew>();
 
-        public gdWindow1ViewModel ()
+        public dongtugridViewModel ()
         {
             //初始化
             Students = new ObservableCollection<StudentDataNew>() {

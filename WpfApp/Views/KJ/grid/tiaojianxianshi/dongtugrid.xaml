@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp.Views.KJ.grid.tiaojianxianshi.gdWindow1"
+﻿<Window x:Class="WpfApp.Views.KJ.grid.tiaojianxianshi.dongtugrid"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,7 +7,7 @@
         Title="gdWindow1"
         Width="800"
         Height="450"
-        d:DataContext="{d:DesignInstance local:gdWindow1ViewModel,
+        d:DataContext="{d:DesignInstance local:dongtugridViewModel,
                                          IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">

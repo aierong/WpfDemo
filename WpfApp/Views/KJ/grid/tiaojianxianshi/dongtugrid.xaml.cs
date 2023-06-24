@@ -17,17 +17,15 @@ namespace WpfApp.Views.KJ.grid.tiaojianxianshi
     /// <summary>
     /// gdWindow1.xaml 的交互逻辑
     /// </summary>
-    public partial class gdWindow1 : Window
+    public partial class dongtugrid : Window
     {
-        public gdWindow1 ()
+        public dongtugrid ()
         {
             InitializeComponent();
 
-            this.DataContext = new gdWindow1ViewModel();
+            this.DataContext = new dongtugridViewModel();
 
-            //var i = 0;
-
-            //var m = 100 / i;
+             
         }
     }
 }
