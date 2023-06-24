@@ -40,7 +40,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/svgdemo/svgWindow1.XAML">
+             StartupUri="/Views/KJ/grid/demo1/DataWindow1.XAML" >
 
 
 

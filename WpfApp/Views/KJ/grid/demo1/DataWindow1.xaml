@@ -40,6 +40,7 @@
         <DataGrid x:Name="userGrid"
                   Grid.Row="0"
                   Grid.Column="0"
+                  AlternationCount="2"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
                   IsReadOnly="True"
@@ -154,7 +155,14 @@
             <DataGrid.RowStyle>
                 <Style TargetType="DataGridRow">
                     <Setter Property="IsSelected" Value="{Binding Path=IsSelectRow}" />
+
+                    <Style.Triggers>
+                        <Trigger Property="ItemsControl.AlternationIndex" Value="0">
+                            <Setter Property="Background" Value="Red" />
+                        </Trigger>
+                    </Style.Triggers>
                 </Style>
+
             </DataGrid.RowStyle>
         </DataGrid>
 
