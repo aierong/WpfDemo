@@ -16,6 +16,7 @@ namespace WpfApp.Views.KJ.grid.tiaojianxianshi.Selector
         1.定义一个类继承:DataTemplateSelector
         2.根据逻辑定义多个DataTemplate变量
         3.override方法SelectTemplate,根据条件返回不同DataTemplate变量
+        4.xaml页面根据逻辑编写不同DataTemplate
         */
         public DataTemplate NanTemplate
         {
