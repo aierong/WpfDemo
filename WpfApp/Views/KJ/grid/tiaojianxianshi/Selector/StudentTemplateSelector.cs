@@ -36,7 +36,6 @@ namespace WpfApp.Views.KJ.grid.tiaojianxianshi.Selector
             {
                 return model.IsMan ? NanTemplate : NvTemplate;
             }
-
             else
             {
                 return null;

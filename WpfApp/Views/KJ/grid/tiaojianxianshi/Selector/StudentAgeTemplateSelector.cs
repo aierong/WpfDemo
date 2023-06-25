@@ -30,7 +30,6 @@ namespace WpfApp.Views.KJ.grid.tiaojianxianshi.Selector
             {
                 return model.IsChengRen ? ChengRenTemplate : NotChengRenTemplate;
             }
-
             else
             {
                 return null;
