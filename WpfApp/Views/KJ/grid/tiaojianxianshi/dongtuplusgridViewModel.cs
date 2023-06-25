@@ -52,9 +52,23 @@ namespace WpfApp.Views.KJ.grid.tiaojianxianshi
 
         public void adddata ()
         {
+            Random _random = new Random();
 
-            Students.Add( new StudentDataNew() { Id = 10 , Age = 20 , Name = "Yang20" , IsMan = true } );
-            Students.Add( new StudentDataNew() { Id = 11 , Age = 12 , Name = "Y12" , IsMan = false } );
+
+            Students.Add( new StudentDataNew()
+            {
+                Id = 10 ,
+                Age = _random.Next( 1 , 30 ) ,
+                Name = "Yang20" ,
+                IsMan = true
+            } );
+            Students.Add( new StudentDataNew()
+            {
+                Id = 11 ,
+                Age = _random.Next( 10 , 25 ) ,
+                Name = "Y12" ,
+                IsMan = false
+            } );
 
         }
 

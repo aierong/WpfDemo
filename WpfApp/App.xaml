@@ -1,9 +1,11 @@
 ﻿<!--
     StartupUri="/Views/KJ/mainpage.XAML"  控件主页
     
-    StartupUri="/Views/KJ/grid/demo1/DataWindow1.XAML"   表格
-    StartupUri="/Views/KJ/grid/tiaojianxianshi/gridWindow1.XAML"   表格
-    StartupUri="/Views/KJ/grid/tiaojianxianshi/dongtugrid.XAML"   表格
+    StartupUri="/Views/KJ/grid/demo1/DataWindow1.XAML"               表格
+    StartupUri="/Views/KJ/grid/tiaojianxianshi/gridWindow1.XAML"     表格
+    StartupUri="/Views/KJ/grid/tiaojianxianshi/dongtugrid.XAML"      表格
+    StartupUri="/Views/KJ/grid/tiaojianxianshi/dongtuplusgrid.XAML"  表格
+    
     
     StartupUri="/Views/KJ/grid/tiaojianxianshi/BuTonggridWindow1.XAML"   表格
     
@@ -43,7 +45,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/KJ/grid/tiaojianxianshi/BuTonggridWindow1.XAML"  >
+             StartupUri="/Views/KJ/grid/tiaojianxianshi/dongtuplusgrid.XAML"  >
 
 
 
