@@ -31,6 +31,7 @@
     
     StartupUri="/Views/DH/Window1.XAML"  动画
     StartupUri="/Views/DH/dhWindow6.XAML"  动画
+    StartupUri="/Views/DH/BorderWindow6.XAML"  动画
     
     StartupUri="/Views/svgdemo/svgWindow1.XAML"  svg
     
@@ -45,7 +46,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/KJ/grid/tiaojianxianshi/dongtuplusgrid.XAML"  >
+              StartupUri="/Views/DH/BorderWindow6.XAML"  >
 
 
 
