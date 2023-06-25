@@ -41,11 +41,8 @@
                     <DataGridTemplateColumn Width="160"
                                             Header="性别文本">
 
-
                         <DataGridTemplateColumn.CellTemplateSelector>
                             <localselect:StudentTemplateSelector>
-
-
                                 <localselect:StudentTemplateSelector.NanTemplate>
                                     <DataTemplate>
                                         <!--  不同TemplateSelector中的DataTemplate里面可以包含不同的控件  -->
@@ -70,10 +67,8 @@
                             </localselect:StudentTemplateSelector>
                         </DataGridTemplateColumn.CellTemplateSelector>
 
-
-
-
                     </DataGridTemplateColumn>
+                    
                 </DataGrid.Columns>
             </DataGrid>
 
