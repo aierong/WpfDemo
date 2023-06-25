@@ -126,7 +126,7 @@
                                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Background.(SolidColorBrush.Color)">
                                                                         <EasingColorKeyFrame KeyTime="0"
                                                                                              Value="#555555" />
-                                                                        <EasingColorKeyFrame KeyTime="00:00:0.2"
+                                                                        <EasingColorKeyFrame KeyTime="00:00:0.20"
                                                                                              Value="Green" />
                                                                     </ColorAnimationUsingKeyFrames>
                                                                 </Storyboard>
@@ -158,7 +158,7 @@
                                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Background.(SolidColorBrush.Color)">
                                                                         <EasingColorKeyFrame KeyTime="0"
                                                                                              Value="#555555" />
-                                                                        <EasingColorKeyFrame KeyTime="00:00:0.2"
+                                                                        <EasingColorKeyFrame KeyTime="00:00:0.20"
                                                                                              Value="Red" />
                                                                     </ColorAnimationUsingKeyFrames>
                                                                 </Storyboard>
