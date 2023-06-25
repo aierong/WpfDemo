@@ -43,7 +43,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-              StartupUri="/Views/KJ/grid/tiaojianxianshi/dongtugrid.XAML">
+             StartupUri="/Views/KJ/grid/tiaojianxianshi/BuTonggridWindow1.XAML"  >
 
 
 

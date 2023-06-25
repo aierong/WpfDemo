@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace WpfApp.Views.KJ.grid.tiaojianxianshi
+namespace WpfApp.Views.KJ.grid.tiaojianxianshi.Selector
 {
     public class StudentTemplateSelector : DataTemplateSelector
     {

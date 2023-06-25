@@ -191,7 +191,8 @@
       <DependentUpon>BuTonggridWindow1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\KJ\grid\tiaojianxianshi\BuTonggridWindow1ViewModel.cs" />
-    <Compile Include="Views\KJ\grid\tiaojianxianshi\StudentTemplateSelector.cs" />
+    <Compile Include="Views\KJ\grid\tiaojianxianshi\Selector\Class1.cs" />
+    <Compile Include="Views\KJ\grid\tiaojianxianshi\Selector\StudentTemplateSelector.cs" />
     <Compile Include="Views\KJ\grid\tiaojianxianshi\dongtugrid.xaml.cs">
       <DependentUpon>dongtugrid.xaml</DependentUpon>
     </Compile>

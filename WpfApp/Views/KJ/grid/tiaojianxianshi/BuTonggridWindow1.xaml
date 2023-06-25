@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WpfApp.Views.KJ.grid.tiaojianxianshi"
+        xmlns:localselect="clr-namespace:WpfApp.Views.KJ.grid.tiaojianxianshi.Selector"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="BuTonggridWindow1"
         Width="800"
@@ -42,18 +43,18 @@
 
 
                         <DataGridTemplateColumn.CellTemplateSelector>
-                            <local:StudentTemplateSelector>
+                            <localselect:StudentTemplateSelector>
 
 
-                                <local:StudentTemplateSelector.NanTemplate>
+                                <localselect:StudentTemplateSelector.NanTemplate>
                                     <DataTemplate>
                                         <!--  不同TemplateSelector中的DataTemplate里面可以包含不同的控件  -->
                                         <TextBox IsReadOnly="False"
                                                  Text="我是男性" />
                                     </DataTemplate>
-                                </local:StudentTemplateSelector.NanTemplate>
+                                </localselect:StudentTemplateSelector.NanTemplate>
 
-                                <local:StudentTemplateSelector.NvTemplate>
+                                <localselect:StudentTemplateSelector.NvTemplate>
                                     <DataTemplate>
                                         <StackPanel HorizontalAlignment="Center"
                                                     VerticalAlignment="Center"
@@ -65,8 +66,8 @@
                                                      Text="我是女性" />
                                         </StackPanel>
                                     </DataTemplate>
-                                </local:StudentTemplateSelector.NvTemplate>
-                            </local:StudentTemplateSelector>
+                                </localselect:StudentTemplateSelector.NvTemplate>
+                            </localselect:StudentTemplateSelector>
                         </DataGridTemplateColumn.CellTemplateSelector>
 
 
