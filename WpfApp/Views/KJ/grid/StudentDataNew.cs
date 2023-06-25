@@ -94,38 +94,7 @@ namespace WpfApp.Views.KJ.grid
             }
         }
 
-        //public Brush agecolor1
-        //{
-        //    get
-        //    {
-
-        //        return IsChengRen ? Brushes.Green : Brushes.Red;
-        //    }
-        //}
-
-        //private Brush _agecolor1;
-
-        //public Brush agecolor1
-        //{
-        //    get
-        //    {
-        //        return _agecolor1;
-        //    }
-        //    set
-        //    {
-        //        _agecolor1 = value;
-
-        //        //通知数据已经变化
-        //        PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "agecolor1" ) );
-        //    }
-        //}
-
-        //public SolidColorBrush agecolor12
-        //{
-        //    get
-        //    {
-        //        return IsChengRen ? Brushes.Green : Brushes.Red;
-        //    }
-        //}
+     
+      
     }
 }
