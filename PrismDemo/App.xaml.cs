@@ -212,7 +212,7 @@ namespace PrismDemo
 
         //}
 
-        
+        Microsoft.Extensions.Logging.ILogger logger;
 
         protected override void RegisterTypes ( IContainerRegistry containerRegistry )
         {
