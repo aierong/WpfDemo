@@ -27,5 +27,16 @@ namespace PrismDemo.LogDemo.UC
             this.logger.LogInformation( "msg:A用户控件写入" );
         } ) );
 
+        private DelegateCommand _MyERRORButtonClickCommand;
+        public DelegateCommand MyERRORButtonClickCommand => _MyERRORButtonClickCommand ?? ( _MyERRORButtonClickCommand = new DelegateCommand( () =>
+        {
+            // 故意异常
+
+            var i = 0;
+            var ii = 100 / i;
+
+                         
+        } ) );
+        
     }
 }

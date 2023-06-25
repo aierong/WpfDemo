@@ -9,13 +9,14 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using Microsoft.Extensions.Logging;
 using Microsoft.Win32;
 using Prism.Events;
 using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Services.Dialogs;
 using Prism.Unity;
- 
+
 
 namespace PrismDemo
 {
@@ -34,6 +35,9 @@ namespace PrismDemo
         /// <returns></returns>
         protected override Window CreateShell ()
         {
+            //捕捉未处理的异常
+            this.DispatcherUnhandledException += App_DispatcherUnhandledException;
+
             Debug.WriteLine( "CreateShell" );
 
 
@@ -78,7 +82,7 @@ namespace PrismDemo
 
 
             //对话框
-            return Container.Resolve<DialogDemo.DialogWindow>();
+            //return Container.Resolve<DialogDemo.DialogWindow>();
 
 
 
@@ -88,12 +92,51 @@ namespace PrismDemo
 
 
             //日志
-            //return Container.Resolve<LogDemo.LogWindow>();
+            return Container.Resolve<LogDemo.LogWindow>();
 
 
             //测试登录  
             // 记得，如果使用下面的登录，请把下面屏蔽的OnInitialized代码打开
             //return Container.Resolve<LoginDemo.Demo2.MainIndex>();
+        }
+
+        private void App_DispatcherUnhandledException ( object sender , System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e )
+        {
+            try
+            {
+                e.Handled = true; //标识异常已经处理
+
+                if ( e.Exception.InnerException == null )
+                {
+                    //MessageBox.Show( "（1）发生了一个错误！请联系开发人员！" + Environment.NewLine
+                    //                   + "（2）错误源：" + e.Exception.Source + Environment.NewLine
+                    //                   + "（3）详细信息：" + e.Exception.Message + Environment.NewLine );
+                    //+ "（4）报错区域：" + e.Exception.StackTrace);
+
+                    this.logger.LogError( $"{e.Exception.StackTrace}" + Environment.NewLine + $"{e.Exception.Message}" );
+
+                }
+                else
+                {
+                    //MessageBox.Show( "（1）发生了一个错误！请联系开发人员！" + Environment.NewLine
+                    //                    + "（2）错误源：" + e.Exception.InnerException.Source + Environment.NewLine
+                    //                    + "（3）错误信息：" + e.Exception.Message + Environment.NewLine
+                    //                    + "（4）详细信息：" + e.Exception.InnerException.Message + Environment.NewLine
+                    //                    + "（5）报错区域：" + e.Exception.InnerException.StackTrace );
+
+                    this.logger.LogError( $"{e.Exception.InnerException.StackTrace}" + Environment.NewLine + $"{e.Exception.InnerException.Message}{e.Exception.InnerException.Source}" );
+                }
+
+            }
+            catch ( Exception e2 )
+            {
+                //此时程序出现严重异常，将强制结束退出
+                //MessageBox.Show( "程序发生致命错误，将终止，请联系运营商！" );
+            }
+            finally
+            {
+
+            }
         }
 
 
@@ -169,7 +212,7 @@ namespace PrismDemo
 
         //}
 
-
+        
 
         protected override void RegisterTypes ( IContainerRegistry containerRegistry )
         {
@@ -182,7 +225,7 @@ namespace PrismDemo
             */
 
             var factory = new NLog.Extensions.Logging.NLogLoggerFactory();
-            Microsoft.Extensions.Logging.ILogger logger = factory.CreateLogger( "" );
+            this.logger = factory.CreateLogger( "" );
             //下面这个是加载指定名字  nlog.config里面：    <logger name="mylognameabc" level="Info" writeTo="mylogfileabc"/>
             //Microsoft.Extensions.Logging.ILogger logger = factory.CreateLogger( "mylognameabc" );
             containerRegistry.RegisterInstance( logger );
@@ -219,8 +262,8 @@ namespace PrismDemo
 
             //同一个接口，多个服务实现
             //分别起一个名字，这样注入时，我们可以区分
-            containerRegistry.RegisterSingleton<IOCDemo.Demo1.Service.IPerson, IOCDemo.Demo1.Service.Man>("man");
-            containerRegistry.RegisterSingleton<IOCDemo.Demo1.Service.IPerson , IOCDemo.Demo1.Service.Woman>("woman");
+            containerRegistry.RegisterSingleton<IOCDemo.Demo1.Service.IPerson , IOCDemo.Demo1.Service.Man>( "man" );
+            containerRegistry.RegisterSingleton<IOCDemo.Demo1.Service.IPerson , IOCDemo.Demo1.Service.Woman>( "woman" );
 
             //通过实例的方式注册的对象属于单例
             //containerRegistry.RegisterInstance<IOCDemo.Demo1.Service.IPerson>( new IOCDemo.Demo1.Service.Man() { Name ="qq" } );
@@ -235,7 +278,7 @@ namespace PrismDemo
 
 
             //
-            containerRegistry.RegisterDialog<LoginDemo.Demo2.UCLogin, LoginDemo.Demo2.UCLoginViewModel>( "systemlogin" );
+            containerRegistry.RegisterDialog<LoginDemo.Demo2.UCLogin , LoginDemo.Demo2.UCLoginViewModel>( "systemlogin" );
 
         }
 
@@ -303,12 +346,12 @@ namespace PrismDemo
 
 
 
-           
+
             //测试登录窗体 demo2
-            ViewModelLocationProvider.Register<LoginDemo.Demo2.MainIndex, LoginDemo.Demo2.MainIndexViewModel>();
+            ViewModelLocationProvider.Register<LoginDemo.Demo2.MainIndex , LoginDemo.Demo2.MainIndexViewModel>();
             ViewModelLocationProvider.Register<LoginDemo.Demo2.UCLogin , LoginDemo.Demo2.UCLoginViewModel>();
-            ViewModelLocationProvider.Register<LoginDemo.Demo2.UC.UCChild1, LoginDemo.Demo2.UC.UCChild1VM>();
-            ViewModelLocationProvider.Register<LoginDemo.Demo2.UC.UCChild2, LoginDemo.Demo2.UC.UCChild2VM>();
+            ViewModelLocationProvider.Register<LoginDemo.Demo2.UC.UCChild1 , LoginDemo.Demo2.UC.UCChild1VM>();
+            ViewModelLocationProvider.Register<LoginDemo.Demo2.UC.UCChild2 , LoginDemo.Demo2.UC.UCChild2VM>();
 
 
 
@@ -329,7 +372,7 @@ namespace PrismDemo
 
         }
 
-        
+
 
     }
 }

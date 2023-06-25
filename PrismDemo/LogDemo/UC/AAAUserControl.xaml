@@ -26,13 +26,22 @@
                    FontWeight="Bold"
                    Text="这里是A的内容"
                    TextDecorations="Underline" />
-        <Button Grid.Row="1"
-                Grid.Column="0"
+
+        <StackPanel Grid.Row="1"
+                Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button 
                 Width="80"
                 Height="30"
                 Margin="10,10,10,10"
                 Command="{Binding MyButtonClickCommand}"
                 Content="写日志" />
-
+            <Button 
+                Width="80"
+                Height="30"
+                Margin="10,10,10,10"
+                Command="{Binding MyERRORButtonClickCommand}"
+                Content="故意异常" />
+        </StackPanel>
+       
     </Grid>
 </UserControl>
