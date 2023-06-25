@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WpfApp.Views.BaseCommand;
+using WpfApp.Views.KJ.grid.tiaojianxianshi.Models;
 
 namespace WpfApp.Views.KJ.grid.tiaojianxianshi
 {

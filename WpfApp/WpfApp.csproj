@@ -185,7 +185,7 @@
     <Compile Include="Views\KJ\grid\demo1\DataWindowViewModel1.cs" />
     <Compile Include="Views\BaseCommand\MyParCommand.cs" />
     <Compile Include="Views\KJ\grid\demo1\Models\Student.cs" />
-    <Compile Include="Views\KJ\grid\StudentDataNew.cs" />
+    <Compile Include="Views\KJ\grid\tiaojianxianshi\Models\StudentDataNew.cs" />
     <Compile Include="Views\KJ\grid\tiaojianxianshi\BooleanToVisibilityConverterNew.cs" />
     <Compile Include="Views\KJ\grid\tiaojianxianshi\BuTonggridWindow1.xaml.cs">
       <DependentUpon>BuTonggridWindow1.xaml</DependentUpon>

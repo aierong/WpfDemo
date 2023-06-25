@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 
-namespace WpfApp.Views.KJ.grid
+namespace WpfApp.Views.KJ.grid.tiaojianxianshi.Models
 {
     public  class StudentDataNew : INotifyPropertyChanged
     {

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using WpfApp.Views.KJ.grid.tiaojianxianshi.Models;
 
 namespace WpfApp.Views.KJ.grid.tiaojianxianshi.Selector
 {
