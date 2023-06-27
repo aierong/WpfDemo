@@ -46,7 +46,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-              StartupUri="/Views/DH/BorderWindow6.XAML"  >
+             StartupUri="/Views/KJ/grid/demo1/DataWindow1.XAML">
 
 
 

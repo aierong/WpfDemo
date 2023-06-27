@@ -36,13 +36,17 @@
             
             AutoGenerateColumns=“False” 不自动生成列
             CanUserAddRows="False" 去除空白行
+            
+            GridLinesVisibility="None" 无边框 
+            BorderThickness="0"
         -->
         <DataGrid x:Name="userGrid"
                   Grid.Row="0"
                   Grid.Column="0"
-                  AlternationCount="2"
+                  AlternationCount="2" BorderThickness="0"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
+                  GridLinesVisibility="None"
                   IsReadOnly="True"
                   ItemsSource="{Binding Students}"
                   SelectionUnit="FullRow">
