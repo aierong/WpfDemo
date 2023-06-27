@@ -15,7 +15,8 @@
         参考:https://www.cnblogs.com/moonsk/p/15056259.html
     -->
     <Grid>
-        <StackPanel>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
             <!--  第1个  -->
             <TextBlock Margin="0,10,0,10"
                        FontSize="30"
@@ -93,11 +94,20 @@
                             <TranslateTransform x:Name="LinearGradientBrushTranslate" />
                         </LinearGradientBrush.Transform>
                         <LinearGradientBrush.GradientStops>
-                            <GradientStop Offset="0.00" Color="Red" />
+                            <GradientStop Offset="0.00" Color="#FFFF2B88" />
+                            <GradientStop Offset="0.14" Color="#FFFF9B6A" />
+                            <GradientStop Offset="0.28" Color="#FFF3D64E" />
+                            <GradientStop Offset="0.42" Color="#FFDCFF93" />
+                            <GradientStop Offset="0.56" Color="#FFB8F1CC" />
+                            <GradientStop Offset="0.70" Color="#FFD9B8F1" />
+                            <GradientStop Offset="0.85" Color="#FFCA7497" />
+                            <GradientStop Offset="1.00" Color="#FFFF2B88" />
+
+                            <!--<GradientStop Offset="0.00" Color="Red" />
                             <GradientStop Offset="0.14" Color="Yellow" />
                             <GradientStop Offset="0.28" Color="Blue" />
                             <GradientStop Offset="0.42" Color="Green" />
-                            <GradientStop Offset="0.42" Color="Purple" />
+                            <GradientStop Offset="0.42" Color="Purple" />-->
 
                             <!--
                             这是一组颜色效果
@@ -139,12 +149,53 @@
                                                  Storyboard.TargetProperty="X"
                                                  From="0"
                                                  To="700"
-                                                 Duration="0:0:12" />
+                                                 Duration="0:0:5" />
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
                 </TextBlock.Triggers>
             </TextBlock>
+
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="50"
+                       Opacity="0.75"
+                       Text="字体霓虹灯渐变动画效果">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush SpreadMethod="Repeat">
+                        <LinearGradientBrush.Transform>
+                            <TranslateTransform x:Name="LinearGradientBrushTranslate2" />
+                        </LinearGradientBrush.Transform>
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Offset="0.00" Color="#FFFF2B88" />
+                            <GradientStop Offset="0.14" Color="#FFFF9B6A" />
+                            <GradientStop Offset="0.28" Color="#FFF3D64E" />
+                            <GradientStop Offset="0.42" Color="#FFDCFF93" />
+                            <GradientStop Offset="0.56" Color="#FFB8F1CC" />
+                            <GradientStop Offset="0.70" Color="#FFD9B8F1" />
+                            <GradientStop Offset="0.85" Color="#FFCA7497" />
+                            <GradientStop Offset="1.00" Color="#FFFF2B88" />
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="TextBlock.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation RepeatBehavior="Forever"
+                                                 Storyboard.TargetName="LinearGradientBrushTranslate2"
+                                                 Storyboard.TargetProperty="X"
+                                                 From="0"
+                                                 To="700"
+                                                 Duration="0:0:2" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+
+            
+
             <Button Width="50"
                     Margin="0,20,0,20"
                     Command="{Binding ShowCommand}"

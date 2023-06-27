@@ -21,9 +21,15 @@ namespace WpfApp.Views.DH
     {
         public Window1 ()
         {
+
             InitializeComponent();
 
             this.DataContext = new Window1ViewModel();
+                         
         }
+
+
+
+        
     }
 }
