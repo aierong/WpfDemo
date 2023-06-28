@@ -1,4 +1,4 @@
-本项目主要是HandyControl的演示demo
+HandyControl组件的演示demo
 
 
 

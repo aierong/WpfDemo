@@ -1,4 +1,4 @@
-本项目主要是LiveCharts2的演示demo
+LiveCharts2组件的演示demo
 
 
 

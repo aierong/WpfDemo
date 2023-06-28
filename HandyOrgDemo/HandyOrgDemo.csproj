@@ -10,16 +10,11 @@
   <ItemGroup>
     <None Remove=".gitattributes" />
     <None Remove=".gitignore" />
-    <None Remove="ooVoo2.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
     <PackageReference Include="HandyControl" Version="3.4.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="ooVoo2.ico" />
   </ItemGroup>
 
   <ItemGroup>
