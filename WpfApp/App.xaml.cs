@@ -20,9 +20,9 @@ namespace WpfApp
         {
             //xaml中注册Startup = "Application_Startup"
 
-            var a = 1;
+            //var a = 1;
 
-            var b = 2;
+            //var b = 2;
 
             Debug.WriteLine( "Application_Startup" );
         }
@@ -65,7 +65,9 @@ namespace WpfApp
         }
 
 
+
         const string GlobalMutexName = "WpfApp";
+
 
 
         private void App_DispatcherUnhandledException ( object sender , System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e )
