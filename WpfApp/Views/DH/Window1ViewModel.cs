@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Xml.Linq;
+using FluentScheduler;
 using WpfApp.Views.BaseCommand;
 
 namespace WpfApp.Views.DH
@@ -19,6 +20,22 @@ namespace WpfApp.Views.DH
             Title = "Titleinit";
 
             ShowCommand = new MyCommand( Show );
+
+            FluentScheduler.JobManager.Initialize();
+
+            JobManager.AddJob(
+            () =>
+            {
+
+                Show();
+            } ,
+            s =>
+            {
+                //5秒钟一次
+                //s.ToRunEvery( 5 ).Seconds();
+                //1分钟一次
+                s.ToRunEvery( 1 ).Minutes();
+            });
         }
 
 
