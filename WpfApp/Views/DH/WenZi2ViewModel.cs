@@ -4,44 +4,28 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Xml.Linq;
-using FluentScheduler;
 using WpfApp.Views.BaseCommand;
 
 namespace WpfApp.Views.DH
 {
-    public class Window1ViewModel : INotifyPropertyChanged
+    public  class WenZi2ViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public Window1ViewModel ()
+        public WenZi2ViewModel ()
         {
             Title = "Titleinit";
 
             ShowCommand = new MyCommand( Show );
-
-            FluentScheduler.JobManager.Initialize();
-
-            JobManager.AddJob(
-            () =>
-            {
-
-                Show();
-            } ,
-            s =>
-            {
-                //5秒钟一次
-                //s.ToRunEvery( 5 ).Seconds();
-                //1分钟一次
-                s.ToRunEvery( 1 ).Minutes();
-            });
         }
 
 
         public void Show ()
         {
-            Title = "gang gang gai le title time:" + DateTime.Now.ToLongTimeString();
+
+            Title = "gai le title" + DateTime.Now.ToLongTimeString();
+
+
         }
 
 
@@ -52,7 +36,6 @@ namespace WpfApp.Views.DH
         {
             get; set;
         }
-
 
         private string title;
 
@@ -72,6 +55,5 @@ namespace WpfApp.Views.DH
                 PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "Title" ) );
             }
         }
-
     }
 }

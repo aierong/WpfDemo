@@ -7,7 +7,7 @@
         Title="动画"
         Width="800"
         Height="650"
-        d:DataContext="{d:DesignInstance local:Window1ViewModel,
+        d:DataContext="{d:DesignInstance local:WenZiViewModel,
                                          IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">

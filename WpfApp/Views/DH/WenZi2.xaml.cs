@@ -17,13 +17,13 @@ namespace WpfApp.Views.DH
     /// <summary>
     /// Window2.xaml 的交互逻辑
     /// </summary>
-    public partial class Window2 : Window
+    public partial class WenZi2 : Window
     {
-        public Window2 ()
+        public WenZi2 ()
         {
             InitializeComponent();
 
-            this.DataContext = new Window2ViewModel();
+            this.DataContext = new WenZi2ViewModel();
         }
     }
 }

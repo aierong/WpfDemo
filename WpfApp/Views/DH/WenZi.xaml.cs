@@ -26,7 +26,7 @@ namespace WpfApp.Views.DH
 
             InitializeComponent();
 
-            this.DataContext = new Window1ViewModel();
+            this.DataContext = new WenZiViewModel();
                          
         }
 
