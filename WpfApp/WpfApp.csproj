@@ -154,11 +154,11 @@
       <DependentUpon>WenZi2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DH\WenZi2ViewModel.cs" />
-    <Compile Include="Views\DH\Window3.xaml.cs">
-      <DependentUpon>Window3.xaml</DependentUpon>
+    <Compile Include="Views\DH\Deng1.xaml.cs">
+      <DependentUpon>Deng1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\DH\Window4.xaml.cs">
-      <DependentUpon>Window4.xaml</DependentUpon>
+    <Compile Include="Views\DH\Deng2.xaml.cs">
+      <DependentUpon>Deng2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DH\Window5.xaml.cs">
       <DependentUpon>Window5.xaml</DependentUpon>
@@ -446,11 +446,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\DH\Window3.xaml">
+    <Page Include="Views\DH\Deng1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\DH\Window4.xaml">
+    <Page Include="Views\DH\Deng2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

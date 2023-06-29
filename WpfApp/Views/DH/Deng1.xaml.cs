@@ -17,9 +17,9 @@ namespace WpfApp.Views.DH
     /// <summary>
     /// Window3.xaml 的交互逻辑
     /// </summary>
-    public partial class Window3 : Window
+    public partial class Deng1 : Window
     {
-        public Window3 ()
+        public Deng1 ()
         {
             InitializeComponent();
         }
