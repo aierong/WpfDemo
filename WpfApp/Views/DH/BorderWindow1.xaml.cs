@@ -17,9 +17,9 @@ namespace WpfApp.Views.DH
     /// <summary>
     /// dhWindow6.xaml 的互動邏輯
     /// </summary>
-    public partial class dhWindow6 : Window
+    public partial class BorderWindow1 : Window
     {
-        public dhWindow6 ()
+        public BorderWindow1 ()
         {
             InitializeComponent();
         }

@@ -34,7 +34,7 @@
     StartupUri="/Views/DH/Deng0.XAML"        动画
     StartupUri="/Views/DH/Deng1.XAML"        动画
     StartupUri="/Views/DH/Deng2.XAML"        动画
-    StartupUri="/Views/DH/dhWindow6.XAML"      动画
+    StartupUri="/Views/DH/BorderWindow1.XAML"      动画
     StartupUri="/Views/DH/BorderWindow6.XAML"  动画
     
     StartupUri="/Views/svgdemo/svgWindow1.XAML"  svg
@@ -50,7 +50,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/DH/Deng0.XAML">
+             StartupUri="/Views/DH/BorderWindow1.XAML">
 
 
 
