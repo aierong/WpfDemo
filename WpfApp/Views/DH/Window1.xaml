@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="动画"
         Width="800"
-        Height="450"
+        Height="650"
         d:DataContext="{d:DesignInstance local:Window1ViewModel,
                                          IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
@@ -194,6 +194,105 @@
                 </TextBlock.Triggers>
             </TextBlock>
 
+
+            <!--
+                参考:
+                https://learn.microsoft.com/zh-cn/dotnet/desktop/wpf/advanced/how-to-apply-animations-to-text?view=netframeworkdesktop-4.8
+            -->
+
+            <TextBlock Name="MyWipedText"
+                       Width="480"
+                       Height="60"
+                       Margin="5"
+                       FontSize="48"
+                       FontWeight="Bold"
+                       Foreground="Maroon">
+                This is wiped text
+                <!--  Animates the text block's width.  -->
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="TextBlock.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation AutoReverse="True"
+                                                 RepeatBehavior="Forever"
+                                                 Storyboard.TargetName="MyWipedText"
+                                                 Storyboard.TargetProperty="(TextBlock.Width)"
+                                                 To="0.0"
+                                                 Duration="0:0:10" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+
+            <!--
+                参考:
+                https://learn.microsoft.com/zh-cn/dotnet/desktop/wpf/advanced/how-to-apply-animations-to-text?view=netframeworkdesktop-4.8
+            -->
+            <!--  对文本块的不透明度设置动画。 不透明度值从 1.0 更改为 0，持续时间为 5 秒，然后再改回其不透明度值并继续。  -->
+
+            <TextBlock Name="MyFadingText"
+                       Width="640"
+                       Height="60"
+                       Margin="5"
+                       FontSize="48"
+                       FontWeight="Bold"
+                       Foreground="Maroon">
+                This is fading text
+                <!--  Animates the text block's opacity.  -->
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="TextBlock.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation AutoReverse="True"
+                                                 RepeatBehavior="Forever"
+                                                 Storyboard.TargetName="MyFadingText"
+                                                 Storyboard.TargetProperty="(TextBlock.Opacity)"
+                                                 From="1.0"
+                                                 To="0.0"
+                                                 Duration="0:0:5" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+
+            <!--
+                参考:
+                https://learn.microsoft.com/zh-cn/dotnet/desktop/wpf/advanced/how-to-apply-animations-to-text?view=netframeworkdesktop-4.8
+            -->
+            <!--  对文本块的前景色设置动画。 前景色值从一种颜色更改为另一种颜色，持续时间为 5 秒，然后返回到原来的颜色值并继续。  -->
+
+            <TextBlock Name="MyChangingColorText"
+                       Width="640"
+                       Height="60"
+                       Margin="20"
+                       FontSize="48"
+                       FontWeight="Bold">
+                This is changing color text
+                <TextBlock.Foreground>
+                    <SolidColorBrush x:Name="MySolidColorBrush"
+                                     Color="Maroon" />
+                </TextBlock.Foreground>
+
+                <!--  Animates the text block's color.  -->
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="TextBlock.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation AutoReverse="True"
+                                                RepeatBehavior="Forever"
+                                                Storyboard.TargetName="MySolidColorBrush"
+                                                Storyboard.TargetProperty="Color"
+                                                From="DarkOrange"
+                                                To="SteelBlue"
+                                                Duration="0:0:5" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+            
             
 
             <Button Width="50"
