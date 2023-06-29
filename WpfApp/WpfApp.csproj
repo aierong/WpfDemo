@@ -160,10 +160,10 @@
     <Compile Include="Views\DH\Deng2.xaml.cs">
       <DependentUpon>Deng2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\DH\Window5.xaml.cs">
-      <DependentUpon>Window5.xaml</DependentUpon>
+    <Compile Include="Views\DH\Deng0.xaml.cs">
+      <DependentUpon>Deng0.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\DH\Window5ViewModel.cs" />
+    <Compile Include="Views\DH\Deng0ViewModel.cs" />
     <Compile Include="Views\fonts\font2Window.xaml.cs">
       <DependentUpon>font2Window.xaml</DependentUpon>
     </Compile>
@@ -454,7 +454,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\DH\Window5.xaml">
+    <Page Include="Views\DH\Deng0.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

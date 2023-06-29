@@ -17,13 +17,13 @@ namespace WpfApp.Views.DH
     /// <summary>
     /// Window5.xaml 的交互逻辑
     /// </summary>
-    public partial class Window5 : Window
+    public partial class Deng0 : Window
     {
-        public Window5 ()
+        public Deng0 ()
         {
             InitializeComponent();
 
-            this.DataContext = new Window5ViewModel();
+            this.DataContext = new Deng0ViewModel();
         }
     }
 }

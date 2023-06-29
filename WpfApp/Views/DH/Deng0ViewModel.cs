@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace WpfApp.Views.DH
 {
-    public class Window5ViewModel : INotifyPropertyChanged
+    public class Deng0ViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
 
-        public Window5ViewModel ()
+        public Deng0ViewModel ()
         {
             IsAnimation = true;
         }
