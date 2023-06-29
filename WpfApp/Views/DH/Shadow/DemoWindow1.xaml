@@ -1,0 +1,66 @@
+﻿<Window x:Class="WpfApp.Views.DH.Shadow.DemoWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp.Views.DH.Shadow"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="DemoWindow1"
+        Width="800"
+        Height="450"
+        mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+
+            <!--
+                参考:
+                https://learn.microsoft.com/zh-cn/dotnet/desktop/wpf/advanced/how-to-create-text-with-a-shadow?view=netframeworkdesktop-4.8
+            -->
+
+            <TextBlock FontSize="25"
+                       FontWeight="Bold"
+                       Foreground="Teal"
+                       Text="Shadow Text">
+
+                <!--
+                    可以通过设置 ShadowDepth 属性来控制阴影的宽度。 值 4.0 指示阴影宽度为 4 像素。
+                    可通过修改 BlurRadius 属性来控制阴影的柔和度或模糊程度。 值 0.0 指示无模糊。
+                -->
+
+                <TextBlock.Effect>
+                    <DropShadowEffect BlurRadius="4"
+                                      Direction="330"
+                                      Opacity="0.5"
+                                      ShadowDepth="4"
+                                      Color="Black" />
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBlock Margin="0,20,0,0"
+                       FontSize="25"
+                       Foreground="Maroon"
+                       Text="Shadow Text">
+                <TextBlock.Effect>
+                    <DropShadowEffect BlurRadius="0.0"
+                                      Direction="135"
+                                      Opacity="0.35"
+                                      ShadowDepth="6"
+                                      Color="Maroon" />
+                </TextBlock.Effect>
+            </TextBlock>
+
+
+        </StackPanel>
+
+    </Grid>
+</Window>

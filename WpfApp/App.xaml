@@ -37,6 +37,8 @@
     StartupUri="/Views/DH/BorderWindow1.XAML"      动画
     StartupUri="/Views/DH/BorderWindow6.XAML"  动画
     
+    StartupUri="/Views/DH/Shadow/DemoWindow1.XAML"  阴影效果
+    
     StartupUri="/Views/svgdemo/svgWindow1.XAML"  svg
     
     
@@ -50,7 +52,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/DH/BorderWindow1.XAML">
+             StartupUri="/Views/DH/Shadow/DemoWindow1.XAML">
 
 
 
