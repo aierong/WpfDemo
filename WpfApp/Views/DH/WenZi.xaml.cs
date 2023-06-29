@@ -19,9 +19,9 @@ namespace WpfApp.Views.DH
     /// <summary>
     /// Window1.xaml 的交互逻辑
     /// </summary>
-    public partial class Window1 : Window
+    public partial class WenZi : Window
     {
-        public Window1 ()
+        public WenZi ()
         {
 
             InitializeComponent();
