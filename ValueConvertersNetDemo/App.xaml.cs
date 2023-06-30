@@ -13,6 +13,7 @@ using Prism.Unity;
 using Prism.Mvvm;
 
 
+
 namespace ValueConvertersNetDemo
 {
     /// <summary>
@@ -35,12 +36,9 @@ namespace ValueConvertersNetDemo
         protected override void RegisterTypes ( IContainerRegistry containerRegistry )
         {
             //注册导航
-            //注册对话框
             //添加 并且起个别名  
-
             containerRegistry.RegisterForNavigation<Views.UC.BoolUserControl1>( "BoolUserControl1" );
-
-
+            containerRegistry.RegisterForNavigation<Views.UC.DateTimeUserControl1>( "DateTimeUserControl1" );
 
 
 

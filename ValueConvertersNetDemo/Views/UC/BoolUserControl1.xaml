@@ -11,6 +11,21 @@
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d">
     <UserControl.Resources>
+        <Style x:Key="TrueStyleTemplate"
+               TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="LightGreen" />
+            <Setter Property="FontSize" Value="26">
+            </Setter>
+        </Style>
+        <Style x:Key="FalseStyleTemplate"
+               TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="MistyRose" />
+            <Setter Property="FontSize" Value="10">
+            </Setter>
+        </Style>
+
+
+
         <!--
             布尔转Visibility
             IsInverted="True" 就是反转一下
@@ -26,6 +41,7 @@
                                                FalseValue="00"
                                                TrueValue="11">
         </valueConverters:BoolToDoubleConverter>
+
         <!--
             布尔转字符串
             IsInverted="True" 就是反转一下
@@ -35,7 +51,6 @@
                                                IsInverted="True"
                                                TrueValue="Yes">
         </valueConverters:BoolToStringConverter>
-
 
         <!--
             布尔转FontWeight
@@ -62,12 +77,23 @@
         <valueConverters:BoolToBrushConverter x:Key="BoolToBrushConverterTwo"
                                               FalseValue="White"
                                               TrueValue="Blue" />
+
+        <!--
+            布尔转Style
+            IsInverted="True" 就是反转一下
+        -->
+        <valueConverters:BoolToStyleConverter x:Key="BoolToStyleConverter"
+                                              FalseValue="{StaticResource FalseStyleTemplate}"
+                                              TrueValue="{StaticResource TrueStyleTemplate}">
+        </valueConverters:BoolToStyleConverter>
+
+
     </UserControl.Resources>
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
             <RowDefinition />
             <RowDefinition />
+
             <RowDefinition />
         </Grid.RowDefinitions>
 
@@ -125,6 +151,13 @@
                         BorderThickness="1"
                         Content="我的Brush随布尔值变化"
                         Foreground="{Binding IsOk, Converter={StaticResource BoolToBrushConverter}}">
+                </Button>
+
+                <Button Width="250"
+                        Margin="30,0,0,0"
+                        BorderThickness="1"
+                        Content="我Style随布尔值变化"
+                        Style="{Binding IsOk, Converter={StaticResource BoolToStyleConverter}}">
                 </Button>
             </StackPanel>
             <Button Width="100"

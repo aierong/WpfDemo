@@ -59,6 +59,7 @@
     </ApplicationDefinition>
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\UC\BoolUserControl1ViewModel.cs" />
+    <Compile Include="ViewModels\UC\DateTimeUserControl1ViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -69,11 +70,18 @@
     <Compile Include="Views\UC\BoolUserControl1.xaml.cs">
       <DependentUpon>BoolUserControl1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UC\DateTimeUserControl1.xaml.cs">
+      <DependentUpon>DateTimeUserControl1.xaml</DependentUpon>
+    </Compile>
     <Page Include="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UC\BoolUserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC\DateTimeUserControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -46,9 +46,12 @@
                             Orientation="Horizontal">
                     <Button Height="30"
                             Margin="10,10,10,10"
-                            Command="{Binding AButtonClickCommand}"
-                            Content="基本" />
-
+                            Command="{Binding BoolButtonClickCommand}"
+                            Content="Bool" />
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding DateTimeButtonClickCommand}"
+                            Content="DateTime" />
 
 
                 </StackPanel>
@@ -57,10 +60,10 @@
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                             Orientation="Horizontal">
-                    <Button Height="30"
+                    <!--<Button Height="30"
                             Margin="10,10,10,10"
                             Command="{Binding LineDongTai1ButtonClickCommand}"
-                            Content="动态line" />
+                            Content="动态line" />-->
 
 
                 </StackPanel>
