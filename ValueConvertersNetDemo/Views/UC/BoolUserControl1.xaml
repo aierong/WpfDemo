@@ -11,6 +11,12 @@
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d">
     <UserControl.Resources>
+        <!--
+            布尔转Visibility
+            IsInverted="True" 就是反转一下
+        -->
+        <valueConverters:BoolToVisibilityConverter x:Key="BoolToInvertedVisibilityConverter"
+                                                   IsInverted="True" />
 
         <!--
             布尔转数字
@@ -38,14 +44,28 @@
         <valueConverters:BoolToFontWeightConverter x:Key="BoolToFontWeightConverter"
                                                    FalseValue="Normal"
                                                    TrueValue="Bold" />
-
+        <!--
+            布尔转Thickness
+            IsInverted="True" 就是反转一下
+        -->
         <valueConverters:BoolToThicknessConverter x:Key="BoolToThicknessConverter"
                                                   FalseValue="8"
-                                                  TrueValue="1" />
+                                                  TrueValue="0" />
+
+        <!--
+            布尔转Brush  可以作用于：Background Foreground BorderBrush这些颜色属性
+            IsInverted="True" 就是反转一下
+        -->
+        <valueConverters:BoolToBrushConverter x:Key="BoolToBrushConverter"
+                                              FalseValue="Purple"
+                                              TrueValue="Green" />
+        <valueConverters:BoolToBrushConverter x:Key="BoolToBrushConverterTwo"
+                                              FalseValue="White"
+                                              TrueValue="Blue" />
     </UserControl.Resources>
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
-            <RowDefinition />
+            <RowDefinition Height="auto" />
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
@@ -64,6 +84,13 @@
                 <TextBlock Margin="10,0,0,0"
                            FontSize="20"
                            Foreground="#FFF50808"
+                           Text="文本(我会隐藏)"
+                           Visibility="{Binding IsOk, Converter={StaticResource BoolToInvertedVisibilityConverter}}">
+                </TextBlock>
+
+                <TextBlock Margin="10,0,0,0"
+                           FontSize="20"
+                           Foreground="#FFF50808"
                            Text="{Binding IsOk, Converter={StaticResource BoolToDoubleConverter}}">
                 </TextBlock>
                 <TextBlock Margin="30,0,0,0"
@@ -79,14 +106,27 @@
                            Text="FontWeight随布尔值变化">
                 </TextBlock>
 
+
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Orientation="Horizontal">
                 <Button Width="188"
                         Margin="30,0,0,0"
                         BorderBrush="#FFE60A0A"
                         BorderThickness="{Binding IsOk, Converter={StaticResource BoolToThicknessConverter}}"
                         Content="我的Thickness随布尔值变化">
                 </Button>
-            </StackPanel>
 
+                <Button Width="188"
+                        Margin="30,0,0,0"
+                        Background="{Binding IsOk, Converter={StaticResource BoolToBrushConverterTwo}}"
+                        BorderBrush="{Binding IsOk, Converter={StaticResource BoolToBrushConverter}}"
+                        BorderThickness="1"
+                        Content="我的Brush随布尔值变化"
+                        Foreground="{Binding IsOk, Converter={StaticResource BoolToBrushConverter}}">
+                </Button>
+            </StackPanel>
             <Button Width="100"
                     Margin="10,10,10,10"
                     Command="{Binding QieHuanClickCommand}"
