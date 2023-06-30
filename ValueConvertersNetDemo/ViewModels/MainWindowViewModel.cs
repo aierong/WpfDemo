@@ -7,7 +7,9 @@ using Prism.Mvvm;
 
 namespace ValueConvertersNetDemo.ViewModels
 {
-    public  class MainWindowViewModel : BindableBase
+    public class MainWindowViewModel : BindableBase
     {
+
+
     }
 }

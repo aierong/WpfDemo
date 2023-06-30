@@ -1,9 +1,9 @@
-﻿<Application x:Class="ValueConvertersNetDemo.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:ValueConvertersNetDemo"
-             StartupUri="MainWindow.xaml">
+﻿<prism:PrismApplication x:Class="ValueConvertersNetDemo.App"
+                        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:local="clr-namespace:ValueConvertersNetDemo"
+                        xmlns:prism="http://prismlibrary.com/">
     <Application.Resources>
-         
+        <!--  app资源  -->
     </Application.Resources>
-</Application>
+</prism:PrismApplication>
