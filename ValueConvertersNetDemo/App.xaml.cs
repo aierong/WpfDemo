@@ -39,7 +39,8 @@ namespace ValueConvertersNetDemo
             //添加 并且起个别名  
             containerRegistry.RegisterForNavigation<Views.UC.BoolUserControl1>( "BoolUserControl1" );
             containerRegistry.RegisterForNavigation<Views.UC.DateTimeUserControl1>( "DateTimeUserControl1" );
-
+            containerRegistry.RegisterForNavigation<Views.UC.GroupUserControl1>( "GroupUserControl1" );
+            
 
 
         }

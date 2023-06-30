@@ -26,6 +26,7 @@ namespace ValueConvertersNetDemo.ViewModels
         }
 
 
+
         private DelegateCommand _BoolButtonClickCommand;
         public DelegateCommand BoolButtonClickCommand => _BoolButtonClickCommand ?? ( _BoolButtonClickCommand = new DelegateCommand( () =>
         {
@@ -41,5 +42,17 @@ namespace ValueConvertersNetDemo.ViewModels
             //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
             this._regionManager.RequestNavigate( "ContentRegion" , "DateTimeUserControl1" );
         } ) );
+
+
+
+        private DelegateCommand _GroupButtonClickCommand;
+        public DelegateCommand GroupButtonClickCommand => _GroupButtonClickCommand ?? ( _GroupButtonClickCommand = new DelegateCommand( () =>
+        {
+            //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
+            this._regionManager.RequestNavigate( "ContentRegion" , "DateTimeUserControl1" );
+        } ) );
+
+
+
     }
 }

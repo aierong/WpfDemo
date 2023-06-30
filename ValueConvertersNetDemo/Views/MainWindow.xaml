@@ -47,13 +47,16 @@
                     <Button Height="30"
                             Margin="10,10,10,10"
                             Command="{Binding BoolButtonClickCommand}"
-                            Content="Bool" />
+                            Content="Bool转各种" />
                     <Button Height="30"
                             Margin="10,10,10,10"
                             Command="{Binding DateTimeButtonClickCommand}"
-                            Content="DateTime" />
+                            Content="DateTime转字符串" />
 
-
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding GroupButtonClickCommand}"
+                            Content="组转换器的使用" />
                 </StackPanel>
 
             </Grid>
