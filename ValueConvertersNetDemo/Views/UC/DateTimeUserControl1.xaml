@@ -5,11 +5,69 @@
              xmlns:local="clr-namespace:ValueConvertersNetDemo.Views.UC"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:prism="http://prismlibrary.com/"
+             xmlns:valueConverters="clr-namespace:ValueConverters;assembly=ValueConverters"
              d:DesignHeight="450"
              d:DesignWidth="800"
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d">
-    <Grid>
+    <UserControl.Resources>
+        <!--
+            时间转换字符串
+            Format:格式化字符串
+        -->
+        <valueConverters:DateTimeToStringConverter x:Key="DateTimeToStringConverter1"
+                                                   Format="yyyy-MM-dd"
+                                                   MinValueString="---"
+                                                   PreferredCulture="CurrentUICulture" />
+        <valueConverters:DateTimeToStringConverter x:Key="DateTimeToStringConverter2"
+                                                   Format="yyyy-MM-dd HH:mm:ss"
+                                                   MinValueString="---"
+                                                   PreferredCulture="CurrentUICulture" />
+        <valueConverters:DateTimeToStringConverter x:Key="DateTimeToStringConverter3"
+                                                   Format="yyyyMMdd"
+                                                   MinValueString="---"
+                                                   PreferredCulture="CurrentUICulture" />
+    </UserControl.Resources>
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
 
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Orientation="Vertical">
+                <TextBlock Margin="10,0,0,0"
+                           FontSize="20"
+                           Foreground="#FFF50808"
+                           Text="{Binding ChangeDate, Converter={StaticResource DateTimeToStringConverter1}}">
+                </TextBlock>
+                <TextBlock Margin="10,0,0,0"
+                           FontSize="20"
+                           Foreground="#FFF50808"
+                           Text="{Binding ChangeDate, Converter={StaticResource DateTimeToStringConverter2}}">
+                </TextBlock>
+                <TextBlock Margin="10,0,0,0"
+                           FontSize="20"
+                           Foreground="#FFF50808"
+                           Text="{Binding ChangeDate, Converter={StaticResource DateTimeToStringConverter3}}">
+                </TextBlock>
+            </StackPanel>
+            <Button Width="100"
+                    Margin="10,10,10,10"
+                    Command="{Binding QieHuanClickCommand}"
+                    Content="切换时间">
+            </Button>
+        </StackPanel>
     </Grid>
 </UserControl>

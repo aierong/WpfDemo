@@ -33,7 +33,7 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition />
-                    <RowDefinition />
+
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -55,18 +55,7 @@
 
 
                 </StackPanel>
-                <StackPanel Grid.Row="1"
-                            Grid.Column="0"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            Orientation="Horizontal">
-                    <!--<Button Height="30"
-                            Margin="10,10,10,10"
-                            Command="{Binding LineDongTai1ButtonClickCommand}"
-                            Content="动态line" />-->
 
-
-                </StackPanel>
             </Grid>
 
         </StackPanel>
