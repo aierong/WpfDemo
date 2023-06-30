@@ -37,9 +37,8 @@ namespace ValueConvertersNetDemo
             //注册导航
             //注册对话框
             //添加 并且起个别名  
-            //containerRegistry.RegisterForNavigation<UserControlDemo1>( "UserControlDemo1" );
-            //containerRegistry.RegisterForNavigation<UserControlLine1>( "UserControlLine1" );
 
+            containerRegistry.RegisterForNavigation<Views.UC.BoolUserControl1>( "BoolUserControl1" );
 
 
 
