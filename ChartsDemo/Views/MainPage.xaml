@@ -72,7 +72,7 @@
 
                     <Button Height="30"
                             Margin="10,10,10,10"
-                            Command="{Binding Bar1ButtonClickCommand}"
+                            Command="{Binding BarDuo1ButtonClickCommand}"
                             Content="Bar(多个)" />
 
                     <Button Height="30"

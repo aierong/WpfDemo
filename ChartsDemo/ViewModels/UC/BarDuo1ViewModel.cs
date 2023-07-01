@@ -13,7 +13,7 @@ using Prism.Regions;
 
 namespace ChartsDemo.ViewModels.UC
 {
-    public class UCBar1ViewModel : BindableBase, INavigationAware
+    public class BarDuo1ViewModel : BindableBase, INavigationAware
     {
         public ISeries[] Series
         {
