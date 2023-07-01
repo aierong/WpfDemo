@@ -25,7 +25,7 @@
                             Series="{Binding Series}"
                             TooltipTextPaint="{Binding TooltipTextPaint}"
                             XAxes="{Binding XAxes}">
-            <!--  1  -->
+
         </lvc:CartesianChart>
     </Grid>
 </UserControl>
