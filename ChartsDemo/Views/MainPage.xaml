@@ -132,7 +132,7 @@
                             Content="动态pie demoplus" />
                     <Button Margin="10,10,0,10"
                             Command="{Binding MultipleAxesDongTai1ButtonClickCommand}"
-                            Content="动态">
+                            Content="动态(多个Y轴)">
                     </Button>
                 </StackPanel>
             </Grid>

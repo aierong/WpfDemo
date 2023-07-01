@@ -6,8 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using LiveChartsCore;
 using LiveChartsCore.Defaults;
+using LiveChartsCore.Measure;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
 using SkiaSharp;
@@ -16,15 +18,15 @@ namespace ChartsDemo.ViewModels.UC
 {
     public class MultipleAxesDongTai1ViewModel : BindableBase, INavigationAware
     {
-        private ObservableCollection<ObservableValue> _dt_observableValues1 = new ObservableCollection<ObservableValue>()
+        private ObservableCollection<ObservableValue> _observableValues1 = new ObservableCollection<ObservableValue>()
         {
         };
 
-        private ObservableCollection<ObservableValue> _dt_observableValues2 = new ObservableCollection<ObservableValue>()
+        private ObservableCollection<ObservableValue> _observableValues2 = new ObservableCollection<ObservableValue>()
         {
         };
 
-        private ObservableCollection<ObservableValue> _dt_observableValues3 = new ObservableCollection<ObservableValue>()
+        private ObservableCollection<ObservableValue> _observableValues3 = new ObservableCollection<ObservableValue>()
         {
         };
 
@@ -81,27 +83,27 @@ namespace ChartsDemo.ViewModels.UC
         public MultipleAxesDongTai1ViewModel ()
         {
 
-            _dt_observableValues1 = new ObservableCollection<ObservableValue>
+            _observableValues1 = new ObservableCollection<ObservableValue>
             {
-                new ObservableValue(2),
+                new ObservableValue(2000),
 
-                new ObservableValue(4),
+                new ObservableValue(1400),
 
-                new ObservableValue(13),
+                new ObservableValue(1300),
 
             };
 
-            _dt_observableValues2 = new ObservableCollection<ObservableValue>
+            _observableValues2 = new ObservableCollection<ObservableValue>
             {
-                new ObservableValue(3),
+                new ObservableValue(2300),
 
-                new ObservableValue(5),
+                new ObservableValue(1500),
 
-                new ObservableValue(9),
+                new ObservableValue(900),
 
             };
 
-            _dt_observableValues3 = new ObservableCollection<ObservableValue>
+            _observableValues3 = new ObservableCollection<ObservableValue>
             {
                 new ObservableValue(0.3),
 
@@ -116,27 +118,46 @@ namespace ChartsDemo.ViewModels.UC
                 new ColumnSeries<ObservableValue>
                 {
                     //Name = "计划数量",
-                    Values =_dt_observableValues1,
+                    Values =_observableValues1,
                     //指定这个系列柱子颜色，如果不指定，系统自动分配
                     Fill = new SolidColorPaint(SKColors.Red),
+
+                    // ,显示值
+                    DataLabelsPaint = new SolidColorPaint(  SKColors.Red),
+            DataLabelsSize = 14,
+            DataLabelsPosition = DataLabelsPosition.Top,
+
+
                     //这里指定第一组y轴
                     ScalesYAt = 0
                 },
                 new ColumnSeries<ObservableValue>
                 {
                     //Name = "实际数量",
-                    Values = _dt_observableValues2,
+                    Values = _observableValues2,
 
                     //指定这个系列柱子颜色，如果不指定，系统自动分配
                     Fill = new SolidColorPaint(SKColors.Green  ),
+
+                    // ,显示值
+                    DataLabelsPaint = new SolidColorPaint(  SKColors.Green),
+            DataLabelsSize = 14,
+            DataLabelsPosition = DataLabelsPosition.Top,
+
                     //这里指定第一组y轴
                     ScalesYAt = 0
                 },
                 new LineSeries<ObservableValue>
                 {
-                    Values =_dt_observableValues3,
+                    Values =_observableValues3,
                     Fill = null,
-                    Stroke = new SolidColorPaint(SKColors.Yellow) { StrokeThickness = 1 },
+
+                    //中间节点,显示值
+                    DataLabelsSize = 20,
+                    DataLabelsPaint = new SolidColorPaint(SKColors.Blue),
+                    DataLabelsPosition = LiveChartsCore.Measure.DataLabelsPosition.Top,
+
+                    Stroke = new SolidColorPaint(SKColors.Blue) { StrokeThickness = 1 },
                     //这里指定第2组y轴
                     ScalesYAt = 1
                 }
@@ -191,31 +212,33 @@ namespace ChartsDemo.ViewModels.UC
                         // SKTypeface = SKFontManager.Default.MatchCharacter('أ'), // Arab
                         // SKTypeface = SKFontManager.Default.MatchCharacter('あ'), // Japanese
                         // SKTypeface = SKFontManager.Default.MatchCharacter('Ж'), // Russian
-                    }
+                    },
+                    MinLimit=0
 
 
 
                 },
                 new Axis
                 {
-                    Name = "良率",
+                    Name = "不良率",
                     NamePadding = new LiveChartsCore.Drawing.Padding(0, 15),
                     NamePaint=  new SolidColorPaint
                     {
-                        Color = SKColors.Red,
+                        Color = SKColors.Blue,
 
                         SKTypeface = SKFontManager.Default.MatchCharacter('汉') // 汉语 
                         // SKTypeface = SKFontManager.Default.MatchCharacter('أ'), // Arab
                         // SKTypeface = SKFontManager.Default.MatchCharacter('あ'), // Japanese
                         // SKTypeface = SKFontManager.Default.MatchCharacter('Ж'), // Russian
                     },
-                    ShowSeparatorLines = true,
-                    SeparatorsPaint =new SolidColorPaint
-                    {
-                        Color = SKColors.Red,
-
-                   
-                    },
+                    LabelsPaint = new SolidColorPaint(SKColors.Blue),
+                    MinLimit=0,
+                    //ShowSeparatorLines = true,
+                    //SeparatorsPaint =new SolidColorPaint
+                    //{
+                    //    Color = SKColors.Blue,
+                    //},
+                    ShowSeparatorLines = false,
                     Position = LiveChartsCore.Measure.AxisPosition.End
                 },
 
@@ -224,6 +247,52 @@ namespace ChartsDemo.ViewModels.UC
         }
 
 
+
+
+
+
+
+        private DelegateCommand _UpdateButtonClickCommand;
+        public DelegateCommand UpdateButtonClickCommand => _UpdateButtonClickCommand ?? ( _UpdateButtonClickCommand = new DelegateCommand( () =>
+        {
+            Random _random = new Random();
+            var fors = _random.Next( 2 , 6 );
+
+            _observableValues1.Clear();
+            _observableValues2.Clear();
+            _observableValues3.Clear();
+            _observableValues_x_val.Clear();
+            for ( int i = 1 ; i <= fors ; i++ )
+            {
+                 
+                var num2 = _random.Next( 1 , 9 )/10.0;
+
+                _observableValues1.Add( new ObservableValue( _random.Next( 2000 , 2500 ) ) );
+                _observableValues2.Add( new ObservableValue( _random.Next( 1600 , 2500 ) ) );
+                _observableValues3.Add( new ObservableValue( num2 ) );
+
+                _observableValues_x_val.Add(  num2.ToString () + "xval" );
+            }
+
+            //_observableValues.Clear();
+            //_observableValues.Add( new ObservableValue( _random.Next( 1 , 250 ) ) );
+            //_observableValues.Add( new ObservableValue( _random.Next( 44 , 55 ) ) );
+            //_observableValues.Add( new ObservableValue( _random.Next( 1 , 20 ) ) );
+            //_observableValues.Add( new ObservableValue( _random.Next( 1 , 10 ) ) );
+            //_observableValues.Add( new ObservableValue( _random.Next( 0 , 0 ) ) );
+            //_observableValues.Add( new ObservableValue( _random.Next( 22 , 44 ) ) );
+            //_observableValues.Add( new ObservableValue( _random.Next( 22 , 44 ) ) );
+
+
+            ////清除x轴的值，随机产生6个x轴的值
+            //_observableValues_x_val.Clear();
+            //_observableValues_x_val.Add( _random.Next( 1 , 20 ).ToString() + "x" );
+            //_observableValues_x_val.Add( _random.Next( 1 , 20 ).ToString() + "x" );
+            //_observableValues_x_val.Add( _random.Next( 1 , 20 ).ToString() + "x" );
+            //_observableValues_x_val.Add( _random.Next( 1 , 20 ).ToString() + "x" );
+            //_observableValues_x_val.Add( _random.Next( 1 , 20 ).ToString() + "xval" );
+            //_observableValues_x_val.Add( _random.Next( 1 , 20 ).ToString() + "xval" );
+        } ) );
 
 
 
