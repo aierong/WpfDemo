@@ -156,6 +156,18 @@ namespace ChartsDemo.ViewModels.UC
         } ) );
 
 
+
+
+
+
+
+
+
+
+
+
+
+
         /*
 INavigationAware接口3个方法:
 

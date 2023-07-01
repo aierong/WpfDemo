@@ -24,7 +24,8 @@ namespace ChartsDemo.ViewModels.UC
                     Values = new double[] { 426, 583, 104 }
                 },
                 new LineSeries<double>   {
-                    Values = new double[] { 200, 558, 458 }, Fill = null
+                    Values = new double[] { 200, 558, 458 }, 
+                    Fill = null
                 },
             };
 
