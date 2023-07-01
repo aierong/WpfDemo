@@ -20,7 +20,12 @@
 
         <lvc:CartesianChart Grid.Row="0"
                             Grid.Column="0"
-                            Series="{Binding Series}">
+                            LegendBackgroundPaint="{Binding LedgendBackgroundPaint}"
+                            LegendPosition="Left"
+                            LegendTextPaint="{Binding LegendTextPaint}"
+                            LegendTextSize="16"
+                            Series="{Binding Series}"
+                            YAxes="{Binding YAxes}">
             <!--  1  -->
         </lvc:CartesianChart>
     </Grid>
