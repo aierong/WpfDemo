@@ -13,7 +13,7 @@ using SkiaSharp;
 
 namespace ChartsDemo.ViewModels.UC
 {
-    public class MultipleAxesViewModel : BindableBase, INavigationAware
+    public class MultipleAxesUserControl1ViewModel : BindableBase, INavigationAware
     {
         public SolidColorPaint LegendTextPaint
         {
@@ -50,16 +50,18 @@ namespace ChartsDemo.ViewModels.UC
             GeometrySize = 10,
             GeometryStroke = new SolidColorPaint(s_blue, 2),
             Fill = null,
+            //这里指定第一组y轴
             ScalesYAt = 0 // it will be scaled at the Axis[0] instance 
         },
         new LineSeries<double>
         {
             Name = "Tens 2",
-            Values = new double[] { 11, 12, 13, 10, 13 },
+            Values = new double[] { 13, 2, 13, 10, 12 },
             Stroke = new SolidColorPaint(s_blue, 2),
             GeometrySize = 10,
             GeometryStroke = new SolidColorPaint(s_blue, 2),
             Fill = null,
+            //这里指定第一组y轴
             ScalesYAt = 0 // it will be scaled at the Axis[0] instance 
         },
         new LineSeries<double>
@@ -70,6 +72,7 @@ namespace ChartsDemo.ViewModels.UC
             GeometrySize = 10,
             GeometryStroke = new SolidColorPaint(s_red, 2),
             Fill = null,
+            //这里指定第2组y轴
             ScalesYAt = 1 // it will be scaled at the YAxes[1] instance 
         },
         new LineSeries<double>
@@ -80,6 +83,7 @@ namespace ChartsDemo.ViewModels.UC
             GeometrySize = 10,
             GeometryStroke = new SolidColorPaint(s_yellow, 2),
             Fill = null,
+            //这里指定第3组y轴
             ScalesYAt = 2  // it will be scaled at the YAxes[2] instance 
         }
     };

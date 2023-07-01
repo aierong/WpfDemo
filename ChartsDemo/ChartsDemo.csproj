@@ -57,7 +57,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModels\MainPageViewModel.cs" />
-    <Compile Include="ViewModels\UC\MultipleAxesViewModel.cs" />
+    <Compile Include="ViewModels\UC\MultipleAxesUserControl1ViewModel.cs" />
     <Compile Include="ViewModels\UC\LineDongTai2ViewModel.cs" />
     <Compile Include="ViewModels\UC\UCBar0ViewModel.cs" />
     <Compile Include="ViewModels\UC\UCBar1ViewModel.cs" />

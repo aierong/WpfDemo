@@ -182,7 +182,7 @@ namespace ChartsDemo.ViewModels.UC
                     continue;
 
                 var i = ( ( ObservableValue[] ) item.Values )[0];
-                i.Value += _random.Next( 0 , 20 );
+                i.Value += _random.Next( 0 , 99 );
             }
 
             //好像加一个也可以
@@ -200,8 +200,6 @@ namespace ChartsDemo.ViewModels.UC
 
             //排序一下
             Series = Series.OrderByDescending( item => ( ( ObservableValue[] ) item.Values )[0].Value ).ToList();
-
-
 
         } ) );
 
