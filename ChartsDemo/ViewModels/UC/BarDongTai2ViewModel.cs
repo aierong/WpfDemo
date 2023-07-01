@@ -8,13 +8,9 @@ using LiveChartsCore.Defaults;
 using LiveChartsCore;
 using Prism.Mvvm;
 using Prism.Regions;
-using LiveChartsCore;
-using LiveChartsCore.Defaults;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
 using Prism.Commands;
-using Prism.Mvvm;
-using Prism.Regions;
 using SkiaSharp;
 
 
