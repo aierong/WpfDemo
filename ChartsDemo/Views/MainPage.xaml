@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:ChartsDemo.Views"
+        xmlns:localcommon="clr-namespace:ChartsDemo.Common"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
         Title="主页"
@@ -20,12 +21,13 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        
+
         <!--  这里定义一个区域来加载导航  -->
         <ContentControl Grid.Row="0"
                         Grid.Column="0"
-                        prism:RegionManager.RegionName="ContentRegion" />
-
+                        prism:RegionManager.RegionName="{x:Static localcommon:Common.RegionName}">
+        </ContentControl>
+        
         <StackPanel Grid.Row="1"
                     Grid.Column="0"
                     HorizontalAlignment="Center"
@@ -109,7 +111,7 @@
                             Command="{Binding LineDongTai2ButtonClickCommand}"
                             Content="动态line___" />
 
-                    
+
                     <Button Height="30"
                             Margin="10,10,10,10"
                             Command="{Binding DongTaiBar1ButtonClickCommand}"
@@ -118,7 +120,7 @@
                             Margin="10,10,10,10"
                             Command="{Binding DongTaiBar2ButtonClickCommand}"
                             Content="动态bar" />
-                    
+
                     <Button Height="30"
                             Margin="10,10,10,10"
                             Command="{Binding UCBarRow1DongTaiButtonClickCommand}"
