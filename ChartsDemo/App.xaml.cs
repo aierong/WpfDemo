@@ -100,7 +100,7 @@ namespace ChartsDemo
 
             containerRegistry.RegisterForNavigation<UCBarRow1DongTai>( "UCBarRow1DongTai" );
             containerRegistry.RegisterForNavigation<MultipleAxes>(  Common.Common.NavigateNameMultipleAxes );
-
+            containerRegistry.RegisterForNavigation<MultipleAxesDongTai1>( Common.Common.NavigateNameMultipleAxesDongTai1 );
         }
 
 

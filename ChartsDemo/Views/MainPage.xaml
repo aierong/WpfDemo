@@ -27,7 +27,7 @@
                         Grid.Column="0"
                         prism:RegionManager.RegionName="{x:Static localcommon:Common.RegionName}">
         </ContentControl>
-        
+
         <StackPanel Grid.Row="1"
                     Grid.Column="0"
                     HorizontalAlignment="Center"
@@ -102,42 +102,38 @@
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                             Orientation="Horizontal">
-                    <Button Height="30"
-                            Margin="10,10,10,10"
+                    <Button Margin="10,10,0,10"
                             Command="{Binding LineDongTai1ButtonClickCommand}"
                             Content="动态line" />
-                    <Button Height="30"
-                            Margin="10,10,10,10"
+                    <Button Margin="10,10,0,10"
                             Command="{Binding LineDongTai2ButtonClickCommand}"
-                            Content="动态line___" />
+                            Content="动态line" />
 
 
-                    <Button Height="30"
-                            Margin="10,10,10,10"
+                    <Button Margin="10,10,0,10"
                             Command="{Binding DongTaiBar1ButtonClickCommand}"
                             Content="动态bar" />
-                    <Button Height="30"
-                            Margin="10,10,10,10"
+                    <Button Margin="10,10,0,10"
                             Command="{Binding DongTaiBar2ButtonClickCommand}"
                             Content="动态bar" />
 
-                    <Button Height="30"
-                            Margin="10,10,10,10"
+                    <Button Margin="10,10,0,10"
                             Command="{Binding UCBarRow1DongTaiButtonClickCommand}"
                             Content="动态bar(赛跑模式)" />
 
-                    <Button Height="30"
-                            Margin="10,10,10,10"
+                    <Button Margin="10,10,0,10"
                             Command="{Binding PieDontTai0ButtonClickCommand}"
                             Content="动态pie demo0" />
-                    <Button Height="30"
-                            Margin="10,10,10,10"
+                    <Button Margin="10,10,0,10"
                             Command="{Binding PieDontTai2ButtonClickCommand}"
                             Content="动态pie demo1" />
-                    <Button Height="30"
-                            Margin="10,10,10,10"
+                    <Button Margin="10,10,0,10"
                             Command="{Binding PieDontTaiPlusButtonClickCommand}"
                             Content="动态pie demoplus" />
+                    <Button Margin="10,10,0,10"
+                            Command="{Binding MultipleAxesDongTai1ButtonClickCommand}"
+                            Content="动态">
+                    </Button>
                 </StackPanel>
             </Grid>
 

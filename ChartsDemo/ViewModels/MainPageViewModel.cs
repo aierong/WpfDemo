@@ -69,7 +69,7 @@ namespace ChartsDemo.ViewModels
         public DelegateCommand BarDuo1ButtonClickCommand => _BarDuo1ButtonClickCommand ?? ( _BarDuo1ButtonClickCommand = new DelegateCommand( () =>
         {
             //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
-            this._regionManager.RequestNavigate( Common.Common.RegionName ,  Common.Common.NavigateNameBarDuo1 );
+            this._regionManager.RequestNavigate( Common.Common.RegionName , Common.Common.NavigateNameBarDuo1 );
         } ) );
 
 
@@ -162,6 +162,7 @@ namespace ChartsDemo.ViewModels
         } ) );
 
 
+
         private DelegateCommand _UCBarRow1DongTaiButtonClickCommand;
         public DelegateCommand UCBarRow1DongTaiButtonClickCommand => _UCBarRow1DongTaiButtonClickCommand ?? ( _UCBarRow1DongTaiButtonClickCommand = new DelegateCommand( () =>
         {
@@ -170,12 +171,21 @@ namespace ChartsDemo.ViewModels
         } ) );
 
 
-        //
+
         private DelegateCommand _MultipleAxesButtonClickCommand;
         public DelegateCommand MultipleAxesButtonClickCommand => _MultipleAxesButtonClickCommand ?? ( _MultipleAxesButtonClickCommand = new DelegateCommand( () =>
         {
             //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
             this._regionManager.RequestNavigate( Common.Common.RegionName , Common.Common.NavigateNameMultipleAxes );
+        } ) );
+
+
+        //
+        private DelegateCommand _MultipleAxesDongTai1ButtonClickCommand;
+        public DelegateCommand MultipleAxesDongTai1ButtonClickCommand => _MultipleAxesDongTai1ButtonClickCommand ?? ( _MultipleAxesDongTai1ButtonClickCommand = new DelegateCommand( () =>
+        {
+            //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
+            this._regionManager.RequestNavigate( Common.Common.RegionName , Common.Common.NavigateNameMultipleAxesDongTai1 );
         } ) );
 
     }

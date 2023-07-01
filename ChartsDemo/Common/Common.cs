@@ -15,5 +15,6 @@ namespace ChartsDemo.Common
 
       
         public static string NavigateNameMultipleAxes = "MultipleAxes";
+        public static string NavigateNameMultipleAxesDongTai1 = "MultipleAxesDongTai1";
     }
 }
