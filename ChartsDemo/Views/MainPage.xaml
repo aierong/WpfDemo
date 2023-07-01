@@ -114,7 +114,11 @@
                             Margin="10,10,10,10"
                             Command="{Binding DongTaiBar1ButtonClickCommand}"
                             Content="动态bar" />
-
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding DongTaiBar2ButtonClickCommand}"
+                            Content="动态bar" />
+                    
                     <Button Height="30"
                             Margin="10,10,10,10"
                             Command="{Binding UCBarRow1DongTaiButtonClickCommand}"

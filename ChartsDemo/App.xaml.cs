@@ -66,7 +66,7 @@ namespace ChartsDemo
         //            // OPTIONAL
         //            .AddDarkTheme()
         //            //.AddLightTheme()
-                                         
+
         //        );
         //}
 
@@ -79,7 +79,7 @@ namespace ChartsDemo
             containerRegistry.RegisterForNavigation<UserControlDemo1>( "UserControlDemo1" );
             containerRegistry.RegisterForNavigation<UserControlLine1>( "UserControlLine1" );
             containerRegistry.RegisterForNavigation<UserControlLineDuo>( "UserControlLineDuo" );
-       
+
             containerRegistry.RegisterForNavigation<UCBar0>( "UCBar0" );
             containerRegistry.RegisterForNavigation<UCBar1>( "UCBar1" );
             containerRegistry.RegisterForNavigation<Pie1>( "Pie1" );
@@ -89,6 +89,7 @@ namespace ChartsDemo
 
             containerRegistry.RegisterForNavigation<UCBarLine1>( "UCBarLine1" );
             containerRegistry.RegisterForNavigation<BarDongTai1>( "BarDongTai1" );
+            containerRegistry.RegisterForNavigation<BarDongTai2>( "BarDongTai2" );
 
             containerRegistry.RegisterForNavigation<PieDontTai1>( "PieDontTai1" );
             containerRegistry.RegisterForNavigation<PieDontTai2>( "PieDontTai2" );
@@ -96,10 +97,10 @@ namespace ChartsDemo
 
             containerRegistry.RegisterForNavigation<UserControl123>( "UserControl123" );
             containerRegistry.RegisterForNavigation<UCBarRow1>( "UCBarRow1" );
-             
+
             containerRegistry.RegisterForNavigation<UCBarRow1DongTai>( "UCBarRow1DongTai" );
             containerRegistry.RegisterForNavigation<MultipleAxesUserControl1>( "MultipleAxesUserControl1" );
- 
+
         }
 
 

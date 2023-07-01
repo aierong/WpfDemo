@@ -289,6 +289,9 @@ namespace ChartsDemo.ViewModels.UC
 
 
 
+
+
+
         public void OnNavigatedTo ( NavigationContext navigationContext )
         {
             //throw new NotImplementedException();
