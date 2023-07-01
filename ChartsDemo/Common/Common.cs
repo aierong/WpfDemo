@@ -9,5 +9,8 @@ namespace ChartsDemo.Common
     public class Common
     {
         public static string RegionName = "ContentRegion";
+
+        public static string NavigateNameBar0 = "Bar0";
+        public static string NavigateNameBarDuo1 = "BarDuo1";
     }
 }
