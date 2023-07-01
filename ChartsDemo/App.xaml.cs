@@ -80,7 +80,7 @@ namespace ChartsDemo
             containerRegistry.RegisterForNavigation<UserControlLine1>( "UserControlLine1" );
             containerRegistry.RegisterForNavigation<UserControlLineDuo>( "UserControlLineDuo" );
 
-            containerRegistry.RegisterForNavigation<UCBar0>( "UCBar0" );
+            containerRegistry.RegisterForNavigation<Bar0>( "Bar0" );
             containerRegistry.RegisterForNavigation<BarDuo1>( "BarDuo1" );
             containerRegistry.RegisterForNavigation<Pie1>( "Pie1" );
 
