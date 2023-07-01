@@ -59,6 +59,7 @@
     <Compile Include="Common\Common.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\UC\BarDongTai2ViewModel.cs" />
+    <Compile Include="ViewModels\UC\MultipleAxesDongTai1ViewModel.cs" />
     <Compile Include="ViewModels\UC\MultipleAxesViewModel.cs" />
     <Compile Include="ViewModels\UC\LineDongTai2ViewModel.cs" />
     <Compile Include="ViewModels\UC\Bar0ViewModel.cs" />
@@ -97,6 +98,9 @@
     </Compile>
     <Compile Include="Views\UC\BarDuo1.xaml.cs">
       <DependentUpon>BarDuo1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC\MultipleAxesDongTai1.xaml.cs">
+      <DependentUpon>MultipleAxesDongTai1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UC\UCBarLine1.xaml.cs">
       <DependentUpon>UCBarLine1.xaml</DependentUpon>
@@ -158,6 +162,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UC\BarDuo1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC\MultipleAxesDongTai1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
