@@ -24,6 +24,9 @@ namespace ChartsDemo.ViewModels.UC
         {
         };
 
+        private ObservableCollection<ObservableValue> _dt_observableValues3 = new ObservableCollection<ObservableValue>()
+        {
+        };
 
         ObservableCollection<ISeries> _Series;
 
@@ -98,6 +101,16 @@ namespace ChartsDemo.ViewModels.UC
 
             };
 
+            _dt_observableValues3 = new ObservableCollection<ObservableValue>
+            {
+                new ObservableValue(0.3),
+
+                new ObservableValue(0.9),
+
+                new ObservableValue(0.88),
+
+            };
+
             Series = new ObservableCollection<ISeries>()
             {
                 new ColumnSeries<ObservableValue>
@@ -106,7 +119,8 @@ namespace ChartsDemo.ViewModels.UC
                     Values =_dt_observableValues1,
                     //指定这个系列柱子颜色，如果不指定，系统自动分配
                     Fill = new SolidColorPaint(SKColors.Red),
-
+                    //这里指定第一组y轴
+                    ScalesYAt = 0
                 },
                 new ColumnSeries<ObservableValue>
                 {
@@ -115,7 +129,17 @@ namespace ChartsDemo.ViewModels.UC
 
                     //指定这个系列柱子颜色，如果不指定，系统自动分配
                     Fill = new SolidColorPaint(SKColors.Green  ),
+                    //这里指定第一组y轴
+                    ScalesYAt = 0
                 },
+                new LineSeries<ObservableValue>
+                {
+                    Values =_dt_observableValues3,
+                    Fill = null,
+                    Stroke = new SolidColorPaint(SKColors.Yellow) { StrokeThickness = 1 },
+                    //这里指定第2组y轴
+                    ScalesYAt = 1
+                }
             };
 
 
@@ -171,7 +195,30 @@ namespace ChartsDemo.ViewModels.UC
 
 
 
-                }
+                },
+                new Axis
+                {
+                    Name = "良率",
+                    NamePadding = new LiveChartsCore.Drawing.Padding(0, 15),
+                    NamePaint=  new SolidColorPaint
+                    {
+                        Color = SKColors.Red,
+
+                        SKTypeface = SKFontManager.Default.MatchCharacter('汉') // 汉语 
+                        // SKTypeface = SKFontManager.Default.MatchCharacter('أ'), // Arab
+                        // SKTypeface = SKFontManager.Default.MatchCharacter('あ'), // Japanese
+                        // SKTypeface = SKFontManager.Default.MatchCharacter('Ж'), // Russian
+                    },
+                    ShowSeparatorLines = true,
+                    SeparatorsPaint =new SolidColorPaint
+                    {
+                        Color = SKColors.Red,
+
+                   
+                    },
+                    Position = LiveChartsCore.Measure.AxisPosition.End
+                },
+
             };
 
         }

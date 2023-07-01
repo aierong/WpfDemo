@@ -118,7 +118,9 @@ namespace ChartsDemo.ViewModels.UC
             TicksPaint = new SolidColorPaint(s_red),
             SubticksPaint = new SolidColorPaint(s_red),
             DrawTicksPath = true,
+            //不显示数据分割线
             ShowSeparatorLines = false,
+            //y轴显示在右边
             Position = LiveChartsCore.Measure.AxisPosition.End
         },
         new Axis // the "thousands" series will be scaled on this axis
@@ -133,7 +135,9 @@ namespace ChartsDemo.ViewModels.UC
             TicksPaint = new SolidColorPaint(s_yellow),
             SubticksPaint = new SolidColorPaint(s_yellow),
             DrawTicksPath = true,
+            //不显示数据分割线
             ShowSeparatorLines = false,
+            //y轴显示在右边
             Position = LiveChartsCore.Measure.AxisPosition.End
         }
         };
