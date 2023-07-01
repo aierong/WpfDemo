@@ -89,6 +89,8 @@ namespace ChartsDemo.ViewModels.UC
 
 
             //特别提示：每次重新刷新数据后，Legend里面的文本位置会错乱   官网github，好像有提到会在后续版本修复
+            // 2.0.0beta.802版本已经修复这个bug
+
             //SolidColorPaint 要重新赋值，要不，更新后，不显示
             LegendTextPaint = new SolidColorPaint
             {
