@@ -44,18 +44,34 @@ namespace ChartsDemo.ViewModels.UC
         {
         };
 
-        ObservableCollection<Axis> _XAxess = new ObservableCollection<Axis>() { };
+        ObservableCollection<Axis> _XAxes = new ObservableCollection<Axis>() { };
 
-        public ObservableCollection<Axis> XAxess
+        public ObservableCollection<Axis> XAxes
         {
             get
             {
-                return _XAxess;
+                return _XAxes;
             }
             set
             {
                 //SetProperty就是设置值,并且通知属性改变
-                SetProperty( ref _XAxess , value );
+                SetProperty( ref _XAxes , value );
+            }
+        }
+
+
+        ObservableCollection<Axis> _YAxes = new ObservableCollection<Axis>() { };
+
+        public ObservableCollection<Axis> YAxes
+        {
+            get
+            {
+                return _YAxes;
+            }
+            set
+            {
+                //SetProperty就是设置值,并且通知属性改变
+                SetProperty( ref _YAxes , value );
             }
         }
 
@@ -107,6 +123,55 @@ namespace ChartsDemo.ViewModels.UC
             _observableValues_x_val = new ObservableCollection<string>()
             {
                 "王", "赵", "张"
+            };
+
+
+            XAxes = new ObservableCollection<Axis>()
+            {
+                new Axis
+                {
+
+                    Labels = _observableValues_x_val ,
+                    
+
+                     //旋转角度
+                    LabelsRotation = 0,
+                    SeparatorsPaint = new SolidColorPaint(new SKColor(200, 200, 200)),
+                    SeparatorsAtCenter = false,
+                    TicksPaint = new SolidColorPaint(new SKColor(35, 35, 35)),
+                    TicksAtCenter = true,
+                    LabelsPaint = new SolidColorPaint
+                    {
+                        Color = SKColors.Black,
+
+                        SKTypeface = SKFontManager.Default.MatchCharacter('汉') // 汉语 
+                        // SKTypeface = SKFontManager.Default.MatchCharacter('أ'), // Arab
+                        // SKTypeface = SKFontManager.Default.MatchCharacter('あ'), // Japanese
+                        // SKTypeface = SKFontManager.Default.MatchCharacter('Ж'), // Russian
+                    }
+                }
+            };
+
+            //开始y轴
+            YAxes = new ObservableCollection<Axis>()
+            {
+                new Axis
+                {
+                    Name = "数量",
+                    NamePadding = new LiveChartsCore.Drawing.Padding(0, 15),
+                    NamePaint=  new SolidColorPaint
+                    {
+                        Color = SKColors.Black,
+
+                        SKTypeface = SKFontManager.Default.MatchCharacter('汉') // 汉语 
+                        // SKTypeface = SKFontManager.Default.MatchCharacter('أ'), // Arab
+                        // SKTypeface = SKFontManager.Default.MatchCharacter('あ'), // Japanese
+                        // SKTypeface = SKFontManager.Default.MatchCharacter('Ж'), // Russian
+                    }
+                   
+
+
+                }
             };
 
         }
