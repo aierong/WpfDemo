@@ -168,7 +168,7 @@ namespace ChartsDemo.ViewModels.UC
                         // SKTypeface = SKFontManager.Default.MatchCharacter('あ'), // Japanese
                         // SKTypeface = SKFontManager.Default.MatchCharacter('Ж'), // Russian
                     }
-                   
+
 
 
                 }
