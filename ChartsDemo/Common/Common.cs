@@ -12,5 +12,8 @@ namespace ChartsDemo.Common
 
         public static string NavigateNameBar0 = "Bar0";
         public static string NavigateNameBarDuo1 = "BarDuo1";
+
+      
+        public static string NavigateNameMultipleAxes = "MultipleAxes";
     }
 }

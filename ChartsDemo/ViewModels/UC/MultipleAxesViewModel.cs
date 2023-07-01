@@ -13,7 +13,7 @@ using SkiaSharp;
 
 namespace ChartsDemo.ViewModels.UC
 {
-    public class MultipleAxesUserControl1ViewModel : BindableBase, INavigationAware
+    public class MultipleAxesViewModel : BindableBase, INavigationAware
     {
         public SolidColorPaint LegendTextPaint
         {

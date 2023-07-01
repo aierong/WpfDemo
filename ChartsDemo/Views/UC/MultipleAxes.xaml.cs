@@ -18,9 +18,9 @@ namespace ChartsDemo.Views.UC
     /// <summary>
     /// MultipleAxesUserControl1.xaml 的交互逻辑
     /// </summary>
-    public partial class MultipleAxesUserControl1 : UserControl
+    public partial class MultipleAxes : UserControl
     {
-        public MultipleAxesUserControl1 ()
+        public MultipleAxes ()
         {
             InitializeComponent();
         }
