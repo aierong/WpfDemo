@@ -10,7 +10,18 @@
              d:DesignWidth="800"
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d">
-    <Grid>
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
 
+        <lvc:CartesianChart Grid.Row="0"
+                            Grid.Column="0"
+                            Series="{Binding Series}">
+            <!--  1  -->
+        </lvc:CartesianChart>
     </Grid>
 </UserControl>

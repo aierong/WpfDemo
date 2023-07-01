@@ -96,12 +96,11 @@ namespace ChartsDemo
 
             containerRegistry.RegisterForNavigation<UserControl123>( "UserControl123" );
             containerRegistry.RegisterForNavigation<UCBarRow1>( "UCBarRow1" );
-            //
+             
             containerRegistry.RegisterForNavigation<UCBarRow1DongTai>( "UCBarRow1DongTai" );
-
+            containerRegistry.RegisterForNavigation<MultipleAxesUserControl1>( "MultipleAxesUserControl1" );
+ 
         }
-
-
 
 
 

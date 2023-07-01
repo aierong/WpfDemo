@@ -89,6 +89,11 @@
                             Margin="10,10,10,10"
                             Command="{Binding Pie1ButtonClickCommand}"
                             Content="pie" />
+
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding MultipleAxesButtonClickCommand}"
+                            Content="多个Y轴" />
                 </StackPanel>
                 <StackPanel Grid.Row="1"
                             Grid.Column="0"
