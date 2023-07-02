@@ -8,7 +8,7 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         Title="ResourceWindow"
         Width="800"
-        Height="450"
+        Height="650"
         d:DataContext="{d:DesignInstance localvm:ResourceWindowViewModel,
                                          IsDesignTimeCreatable=True}"
         mc:Ignorable="d">
@@ -33,12 +33,45 @@
         <sys:Double x:Key="num1">123.002</sys:Double>
 
 
-        <sys:Boolean  x:Key="bl1">true</sys:Boolean>
+        <sys:Boolean x:Key="bl1">true</sys:Boolean>
+
+
+
+
+
+
+
+        <SolidColorBrush x:Key="MyBrush"
+                         Color="Gold" />
+        <Style x:Key="PageBackground"
+               TargetType="Border">
+            <Setter Property="Background" Value="Blue" />
+        </Style>
+        <Style x:Key="TitleText"
+               TargetType="TextBlock">
+            <Setter Property="Background" Value="Blue" />
+            <Setter Property="DockPanel.Dock" Value="Top" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Foreground" Value="#4E87D4" />
+            <Setter Property="FontFamily" Value="Trebuchet MS" />
+            <Setter Property="Margin" Value="0,40,10,10" />
+        </Style>
+        <Style x:Key="Label"
+               TargetType="TextBlock">
+            <Setter Property="DockPanel.Dock" Value="Right" />
+            <Setter Property="FontSize" Value="8" />
+            <Setter Property="Foreground" Value="{StaticResource MyBrush}" />
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Margin" Value="0,3,10,0" />
+        </Style>
+
     </Window.Resources>
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -83,6 +116,35 @@
                     HorizontalAlignment="Left"
                     Command="{Binding DataCommand}"
                     Content="viewmodel访问资源" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="3"
+                    Grid.Column="0">
+            <Border Style="{StaticResource PageBackground}">
+                <DockPanel>
+                    <TextBlock Style="{StaticResource TitleText}">Title</TextBlock>
+                    <TextBlock Style="{StaticResource Label}">Label</TextBlock>
+                    <TextBlock Margin="20"
+                               HorizontalAlignment="Left"
+                               DockPanel.Dock="Top"
+                               FontSize="36"
+                               Foreground="{StaticResource MyBrush}"
+                               Text="Text" />
+                    <Button Height="30"
+                            Margin="5"
+                            HorizontalAlignment="Left"
+                            Background="{StaticResource MyBrush}"
+                            DockPanel.Dock="Top">
+                        Button
+                    </Button>
+                    <Ellipse Width="50"
+                             Height="50"
+                             Margin="5"
+                             HorizontalAlignment="Left"
+                             DockPanel.Dock="Top"
+                             Fill="{StaticResource MyBrush}" />
+                </DockPanel>
+            </Border>
         </StackPanel>
     </Grid>
 </Window>
