@@ -304,7 +304,7 @@
     <Compile Include="Views\ValidationData\demo1\view\Yz.xaml.cs">
       <DependentUpon>Yz.xaml</DependentUpon>
     </Compile>
-    <Page Include="DictionaryABC.xaml">
+    <Page Include="DictionaryColor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
