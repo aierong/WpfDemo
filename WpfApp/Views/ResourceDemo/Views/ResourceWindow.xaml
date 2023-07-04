@@ -12,7 +12,9 @@
         d:DataContext="{d:DesignInstance localvm:ResourceWindowViewModel,
                                          IsDesignTimeCreatable=True}"
         mc:Ignorable="d">
-    <!--  Window.Resources是定义本窗体的资源，自己这个窗体可访问到  -->
+    <!--
+        Window.Resources是定义本窗体的资源，自己这个窗体可访问到
+    -->
     <Window.Resources>
         <!--  这个资源变量在App.xaml里面有定义，这里再定义，在本窗体就以这个为为准  -->
         <sys:String x:Key="ComboBoxTitle">Items(本窗体):</sys:String>

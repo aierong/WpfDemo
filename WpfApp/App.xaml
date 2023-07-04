@@ -75,6 +75,9 @@
             <sys:String>Item #3</sys:String>
         </x:Array>
 
+        <ResourceDictionary x:Key="key1"
+                            Source="DictionaryABC.xaml">
+        </ResourceDictionary>
 
     </Application.Resources>
 
