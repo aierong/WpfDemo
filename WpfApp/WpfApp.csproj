@@ -308,6 +308,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DictionaryData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\BindData\contexts\basedemo\demo2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

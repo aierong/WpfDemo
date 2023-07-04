@@ -89,10 +89,12 @@
                 <sys:String x:Key="Title123">Items123:</sys:String>
             </StackPanel.Resources>
 
-            <Label Content="{StaticResource ComboBoxTitle}" />
+            <Label Background="{StaticResource PieColor1}"
+                   Content="{StaticResource ComboBoxTitle}" />
             <ComboBox ItemsSource="{StaticResource ComboBoxItems}" />
 
-            <Label Content="{StaticResource ComboBoxTitleWin}" />
+            <Label Content="{StaticResource ComboBoxTitleWin}"
+                   Foreground="{StaticResource Color2}" />
             <ComboBox ItemsSource="{StaticResource ComboBoxItems}" />
 
             <Label Content="{StaticResource Title123}" />
