@@ -44,6 +44,9 @@
     StartupUri="/Views/ResourceDemo/Views/ResourceWindow.XAML"   资源
     
     StartupUri="/Views/BindData/ListData/Views/ListData.XAML"    列表
+    
+    
+    StartupUri="/Views/colorbrushstring/colorWindow1.XAML"    列表
 -->
 <Application x:Class="WpfApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -53,7 +56,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/ResourceDemo/Views/ResourceWindow.XAML">
+            StartupUri="/Views/colorbrushstring/colorWindow1.XAML">
 
 
 

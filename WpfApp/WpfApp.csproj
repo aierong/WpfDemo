@@ -127,6 +127,10 @@
     <Compile Include="Views\BUJU\ZhongHeDemo\zhonghe1.xaml.cs">
       <DependentUpon>zhonghe1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\colorbrushstring\colorWindow1.xaml.cs">
+      <DependentUpon>colorWindow1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\colorbrushstring\colorWindow1ViewModel.cs" />
     <Compile Include="Views\CommandDemo\demo1\duo.xaml.cs">
       <DependentUpon>duo.xaml</DependentUpon>
     </Compile>
@@ -430,6 +434,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\BUJU\ZhongHeDemo\zhonghe1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\colorbrushstring\colorWindow1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
