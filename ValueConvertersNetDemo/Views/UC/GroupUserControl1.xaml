@@ -10,7 +10,87 @@
              d:DesignWidth="800"
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d">
-    <Grid>
+    <UserControl.Resources>
 
+        <Style x:Key="TrueStyleTemplate"
+               TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="LightGreen" />
+            <Setter Property="FontSize" Value="33">
+            </Setter>
+        </Style>
+        <Style x:Key="FalseStyleTemplate"
+               TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="MistyRose" />
+            <Setter Property="FontSize" Value="16">
+            </Setter>
+        </Style>
+
+        <valueConverters:ValueConverterGroup x:Key="ValueConverterGroupDemo">
+            <valueConverters:MinMaxValueToBoolConverter MaxValue="5"
+                                                        MinValue="3">
+            </valueConverters:MinMaxValueToBoolConverter>
+
+            <!--  布尔值反转  -->
+            <valueConverters:BoolInverter />
+
+            <valueConverters:BoolToStyleConverter FalseValue="{StaticResource FalseStyleTemplate}"
+                                                  TrueValue="{StaticResource TrueStyleTemplate}">
+            </valueConverters:BoolToStyleConverter>
+
+
+
+        </valueConverters:ValueConverterGroup>
+
+        <valueConverters:ValueConverterGroup x:Key="Group2">
+            <valueConverters:IntegerToBoolConverter FalseValue="200"
+                                                    TrueValue="100">
+
+            </valueConverters:IntegerToBoolConverter>
+            <valueConverters:BoolToStyleConverter FalseValue="{StaticResource FalseStyleTemplate}"
+                                                  TrueValue="{StaticResource TrueStyleTemplate}">
+            </valueConverters:BoolToStyleConverter>
+        </valueConverters:ValueConverterGroup>
+    </UserControl.Resources>
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Button Width="250"
+                    Margin="30,0,0,0"
+                    BorderThickness="1"
+                    Content="我Style随值变化"
+                    Style="{Binding Num, Converter={StaticResource ValueConverterGroupDemo}}">
+            </Button>
+            <Button Width="250"
+                    Margin="30,0,0,0"
+                    BorderThickness="1"
+                    Content="我Style随值变化"
+                    Style="{Binding NumTwo, Converter={StaticResource Group2}}">
+            </Button>
+            <TextBlock Margin="30,0,0,0"
+                       FontSize="20"
+                       Foreground="Green"
+                       Text="{Binding Num}">
+            </TextBlock>
+            <TextBlock Margin="30,0,0,0"
+                       FontSize="20"
+                       Foreground="Green"
+                       Text="{Binding NumTwo}">
+            </TextBlock>
+            <Button Width="100"
+                    Margin="10,10,10,10"
+                    Command="{Binding QieHuanClickCommand}"
+                    Content="切换状态">
+            </Button>
+        </StackPanel>
     </Grid>
 </UserControl>
