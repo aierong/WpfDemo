@@ -49,7 +49,7 @@
         <valueConverters:BoolToStringConverter x:Key="BoolToStringConverter"
                                                FalseValue="No"
                                                IsInverted="True"
-                                               TrueValue="Yes">
+                                               TrueValue="OK">
         </valueConverters:BoolToStringConverter>
 
         <!--
