@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 using System.Windows.Media;
 
 /*       
-SolidColorBrush的创建方式
+Color转SolidColorBrush
 SolidColorBrush br1 = new System.Windows.Media.SolidColorBrush( Colors.Brown );
 
-Brush的创建方式
+SolidColorBrush转Brush
 //Brush是SolidColorBrush的基类
 Brush b1 = new System.Windows.Media.SolidColorBrush( Colors.Brown );
 
@@ -29,9 +29,7 @@ SolidColorBrush sb2 = new System.Windows.Media.SolidColorBrush( Colors.Brown );
 //SolidColorBrush转Color
 var co1 = sb2.Color;
            
-Color的创建方式：
-Color cl0 = Colors.Brown;
-
+ 
 //hex转Color
 Color cl = ( Color ) ColorConverter.ConvertFromString( "#A52A2A" );
 //rgb转Color
