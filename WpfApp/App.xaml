@@ -7,6 +7,7 @@
     StartupUri="/Views/KJ/grid/tiaojianxianshi/dongtuplusgrid.XAML"  表格
     
     
+    
     StartupUri="/Views/KJ/grid/tiaojianxianshi/BuTonggridWindow1.XAML"   表格
     
     
@@ -46,6 +47,7 @@
     StartupUri="/Views/BindData/ListData/Views/ListData.XAML"    列表
     
     
+    
     StartupUri="/Views/colorbrushstring/colorWindow1.XAML"    列表
 -->
 <Application x:Class="WpfApp.App"
@@ -56,7 +58,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-            StartupUri="/Views/colorbrushstring/colorWindow1.XAML">
+             StartupUri="/Views/DH/WenZi2.XAML">
 
 
 
@@ -68,11 +70,11 @@
 
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                 
-                
+
+
                 <ResourceDictionary Source="/DictionaryColor.xaml">
                 </ResourceDictionary>
-                
+
                 <ResourceDictionary Source="/DictionaryData.xaml">
                 </ResourceDictionary>
 
@@ -82,18 +84,22 @@
 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-         
+
     </Application.Resources>
 
 
     <!--
     <Application.Resources>
-       
 
-        --><!--  定义一个字符串  --><!--
+
+    -->
+    <!--  定义一个字符串  -->
+    <!--
         <sys:String x:Key="ComboBoxTitle">Items:</sys:String>
 
-        --><!--  定义一个字符串数组  --><!--
+    -->
+    <!--  定义一个字符串数组  -->
+    <!--
         <x:Array x:Key="ComboBoxItems"
                  Type="sys:String">
             <sys:String>Item #1</sys:String>

@@ -57,6 +57,7 @@
                     <LinearGradientBrush StartPoint="0.5 0" EndPoint="0.5 1">
                         <GradientStop Offset="0" Color="#FFB0F691" />
                         <GradientStop Offset="1" Color="#FF022802" />
+                        <GradientStop Offset="1" Color="Red" />
                     </LinearGradientBrush>
                 </TextBlock.Foreground>
                 <TextBlock.Effect>
@@ -72,7 +73,7 @@
                                                     RepeatBehavior="Forever"
                                                     Storyboard.TargetProperty="Foreground.GradientStops[1].Color"
                                                     To="Green"
-                                                    Duration="0:0:1" />
+                                                    Duration="0:0:15" />
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger.Actions>
