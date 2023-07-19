@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ChartsDemo.Common
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Common
     {
         public static string RegionName = "ContentRegion";

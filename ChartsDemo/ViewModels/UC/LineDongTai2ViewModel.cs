@@ -132,6 +132,7 @@ namespace ChartsDemo.ViewModels.UC
 
             _observableValues.Clear();
             _observableValues_x_val.Clear();
+
             for ( int i = 1 ; i <= fors ; i++ )
             {
                 var num = _random.Next( 1 , 250 );
@@ -200,12 +201,16 @@ IsNavigationTarget：True则重用该View实例，Flase则每一次导航到该�
             //throw new NotImplementedException();
         }
 
+
+
         public bool IsNavigationTarget ( NavigationContext navigationContext )
         {
             //throw new NotImplementedException();
             //IsNavigationTarget：True则重用该View实例，Flase则每一次导航到该页面都会实例化一次
             return false;
         }
+
+
 
         public void OnNavigatedFrom ( NavigationContext navigationContext )
         {
