@@ -232,6 +232,11 @@
     <Compile Include="Views\KJ\mainpage.xaml.cs">
       <DependentUpon>mainpage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\KJ\RadioButtons\conver\DisplayTypeConverter.cs" />
+    <Compile Include="Views\KJ\RadioButtons\UCRadioButton.xaml.cs">
+      <DependentUpon>UCRadioButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KJ\RadioButtons\UCRadioButtonViewModel.cs" />
     <Compile Include="Views\KJ\Tab\Tab2UserControl.xaml.cs">
       <DependentUpon>Tab2UserControl.xaml</DependentUpon>
     </Compile>
@@ -534,6 +539,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\KJ\mainpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KJ\RadioButtons\UCRadioButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

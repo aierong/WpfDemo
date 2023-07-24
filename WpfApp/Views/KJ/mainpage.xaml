@@ -51,6 +51,15 @@
                     Content="ItemsControl"
                     Tag="/Views/KJ/ItemsControl/ItemsControlUserControl.xaml" />
 
+            <Button Margin="5"
+                    Click="btnNav_Click"
+                    Content="RadioButton"
+                    Tag="/Views/KJ/RadioButtons/UCRadioButton.xaml" />
+            
+            <!--
+            <RadioButton Content="RadioButton1"/>
+            <RadioButton Content="RadioButton2"/>
+            -->
 
         </WrapPanel>
 

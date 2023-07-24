@@ -58,10 +58,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/DH/WenZi2.XAML">
-
-
-
+             StartupUri="/Views/KJ/mainpage.XAML" >
 
 
 
