@@ -20,13 +20,14 @@
     StartupUri="/Views/StyleDemo/StyleMain.XAML"
     
     
+    
     StartupUri="/Views/BUJU/StackPanel/cuizhi.XAML"       布局
     StartupUri="/Views/BUJU/Uniform/UniformWindow1.XAML"  布局
     StartupUri="/Views/BUJU/WrapPanel/Horizontal.XAML"    布局
     
     
     StartupUri="/Views/fonts/fontWindow1.XAML"    图标
-    StartupUri="/Views/fonts/font2Window.XAML"
+    StartupUri="/Views/fonts/font2Window.XAML"    led 
     
     StartupUri="/Views/ConverterDemo/demo1/Window1.XAML"  转换器
     
@@ -49,6 +50,9 @@
     
     
     StartupUri="/Views/colorbrushstring/colorWindow1.XAML"    列表
+    
+    
+    /Views/TeXiao/LedClock/demo1/view/ClockWindow1.XAML
 -->
 <Application x:Class="WpfApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -58,7 +62,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/KJ/mainpage.XAML" >
+             StartupUri="/Views/TeXiao/LedClock/demo1/view/ClockWindow1.XAML" >
 
 
 
