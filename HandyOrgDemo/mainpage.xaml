@@ -31,6 +31,9 @@
                 <TabItem Header="Label Demo">
                     <localuc:LabelDemoUserControl />
                 </TabItem>
+                <TabItem Header="Button Demo">
+                    <localuc:ButtonUserControl1 />
+                </TabItem>
                 <TabItem Header="MessageBox Demo">
                     <localuc:MessageBoxDemoUserControl />
                 </TabItem>
@@ -53,22 +56,12 @@
                     <localuc:UserControlFK />
                 </TabItem>
 
-
             </TabControl>
 
         </ScrollViewer>
 
 
-        <!--<ScrollViewer Grid.Row="1"
-                      HorizontalAlignment="Right"
-                      VerticalScrollBarVisibility="Hidden">
-        -->
-        <!--  hc:Growl.GrowlParent就是在自己窗体弹窗提示  -->
-        <!--
-            <StackPanel Margin="0,10,10,10"
-                        VerticalAlignment="Top"
-                        hc:Growl.GrowlParent="True" />
-        </ScrollViewer>-->
+
 
 
         <!--
@@ -88,13 +81,5 @@
         </ScrollViewer>
 
 
-        <!--<ScrollViewer Grid.Row="1"
-                      HorizontalAlignment="Right"
-                      VerticalAlignment="Bottom"
-                      VerticalScrollBarVisibility="Hidden">
-            <StackPanel Margin="0,10,10,10"
-                        VerticalAlignment="Top"
-                        hc:Growl.Token="ErrorMessage" />
-        </ScrollViewer>-->
     </Grid>
 </Window>

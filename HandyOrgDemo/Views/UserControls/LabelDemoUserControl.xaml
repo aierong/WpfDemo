@@ -9,7 +9,7 @@
              mc:Ignorable="d">
     <Grid>
         <StackPanel>
-            <Label Content="我是原始的" />
+            <Label Content="我是默认样式的" />
             <Label Content="我是加入样式的1"
                    Style="{StaticResource LabelDanger.Small}" />
             <Label Content="我是加入样式的2"
