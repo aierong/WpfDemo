@@ -31,9 +31,6 @@ namespace WpfApp.Views.KJ
             Button btn = sender as Button;
             var uri = btn.Tag.ToString();
 
-            //uri = "pack://application:,,,/Views/KJ/Window22.xaml";
-            //uri = "/Views/KJ/UserControl12.xaml";
-
             this.frmMain.Navigate( new Uri( uri , UriKind.Relative ) );
         }
     }

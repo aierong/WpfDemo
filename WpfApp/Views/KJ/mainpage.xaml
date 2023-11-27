@@ -55,11 +55,8 @@
                     Click="btnNav_Click"
                     Content="RadioButton"
                     Tag="/Views/KJ/RadioButtons/UCRadioButton.xaml" />
-            
-            <!--
-            <RadioButton Content="RadioButton1"/>
-            <RadioButton Content="RadioButton2"/>
-            -->
+
+
 
         </WrapPanel>
 
