@@ -50,11 +50,9 @@
                 https://blog.csdn.net/m0_59600895/article/details/127115529
             -->
             <Button Height="30"
-                    Margin="10,10,10,10"
                     Content="基本"
                     Style="{x:Null}" />
             <Button Height="30"
-                    Margin="10,10,10,10"
                     Content="基本"
                     Style="{StaticResource notys}" />
         </StackPanel>
