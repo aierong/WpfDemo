@@ -15,15 +15,13 @@ using System.Windows.Shapes;
 namespace WpfApp.Views.TeXiao.PMD.DEMO1
 {
     /// <summary>
-    /// PMDWindow1.xaml 的互動邏輯
+    /// PMDWindowRunningBlock.xaml 的互動邏輯
     /// </summary>
-    public partial class PMDWindow1 : Window
+    public partial class PMDWindowRunningBlock : Window
     {
-        public PMDWindow1 ()
+        public PMDWindowRunningBlock ()
         {
             InitializeComponent();
-
-            this.DataContext = new PMDWindow1VM();
         }
     }
 }

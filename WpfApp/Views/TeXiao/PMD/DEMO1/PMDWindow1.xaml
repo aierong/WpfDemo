@@ -1,26 +1,176 @@
-﻿<Window x:Class="WpfApp.Views.TeXiao.PMD.DEMO1.PMDWindow1"
+﻿
+<!--
+    引入：dll
+    
+    xmlns:pp="https://www.cnblogs.com/pumbaa"
+-->
+
+
+<Window x:Class="WpfApp.Views.TeXiao.PMD.DEMO1.PMDWindow1"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WpfApp.Views.TeXiao.PMD.DEMO1"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="PMDWindow1"
+        xmlns:pp="https://www.cnblogs.com/pumbaa"
+        Title="PMD"
         Width="800"
-        Height="450"
+        Height="650"
+        d:DataContext="{d:DesignInstance local:PMDWindow1VM,
+                                         IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
 
-         
+        <GroupBox Grid.Row="0"
+                  Grid.Column="0"
+                  Margin="4"
+                  Header="demo(左右模式)">
+            <StackPanel Orientation="Vertical">
+
+                <!--
+                    文字默认是从右向左
+                    Direction="LeftToRight" 可以从左向右
+                    
+                    速度：默认120，值越大速度越快
+                    Speed="120"
+                    
+                    Space：首尾间距，负值或NaN时，首尾间距为整个容器宽度； 可以不配置这个参数也行
+                    Space="200"
+                    
+                    Text="123 ABC 滚动轮播文字（走马灯效果）；可调节滚动速度、首尾间距、文字大小、颜色，以及常规的背景、边框、内外边距；文字不限长度、自动适应容器大小........."
+                -->
+                <pp:RunningText Margin="10,10,10,10"
+                                Padding="12,6"
+                                Background="GreenYellow"
+                                Foreground="Purple"
+                                Speed="90"
+                                Text="123 ABC 滚动轮播文字（走马灯效果）；可调节滚动速度、首尾间距、文字大小、颜色，以及常规的背景、边框、内外边距；文字不限长度、自动适应容器大小.........">
+
+                    <!-- pp:RunningText.Style 里面的可以不用，一样显示
+                    <pp:RunningText.Style>
+                        <Style TargetType="{x:Type pp:RunningText}">
+                            <Setter Property="VerticalAlignment" Value="Top" />
+                            <Style.Triggers>
+                                <Trigger Property="Direction" Value="BottomToTop">
+                                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                                    <Setter Property="HorizontalAlignment" Value="Left" />
+                                </Trigger>
+                                <Trigger Property="Direction" Value="TopToBottom">
+                                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                                    <Setter Property="HorizontalAlignment" Value="Left" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </pp:RunningText.Style>
+                    -->
+
+                </pp:RunningText>
+                <pp:RunningText Margin="10,10,10,10"
+                                Padding="12,6"
+                                Background="Transparent"
+                                Direction="LeftToRight"
+                                Foreground="Blue"
+                                Text="123 ABC">
+
+
+                    <!-- pp:RunningText.Style 里面的可以不用，一样显示
+                    <pp:RunningText.Style>
+                        <Style TargetType="{x:Type pp:RunningText}">
+                            <Setter Property="VerticalAlignment" Value="Top" />
+                            <Style.Triggers>
+                                <Trigger Property="Direction" Value="BottomToTop">
+                                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                                    <Setter Property="HorizontalAlignment" Value="Left" />
+                                </Trigger>
+                                <Trigger Property="Direction" Value="TopToBottom">
+                                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                                    <Setter Property="HorizontalAlignment" Value="Left" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </pp:RunningText.Style>
+                    -->
+
+                </pp:RunningText>
+
+                <pp:RunningText Margin="10,10,10,10"
+                                Padding="12,6"
+                                Background="GreenYellow"
+                                Foreground="Purple"
+                                Speed="90"
+                                Text="{Binding Title}">
+
+                    <!-- pp:RunningText.Style 里面的可以不用，一样显示
+    <pp:RunningText.Style>
+        <Style TargetType="{x:Type pp:RunningText}">
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Style.Triggers>
+                <Trigger Property="Direction" Value="BottomToTop">
+                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                    <Setter Property="HorizontalAlignment" Value="Left" />
+                </Trigger>
+                <Trigger Property="Direction" Value="TopToBottom">
+                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                    <Setter Property="HorizontalAlignment" Value="Left" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </pp:RunningText.Style>
+                    -->
+
+                </pp:RunningText>
+                <Button Width="200"
+                        Command="{Binding UpdateDataCommand}"
+                        Content="动态改变文本" />
+
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Row="1"
+                  Grid.Column="0"
+                  Margin="4"
+                  Header="demo(上下模式)">
+            <StackPanel Orientation="Vertical">
+
+                <pp:RunningText Height="220"
+                                Margin="10,10,10,10"
+                                Padding="12,6"
+                                Background="GreenYellow"
+                                Direction="BottomToTop"
+                                Foreground="Purple"
+                                Speed="90"
+                                Text="123 ABC 滚动轮播文字（走马灯效果）；可调节滚动速度、首尾间距、文字大小、颜色，以及常规的背景、边框、内外边距；文字不限长度、自动适应容器大小.........">
+
+
+                    <pp:RunningText.Style>
+                        <Style TargetType="{x:Type pp:RunningText}">
+                            <Setter Property="VerticalAlignment" Value="Top" />
+                            <Style.Triggers>
+                                <Trigger Property="Direction" Value="BottomToTop">
+                                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                                    <Setter Property="HorizontalAlignment" Value="Left" />
+                                </Trigger>
+                                <Trigger Property="Direction" Value="TopToBottom">
+                                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                                    <Setter Property="HorizontalAlignment" Value="Left" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </pp:RunningText.Style>
+
+                </pp:RunningText>
+
+            </StackPanel>
+        </GroupBox>
 
     </Grid>
 </Window>

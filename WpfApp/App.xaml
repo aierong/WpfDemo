@@ -57,7 +57,8 @@
     /Views/TeXiao/EmojiDemo/EmojiWindow1.XAML     Emoji
     
     
-    /Views/TeXiao/PMD/DEMO1/PMDWindow1.XAML     PMD
+    /Views/TeXiao/PMD/DEMO1/PMDWindow1.XAML             跑马灯（文字）
+    /Views/TeXiao/PMD/DEMO1/PMDWindowRunningBlock.XAML  跑马灯（运行块：支持放任何内容）
 -->
 <Application x:Class="WpfApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -67,7 +68,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/TeXiao/PMD/DEMO1/PMDWindow1.XAML">
+             StartupUri="/Views/TeXiao/PMD/DEMO1/PMDWindowRunningBlock.XAML">
 
 
 
