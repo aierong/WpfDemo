@@ -22,6 +22,8 @@ namespace WpfApp.Views.TeXiao.EmojiDemo
         public EmojiWindow1 ()
         {
             InitializeComponent();
+
+            this.DataContext = new datawindowviewmodel();
         }
     }
 }

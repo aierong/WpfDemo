@@ -1,19 +1,208 @@
-﻿<Window x:Class="WpfApp.Views.TeXiao.EmojiDemo.EmojiWindow1"
+﻿<!--
+    安装：   Emoji.Wpf
+    
+    xmlns:emoji="clr-namespace:Emoji.Wpf;assembly=Emoji.Wpf"
+-->
+
+
+<Window x:Class="WpfApp.Views.TeXiao.EmojiDemo.EmojiWindow1"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:clr="clr-namespace:System;assembly=mscorlib"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:emoji="clr-namespace:Emoji.Wpf;assembly=Emoji.Wpf"
         xmlns:local="clr-namespace:WpfApp.Views.TeXiao.EmojiDemo"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="Emoji"
-        Width="800"
-        Height="450"
+        Width="960"
+        Height="600"
+        d:DataContext="{d:DesignInstance local:datawindowviewmodel,
+                                         IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
-    <Grid>
 
-        <!--
-            Emoji.Wpf
-        -->
+    <Window.Resources>
+        <clr:String x:Key="SampleText">Hello! 😁🎀🇬🇧👨‍👦👨🏻‍👩🏿‍👧🏽‍👦🏽‍‍😶‍🌫️</clr:String>
+        <clr:String x:Key="PickerEmoji">🍣</clr:String>
+        <clr:String x:Key="FontSizeEmoji">🍷🐉</clr:String>
+        <clr:String x:Key="EnabledButtonText">💾 Enabled</clr:String>
+        <clr:String x:Key="DisabledButtonText">💾 Disabled</clr:String>
+        <clr:String x:Key="QualifiedEmoji">▶︎ ▶ ▶️</clr:String>
+        <clr:String x:Key="EditableText"
+                    xml:space="preserve">I💖emoji! Edit me, or use the picker😄&#x0a;🐍🏍️📞🍰☘️🖋️💩</clr:String>
+        <clr:String x:Key="ShortEditableText"
+                    xml:space="preserve">I💖emoji!</clr:String>
+        <clr:String x:Key="FlagsText">🏁🇨🇭🇺🇳🇸🇰🏳️‍⚧️🏴󠁧󠁢󠁷󠁬󠁳󠁿🇧🇷🇦🇺🏳️‍🌈🇳🇵🏴󠁦󠁲󠁢󠁲󠁥󠁿</clr:String>
+        <clr:String x:Key="Run1Text">🕺</clr:String>
+        <clr:String x:Key="Run2Text">💃</clr:String>
+        <clr:String x:Key="StringImageSource">🍭</clr:String>
+        <DrawingImage x:Key="DrawingImageSource"
+                      emoji:Image.Source="🦞" />
+        <DrawingImage x:Key="DrawingImageSourceQW"
+                      emoji:Image.Source="🐸" />
+    </Window.Resources>
+
+
+    <Grid ShowGridLines="True">
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0"
+              Grid.Column="0"
+              ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <GroupBox Grid.Row="0"
+                      Grid.Column="0"
+                      Margin="4"
+                      Header="wpf的TextBlock vs. emoji:TextBlock不同">
+                <StackPanel Orientation="Vertical">
+                    <!--
+                        我们可以看到原生的TextBlock是可以显示Emoji,少数会显示不出来，并且没有颜色
+                    -->
+                    <TextBlock FontSize="24"
+                               Text="{StaticResource SampleText}" />
+
+                    <!--  指定大小 FontSize="24"  -->
+                    <emoji:TextBlock FontSize="24"
+                                     Text="{StaticResource SampleText}" />
+                    <!--  没有指定大小  -->
+                    <emoji:TextBlock Text="{StaticResource SampleText}" />
+
+                    <!--
+                        Emoji也可以设置颜色， ColorBlend="True" Foreground="Green"
+                    -->
+                    <emoji:TextBlock ColorBlend="True"
+                                     FontSize="24"
+                                     Foreground="Green"
+                                     Text="{StaticResource SampleText}" />
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Grid.Row="0"
+                      Grid.Column="1"
+                      Margin="4"
+                      Header="RichTextBox和TextBox显示">
+                <StackPanel Orientation="Vertical">
+                    <emoji:RichTextBox FontSize="20"
+                                       Text="{StaticResource SampleText}" />
+
+                    <emoji:TextBox FontSize="28"
+                                   Text="{StaticResource SampleText}" />
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+
+        <Grid Grid.Row="1"
+              Grid.Column="0"
+              ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <GroupBox Grid.Row="0"
+                      Grid.Column="0"
+                      Margin="4"
+                      Header="图片加载emoji">
+                <StackPanel Orientation="Horizontal">
+
+                    <!--  下面这种只可以加载：资源里面DrawingImage的数据  -->
+                    <Image Source="{StaticResource DrawingImageSource}" />
+
+                    <!--  下面这种只可以加载：资源里面String的数据  -->
+                    <Image emoji:Image.Source="{StaticResource StringImageSource}" />
+
+                    <!--  可以指定大小  -->
+                    <Image Width="40"
+                           Height="40"
+                           Source="{StaticResource DrawingImageSourceQW}" />
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Grid.Row="0"
+                      Grid.Column="1"
+                      Margin="4"
+                      Header="与vm的变量绑定">
+                <StackPanel Orientation="Vertical">
+                    <emoji:RichTextBox FontSize="20"
+                                       Text="{Binding Str1}" />
+
+                    <emoji:TextBox FontSize="28"
+                                   Text="{Binding Str1}" />
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+
+        <Grid Grid.Row="2"
+              Grid.Column="0"
+              ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <GroupBox Grid.Row="0"
+                      Grid.Column="0"
+                      Margin="4"
+                      Header="动态emoji">
+                <StackPanel Orientation="Horizontal">
+                    <emoji:TextBlock Name="myTextBlock"
+                                     FontSize="24">
+                        <emoji:TextBlock.Triggers>
+                            <EventTrigger RoutedEvent="Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <StringAnimationUsingKeyFrames FillBehavior="HoldEnd"
+                                                                       RepeatBehavior="Forever"
+                                                                       Storyboard.TargetName="myTextBlock"
+                                                                       Storyboard.TargetProperty="Text"
+                                                                       Duration="0:0:1.2">
+                                            <DiscreteStringKeyFrame KeyTime="0:0:0.00"
+                                                                    Value="🌕⬆️" />
+                                            <DiscreteStringKeyFrame KeyTime="0:0:0.15"
+                                                                    Value="🌖↗️" />
+                                            <DiscreteStringKeyFrame KeyTime="0:0:0.30"
+                                                                    Value="🌗➡️" />
+                                            <DiscreteStringKeyFrame KeyTime="0:0:0.45"
+                                                                    Value="🌘↘️" />
+                                            <DiscreteStringKeyFrame KeyTime="0:0:0.60"
+                                                                    Value="🌑⬇️" />
+                                            <DiscreteStringKeyFrame KeyTime="0:0:0.75"
+                                                                    Value="🌒↙️" />
+                                            <DiscreteStringKeyFrame KeyTime="0:0:0.90"
+                                                                    Value="🌓⬅️" />
+                                            <DiscreteStringKeyFrame KeyTime="0:0:1.05"
+                                                                    Value="🌔↖️" />
+                                        </StringAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </emoji:TextBlock.Triggers>
+                    </emoji:TextBlock>
+
+                </StackPanel>
+            </GroupBox>
+        </Grid>
 
     </Grid>
 </Window>
