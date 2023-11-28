@@ -27,7 +27,7 @@
     
     
     StartupUri="/Views/fonts/fontWindow1.XAML"    图标
-    StartupUri="/Views/fonts/font2Window.XAML"    led 
+    StartupUri="/Views/fonts/font2Window.XAML"    led
     
     StartupUri="/Views/ConverterDemo/demo1/Window1.XAML"  转换器
     
@@ -55,6 +55,9 @@
     /Views/TeXiao/LedClock/demo1/view/ClockWindow1.XAML    时钟1
     
     /Views/TeXiao/EmojiDemo/EmojiWindow1.XAML     Emoji
+    
+    
+    /Views/TeXiao/PMD/DEMO1/PMDWindow1.XAML     PMD
 -->
 <Application x:Class="WpfApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -64,7 +67,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/TeXiao/EmojiDemo/EmojiWindow1.XAML" >
+             StartupUri="/Views/TeXiao/PMD/DEMO1/PMDWindow1.XAML">
 
 
 

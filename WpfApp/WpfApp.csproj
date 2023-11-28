@@ -74,6 +74,10 @@
     <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PP.Wpf, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>refdlls\PP.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -286,6 +290,9 @@
     <Compile Include="Views\TeXiao\LedClock\demo1\viewmodel\datawindowviewmodel.cs" />
     <Compile Include="Views\TeXiao\LedClock\demo1\view\ClockWindow1.xaml.cs">
       <DependentUpon>ClockWindow1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeXiao\PMD\DEMO1\PMDWindow1.xaml.cs">
+      <DependentUpon>PMDWindow1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControlDemo\demo1\Demo1.xaml.cs">
       <DependentUpon>Demo1.xaml</DependentUpon>
@@ -614,6 +621,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\TeXiao\PMD\DEMO1\PMDWindow1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\UserControlDemo\demo1\Demo1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -731,6 +742,7 @@
     <Content Include="assets\font1\demo_index.html" />
     <Content Include="assets\font1\iconfont.css" />
     <Content Include="assets\font1\iconfont.js" />
+    <Content Include="refdlls\PP.Wpf.dll" />
     <Resource Include="assets\svg\baogao.svg" />
     <Resource Include="assets\svg\juzhong.svg" />
     <Resource Include="assets\svg\2-22.svg" />
