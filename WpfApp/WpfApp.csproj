@@ -279,6 +279,9 @@
     <Compile Include="Views\svgdemo\svgWindow1.xaml.cs">
       <DependentUpon>svgWindow1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\TeXiao\EmojiDemo\EmojiWindow1.xaml.cs">
+      <DependentUpon>EmojiWindow1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\TeXiao\LedClock\demo1\viewmodel\datawindowviewmodel.cs" />
     <Compile Include="Views\TeXiao\LedClock\demo1\view\ClockWindow1.xaml.cs">
       <DependentUpon>ClockWindow1.xaml</DependentUpon>
@@ -602,6 +605,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\TeXiao\EmojiDemo\EmojiWindow1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\TeXiao\LedClock\demo1\view\ClockWindow1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -694,6 +701,9 @@
     <None Include="Resources\icon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Emoji.Wpf">
+      <Version>0.3.4</Version>
+    </PackageReference>
     <PackageReference Include="FluentScheduler">
       <Version>5.5.1</Version>
     </PackageReference>

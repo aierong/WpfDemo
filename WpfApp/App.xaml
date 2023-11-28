@@ -52,7 +52,9 @@
     StartupUri="/Views/colorbrushstring/colorWindow1.XAML"    列表
     
     
-    /Views/TeXiao/LedClock/demo1/view/ClockWindow1.XAML
+    /Views/TeXiao/LedClock/demo1/view/ClockWindow1.XAML    时钟1
+    
+    /Views/TeXiao/EmojiDemo/EmojiWindow1.XAML     Emoji
 -->
 <Application x:Class="WpfApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -62,7 +64,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/TeXiao/LedClock/demo1/view/ClockWindow1.XAML" >
+             StartupUri="/Views/TeXiao/EmojiDemo/EmojiWindow1.XAML" >
 
 
 
