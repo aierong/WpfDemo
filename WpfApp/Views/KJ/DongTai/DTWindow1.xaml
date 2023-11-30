@@ -1,0 +1,119 @@
+﻿<Window x:Class="WpfApp.Views.KJ.DongTai.DTWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp.Views.KJ.DongTai"
+        xmlns:localselect="clr-namespace:WpfApp.Views.KJ.DongTai.Selector"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="动态显示不同控件"
+        Width="800"
+        Height="450"
+        d:DataContext="{d:DesignInstance local:DTWindow1VM,
+                                         IsDesignTimeCreatable=True}"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0">
+            <ContentControl Content="{Binding Num1}">
+                <ContentControl.ContentTemplateSelector>
+                    <localselect:TypeTemplateSelector>
+                        <!--  今天模式的显示面板  -->
+                        <localselect:TypeTemplateSelector.JinTianTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <!--  搞几个控件  -->
+                                    <TextBox Width="250"
+                                             BorderBrush="Blue"
+                                             FontSize="30"
+                                             Foreground="#FFE80909"
+                                             Text="我是男性(今天)" />
+                                    <CheckBox HorizontalAlignment="Center"
+                                              IsChecked="True" />
+                                    <TextBox Width="250"
+                                             BorderBrush="Blue"
+                                             FontSize="30"
+                                             Foreground="#FFE80909"
+                                             Text="{Binding .}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </localselect:TypeTemplateSelector.JinTianTemplate>
+
+                        <!--  今天模式的显示面板  -->
+                        <localselect:TypeTemplateSelector.MingTianTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <!--  搞几个控件  -->
+                                    <TextBox Width="250"
+                                             HorizontalAlignment="Left"
+                                             Text="我是女孩(明天)" />
+                                    <TextBlock Margin="5"
+                                               Foreground="Red"
+                                               Text="This is a TextBlock control with multiple lines of text."
+                                               TextTrimming="CharacterEllipsis">
+                                    </TextBlock>
+                                    <TextBox Width="250"
+                                             BorderBrush="Blue"
+                                             FontSize="30"
+                                             Foreground="#FFE80909"
+                                             Text="{Binding .}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </localselect:TypeTemplateSelector.MingTianTemplate>
+
+                        <!--  昨天模式的显示面板  -->
+                        <localselect:TypeTemplateSelector.ZuoTianTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <!--  tab控件  -->
+                                    <TabControl>
+                                        <TabItem Header="tab1">
+
+                                            <StackPanel Orientation="Vertical">
+                                                <TextBox Text="我是东莞(昨天)" />
+                                                <TextBlock Margin="10"
+                                                           TextWrapping="Wrap">
+                                                    TextBlock with<Bold>bold</Bold>
+                                                    ,<Italic>italic</Italic>
+                                                    and<Underline>underlined</Underline>
+                                                    text.</TextBlock>
+                                                <TextBox Width="250"
+                                                         BorderBrush="Blue"
+                                                         FontSize="30"
+                                                         Foreground="#FFE80909"
+                                                         Text="{Binding .}" />
+                                            </StackPanel>
+                                        </TabItem>
+                                        <TabItem Header="tab2">
+                                            <Label Content="tab Security" />
+                                        </TabItem>
+                                        <TabItem Header="tab3">
+                                            <Label Content="tab Details" />
+                                        </TabItem>
+                                    </TabControl>
+                                </StackPanel>
+                            </DataTemplate>
+                        </localselect:TypeTemplateSelector.ZuoTianTemplate>
+
+                    </localselect:TypeTemplateSelector>
+                </ContentControl.ContentTemplateSelector>
+            </ContentControl>
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0">
+            <Button Width="200"
+                    Margin="0,10,0,0"
+                    Command="{Binding ReCommand}"
+                    Content="动态改变值" />
+        </StackPanel>
+    </Grid>
+</Window>

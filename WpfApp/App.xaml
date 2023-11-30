@@ -51,7 +51,7 @@
     
     StartupUri="/Views/colorbrushstring/colorWindow1.XAML"    列表
     
-    
+    /Views/KJ/DongTai/DTWindow1.XAML
     
     
     /Views/TeXiao/EmojiDemo/EmojiWindow1.XAML     Emoji
@@ -73,7 +73,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/ResourceDemo/Views/ResourceWindow.XAML">
+             StartupUri="/Views/KJ/DongTai/DTWindow1.XAML">
 
 
 

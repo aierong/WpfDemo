@@ -26,13 +26,33 @@ namespace WpfApp.Views.KJ.ItemsControl
         public ItemsControlViewModel ()
         {
             StudentList = new ObservableCollection<string>() {
-                "guoguo" , "juan" , "tom" , "jack" , "wubingbing"
+                "guoguo" ,
+                "juan" ,
+                "tom" ,
+                "jack" ,
+                "wubingbing"
             };
 
-            ItemDatas.Add( new TodoItem() { Title = "Complete this WPF tutorial" , Completion = 45 } );
-            ItemDatas.Add( new TodoItem() { Title = "Learn C#" , Completion = 80 } );
-            ItemDatas.Add( new TodoItem() { Title = "Wash the car" , Completion = 0 } );
-            ItemDatas.Add( new TodoItem() { Title = "car8" , Completion = 8 } );
+            ItemDatas.Add( new TodoItem()
+            {
+                Title = "Complete this WPF tutorial" ,
+                Completion = 45
+            } );
+            ItemDatas.Add( new TodoItem()
+            {
+                Title = "Learn C#" ,
+                Completion = 80
+            } );
+            ItemDatas.Add( new TodoItem()
+            {
+                Title = "Wash the car" ,
+                Completion = 0
+            } );
+            ItemDatas.Add( new TodoItem()
+            {
+                Title = "car8" ,
+                Completion = 8
+            } );
         }
     }
 }

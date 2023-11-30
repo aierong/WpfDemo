@@ -191,6 +191,11 @@
     <Compile Include="Views\KJ\border\BorderWindow1.xaml.cs">
       <DependentUpon>BorderWindow1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\KJ\DongTai\DTWindow1.xaml.cs">
+      <DependentUpon>DTWindow1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KJ\DongTai\DTWindow1VM.cs" />
+    <Compile Include="Views\KJ\DongTai\Selector\TypeTemplateSelector.cs" />
     <Compile Include="Views\KJ\grid\demo1\convert\EnabledToConverter.cs" />
     <Compile Include="Views\KJ\grid\demo1\convert\EnabledConverter.cs" />
     <Compile Include="Views\KJ\grid\demo1\DataWindow1.xaml.cs">
@@ -523,6 +528,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\KJ\border\BorderWindow1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KJ\DongTai\DTWindow1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
