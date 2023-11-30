@@ -8,7 +8,7 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         Title="ResourceWindow"
         Width="800"
-        Height="650"
+        Height="760"
         d:DataContext="{d:DesignInstance localvm:ResourceWindowViewModel,
                                          IsDesignTimeCreatable=True}"
         mc:Ignorable="d">
@@ -29,6 +29,8 @@
 
 
         <sys:String x:Key="ComboBoxTitleWin">Items(本窗体自己标题):</sys:String>
+
+
 
         <!--  定义数字  -->
         <sys:Int32 x:Key="int1">123</sys:Int32>
@@ -74,11 +76,13 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
+
         <StackPanel x:Name="myStackPanel"
                     Grid.Row="0"
                     Grid.Column="0">
@@ -109,6 +113,7 @@
             <!--  注意: 下面这个是报错的，它是无法访问到Title123资源的  -->
             <!--<Label Content="{StaticResource  Title123}" />-->
         </StackPanel>
+
         <StackPanel Grid.Row="2"
                     Grid.Column="0">
 
@@ -149,6 +154,43 @@
                              Fill="{StaticResource MyBrush}" />
                 </DockPanel>
             </Border>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4"
+                    Grid.Column="0"
+                    Orientation="Vertical">
+
+            <GroupBox BorderBrush="Blue"
+                      Header="静态资源和动态资源">
+
+                <!--
+                    对于静态资源在第一次创建窗口时，一次性地设置完毕；
+                    而对于动态资源，如果发生了改变，则会重新应用资源。
+                -->
+
+                <StackPanel Orientation="Vertical">
+                    <Button Width="360"
+                            Margin="5"
+                            Background="{StaticResource RedBrush}"
+                            Content="Use a Static Resource"
+                            FontSize="14" />
+                    <Button Width="360"
+                            Margin="5"
+                            Background="{DynamicResource RedBrush}"
+                            Content="Use a Dynamic Resource"
+                            FontSize="14" />
+                    <Button Width="150"
+                            Margin="5"
+                            Content="{DynamicResource btntext}"
+                            FontSize="14" />
+                    <!--
+                        这个按钮单击后，由于第一个按钮是静态资源，所以不会发生改变，第2第3按钮会有改变
+                    -->
+                    <Button Width="150"
+                            Command="{Binding UCommand}"
+                            Content="改变资源" />
+                </StackPanel>
+            </GroupBox>
         </StackPanel>
     </Grid>
 </Window>

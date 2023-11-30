@@ -73,7 +73,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/TeXiao/LedClock/demo1/view/ClockWindow1.XAML">
+             StartupUri="/Views/ResourceDemo/Views/ResourceWindow.XAML">
 
 
 
@@ -100,27 +100,6 @@
     </Application.Resources>
 
 
-    <!--
-    <Application.Resources>
-
-
-    -->
-    <!--  定义一个字符串  -->
-    <!--
-        <sys:String x:Key="ComboBoxTitle">Items:</sys:String>
-
-    -->
-    <!--  定义一个字符串数组  -->
-    <!--
-        <x:Array x:Key="ComboBoxItems"
-                 Type="sys:String">
-            <sys:String>Item #1</sys:String>
-            <sys:String>Item #2</sys:String>
-            <sys:String>Item #3</sys:String>
-        </x:Array>
-
-    </Application.Resources>
-    -->
 
 </Application>
 

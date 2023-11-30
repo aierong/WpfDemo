@@ -11,4 +11,7 @@
         <sys:String>Item #2</sys:String>
         <sys:String>Item #3</sys:String>
     </x:Array>
+
+
+    <sys:String x:Key="btntext">bt1</sys:String>
 </ResourceDictionary>
