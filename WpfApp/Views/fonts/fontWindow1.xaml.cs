@@ -22,6 +22,7 @@ namespace WpfApp.Views.fonts
         public fontWindow1 ()
         {
             InitializeComponent();
+            this.DataContext = new fontWindow1VM();
         }
     }
 }

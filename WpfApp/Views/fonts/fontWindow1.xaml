@@ -6,7 +6,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="font"
         Width="800"
-        Height="450"
+        Height="660"
+        d:DataContext="{d:DesignInstance local:fontWindow1VM,
+                                         IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <Grid ShowGridLines="True">
@@ -28,31 +30,50 @@
             -->
 
             <!--
-            /    代表文件所在的根目录
-            ../  代表文件所在的父级目录
+                /    代表文件所在的根目录
+                ../  代表文件所在的父级目录
             -->
-            <TextBlock FontFamily="/assets/font1/#iconfont"
-                       Text="&#xe6d4;">
-                 
-            </TextBlock>
-            <TextBlock FontFamily="../../assets/font1/#iconfont"
-                       Text="&#xe6d4;"></TextBlock>
-            <TextBlock FontFamily="pack://application:,,,/assets/font1/#iconfont"
-                       Text="&#xe6d4;">
-            </TextBlock>
+            <TextBlock Margin="15,10,0,0"
+                       FontFamily="/assets/font1/#iconfont"
+                       Text="&#xe6d4;" />
+
+            <TextBlock Margin="15,10,0,0"
+                       FontFamily="../../assets/font1/#iconfont"
+                       Text="&#xe6d4;" />
+
+            <TextBlock Margin="15,10,0,0"
+                       FontFamily="pack://application:,,,/assets/font1/#iconfont"
+                       Text="&#xe6d4;" />
+
 
             <!--  可以配置颜色和大小  -->
-            <TextBlock FontFamily="pack://application:,,,/assets/font1/#iconfont"
+            <TextBlock Margin="15,10,0,0"
+                       FontFamily="pack://application:,,,/assets/font1/#iconfont"
                        FontSize="50"
                        Foreground="Lime"
-                       Text="&#xe6d4;">
-            </TextBlock>
-            <TextBlock FontSize="25">
+                       Text="&#xe6d4;" />
+
+            <TextBlock Margin="15,10,0,0"
+                       FontSize="25">
                 <Run FontFamily="/assets/font1/#iconfont"
                      FontSize="50"
                      Foreground="Red"
                      Text="&#xe70b;" />
             </TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0">
+
+            <TextBlock Margin="15,10,0,0"
+                       FontFamily="pack://application:,,,/assets/font1/#iconfont"
+                       FontSize="50"
+                       Foreground="#FFB27BBF"
+                       Text="{Binding Str1}" />
+            <Button Width="200"
+                    Margin="15,10,0,0"
+                    HorizontalAlignment="Left"
+                    Command="{Binding UpdateDataCommand}"
+                    Content="动态改变" />
         </StackPanel>
 
 

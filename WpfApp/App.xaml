@@ -73,7 +73,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/KJ/DongTai/DTWindow1.XAML">
+             StartupUri="/Views/fonts/fontWindow1.XAML">
 
 
 
