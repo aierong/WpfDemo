@@ -779,6 +779,12 @@
     <Resource Include="assets\svg\xiaoniu.svg" />
     <Resource Include="assets\svg\taolun.svg" />
     <Resource Include="assets\svg\VR.svg" />
+    <Resource Include="assets\svg\2.5DC.svg" />
+    <Resource Include="assets\svg\2.5DI.svg" />
+    <Resource Include="assets\svg\2.5DQ.svg" />
+    <Resource Include="assets\svg\2.5DM.svg" />
+    <Resource Include="assets\svg\2.5DS.svg" />
+    <Resource Include="assets\svg\2.5DT.svg" />
     <Content Include="refdlls\PP.Wpf.dll" />
     <Content Include="Views\TeXiao\LedClock\demo2\font\demo.css" />
     <Content Include="Views\TeXiao\LedClock\demo2\font\demo_index.html" />

@@ -4,18 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WpfApp.Views.svgdemo"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:svg="http://sharpvectors.codeplex.com/runtime/"
         xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
         Title="svgWindow1"
-        Width="960"
+        Width="1100"
         Height="660"
+        d:DataContext="{d:DesignInstance local:svgViewModel,
+                                         IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
-
             <RowDefinition />
             <RowDefinition />
-
+            <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
         <!--  定义列，2列  -->
@@ -27,94 +29,79 @@
         <StackPanel Grid.Row="0"
                     Grid.Column="0"
                     Orientation="Horizontal">
-            <!--  修改Button的宽与高时SVG也会跟着变化  -->
+            <svgc:SvgBitmap UriSource="/assets/svg/2_2.svg" />
+
+            <!--
+                内嵌在按钮中
+                修改Button的宽与高时SVG也会跟着变化
+            -->
             <Button Width="100"
                     Height="100">
-                <svgc:SvgViewbox IsHitTestVisible="False"
-                                 Source="pack://application:,,,/assets/svg/hantianyuan.svg" />
-            </Button>
-            <Button Width="50"
-                    Height="50"
-                    Background="{x:Null}"
-                    BorderBrush="{x:Null}">
-                <svgc:SvgViewbox IsHitTestVisible="False"
-                                 Source="pack://application:,,,/assets/svg/2_2.svg" />
-            </Button>
-            <Button Width="150"
-                    Height="150"
-                    Background="{x:Null}"
-                    BorderBrush="{x:Null}">
-                <svgc:SvgViewbox IsHitTestVisible="False"
-                                 Source="pack://application:,,,/assets/svg/juzhong.svg" />
-            </Button>
-            <Button Width="100"
-                    Height="100"
-                    Background="{x:Null}"
-                    BorderBrush="{x:Null}">
-                <svgc:SvgViewbox IsHitTestVisible="False"
-                                 Source="pack://application:,,,/assets/svg/baogao.svg" />
+                <svgc:SvgBitmap UriSource="/assets/svg/hantianyuan.svg" />
             </Button>
 
-            <Button Width="20"
-                    Height="20"
-                    Background="{x:Null}"
-                    BorderBrush="{x:Null}">
-                <svgc:SvgViewbox IsHitTestVisible="False"
-                                 Source="pack://application:,,,/assets/svg/6_6.svg" />
-            </Button>
-            <Button Width="20"
-                    Height="20"
-                    Background="{x:Null}"
-                    BorderBrush="{x:Null}">
-                <svgc:SvgViewbox IsHitTestVisible="False"
-                                 Source="pack://application:,,,/assets/svg/1_1.svg" />
-            </Button>
-            <Button Width="50"
-                    Height="50"
-                    Background="{x:Null}"
-                    BorderBrush="{x:Null}">
-                <svgc:SvgViewbox IsHitTestVisible="False"
-                                 Source="pack://application:,,,/assets/svg/hc.svg" />
-            </Button>
-            <Button Width="50"
-                    Height="50"
-                    Background="{x:Null}"
-                    BorderBrush="{x:Null}">
-                <svgc:SvgViewbox IsHitTestVisible="False"
-                                 Source="pack://application:,,,/assets/svg/xiaoniu.svg" />
-            </Button>
-            <Button Width="120"
-                    Height="120"
-                    Background="{x:Null}"
-                    BorderBrush="{x:Null}">
-                <svgc:SvgViewbox IsHitTestVisible="False"
-                                 Source="pack://application:,,,/assets/svg/taolun.svg" />
-            </Button>
+            <svgc:SvgBitmap Width="100"
+                            Height="100"
+                            UriSource="/assets/svg/juzhong.svg" />
 
-            <Button Width="150"
-                    Height="150"
-                    Background="{x:Null}"
-                    BorderBrush="{x:Null}">
-                <svgc:SvgViewbox IsHitTestVisible="False"
-                                 Source="pack://application:,,,/assets/svg/VR.svg" />
-            </Button>
+            <svgc:SvgBitmap Width="77"
+                            Height="77"
+                            UriSource="/assets/svg/6_6.svg" />
+
+            <svgc:SvgBitmap UriSource="/assets/svg/hc.svg" />
+
+            <svgc:SvgBitmap UriSource="/assets/svg/VR.svg" />
+
         </StackPanel>
 
         <StackPanel Grid.Row="1"
                     Grid.Column="0"
                     HorizontalAlignment="Center"
                     Orientation="Horizontal">
-            <Button Width="100"
-                    Height="100"
-                    Background="{x:Null}"
-                    BorderBrush="{x:Null}">
-                <svgc:SvgViewbox IsHitTestVisible="False"
-                                 Source="{Binding Txt}" />
-            </Button>
+
+            <svgc:SvgBitmap Width="100"
+                            Height="100"
+                            UriSource="{Binding Txt}" />
             <Button Height="20"
                     Command="{Binding ShowCommand}"
                     Content="动态改变svg">
             </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0"
+                    Orientation="Horizontal">
+
+
+
+            <svgc:SvgBitmap Width="100"
+                            Height="100"
+                            UriSource="/assets/svg/2.5DT.svg" />
+
+            <svgc:SvgBitmap Width="100"
+                            Height="100"
+                            UriSource="/assets/svg/2.5DS.svg" />
+
+            <svgc:SvgBitmap Width="100"
+                            Height="100"
+                            UriSource="/assets/svg/2.5DM.svg" />
+
+            <svgc:SvgBitmap Width="100"
+                            Height="100"
+                            UriSource="/assets/svg/2.5DT.svg" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="3"
+                    Grid.Column="0"
+                    Orientation="Horizontal">
+
+            <!--  下面这种写法也是可以的  -->
+            <Image Source="{svgc:SvgImage Source=/assets/svg/2.5DT.svg}" />
+
+            <Image Width="33"
+                   Height="33"
+                   Source="{svgc:SvgImage Source=/assets/svg/2.5DT.svg}" />
+
+
         </StackPanel>
     </Grid>
 </Window>

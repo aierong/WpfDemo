@@ -4,9 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WpfApp.Views.TeXiao.LedClock.demo1.view"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:WpfApp.Views.TeXiao.LedClock.demo1.viewmodel"
         Title="时钟"
         Width="460"
         Height="360"
+        d:DataContext="{d:DesignInstance vm:datawindowviewmodel,
+                                         IsDesignTimeCreatable=True}"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <Window.Resources>

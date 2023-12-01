@@ -15,15 +15,7 @@ namespace WpfApp.Views.svgdemo
 
         public svgViewModel ()
         {
-
-
-            ShowCommand = new MyCommand( Show );
-        }
-
-
-        public void Show ()
-        {
-            Txt = "pack://application:,,,/assets/svg/2_2.svg";
+            ShowCommand = new MyCommand( () => Txt = "/assets/svg/2_2.svg" );
         }
 
 
@@ -36,9 +28,7 @@ namespace WpfApp.Views.svgdemo
         }
 
 
-
-
-        private string _txt = "pack://application:,,,/assets/svg/baogao.svg";
+        private string _txt = "/assets/svg/baogao.svg";
 
 
         public string Txt
