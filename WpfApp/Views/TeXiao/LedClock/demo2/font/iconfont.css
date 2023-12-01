@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4353187 */
+  src: url('iconfont.woff2?t=1701398161135') format('woff2'),
+       url('iconfont.woff?t=1701398161135') format('woff'),
+       url('iconfont.ttf?t=1701398161135') format('truetype'),
+       url('iconfont.svg?t=1701398161135#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-maohao:before {
+  content: "\e61a";
+}
+
+.icon-bianzu22x:before {
+  content: "\e614";
+}
+
+.icon-shuzi1:before {
+  content: "\e61e";
+}
+
+.icon-shuzi0:before {
+  content: "\e61f";
+}
+
+.icon-shuzi5:before {
+  content: "\e620";
+}
+
+.icon-shuzi2:before {
+  content: "\e621";
+}
+
+.icon-shuzi6:before {
+  content: "\e622";
+}
+
+.icon-shuzi7:before {
+  content: "\e623";
+}
+
+.icon-shuzi8:before {
+  content: "\e624";
+}
+
+.icon-shuzi9:before {
+  content: "\e625";
+}
+
+.icon-shuzi4:before {
+  content: "\e626";
+}
+
+.icon-shuzi3:before {
+  content: "\e627";
+}
+

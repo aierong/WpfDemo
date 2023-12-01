@@ -297,6 +297,10 @@
     <Compile Include="Views\TeXiao\LedClock\demo1\view\ClockWindow1.xaml.cs">
       <DependentUpon>ClockWindow1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\TeXiao\LedClock\demo2\viewmodel\ClockledVM.cs" />
+    <Compile Include="Views\TeXiao\LedClock\demo2\view\Clockled.xaml.cs">
+      <DependentUpon>Clockled.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\TeXiao\PMD\DEMO1\PMDWindow1.xaml.cs">
       <DependentUpon>PMDWindow1.xaml</DependentUpon>
     </Compile>
@@ -636,6 +640,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\TeXiao\LedClock\demo2\view\Clockled.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\TeXiao\PMD\DEMO1\PMDWindow1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -702,6 +710,10 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="assets\font1\iconfont.json" />
+    <None Include="Views\TeXiao\LedClock\demo2\font\iconfont.json" />
+    <Resource Include="Views\TeXiao\LedClock\demo2\font\iconfont.ttf" />
+    <None Include="Views\TeXiao\LedClock\demo2\font\iconfont.woff" />
+    <None Include="Views\TeXiao\LedClock\demo2\font\iconfont.woff2" />
     <Resource Include="assets\font1\iconfont.ttf" />
     <None Include="assets\font1\iconfont.woff" />
     <None Include="assets\font1\iconfont.woff2" />
@@ -761,11 +773,22 @@
     <Content Include="assets\font1\demo_index.html" />
     <Content Include="assets\font1\iconfont.css" />
     <Content Include="assets\font1\iconfont.js" />
+    <Resource Include="assets\svg\1_1.svg" />
+    <Resource Include="assets\svg\6_6.svg" />
+    <Resource Include="assets\svg\hc.svg" />
+    <Resource Include="assets\svg\xiaoniu.svg" />
+    <Resource Include="assets\svg\taolun.svg" />
+    <Resource Include="assets\svg\VR.svg" />
     <Content Include="refdlls\PP.Wpf.dll" />
+    <Content Include="Views\TeXiao\LedClock\demo2\font\demo.css" />
+    <Content Include="Views\TeXiao\LedClock\demo2\font\demo_index.html" />
+    <Content Include="Views\TeXiao\LedClock\demo2\font\iconfont.css" />
+    <Content Include="Views\TeXiao\LedClock\demo2\font\iconfont.js" />
+    <Content Include="Views\TeXiao\LedClock\demo2\font\iconfont.svg" />
     <Resource Include="Views\TeXiao\PMD\DEMO2\readme.txt" />
     <Resource Include="assets\svg\baogao.svg" />
     <Resource Include="assets\svg\juzhong.svg" />
-    <Resource Include="assets\svg\2-22.svg" />
+    <Resource Include="assets\svg\2_2.svg" />
     <Resource Include="assets\svg\hantianyuan.svg" />
     <Resource Include="assets\svg\juhua.svg" />
     <Resource Include="Imgs\car.gif" />

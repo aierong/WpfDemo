@@ -23,7 +23,7 @@ namespace WpfApp.Views.svgdemo
 
         public void Show ()
         {
-            Txt = "pack://application:,,,/assets/svg/2-22.svg";
+            Txt = "pack://application:,,,/assets/svg/2_2.svg";
         }
 
 

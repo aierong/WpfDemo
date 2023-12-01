@@ -6,17 +6,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
         Title="svgWindow1"
-        Width="800"
-        Height="450"
+        Width="960"
+        Height="660"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
 
             <RowDefinition />
+            <RowDefinition />
 
-
-            <RowDefinition Height="50" />
+            <RowDefinition />
         </Grid.RowDefinitions>
         <!--  定义列，2列  -->
         <Grid.ColumnDefinitions>
@@ -38,7 +38,7 @@
                     Background="{x:Null}"
                     BorderBrush="{x:Null}">
                 <svgc:SvgViewbox IsHitTestVisible="False"
-                                 Source="pack://application:,,,/assets/svg/2-22.svg" />
+                                 Source="pack://application:,,,/assets/svg/2_2.svg" />
             </Button>
             <Button Width="150"
                     Height="150"
@@ -55,7 +55,55 @@
                                  Source="pack://application:,,,/assets/svg/baogao.svg" />
             </Button>
 
+            <Button Width="20"
+                    Height="20"
+                    Background="{x:Null}"
+                    BorderBrush="{x:Null}">
+                <svgc:SvgViewbox IsHitTestVisible="False"
+                                 Source="pack://application:,,,/assets/svg/6_6.svg" />
+            </Button>
+            <Button Width="20"
+                    Height="20"
+                    Background="{x:Null}"
+                    BorderBrush="{x:Null}">
+                <svgc:SvgViewbox IsHitTestVisible="False"
+                                 Source="pack://application:,,,/assets/svg/1_1.svg" />
+            </Button>
+            <Button Width="50"
+                    Height="50"
+                    Background="{x:Null}"
+                    BorderBrush="{x:Null}">
+                <svgc:SvgViewbox IsHitTestVisible="False"
+                                 Source="pack://application:,,,/assets/svg/hc.svg" />
+            </Button>
+            <Button Width="50"
+                    Height="50"
+                    Background="{x:Null}"
+                    BorderBrush="{x:Null}">
+                <svgc:SvgViewbox IsHitTestVisible="False"
+                                 Source="pack://application:,,,/assets/svg/xiaoniu.svg" />
+            </Button>
+            <Button Width="120"
+                    Height="120"
+                    Background="{x:Null}"
+                    BorderBrush="{x:Null}">
+                <svgc:SvgViewbox IsHitTestVisible="False"
+                                 Source="pack://application:,,,/assets/svg/taolun.svg" />
+            </Button>
 
+            <Button Width="150"
+                    Height="150"
+                    Background="{x:Null}"
+                    BorderBrush="{x:Null}">
+                <svgc:SvgViewbox IsHitTestVisible="False"
+                                 Source="pack://application:,,,/assets/svg/VR.svg" />
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal">
             <Button Width="100"
                     Height="100"
                     Background="{x:Null}"
@@ -63,13 +111,6 @@
                 <svgc:SvgViewbox IsHitTestVisible="False"
                                  Source="{Binding Txt}" />
             </Button>
-
-        </StackPanel>
-
-        <StackPanel Grid.Row="1"
-                    Grid.Column="0"
-                    HorizontalAlignment="Center"
-                    Orientation="Horizontal">
             <Button Height="20"
                     Command="{Binding ShowCommand}"
                     Content="动态改变svg">
