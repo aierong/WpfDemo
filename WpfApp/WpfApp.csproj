@@ -785,6 +785,13 @@
     <Resource Include="assets\svg\2.5DM.svg" />
     <Resource Include="assets\svg\2.5DS.svg" />
     <Resource Include="assets\svg\2.5DT.svg" />
+    <Resource Include="assets\svg\3_3.svg" />
+    <Resource Include="assets\svg\4_4.svg" />
+    <Resource Include="assets\svg\5_5.svg" />
+    <Resource Include="assets\svg\7_7.svg" />
+    <Resource Include="assets\svg\0_0.svg" />
+    <Resource Include="assets\svg\8_8.svg" />
+    <Resource Include="assets\svg\9_9.svg" />
     <Content Include="refdlls\PP.Wpf.dll" />
     <Content Include="Views\TeXiao\LedClock\demo2\font\demo.css" />
     <Content Include="Views\TeXiao\LedClock\demo2\font\demo_index.html" />

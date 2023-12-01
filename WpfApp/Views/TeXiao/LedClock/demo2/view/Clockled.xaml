@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WpfApp.Views.TeXiao.LedClock.demo2.view"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:svg="http://sharpvectors.codeplex.com/runtime/"
+        xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
         Title="led"
         Width="800"
         Height="450"
@@ -34,11 +36,23 @@
             <Setter Property="FontSize" Value="20" />
 
         </Style>
+
+
+        <Style x:Key="yssvg"
+               TargetType="{x:Type TextBlock}">
+            <Setter Property="FontFamily" Value="{DynamicResource SegFontFamily}" />
+
+            <Setter Property="Foreground" Value="#FF7676EC" />
+
+            <Setter Property="FontSize" Value="20" />
+
+        </Style>
     </Window.Resources>
 
 
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
+            <RowDefinition />
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
@@ -48,6 +62,7 @@
 
         <StackPanel Grid.Row="0"
                     Grid.Column="0"
+                    Margin="15,15,0,0"
                     Orientation="Horizontal">
             <TextBlock Margin="5,0,0,0"
                        Style="{StaticResource ys1}"
@@ -70,6 +85,7 @@
 
         <StackPanel Grid.Row="1"
                     Grid.Column="0"
+                    Margin="15,15,0,0"
                     Orientation="Horizontal">
             <TextBlock Margin="5,0,0,0"
                        Style="{StaticResource ystwo}"
@@ -88,6 +104,40 @@
                        Text="{Binding Second1}" />
             <TextBlock Style="{StaticResource ystwo}"
                        Text="{Binding Second2}" />
+        </StackPanel>
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="15,15,0,0"
+                    Orientation="Horizontal">
+            <svgc:SvgBitmap Width="40"
+                            Height="40"
+                            UriSource="{Binding SvgHour1}" />
+            <svgc:SvgBitmap Width="40"
+                            Height="40"
+                            UriSource="{Binding SvgHour2}" />
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Style="{StaticResource yssvg}"
+                       Text="&#xe61a;" />
+
+            <svgc:SvgBitmap Width="40"
+                            Height="40"
+                            UriSource="{Binding SvgMinute1}" />
+            <svgc:SvgBitmap Width="40"
+                            Height="40"
+                            UriSource="{Binding SvgMinute2}" />
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Style="{StaticResource yssvg}"
+                       Text="&#xe61a;" />
+
+            <svgc:SvgBitmap Width="40"
+                            Height="40"
+                            UriSource="{Binding SvgSecond1}" />
+            <svgc:SvgBitmap Width="40"
+                            Height="40"
+                            UriSource="{Binding SvgSecond2}" />
+
         </StackPanel>
     </Grid>
 </Window>

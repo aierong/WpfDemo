@@ -32,7 +32,7 @@ namespace WpfApp.Views.TeXiao.LedClock.demo2.viewmodel
         {
             var Timer = DateTime.Now;
 
-            setuptime(Timer );
+            setuptime( Timer );
         }
 
 
@@ -43,46 +43,57 @@ namespace WpfApp.Views.TeXiao.LedClock.demo2.viewmodel
 
             if ( _h >= 10 )
             {
-               
-
-                Hour1 = getcode( Convert.ToInt32( _h.ToString().Substring( 0,1 ) ) );
+                Hour1 = getcode( Convert.ToInt32( _h.ToString().Substring( 0 , 1 ) ) );
                 Hour2 = getcode( Convert.ToInt32( _h.ToString().Substring( 1 ) ) );
+
+                SvgHour1 = getsvgcode( Convert.ToInt32( _h.ToString().Substring( 0 , 1 ) ) );
+                SvgHour2 = getsvgcode( Convert.ToInt32( _h.ToString().Substring( 1 ) ) );
             }
             else
             {
-                //'0'
                 Hour1 = getcode( 0 );
                 Hour2 = getcode( _h );
+
+                SvgHour1 = getsvgcode( 0 );
+                SvgHour2 = getsvgcode( _h );
             }
 
             int _m = now.Minute;
 
             if ( _m >= 10 )
             {
-                
+                Minute1 = getcode( Convert.ToInt32( _m.ToString().Substring( 0 , 1 ) ) );
+                Minute2 = getcode( Convert.ToInt32( _m.ToString().Substring( 1 ) ) );
 
-                Minute1 = getcode( Convert.ToInt32( _m.ToString().Substring( 0,1 ) ) );
-                Minute2 = getcode( Convert.ToInt32( _m.ToString().Substring(  1 ) ) );
+
+                SvgMinute1 = getsvgcode( Convert.ToInt32( _m.ToString().Substring( 0 , 1 ) ) );
+                SvgMinute2 = getsvgcode( Convert.ToInt32( _m.ToString().Substring( 1 ) ) );
             }
             else
             {
-                //'0'
                 Minute1 = getcode( 0 );
                 Minute2 = getcode( _m );
+
+                SvgMinute1 = getsvgcode( 0 );
+                SvgMinute2 = getsvgcode( _m );
             }
 
             int _s = now.Second;
             if ( _s >= 10 )
             {
-
                 Second1 = getcode( Convert.ToInt32( _s.ToString().Substring( 0 , 1 ) ) );
                 Second2 = getcode( Convert.ToInt32( _s.ToString().Substring( 1 ) ) );
+
+                SvgSecond1 = this.getsvgcode( Convert.ToInt32( _s.ToString().Substring( 0 , 1 ) ) );
+                SvgSecond2 = getsvgcode( Convert.ToInt32( _s.ToString().Substring( 1 ) ) );
             }
             else
             {
-                //'0'
                 Second1 = getcode( 0 );
                 Second2 = getcode( _s );
+
+                SvgSecond1 = getsvgcode( 0 );
+                SvgSecond2 = getsvgcode( _s );
             }
         }
 
@@ -138,7 +149,108 @@ namespace WpfApp.Views.TeXiao.LedClock.demo2.viewmodel
             return "\xe61f";
         }
 
-        
+        #region svg
+
+        public string _SvgHour1;
+        public string SvgHour1
+        {
+            get
+            {
+                return _SvgHour1;
+            }
+            set
+            {
+                _SvgHour1 = value;
+                //通知数据已经变化
+                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "SvgHour1" ) );
+            }
+        }
+
+        public string _SvgHour2;
+        public string SvgHour2
+        {
+            get
+            {
+                return _SvgHour2;
+            }
+            set
+            {
+                _SvgHour2 = value;
+                //通知数据已经变化
+                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "SvgHour2" ) );
+            }
+        }
+
+        public string _SvgMinute1;
+        public string SvgMinute1
+        {
+            get
+            {
+                return _SvgMinute1;
+            }
+            set
+            {
+                _SvgMinute1 = value;
+                //通知数据已经变化
+                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "SvgMinute1" ) );
+            }
+        }
+
+        public string _SvgMinute2;
+        public string SvgMinute2
+        {
+            get
+            {
+                return _SvgMinute2;
+            }
+            set
+            {
+                _SvgMinute2 = value;
+                //通知数据已经变化
+                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "SvgMinute2" ) );
+            }
+        }
+
+
+        public string _SvgSecond1;
+        public string SvgSecond1
+        {
+            get
+            {
+                return _SvgSecond1;
+            }
+            set
+            {
+                _SvgSecond1 = value;
+                //通知数据已经变化
+                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "SvgSecond1" ) );
+            }
+        }
+
+        public string _SvgSecond2;
+        public string SvgSecond2
+        {
+            get
+            {
+                return _SvgSecond2;
+            }
+            set
+            {
+                _SvgSecond2 = value;
+                //通知数据已经变化
+                PropertyChanged?.Invoke( this , new PropertyChangedEventArgs( "SvgSecond2" ) );
+            }
+        }
+
+        string getsvgcode ( int num )
+        {
+
+            return string.Format( "/assets/svg/{0}_{1}.svg" , num , num );
+        }
+
+        #endregion 
+
+
         public string _Second1;
         public string Second1
         {

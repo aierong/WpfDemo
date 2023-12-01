@@ -65,7 +65,6 @@
     
     /Views/TeXiao/LedClock/demo1/view/ClockWindow1.XAML    时钟1
     /Views/TeXiao/LedClock/demo2/view/Clockled.XAML        时钟2
-    
 -->
 <Application x:Class="WpfApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -75,7 +74,7 @@
              Activated="Application_Activated"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/svgdemo/svgWindow1.XAML">
+             StartupUri="/Views/TeXiao/LedClock/demo2/view/Clockled.XAML">
 
 
 
