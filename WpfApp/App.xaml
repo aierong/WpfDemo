@@ -72,6 +72,7 @@
              xmlns:local="clr-namespace:WpfApp"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              Activated="Application_Activated"
+             DispatcherUnhandledException="Application_DispatcherUnhandledException"
              Exit="Application_Exit"
              Startup="Application_Startup"
              StartupUri="/Views/TeXiao/LedClock/demo2/view/Clockled.XAML">

@@ -33,6 +33,10 @@ namespace WpfApp.Views.TeXiao.LedClock.demo2.viewmodel
             var Timer = DateTime.Now;
 
             setuptime( Timer );
+
+
+            var i = 0;
+            var a = 100 / i;
         }
 
 

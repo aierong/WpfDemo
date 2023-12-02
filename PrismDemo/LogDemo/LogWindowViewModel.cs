@@ -17,6 +17,9 @@ namespace PrismDemo.LogDemo
         private DelegateCommand _AButtonClickCommand;
         public DelegateCommand AButtonClickCommand => _AButtonClickCommand ?? ( _AButtonClickCommand = new DelegateCommand( () =>
         {
+            //int i = 0;
+            //int j = 100 / i;
+
             //导航 
             this._regionManager.RequestNavigate( "ContentRegion" , "AAAUC" );
 

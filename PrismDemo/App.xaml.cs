@@ -37,7 +37,7 @@ namespace PrismDemo
         protected override Window CreateShell ()
         {
             //捕捉未处理的异常
-            this.DispatcherUnhandledException += App_DispatcherUnhandledException;
+            //this.DispatcherUnhandledException += App_DispatcherUnhandledException;
 
             Debug.WriteLine( "CreateShell" );
 
@@ -99,6 +99,46 @@ namespace PrismDemo
             //测试登录  
             // 记得，如果使用下面的登录，请把下面屏蔽的OnInitialized代码打开
             //return Container.Resolve<LoginDemo.Demo2.MainIndex>();
+        }
+
+
+        private void PrismApplication_DispatcherUnhandledException ( object sender , System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e )
+        {
+            try
+            {
+                e.Handled = true; //标识异常已经处理
+
+                if ( e.Exception.InnerException == null )
+                {
+                    //MessageBox.Show( "（1）发生了一个错误！请联系开发人员！" + Environment.NewLine
+                    //                   + "（2）错误源：" + e.Exception.Source + Environment.NewLine
+                    //                   + "（3）详细信息：" + e.Exception.Message + Environment.NewLine );
+                    //+ "（4）报错区域：" + e.Exception.StackTrace);
+
+                    this.logger.LogError( $"{e.Exception.StackTrace}" + Environment.NewLine + $"{e.Exception.Message}" );
+
+                }
+                else
+                {
+                    //MessageBox.Show( "（1）发生了一个错误！请联系开发人员！" + Environment.NewLine
+                    //                    + "（2）错误源：" + e.Exception.InnerException.Source + Environment.NewLine
+                    //                    + "（3）错误信息：" + e.Exception.Message + Environment.NewLine
+                    //                    + "（4）详细信息：" + e.Exception.InnerException.Message + Environment.NewLine
+                    //                    + "（5）报错区域：" + e.Exception.InnerException.StackTrace );
+
+                    this.logger.LogError( $"{e.Exception.InnerException.StackTrace}" + Environment.NewLine + $"{e.Exception.InnerException.Message}{e.Exception.InnerException.Source}" );
+                }
+
+            }
+            catch ( Exception e2 )
+            {
+                //此时程序出现严重异常，将强制结束退出
+                //MessageBox.Show( "程序发生致命错误，将终止，请联系运营商！" );
+            }
+            finally
+            {
+
+            }
         }
 
         private void App_DispatcherUnhandledException ( object sender , System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e )
@@ -373,7 +413,6 @@ namespace PrismDemo
 
         }
 
-
-
+       
     }
 }
