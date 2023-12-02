@@ -50,13 +50,13 @@
             <TextBox Width="190"
                      Height="30"
                      Text="{Binding Name}" />
-            
+
             <TextBox Width="190"
                      Height="30"
                      Text="{Binding IsFlag, Converter={StaticResource myboolconvert}}" />
 
             <!--
-            还可以利用ConverterParameter给转换器传递参数
+                还可以利用ConverterParameter给转换器传递参数
             -->
             <TextBox Width="190"
                      Height="30"

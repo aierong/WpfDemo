@@ -48,7 +48,7 @@
             <TextBox HorizontalAlignment="Center"
                      VerticalAlignment="Center"
                      Text="{c:Binding (Name + \'  \' + Last)}" />
-            
+
             <!--
                 a等于10,就显示10,否则20
                 注意:3元运算符,?和:前后都要有空格,否则会报错

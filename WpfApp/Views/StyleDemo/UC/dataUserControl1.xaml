@@ -16,7 +16,7 @@
                    FontSize="48">
             <TextBlock.Style>
                 <!--
-                数据触发器
+                    数据触发器
                 -->
                 <Style TargetType="TextBlock">
                     <Setter Property="Text" Value="No" />

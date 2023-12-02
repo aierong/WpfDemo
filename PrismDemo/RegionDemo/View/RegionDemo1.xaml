@@ -29,8 +29,6 @@
         </StackPanel>
 
         <!--
-             
-            
             注意不是任意一个控件都支持区域：
             Prism提供了许多内置得RegionAdapter
             ContentControlRegionAdapter

@@ -78,7 +78,7 @@
                     Command="{Binding AsyncButtonParClickCommand}"
                     CommandParameter="{Binding ElementName=txt1, Path=Width}"
                     Content="异步(带参数)" />
-            <!--下面做一个简单的进度显示-->
+            <!--  下面做一个简单的进度显示  -->
             <TextBlock HorizontalAlignment="Center"
                        FontSize="20"
                        FontStyle="Italic"

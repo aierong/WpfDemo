@@ -8,13 +8,20 @@
         Width="800"
         Height="450"
         mc:Ignorable="d">
-    <!--默认情况下，后添加的元素只能使用剩余空间，无论对DockPanel的最后一个子元素设置任何停靠值，该子元素都将始终填满剩余的空间。
-    如果不希望最后一个元素填充剩余区域，可以将DockPanel属性LastChildFill设置为false，还必须为最后一个子元素显式指定停靠方向。-->
+    <!--
+        默认情况下，后添加的元素只能使用剩余空间，无论对DockPanel的最后一个子元素设置任何停靠值，该子元素都将始终填满剩余的空间。
+        如果不希望最后一个元素填充剩余区域，可以将DockPanel属性LastChildFill设置为false，还必须为最后一个子元素显式指定停靠方向。
+    -->
     <DockPanel LastChildFill="False">
-        <Button Content="ButtonLeft" DockPanel.Dock="Left" />
-        <Button Content="ButtonTop" DockPanel.Dock="Top" />
-        <Button Content="ButtonRight" DockPanel.Dock="Right" />
-        <Button Content="ButtonBottom" DockPanel.Dock="Bottom" />
-        <Button Content="最后一个Button不填充剩余空间" DockPanel.Dock="Top" />
+        <Button Content="ButtonLeft"
+                DockPanel.Dock="Left" />
+        <Button Content="ButtonTop"
+                DockPanel.Dock="Top" />
+        <Button Content="ButtonRight"
+                DockPanel.Dock="Right" />
+        <Button Content="ButtonBottom"
+                DockPanel.Dock="Bottom" />
+        <Button Content="最后一个Button不填充剩余空间"
+                DockPanel.Dock="Top" />
     </DockPanel>
 </Window>

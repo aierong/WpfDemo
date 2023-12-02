@@ -8,10 +8,11 @@
              d:DesignWidth="800"
              mc:Ignorable="d">
 
-    <!-- 参考:
-    https://wpf-tutorial.com/zh/14/%E5%9F%BA%E6%9C%AC%E6%8E%A7%E5%88%B6%E9%A0%85/textblock%E6%8E%A7%E5%88%B6%E9%A0%85/
+    <!--
+        参考:
+        https://wpf-tutorial.com/zh/14/%E5%9F%BA%E6%9C%AC%E6%8E%A7%E5%88%B6%E9%A0%85/textblock%E6%8E%A7%E5%88%B6%E9%A0%85/
     -->
-    
+
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition />

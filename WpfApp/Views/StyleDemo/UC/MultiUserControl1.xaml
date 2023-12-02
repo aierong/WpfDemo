@@ -15,9 +15,6 @@
             <TextBox.Style>
                 <!--
                     多重触发（MultiTrigger）
-                
-                
-                
                 -->
                 <Style TargetType="TextBox">
                     <Style.Triggers>

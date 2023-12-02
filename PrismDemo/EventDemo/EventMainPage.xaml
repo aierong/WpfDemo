@@ -14,7 +14,7 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
-    
+
     <Grid ShowGridLines="True">
         <!--  2行2列的表格  -->
         <Grid.RowDefinitions>

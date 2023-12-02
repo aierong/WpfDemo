@@ -31,7 +31,8 @@
                 Background="#7178DB" />
 
         <!--  1行2列  -->
-        <Grid Grid.Row="1" Grid.Column="0">
+        <Grid Grid.Row="1"
+              Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition />
             </Grid.RowDefinitions>
@@ -46,7 +47,8 @@
                     Margin="5"
                     Background="blue" />
             <!--  分成5行5列的表格  -->
-            <Grid Grid.Row="0" Grid.Column="1">
+            <Grid Grid.Row="0"
+                  Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition />
                     <RowDefinition />

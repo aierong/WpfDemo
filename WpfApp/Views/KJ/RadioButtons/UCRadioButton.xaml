@@ -13,13 +13,13 @@
         <StackPanel HorizontalAlignment="Center"
                     VerticalAlignment="Center">
             <StackPanel.Resources>
-                <!--  
-                引入转换器  
+                <!--
+                    引入转换器
                 -->
                 <localcv:DisplayTypeConverter x:Key="conv">
                 </localcv:DisplayTypeConverter>
             </StackPanel.Resources>
-            
+
             <RadioButton Content="好的"
                          IsChecked="{Binding UserSelectDisplayType, Converter={StaticResource conv}, ConverterParameter={x:Static local:DisplayType.Good}}">
             </RadioButton>

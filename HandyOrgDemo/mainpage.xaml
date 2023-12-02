@@ -18,14 +18,14 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <!--  
-        Style="{StaticResource TabControlCapsuleSolid}"  
+        <!--
+            Style="{StaticResource TabControlCapsuleSolid}"
         -->
 
         <ScrollViewer>
             <TabControl TabStripPlacement="Left">
                 <TabItem Header="Drawer Demo">
-                    <!--要显示的页面-->
+                    <!--  要显示的页面  -->
                     <localuc:DrawerUserControl />
                 </TabItem>
                 <TabItem Header="Drawer(MVVM操作) Demo">

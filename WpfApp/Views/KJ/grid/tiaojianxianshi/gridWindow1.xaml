@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WpfApp.Views.KJ.grid.tiaojianxianshi"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="gridWindow1"  
+        Title="gridWindow1"
         Width="800"
         Height="680"
         d:DataContext="{d:DesignInstance local:gridWindow1ViewModel,

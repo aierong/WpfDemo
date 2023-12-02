@@ -68,7 +68,7 @@
                         </DataGridTemplateColumn.CellTemplateSelector>
 
                     </DataGridTemplateColumn>
-                    
+
                 </DataGrid.Columns>
             </DataGrid>
 

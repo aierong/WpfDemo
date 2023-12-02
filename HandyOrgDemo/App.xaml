@@ -10,7 +10,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml" />
                 <!--
                 这个是 暗色
                 <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDark.xaml" />
@@ -22,11 +22,11 @@
 </Application>
 
 
-    
-    
+
+
 
 <!--
-    
+
 1.  nuget:  HandyControl
 
     2.app.xaml
@@ -41,6 +41,5 @@
 
     3.空间名
     xmlns:hc="https://handyorg.github.io/handycontrol"
-    
-    
+
 -->

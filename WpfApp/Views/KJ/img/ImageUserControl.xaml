@@ -10,12 +10,12 @@
              d:DesignWidth="800"
              mc:Ignorable="d">
     <Grid ShowGridLines="True">
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
-        
-           
+
+
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -23,10 +23,10 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-     
+
         <!--
-        Image可以加载网络上图片  
-        
+        Image可以加载网络上图片
+
         <Image Grid.Row="0"
                Grid.Column="0"
                Source="https://upload.wikimedia.org/wikipedia/commons/3/30/Googlelogo.png" />
@@ -47,7 +47,7 @@
                Height="100"
                Source="/Imgs/VER.png" />
 
-     
+
 
         <!--
             Stretch属性:
@@ -56,7 +56,6 @@
             UniformToFill: 图片将被缩放，以便完全填充图片区域。 将保留图片的宽高比。
             Fill: 图片将缩放以适合图片控件的区域。 可能无法保留宽高比，因为图片的高度和宽度是独立缩放的。
             None: 如果图片小于图片控件，则不执行任何操作。 如果它比图片控件大，则会裁剪图片以适合图片控件，这意味着只有部分图片可见。
-        
         -->
         <Image Grid.Row="0"
                Grid.Column="1"

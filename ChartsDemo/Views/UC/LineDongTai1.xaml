@@ -41,12 +41,12 @@
                     Margin="10,10,10,10"
                     Command="{Binding UpdateButtonClickCommand}"
                     Content="update" />
-            
+
             <Button Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding ResetButtonClickCommand}"
                     Content="重置" />
-            
+
             <Button Height="30"
                     Margin="10,10,10,10"
                     Command="{Binding AddSeriesButtonClickCommand}"

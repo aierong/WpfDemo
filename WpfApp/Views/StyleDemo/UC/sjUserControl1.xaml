@@ -16,9 +16,8 @@
             <TextBlock.Style>
                 <!--
                     事件触发器
-                    使用EventTrigger订阅两个事件：MouseEnter和MouseLeave。 
+                    使用EventTrigger订阅两个事件：MouseEnter和MouseLeave。
                     当鼠标进入时，我会在300毫秒内进行平滑和动画过渡到28像素的FontSize。 当鼠标离开时，我将FontSize改回18像素
-                
                 -->
                 <Style TargetType="TextBlock">
                     <Style.Triggers>

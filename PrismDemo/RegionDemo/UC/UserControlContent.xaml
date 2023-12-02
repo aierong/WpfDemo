@@ -9,10 +9,13 @@
              mc:Ignorable="d">
     <Grid Background="Green"
           ShowGridLines="True">
-        <TextBlock FontStyle="Italic"
+        <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="48"
+                   FontStyle="Italic"
                    FontWeight="Bold"
                    Text="这里是内容"
-                   TextDecorations="Underline" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                   TextDecorations="Underline" />
 
     </Grid>
 </UserControl>
