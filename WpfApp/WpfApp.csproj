@@ -148,6 +148,18 @@
     <Compile Include="Views\ConverterDemo\demo1\Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DAOHAN\DEMO1\MAINWindow1.xaml.cs">
+      <DependentUpon>MAINWindow1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DAOHAN\DEMO1\UC\UserControlDATA.xaml.cs">
+      <DependentUpon>UserControlDATA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DAOHAN\DEMO1\UC\UserControlSETUP.xaml.cs">
+      <DependentUpon>UserControlSETUP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DAOHAN\DEMO1\UC\UserControlUSER.xaml.cs">
+      <DependentUpon>UserControlUSER.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DH\BorderWindow6.xaml.cs">
       <DependentUpon>BorderWindow6.xaml</DependentUpon>
     </Compile>
@@ -481,6 +493,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConverterDemo\demo1\Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DAOHAN\DEMO1\MAINWindow1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DAOHAN\DEMO1\UC\UserControlDATA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DAOHAN\DEMO1\UC\UserControlSETUP.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DAOHAN\DEMO1\UC\UserControlUSER.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
