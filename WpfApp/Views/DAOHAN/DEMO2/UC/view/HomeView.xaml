@@ -8,9 +8,9 @@
              d:DesignHeight="450"
              d:DesignWidth="800"
              mc:Ignorable="d">
-    <!--<UserControl.DataContext>
+    <UserControl.DataContext>
         <localvm:HomeViewModel/>
-    </UserControl.DataContext>-->
+    </UserControl.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />

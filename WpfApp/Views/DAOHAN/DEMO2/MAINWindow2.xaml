@@ -18,7 +18,9 @@
     </Window.DataContext>
 
     <Window.Resources>
-        <!--  定义数据模版，就是把模型和视图对应  -->
+        <!--
+            定义数据模版，就是把模型和视图对应起来
+        -->
         <DataTemplate DataType="{x:Type localvm:HomeViewModel}">
             <localview:HomeView>
             </localview:HomeView>

@@ -8,9 +8,9 @@
              d:DesignHeight="450"
              d:DesignWidth="800"
              mc:Ignorable="d">
-    <!--<UserControl.DataContext>
+    <UserControl.DataContext>
         <localvm:DesktopViewModel />
-    </UserControl.DataContext>-->
+    </UserControl.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -32,6 +32,13 @@
                      Height="50"
                      Text="2"
                      TextWrapping="Wrap" />
+            <TextBox Width="120"
+                     Height="50"
+                     Text="{Binding Str1}"
+                     TextWrapping="Wrap" />
+            <Button Width="200"
+                    Command="{Binding UpdateDataCommand}"
+                    Content="动态改变文本" />
         </StackPanel>
     </Grid>
 </UserControl>
