@@ -154,12 +154,25 @@
     <Compile Include="Views\DAOHAN\DEMO1\UC\UserControlDATA.xaml.cs">
       <DependentUpon>UserControlDATA.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DAOHAN\DEMO1\UC\UserControlDATAVM.cs" />
     <Compile Include="Views\DAOHAN\DEMO1\UC\UserControlSETUP.xaml.cs">
       <DependentUpon>UserControlSETUP.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DAOHAN\DEMO1\UC\UserControlUSER.xaml.cs">
       <DependentUpon>UserControlUSER.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DAOHAN\DEMO2\MAINWindow2.xaml.cs">
+      <DependentUpon>MAINWindow2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DAOHAN\DEMO2\MAINWindow2VM.cs" />
+    <Compile Include="Views\DAOHAN\DEMO2\UC\view\DesktopView.xaml.cs">
+      <DependentUpon>DesktopView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DAOHAN\DEMO2\UC\view\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DAOHAN\DEMO2\UC\vm\DesktopViewModel.cs" />
+    <Compile Include="Views\DAOHAN\DEMO2\UC\vm\HomeViewModel.cs" />
     <Compile Include="Views\DH\BorderWindow6.xaml.cs">
       <DependentUpon>BorderWindow6.xaml</DependentUpon>
     </Compile>
@@ -509,6 +522,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\DAOHAN\DEMO1\UC\UserControlUSER.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DAOHAN\DEMO2\MAINWindow2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DAOHAN\DEMO2\UC\view\DesktopView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DAOHAN\DEMO2\UC\view\HomeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

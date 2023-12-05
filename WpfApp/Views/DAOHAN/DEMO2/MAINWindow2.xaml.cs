@@ -10,20 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp.Views.DAOHAN.DEMO1.UC
+namespace WpfApp.Views.DAOHAN.DEMO2
 {
     /// <summary>
-    /// UserControlDATA.xaml 的互動邏輯
+    /// MAINWindow2.xaml 的互動邏輯
     /// </summary>
-    public partial class UserControlDATA : UserControl
+    public partial class MAINWindow2 : Window
     {
-        public UserControlDATA ()
+        public MAINWindow2 ()
         {
             InitializeComponent();
-            this.DataContext = new UserControlDATAVM();
         }
     }
 }

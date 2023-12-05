@@ -13,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp.Views.DAOHAN.DEMO1.UC
+namespace WpfApp.Views.DAOHAN.DEMO2.UC.view
 {
     /// <summary>
-    /// UserControlDATA.xaml 的互動邏輯
+    /// DesktopView.xaml 的互動邏輯
     /// </summary>
-    public partial class UserControlDATA : UserControl
+    public partial class DesktopView : UserControl
     {
-        public UserControlDATA ()
+        public DesktopView ()
         {
             InitializeComponent();
-            this.DataContext = new UserControlDATAVM();
         }
     }
 }

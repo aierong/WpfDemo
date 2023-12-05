@@ -67,6 +67,7 @@
     /Views/TeXiao/LedClock/demo2/view/Clockled.XAML        时钟2
     
     /Views/DAOHAN/DEMO1/MAINWindow1.XAML        导航1
+    /Views/DAOHAN/DEMO2/MAINWindow2.XAML        导航2
 -->
 <Application x:Class="WpfApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
