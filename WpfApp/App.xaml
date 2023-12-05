@@ -78,7 +78,7 @@
              DispatcherUnhandledException="Application_DispatcherUnhandledException"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/DAOHAN/DEMO1/MAINWindow1.XAML">
+             StartupUri="/Views/DAOHAN/DEMO2/MAINWindow2.XAML">
 
 
 

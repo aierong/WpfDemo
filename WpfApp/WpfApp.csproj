@@ -171,8 +171,12 @@
     <Compile Include="Views\DAOHAN\DEMO2\UC\view\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DAOHAN\DEMO2\UC\view\SetupView.xaml.cs">
+      <DependentUpon>SetupView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DAOHAN\DEMO2\UC\vm\DesktopViewModel.cs" />
     <Compile Include="Views\DAOHAN\DEMO2\UC\vm\HomeViewModel.cs" />
+    <Compile Include="Views\DAOHAN\DEMO2\UC\vm\SetupViewModel.cs" />
     <Compile Include="Views\DH\BorderWindow6.xaml.cs">
       <DependentUpon>BorderWindow6.xaml</DependentUpon>
     </Compile>
@@ -534,6 +538,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\DAOHAN\DEMO2\UC\view\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DAOHAN\DEMO2\UC\view\SetupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

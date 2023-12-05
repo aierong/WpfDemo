@@ -3,16 +3,37 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WpfApp.Views.DAOHAN.DEMO2"
+        xmlns:localview="clr-namespace:WpfApp.Views.DAOHAN.DEMO2.UC.view"
+        xmlns:localvm="clr-namespace:WpfApp.Views.DAOHAN.DEMO2.UC.vm"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="导航主页2"
         Width="800"
         Height="450"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
+
     <Window.DataContext>
         <local:MAINWindow2VM>
         </local:MAINWindow2VM>
     </Window.DataContext>
+
+    <Window.Resources>
+        <!--  定义数据模版，就是把模型和视图对应  -->
+        <DataTemplate DataType="{x:Type localvm:HomeViewModel}">
+            <localview:HomeView>
+            </localview:HomeView>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type localvm:DesktopViewModel}">
+            <localview:DesktopView>
+            </localview:DesktopView>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type localvm:SetupViewModel}">
+            <localview:SetupView>
+            </localview:SetupView>
+        </DataTemplate>
+    </Window.Resources>
 
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
@@ -32,7 +53,10 @@
                     Content="Home" />
             <Button Command="{Binding OpenCommand}"
                     CommandParameter="DesktopData"
-                    Content="Desktop Data" />
+                    Content="Desktop数据" />
+            <Button Command="{Binding OpenCommand}"
+                    CommandParameter="Setup"
+                    Content="设置" />
         </StackPanel>
         <ContentControl Grid.Row="0"
                         Grid.Column="1"

@@ -54,6 +54,10 @@ namespace WpfApp.Views.DAOHAN.DEMO2
                         MainContent = new UC.vm.DesktopViewModel();
                         break;
 
+                    case "Setup":
+                        MainContent = new UC.vm.SetupViewModel();
+                        break;
+
                     default:
                         MainContent = new UC.vm.HomeViewModel();
                         break;
