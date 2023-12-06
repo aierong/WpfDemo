@@ -98,6 +98,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BindingProxy.cs" />
     <Compile Include="Views\BaseCommand\MyCommand.cs" />
     <Compile Include="Views\BindData\Binds\BindsWindow1.xaml.cs">
       <DependentUpon>BindsWindow1.xaml</DependentUpon>
