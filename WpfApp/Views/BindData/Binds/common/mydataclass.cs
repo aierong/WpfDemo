@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace WpfApp.Views.BindData.Binds.common
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class mydataclass
     {
         public string StrName
