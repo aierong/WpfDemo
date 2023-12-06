@@ -13,7 +13,8 @@
     
     StartupUri="/Views/ValidationData/demo1/view/datawindow.XAML"
     
-    StartupUri="/Views/BindData/RelativeSource/DataWindow1.XAML"
+    StartupUri="/Views/BindData/RelativeSource/DataWindow1.XAML"   RelativeSource
+    
     
     StartupUri="/Views/CommandDemo/demo1/duo.XAML"
     
@@ -68,6 +69,8 @@
     
     /Views/DAOHAN/DEMO1/MAINWindow1.XAML        导航1
     /Views/DAOHAN/DEMO2/MAINWindow2.XAML        导航2
+    
+    /Views/BindData/contexts/basedemo/demo2.XAML
 -->
 <Application x:Class="WpfApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -78,7 +81,7 @@
              DispatcherUnhandledException="Application_DispatcherUnhandledException"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/DAOHAN/DEMO2/MAINWindow2.XAML">
+             StartupUri="/Views/BindData/contexts/basedemo/demo2.XAML">
 
 
 

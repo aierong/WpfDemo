@@ -9,13 +9,14 @@
         Height="450"
         d:DataContext="{d:DesignInstance local:DataViewModel2,
                                          IsDesignTimeCreatable=True}"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <Grid ShowGridLines="True">
         <!--  3行2列的表格  -->
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
-            <RowDefinition />
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -30,10 +31,27 @@
             <TextBox Width="190"
                      Height="30"
                      Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}" />
+            
             <TextBox Width="190"
                      Height="30"
                      IsReadOnly="True"
                      Text="{Binding Description}" />
+
+            <!--下面 2种写法是等效的-->
+            <TextBox Width="190"
+                     Height="30"
+                     IsReadOnly="True"
+                     Text="{Binding Path=Description}" />
+
+            <TextBox Width="190"
+                     Height="30"
+                     IsReadOnly="True">
+                <TextBox.Text>
+                    <Binding Path="Description">
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+
             <Button Width="100"
                     Height="30"
                     Command="{Binding ShowCommand}"
