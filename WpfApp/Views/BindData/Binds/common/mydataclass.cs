@@ -14,9 +14,9 @@ namespace WpfApp.Views.BindData.Binds.common
             get; set;
         } = "我是公有的";
 
-        public static string title = "wo de title";
+        public static string title = "标题";
 
-        public const string constr1 = "title(常量)";
+        public const string constr1 = "常量来了";
     }
 
 }

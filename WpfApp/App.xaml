@@ -84,7 +84,7 @@
              DispatcherUnhandledException="Application_DispatcherUnhandledException"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/BindData/ElementNameDemo/ElementNameWindow1.XAML">
+             StartupUri="/Views/BindData/Binds/BindsWindow1.XAML">
 
 
 

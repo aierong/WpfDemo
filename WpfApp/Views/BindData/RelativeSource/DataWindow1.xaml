@@ -52,7 +52,7 @@
         </Grid.ColumnDefinitions>
         <GroupBox Grid.Row="0"
                   Grid.Column="0"
-                  Header="Self">
+                  Header="Self(绑定自己)">
 
             <!--
                 Self用于绑定源和绑定目标相同的场景中。对象的一个属性与同一对象的另一个属性绑定。
@@ -60,9 +60,24 @@
                 在XAML文件中添加下面给出的代码。宽度属性与高度属性相对绑定。
             -->
             <Grid>
-                <Ellipse Width="{Binding RelativeSource={RelativeSource Self}, Path=Height}"
-                         Height="100"
-                         Fill="Black" />
+                <StackPanel Orientation="Vertical">
+                    <Ellipse Width="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Height}"
+                             Height="20"
+                             Margin="0,2,0,0"
+                             Fill="Black" />
+                    <!--  另一种写法  -->
+                    <!--  Mode可以省略不写  -->
+                    <Ellipse Width="{Binding RelativeSource={RelativeSource Self}, Path=Height}"
+                             Height="20"
+                             Margin="0,2,0,0"
+                             Fill="Black" />
+                    <!--  另一种写法  -->
+                    <Ellipse Width="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=Height}"
+                             Height="20"
+                             Margin="0,2,0,0"
+                             Fill="Black" />
+                </StackPanel>
+
             </Grid>
         </GroupBox>
         <GroupBox Grid.Row="1"
