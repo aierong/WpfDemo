@@ -114,6 +114,9 @@
     <Compile Include="Views\BindData\contexts\dataWindow1.xaml.cs">
       <DependentUpon>dataWindow1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\BindData\ElementNameDemo\ElementNameWindow1.xaml.cs">
+      <DependentUpon>ElementNameWindow1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\BindData\ListData\Models\Student.cs" />
     <Compile Include="Views\BindData\ListData\plus\Models\EMP.cs" />
     <Compile Include="Views\BindData\ListData\plus\ViewModels\PlusDataViewModel.cs" />
@@ -402,6 +405,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\BindData\demo2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BindData\ElementNameDemo\ElementNameWindow1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
