@@ -74,8 +74,6 @@
     /Views/BindData/Binds/BindsWindow1.XAML
     
     /Views/BindData/ElementNameDemo/ElementNameWindow1.XAML
-    
-    
 -->
 <Application x:Class="WpfApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -86,7 +84,7 @@
              DispatcherUnhandledException="Application_DispatcherUnhandledException"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/BindData/Binds/BindsWindow1.XAML">
+             StartupUri="/Views/DAOHAN/DEMO1/MAINWindow1.XAML">
 
 
 

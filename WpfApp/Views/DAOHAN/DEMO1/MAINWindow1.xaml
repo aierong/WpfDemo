@@ -14,11 +14,9 @@
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition />
-
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
-
         </Grid.ColumnDefinitions>
 
         <TabControl TabStripPlacement="Left">
@@ -31,8 +29,6 @@
             <TabItem Header="设置">
                 <localuc:UserControlSETUP />
             </TabItem>
-
-
         </TabControl>
     </Grid>
 </Window>
