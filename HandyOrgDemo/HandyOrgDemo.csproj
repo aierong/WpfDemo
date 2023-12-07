@@ -10,6 +10,19 @@
   <ItemGroup>
     <None Remove=".gitattributes" />
     <None Remove=".gitignore" />
+    <None Remove="assets\Image\QQ\1.gif" />
+    <None Remove="assets\Image\QQ\2.gif" />
+    <None Remove="assets\Image\QQ\3.gif" />
+    <None Remove="assets\Image\QQ\4.gif" />
+    <None Remove="assets\Image\QQ\5.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="assets\Image\QQ\1.gif" />
+    <Resource Include="assets\Image\QQ\2.gif" />
+    <Resource Include="assets\Image\QQ\3.gif" />
+    <Resource Include="assets\Image\QQ\4.gif" />
+    <Resource Include="assets\Image\QQ\5.gif" />
   </ItemGroup>
 
   <ItemGroup>

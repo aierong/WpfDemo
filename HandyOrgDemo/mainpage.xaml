@@ -9,7 +9,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="主页面"
         Width="800"
-        Height="450"
+        Height="600"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <Grid>
@@ -60,6 +60,10 @@
                 </TabItem>
                 <TabItem Header="翻页时种">
                     <localuc:UserControlFK />
+                </TabItem>
+                <TabItem Header="跑马灯">
+                    <localuc:UCRunningBlock>
+                    </localuc:UCRunningBlock>
                 </TabItem>
 
             </TabControl>
