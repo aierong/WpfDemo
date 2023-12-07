@@ -12,22 +12,38 @@
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
-        <StackPanel>
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0">
             <!--
                 官网提到要用：Viewbox控制大小
             -->
             <!--
                 Stretch="Fill" 可以填充
             -->
-            <Viewbox Width="250"
-                     Height="250">
+            <Viewbox Width="200">
                 <hc:FlipClock />
             </Viewbox>
 
         </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0">
+            <hc:TransitioningContentControl>
+                <Viewbox Width="100">
+                    <hc:FlipClock Margin="32" />
+                </Viewbox>
+            </hc:TransitioningContentControl>
+        </StackPanel>
 
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0">
 
+            <Viewbox Width="400">
+                <hc:FlipClock Margin="32" />
+            </Viewbox>
+
+        </StackPanel>
 
     </Grid>
 </UserControl>
