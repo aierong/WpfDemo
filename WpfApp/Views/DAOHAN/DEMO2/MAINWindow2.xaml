@@ -19,7 +19,7 @@
 
     <Window.Resources>
         <!--
-            定义数据模版，就是把模型和视图对应起来
+            定义数据模版:把vm模型和视图对应起来
         -->
         <DataTemplate DataType="{x:Type localvm:HomeViewModel}">
             <localview:HomeView>
@@ -40,7 +40,6 @@
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition />
-
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />

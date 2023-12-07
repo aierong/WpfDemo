@@ -12,7 +12,6 @@ namespace WpfApp.Views.DAOHAN.DEMO2
 {
     public class MAINWindow2VM : INotifyPropertyChanged
     {
-
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged ( string propName )
         {
@@ -42,8 +41,10 @@ namespace WpfApp.Views.DAOHAN.DEMO2
         {
             MainContent = new UC.vm.HomeViewModel();
 
+            
             OpenCommand = new MyParCommand<string>( ( string str ) =>
             {
+                // 命令根据xaml传递过来参数，切换不同vm
                 switch ( str )
                 {
                     case "Home":
