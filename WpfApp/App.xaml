@@ -84,7 +84,7 @@
              DispatcherUnhandledException="Application_DispatcherUnhandledException"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/DAOHAN/DEMO1/MAINWindow1.XAML">
+             StartupUri="/Views/TeXiao/LedClock/demo2/view/Clockled.XAML">
 
 
 

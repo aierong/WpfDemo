@@ -30,10 +30,16 @@ namespace WpfApp.Views.TeXiao.LedClock.demo1.viewmodel
             }
         }
 
+
+
         private void TimerEventHandler ( Object sender , EventArgs args )
         {
-            Timer = DateTime.Now;
+            //Timer = DateTime.Now;
+            //上面这句也可以，但是频繁更新UI，如果界面还有跑马灯等等其它动态控件，跑马灯会看起来卡顿的
+            Task.Factory.StartNew( () => Timer = DateTime.Now );
         }
+
+
 
         public datawindowviewmodel ()
         {
