@@ -29,6 +29,7 @@
         </StackPanel>
         <StackPanel Grid.Row="1"
                     Grid.Column="0">
+            <!--  一点点小特效  -->
             <hc:TransitioningContentControl>
                 <Viewbox Width="100">
                     <hc:FlipClock Margin="32" />
