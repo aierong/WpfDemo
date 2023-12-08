@@ -1,0 +1,194 @@
+﻿<UserControl x:Class="HandyOrgDemo.Views.UserControls.CardUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:local="clr-namespace:HandyOrgDemo.Views.UserControls"
+             xmlns:localvm="clr-namespace:HandyOrgDemo.ViewModels.UserControls"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             mc:Ignorable="d">
+    <UserControl.DataContext>
+        <localvm:CardUserControlVM>
+        </localvm:CardUserControlVM>
+    </UserControl.DataContext>
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0"
+                    Orientation="Horizontal">
+
+            <!--  单独显示一个card  -->
+            <!--
+                Effect="{DynamicResource EffectShadow2}" 配置边框阴影效果
+                BorderThickness="1"   边框粗细
+            -->
+            <hc:Card MaxWidth="240"
+                     Margin="18"
+                     BorderThickness="1"
+                     Effect="{DynamicResource EffectShadow2}">
+                <!--  Card 的内容部分  -->
+                <Border Width="160"
+                        Height="100"
+                        CornerRadius="4,4,0,0">
+                    <TextBlock HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Text="测试"
+                               TextWrapping="Wrap" />
+                </Border>
+                <!--  Card 的尾部部分  -->
+                <hc:Card.Footer>
+                    <StackPanel Width="160"
+                                Margin="10">
+                        <!--  Card 的一级内容  -->
+                        <TextBlock HorizontalAlignment="Left"
+                                   Style="{DynamicResource TextBlockLargeBold}"
+                                   Text="大标题"
+                                   TextTrimming="CharacterEllipsis"
+                                   TextWrapping="NoWrap" />
+                        <!--  Card 的二级内容  -->
+                        <TextBlock Margin="0,6,0,0"
+                                   HorizontalAlignment="Left"
+                                   Style="{DynamicResource TextBlockDefault}"
+                                   Text="描述信息"
+                                   TextTrimming="CharacterEllipsis"
+                                   TextWrapping="NoWrap" />
+                    </StackPanel>
+                </hc:Card.Footer>
+            </hc:Card>
+
+            <Button Width="200"
+                    Command="{Binding UpdateCommand}"
+                    Content="动态改变"
+                    Style="{StaticResource ButtonPrimary}" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    Orientation="Horizontal">
+
+            <!--
+                ListBox是默认纵向排列的， Style="{StaticResource WrapPanelHorizontalListBox} 可以配置为横向排列
+            -->
+            <ListBox ItemsSource="{Binding Students}"
+                     Style="{StaticResource WrapPanelHorizontalListBox}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <hc:Card MaxWidth="240"
+                                 Margin="8"
+                                 BorderThickness="1"
+                                 Effect="{DynamicResource EffectShadow2}"
+                                 Footer="{Binding Footer}">
+                            <!--  Card 的内容部分模板  -->
+                            <Border Width="160"
+                                    Height="160"
+                                    CornerRadius="4,4,0,0">
+                                <TextBlock HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Text="{Binding Content}"
+                                           TextWrapping="Wrap" />
+                            </Border>
+                            <!--  Card 的尾部部分模板  -->
+                            <hc:Card.FooterTemplate>
+                                <DataTemplate>
+                                    <StackPanel Width="160"
+                                                Margin="10">
+                                        <!--  Card 的一级内容  -->
+                                        <!--  注意绑定有点不一样  -->
+                                        <TextBlock HorizontalAlignment="Left"
+                                                   Style="{DynamicResource TextBlockLargeBold}"
+                                                   Text="{Binding DataContext.Header, RelativeSource={RelativeSource AncestorType=hc:Card}}"
+                                                   TextTrimming="CharacterEllipsis"
+                                                   TextWrapping="NoWrap" />
+                                        <!--  Card 的二级内容  -->
+                                        <TextBlock Margin="0,6,0,0"
+                                                   HorizontalAlignment="Left"
+                                                   Style="{DynamicResource TextBlockDefault}"
+                                                   Text="{Binding}"
+                                                   TextTrimming="CharacterEllipsis"
+                                                   TextWrapping="NoWrap" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </hc:Card.FooterTemplate>
+                        </hc:Card>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ListBox>
+
+        </StackPanel>
+
+
+
+
+        <Border Grid.Row="2"
+                Grid.Column="0">
+
+            <hc:RunningBlock Margin="0,16,0,0"
+                             HorizontalAlignment="Stretch"
+                             VerticalAlignment="Stretch"
+                             AutoReverse="True"
+                             Duration="0:0:15">
+
+                <ListBox HorizontalAlignment="Stretch"
+                         VerticalAlignment="Stretch"
+                         ItemsSource="{Binding StudentsDT}"
+                         Style="{StaticResource WrapPanelHorizontalListBox}">
+
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <hc:Card MaxWidth="240"
+                                     Margin="8"
+                                     BorderThickness="1"
+                                     Effect="{DynamicResource EffectShadow2}"
+                                     Footer="{Binding Footer}">
+                                <!--  Card 的内容部分模板  -->
+                                <Border Width="160"
+                                        Height="160"
+                                        CornerRadius="4,4,0,0">
+                                    <TextBlock HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Text="{Binding Content}"
+                                               TextWrapping="Wrap" />
+                                </Border>
+                                <!--  Card 的尾部部分模板  -->
+                                <hc:Card.FooterTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Width="160"
+                                                    Margin="10">
+                                            <!--  Card 的一级内容  -->
+                                            <!--  注意绑定有点不一样  -->
+                                            <TextBlock HorizontalAlignment="Left"
+                                                       Style="{DynamicResource TextBlockLargeBold}"
+                                                       Text="{Binding DataContext.Header, RelativeSource={RelativeSource AncestorType=hc:Card}}"
+                                                       TextTrimming="CharacterEllipsis"
+                                                       TextWrapping="NoWrap" />
+                                            <!--  Card 的二级内容  -->
+                                            <TextBlock Margin="0,6,0,0"
+                                                       HorizontalAlignment="Left"
+                                                       Style="{DynamicResource TextBlockDefault}"
+                                                       Text="{Binding}"
+                                                       TextTrimming="CharacterEllipsis"
+                                                       TextWrapping="NoWrap" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </hc:Card.FooterTemplate>
+                            </hc:Card>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ListBox>
+
+            </hc:RunningBlock>
+        </Border>
+
+    </Grid>
+</UserControl>
