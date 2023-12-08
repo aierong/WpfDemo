@@ -39,11 +39,23 @@
                TargetType="{x:Type Label}">
             <Setter Property="FontFamily" Value="{DynamicResource 7SegFontFamily}" />
             <Setter Property="HorizontalContentAlignment" Value="Center" />
-            <Setter Property="Foreground" Value="Red" />
+            <Setter Property="Foreground" Value="Green" />
 
             <Setter Property="FontSize" Value="48" />
 
             <Setter Property="VerticalContentAlignment" Value="Top" />
+            <Setter Property="FontStyle" Value="Normal" />
+            <Setter Property="FontWeight" Value="Bold" />
+
+        </Style>
+
+        <Style x:Key="ys3"
+               TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{DynamicResource 7SegFontFamily}" />
+
+            <Setter Property="Foreground" Value="BlueViolet" />
+
+            <Setter Property="FontSize" Value="48" />
             <Setter Property="FontStyle" Value="Normal" />
             <Setter Property="FontWeight" Value="Bold" />
 
@@ -57,17 +69,28 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
+        <Border Grid.Row="0"
+                Grid.Column="0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                BorderThickness="1,1,1,1">
+            <Border.BorderBrush>
+                <ImageBrush />
+            </Border.BorderBrush>
+            <StackPanel>
 
-        <StackPanel Grid.Row="0"
-                    Grid.Column="0">
-            <Label Foreground="Brown"
-                   Style="{DynamicResource ys1}">
-                <TextBlock Text="{Binding Timer, StringFormat={}{0:yyyy-MM-dd HH:mm:ss}}" />
-            </Label>
-            <Label Foreground="Green"
-                   Style="{DynamicResource ys2}">
-                <TextBlock Text="{Binding Timer, StringFormat={}{0:HH:mm:ss}}" />
-            </Label>
-        </StackPanel>
+                <Label Style="{DynamicResource ys1}">
+                    <TextBlock Text="{Binding Timer, StringFormat={}{0:yyyy-MM-dd HH:mm:ss}}" />
+                </Label>
+                <Label Style="{DynamicResource ys2}">
+                    <TextBlock Text="{Binding Timer, StringFormat={}{0:HH:mm:ss}}" />
+                </Label>
+
+                <TextBlock Style="{DynamicResource ys3}"
+                           Text="{Binding Timer, StringFormat={}{0:HH:mm:ss}}" />
+
+
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>
