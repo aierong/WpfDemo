@@ -10,11 +10,26 @@
   <ItemGroup>
     <None Remove=".gitattributes" />
     <None Remove=".gitignore" />
+    <None Remove="assets\Image\cloud.png" />
+    <None Remove="assets\Image\lb\1.jpg" />
+    <None Remove="assets\Image\lb\2.jpg" />
+    <None Remove="assets\Image\lb\3.jpg" />
+    <None Remove="assets\Image\lb\4.jpg" />
+    <None Remove="assets\Image\lb\5.jpg" />
     <None Remove="assets\Image\QQ\1.gif" />
     <None Remove="assets\Image\QQ\2.gif" />
     <None Remove="assets\Image\QQ\3.gif" />
     <None Remove="assets\Image\QQ\4.gif" />
     <None Remove="assets\Image\QQ\5.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="assets\Image\cloud.png" />
+    <Resource Include="assets\Image\lb\1.jpg" />
+    <Resource Include="assets\Image\lb\2.jpg" />
+    <Resource Include="assets\Image\lb\3.jpg" />
+    <Resource Include="assets\Image\lb\4.jpg" />
+    <Resource Include="assets\Image\lb\5.jpg" />
   </ItemGroup>
 
   <ItemGroup>

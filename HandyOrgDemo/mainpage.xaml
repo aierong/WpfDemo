@@ -64,6 +64,11 @@
                 <TabItem Header="card">
                     <localuc:CardUserControl />
                 </TabItem>
+                <TabItem Header="轮播图">
+                    <!--<localuc:CarouselUC />-->
+                    <localuc:UserControlCarousel>
+                    </localuc:UserControlCarousel>
+                </TabItem>
                 <TabItem Header="跑马灯">
                     <localuc:UCRunningBlock />
                 </TabItem>
