@@ -30,9 +30,19 @@
                 几个重要属性
                 AutoRun	是否自动触发滚动	false	当显示区域不够时才触发滚动
                 Orientation	滚动方向	Orientation Horizontal
+                
                 Duration	滚动一个周期需要的时间	5s
                 Speed	滚动速度		如果设定了值，则会覆盖Duration的值
+                
                 AutoReverse	是否反转滚动	false
+            -->
+
+            <!--
+                关于2个滚动速度参数的说明：
+                
+                Duration：表示滚动一个周期需要的时间    例如：2个滚动条(Duration值一样)，一个内容多，一个内容少，当时内容多的会滚动快一些，因为它要在一个周期内完成滚动
+                Speed：滚动速度		 数值越大，速度越快
+                              
             -->
 
             <hc:RunningBlock Margin="3,5,5,5"
@@ -47,11 +57,11 @@
             -->
             <hc:RunningBlock Margin="3,5,5,5"
                              AutoReverse="True"
-                             Content="xxxXXXXXXXXXXXABCDEFGHIJKLMNOPQRST"
+                             Content="xxx"
                              FontSize="18"
                              FontWeight="Bold"
                              Foreground="Blue"
-                             Duration="0:0:20" />
+                             Speed="50" />
             <!--
                 BorderBrush="Transparent"  可以把边框去掉
             -->
