@@ -3,12 +3,78 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WpfMaterialDesign"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="MainWindow"
         Width="800"
-        Height="450"
+        Height="680"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
-    <Grid>
 
+    <!--
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    -->
+
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <materialDesign:Card Margin="16"
+                                 Padding="32">
+                <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">My First Material Design App</TextBlock>
+            </materialDesign:Card>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0">
+            <Button Width="100"
+                    Margin="0,10,0,0"
+                    Content="_MID"
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    ToolTip="Resource name: MaterialDesignRaisedButton" />
+            <Button Width="100"
+                    Margin="0,10,0,0"
+                    Content="LIGHT"
+                    Cursor="Hand"
+                    Style="{StaticResource MaterialDesignRaisedSecondaryLightButton}"
+                    ToolTip="Resource name: MaterialDesignRaisedSecondaryLightButton" />
+            <Button Margin="0,10,0,0"
+                    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                    materialDesign:ButtonProgressAssist.Value="-1"
+                    Content="{materialDesign:PackIcon DotsHorizontal}"
+                    Style="{StaticResource MaterialDesignFloatingActionButton}" />
+            <Button Width="180"
+                    Margin="0,10,0,0"
+                    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                    materialDesign:ButtonProgressAssist.Value="-1"
+                    Content="Indeterminate"
+                    Style="{StaticResource MaterialDesignRaisedButton}" />
+
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0">
+            <GroupBox Margin="16"
+                      Header="Default Look">
+                <TextBlock Text="My Content" />
+            </GroupBox>
+            <GroupBox Margin="16"
+                      materialDesign:ColorZoneAssist.Mode="SecondaryMid"
+                      Header="Secondary Header"
+                      Style="{StaticResource MaterialDesignGroupBox}">
+                <TextBlock Text="My Content" />
+            </GroupBox>
+        </StackPanel>
     </Grid>
 </Window>
