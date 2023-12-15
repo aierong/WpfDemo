@@ -18,9 +18,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <!--
-            Style="{StaticResource TabControlCapsuleSolid}"
-        -->
+
 
         <ScrollViewer>
             <TabControl TabStripPlacement="Left">
@@ -72,7 +70,9 @@
                 <TabItem Header="跑马灯">
                     <localuc:UCRunningBlock />
                 </TabItem>
-
+                <TabItem Header="GroupBox">
+                    <localuc:GroupBoxUserControl1 />
+                </TabItem>
             </TabControl>
 
         </ScrollViewer>
