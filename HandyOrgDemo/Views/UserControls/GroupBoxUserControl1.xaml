@@ -5,7 +5,7 @@
              xmlns:hc="https://handyorg.github.io/handycontrol"
              xmlns:local="clr-namespace:HandyOrgDemo.Views.UserControls"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             d:DesignHeight="450"
+             d:DesignHeight="660"
              d:DesignWidth="800"
              mc:Ignorable="d">
     <Grid ShowGridLines="True">
@@ -21,7 +21,7 @@
         <StackPanel Grid.Row="0"
                     Grid.Column="0">
             <!--
-                GroupBox在handycontrol中会默认就改变了样式
+                在handycontrol中会改变GroupBox的原生样式
             -->
             <GroupBox Width="300"
                       Height="150"
@@ -62,7 +62,7 @@
         <StackPanel Grid.Row="2"
                     Grid.Column="0">
             <!--
-                原生的，不受handycontrol影响 
+                继续使用原生样式，不受handycontrol影响
                 
                 Style="{StaticResource GroupBoxOriginal}"   官网推荐用这个
                 或者：
