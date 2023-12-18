@@ -73,6 +73,10 @@
                 <TabItem Header="GroupBox">
                     <localuc:GroupBoxUserControl1 />
                 </TabItem>
+                <TabItem Header="DataGrid">
+                    <localuc:DataGridUserControl1 />
+                </TabItem>
+
             </TabControl>
 
         </ScrollViewer>
