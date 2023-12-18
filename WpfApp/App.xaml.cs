@@ -16,13 +16,33 @@ namespace WpfApp
     /// </summary>
     public partial class App : Application
     {
+        Mutex mutex;
+
         private void Application_Startup ( object sender , StartupEventArgs e )
         {
             //xaml中注册Startup = "Application_Startup"
 
-        
 
-            Debug.WriteLine( "Application_Startup" );
+            //bool ret;
+            ////第1个参数:true 第2个参数:写一个名字,随便用一个WpfApp
+            //mutex = new Mutex( true, "WpfApp" , out ret) ;
+
+            //if ( ret )
+            //{
+            //     //正常
+            //}
+            //else
+            //{
+            //    MessageBox.Show( "已经启动一个窗口实例" );
+
+            //    Environment.Exit( 0 );
+
+            //    return;
+            //}
+                               
+
+
+            //Debug.WriteLine( "Application_Startup" );
         }
 
 
