@@ -23,6 +23,8 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
+        <!--  在handycontrol中会改变DataGrid的原生样式  -->
+
         <DataGrid Grid.Row="0"
                   Grid.Column="0"
                   AutoGenerateColumns="False"
