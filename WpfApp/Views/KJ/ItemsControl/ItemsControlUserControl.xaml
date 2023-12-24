@@ -56,36 +56,63 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-        <!--
-            奇偶行样式
-            AlternationCount就是配置几条数据一组
-            AlternationCount="2",所以每组数据的索引就是0,1   0,1    0,1
-        -->
-        <ItemsControl Grid.Row="1"
-                      Grid.Column="0"
-                      AlternationCount="2"
-                      ItemsSource="{Binding StudentList}">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <!--  起个名字,下面触发器引用可以调整样式  -->
-                    <TextBlock x:Name="tblock"
-                               Margin="10,5,0,0"
-                               Text="{Binding Path=.}" />
-                    <DataTemplate.Triggers>
-                        <!--
-                            因为上面AlternationCount="2",所以每组数据的索引就是0,1
-                            
-                            下面索引等于1的,我们就变颜色
-                        -->
-                        <Trigger Property="ItemsControl.AlternationIndex" Value="1">
-                            <Setter TargetName="tblock" Property="Background" Value="#FFC8C8F2" />
-                        </Trigger>
-                    </DataTemplate.Triggers>
-                </DataTemplate>
 
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0">
 
+            <!--
+                奇偶行样式
+                AlternationCount就是配置几条数据一组
+                AlternationCount="2",所以每组数据的索引就是0,1   0,1    0,1
+            -->
+            <ItemsControl AlternationCount="2"
+                          ItemsSource="{Binding StudentList}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <!--  起个名字,下面触发器引用可以调整样式  -->
+                        <TextBlock x:Name="tblock"
+                                   Margin="10,5,0,0"
+                                   Text="{Binding Path=.}" />
+                        <DataTemplate.Triggers>
+                            <!--
+                                因为上面AlternationCount="2",所以每组数据的索引就是0,1
+                                
+                                下面索引等于1的,我们就变颜色
+                            -->
+                            <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                                <Setter TargetName="tblock" Property="Background" Value="#FFC8C8F2" />
+                            </Trigger>
+                        </DataTemplate.Triggers>
+                    </DataTemplate>
+
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <ItemsControl Margin="0,20,0,0"
+                          AlternationCount="2"
+                          ItemsSource="{Binding StudentList}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <!--  起个名字,下面触发器引用可以调整样式  -->
+                        <TextBlock x:Name="tblock2"
+                                   Margin="10,5,0,0"
+                                   Foreground="Blue"
+                                   Text="{Binding Path=.}" />
+                        <DataTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Path=.}"
+                                         Value="tom">
+                                <!--  等于tom,就变颜色  -->
+                                <Setter TargetName="tblock2" Property="Foreground" Value="Red">
+                                </Setter>
+                            </DataTrigger>
+                        </DataTemplate.Triggers>
+                    </DataTemplate>
+
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+
+        <!--  滚动条  -->
         <ScrollViewer Grid.Row="1"
                       Grid.Column="1"
                       HorizontalScrollBarVisibility="Auto"
@@ -122,6 +149,15 @@
                            Text="ItemsControl Item #14" />
                 <TextBlock Margin="10,5,0,0"
                            Text="ItemsControl Item #15" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #16" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #17" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #18" />
+                <TextBlock Margin="10,5,0,0"
+                           Text="ItemsControl Item #19" />
+
                 <TextBlock Margin="10,5,0,0"
                            Text="ItemsControl Item #16 ItemsControl Item #16 ItemsControl Item #16" />
             </ItemsControl>
