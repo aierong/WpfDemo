@@ -50,7 +50,7 @@
     
     
     
-    StartupUri="/Views/colorbrushstring/colorWindow1.XAML"    列表
+    StartupUri="/Views/colorbrushstring/colorWindow1.XAML"     
     
     /Views/KJ/DongTai/DTWindow1.XAML
     
@@ -84,7 +84,7 @@
              DispatcherUnhandledException="Application_DispatcherUnhandledException"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/TeXiao/LedClock/demo1/view/ClockWindow1.XAML">
+             StartupUri="/Views/KJ/mainpage.XAML">
 
 
 

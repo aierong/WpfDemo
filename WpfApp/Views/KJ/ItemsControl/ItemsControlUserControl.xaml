@@ -67,6 +67,7 @@
                       ItemsSource="{Binding StudentList}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
+                    <!--  起个名字,下面触发器引用可以调整样式  -->
                     <TextBlock x:Name="tblock"
                                Margin="10,5,0,0"
                                Text="{Binding Path=.}" />
