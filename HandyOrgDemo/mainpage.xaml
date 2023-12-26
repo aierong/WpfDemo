@@ -22,10 +22,11 @@
 
         <ScrollViewer>
             <TabControl TabStripPlacement="Left">
-
-
                 <TabItem Header="Geometry几何形状">
                     <localuc:UCGeometry />
+                </TabItem>
+                <TabItem Header="AnimationPath动画路径">
+                    <localuc:UserControlAnimationPath />
                 </TabItem>
                 <TabItem Header="Drawer Demo">
                     <localuc:DrawerUserControl />
