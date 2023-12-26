@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="HandyOrgDemo.Views.UserControls.UCProgressBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:HandyOrgDemo.Views.UserControls"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <!--
+                Value是0到100之间的数，可以小数(如果大于100,也会显示100%)
+            -->
+            <!--  默认样式  -->
+            <ProgressBar Margin="10,5,10,0"
+                         Value="40.66">
+            </ProgressBar>
+            <ProgressBar Margin="10,5,10,0"
+                         Value="140.66">
+            </ProgressBar>
+            <ProgressBar Margin="10,5,10,0"
+                         Value="0">
+            </ProgressBar>
+            <ProgressBar Margin="10,5,10,0"
+                         Style="{DynamicResource ProgressBarWarning}"
+                         Value="100">
+            </ProgressBar>
+            <!--
+                ProgressBarFlat	扁平风格
+                
+                IsIndeterminate="True" 这个可以循环，好像没有啥用
+            -->
+            <ProgressBar Margin="10,5,10,0"
+                         Style="{DynamicResource ProgressBarFlat}"
+                         Value="40">
+            </ProgressBar>
+            <ProgressBar Margin="10,5,10,0"
+                         IsIndeterminate="True"
+                         Style="{DynamicResource ProgressBarFlat}"
+                         Value="40" />
+
+            <!--  信息色条纹进度条  这种好像不会显示百分比  -->
+            <ProgressBar Margin="10,5,10,0"
+                         Style="{DynamicResource ProgressBarInfoStripe}"
+                         Value="40" />
+
+            <ProgressBar Margin="10,5,10,0"
+                         Style="{DynamicResource ProgressBarPrimaryStripe}"
+                         Value="80.1" />
+
+            <!--  可以自己定义颜色样式  -->
+            <ProgressBar Margin="10,5,10,0"
+                         Style="{DynamicResource ProgressBarPrimaryStripe}"
+                         Value="80.1">
+                <ProgressBar.Foreground>
+                    <DrawingBrush Stretch="None"
+                                  TileMode="Tile"
+                                  Viewport="0,0,20,32"
+                                  ViewportUnits="Absolute">
+                        <DrawingBrush.Transform>
+                            <TransformGroup>
+                                <RotateTransform Angle="20" />
+                                <TranslateTransform x:Name="MyTransform" X="0" />
+                            </TransformGroup>
+                        </DrawingBrush.Transform>
+                        <DrawingBrush.Drawing>
+                            <GeometryDrawing>
+                                <GeometryDrawing.Brush>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                        <GradientStop Offset="0" Color="Violet" />
+                                        <GradientStop Offset="0.5" Color="Violet" />
+                                        <GradientStop Offset="0.5" Color="RoyalBlue" />
+                                        <GradientStop Offset="1" Color="RoyalBlue" />
+                                    </LinearGradientBrush>
+                                </GeometryDrawing.Brush>
+                                <GeometryDrawing.Geometry>
+                                    <RectangleGeometry Rect="0,0,20,32" />
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
+                        </DrawingBrush.Drawing>
+                    </DrawingBrush>
+                </ProgressBar.Foreground>
+            </ProgressBar>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <!--
+                Maximum：最大值
+                
+                这样150的比例就是75%
+            -->
+            <ProgressBar Margin="5"
+                         Maximum="200"
+                         Style="{StaticResource ProgressBarDanger}"
+                         Value="150" />
+        </StackPanel>
+    </Grid>
+</UserControl>

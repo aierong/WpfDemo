@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="HandyOrgDemo.Views.UserControls.UCCircleProgressBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:local="clr-namespace:HandyOrgDemo.Views.UserControls"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0"
+                    Orientation="Horizontal">
+            <!--
+                ArcThickness	圆形粗细		 默认值4
+                ShowText	是否显示文本	默认值true
+                Text	文本内容
+            -->
+            <!--
+                Value是0到100之间的数，可以小数(如果大于100,也会显示100%)
+            -->
+            <hc:CircleProgressBar Margin="10,5,10,0"
+                                  Value="50" />
+            <hc:CircleProgressBar Margin="10,5,10,0"
+                                  Value="0" />
+            <hc:CircleProgressBar Margin="10,5,10,0"
+                                  Style="{StaticResource ProgressBarDangerCircle}"
+                                  Value="100" />
+            <hc:CircleProgressBar Margin="10,5,10,0"
+                                  Value="250" />
+            <hc:CircleProgressBar Width="60"
+                                  Height="60"
+                                  Margin="10,5,10,0"
+                                  ArcThickness="8"
+                                  Style="{StaticResource ProgressBarInfoCircle}"
+                                  Value="50" />
+            <!--  IsIndeterminate="True" 这个可以循环，好像没有啥用  -->
+            <hc:CircleProgressBar Margin="10,5,10,0"
+                                  IsIndeterminate="True"
+                                  Value="5" />
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal">
+            <!--
+                Maximum：最大值
+                
+                这样150的比例就是75%,好像控件不会正确计算比例,所以我们自己配置一下：Text="75%"
+            -->
+            <hc:CircleProgressBar Margin="10,5,10,0"
+                                  Maximum="200"
+                                  Text="75%"
+                                  Value="150" />
+        </StackPanel>
+    </Grid>
+</UserControl>

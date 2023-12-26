@@ -12,8 +12,8 @@
         <!--  引入转换器  -->
         <hc:Boolean2BooleanReConverter x:Key="Bool2BoolReConverter111">
         </hc:Boolean2BooleanReConverter>
-
     </UserControl.Resources>
+    
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />

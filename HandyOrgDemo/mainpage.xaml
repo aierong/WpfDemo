@@ -8,8 +8,8 @@
         xmlns:localuc="clr-namespace:HandyOrgDemo.Views.UserControls"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="主页面"
-        Width="960"
-        Height="600"
+        Width="990"
+        Height="780"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <Grid>
@@ -63,12 +63,19 @@
                     <localuc:CardUserControl />
                 </TabItem>
                 <TabItem Header="轮播图">
-                    <!--<localuc:CarouselUC />-->
-                    <localuc:UserControlCarousel>
-                    </localuc:UserControlCarousel>
+                    <localuc:UserControlCarousel />
                 </TabItem>
                 <TabItem Header="跑马灯">
                     <localuc:UCRunningBlock />
+                </TabItem>
+                <TabItem Header="ProgressBar进度条">
+                    <localuc:UCProgressBar />
+                </TabItem>
+                <TabItem Header="CircleProgressBar圆形进度条">
+                    <localuc:UCCircleProgressBar />
+                </TabItem>
+                <TabItem Header="WaveProgressBar波形进度条">
+                    <localuc:UCWaveProgressBar />
                 </TabItem>
                 <TabItem Header="GroupBox">
                     <localuc:GroupBoxUserControl1 />
