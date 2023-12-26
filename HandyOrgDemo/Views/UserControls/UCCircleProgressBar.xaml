@@ -60,7 +60,7 @@
             -->
             <hc:CircleProgressBar Margin="10,5,10,0"
                                   Maximum="200"
-                                  Text="75%"
+                                  Text="自己计算:75%"
                                   Value="150" />
         </StackPanel>
     </Grid>

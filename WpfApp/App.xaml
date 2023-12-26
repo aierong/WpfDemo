@@ -50,7 +50,7 @@
     
     
     
-    StartupUri="/Views/colorbrushstring/colorWindow1.XAML"     
+    StartupUri="/Views/colorbrushstring/colorWindow1.XAML"
     
     /Views/KJ/DongTai/DTWindow1.XAML
     
@@ -74,6 +74,9 @@
     /Views/BindData/Binds/BindsWindow1.XAML
     
     /Views/BindData/ElementNameDemo/ElementNameWindow1.XAML
+    
+    
+    /Views/TeXiao/GeometryDemo/WindowGeometry.XAML      Geometry
 -->
 <Application x:Class="WpfApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -84,7 +87,7 @@
              DispatcherUnhandledException="Application_DispatcherUnhandledException"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/KJ/mainpage.XAML">
+             StartupUri="/Views/TeXiao/GeometryDemo/WindowGeometry.XAML">
 
 
 

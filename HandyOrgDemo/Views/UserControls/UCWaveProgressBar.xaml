@@ -1,12 +1,69 @@
 ﻿<UserControl x:Class="HandyOrgDemo.Views.UserControls.UCWaveProgressBar"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
              xmlns:local="clr-namespace:HandyOrgDemo.Views.UserControls"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal">
+            <!--
+                Text	进度文本
+                ShowText	是否显示进度文本	true
+                WaveThickness	波浪边框粗细	0
+            -->
+
+
+            <hc:WaveProgressBar Margin="10,5,10,0"
+                                Value="50" />
+            <hc:WaveProgressBar Width="60"
+                                Height="60"
+                                Margin="10,5,10,0"
+                                ShowText="False"
+                                Style="{StaticResource ProgressBarWarningWave}"
+                                Value="50" />
+
+            <hc:WaveProgressBar Margin="5"
+                                FontSize="20"
+                                WaveStroke="#FFFF0080"
+                                WaveThickness="3"
+                                Value="50" />
+
+            <!--
+                Value是0到100之间的数，可以小数(如果大于100,也会显示100%)
+            -->
+            <hc:WaveProgressBar Margin="10,5,10,0"
+                                Value="0" />
+
+            <hc:WaveProgressBar Margin="10,5,10,0"
+                                Value="100" />
+
+            <hc:WaveProgressBar Margin="10,5,10,0"
+                                Value="123.69" />
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal">
+            <!--
+                Maximum：最大值
+                
+                这样150的比例就是75%,好像控件不会正确计算比例,所以我们自己配置一下：Text="75%"
+            -->
+            <hc:WaveProgressBar Margin="10,5,10,0"
+                                Maximum="200"
+                                Text="自己计算:75%"
+                                Value="150" />
+        </StackPanel>
     </Grid>
 </UserControl>

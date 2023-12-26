@@ -22,8 +22,12 @@
 
         <ScrollViewer>
             <TabControl TabStripPlacement="Left">
+
+
+                <TabItem Header="Geometry几何形状">
+                    <localuc:UCGeometry />
+                </TabItem>
                 <TabItem Header="Drawer Demo">
-                    <!--  要显示的页面  -->
                     <localuc:DrawerUserControl />
                 </TabItem>
                 <TabItem Header="Drawer(MVVM操作) Demo">
