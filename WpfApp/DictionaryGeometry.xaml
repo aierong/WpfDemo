@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:o="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+
+    <Geometry x:Key="MyGeometry1"
+              o:Freeze="true">
+        M908.288 39.936q34.816 0 51.712 22.528t15.872 47.104l0 44.032 0 92.16q0 55.296 0.512 118.272t0.512 118.272l0 95.232 0 47.104q0 32.768-23.04 48.64t-50.688 16.896l-24.576 0-43.008 0-55.296 0-61.44 0-161.792 0 0 73.728 76.8 0q12.288 0 19.456 7.168t6.144 15.36q0 10.24-7.168 16.384t-18.432 6.144l-246.784 0q-11.264 0-17.408-7.168t-6.144-15.36 5.12-14.848 18.432-6.656l77.824 0 0-73.728-160.768 0-61.44 0-56.32 0-44.032 0-24.576 0q-32.768 0-53.76-23.04t-20.992-59.904l0-487.424q0-36.864 22.528-58.88t57.344-22.016l785.408 0zM892.928 121.856l-768 0 0 476.16 768 0 0-476.16z
+    </Geometry>
+
+
+</ResourceDictionary>

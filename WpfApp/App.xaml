@@ -104,6 +104,9 @@
                 <ResourceDictionary Source="/DictionaryData.xaml">
                 </ResourceDictionary>
 
+                <ResourceDictionary Source="/DictionaryGeometry.xaml">
+                </ResourceDictionary>
+
                 <!-- 这种模式必须全部从外部引入文件，不可以像下面那样再单独定义一个个资源值
                 <sys:String x:Key="ComboBoxTitle">Items:</sys:String>
                 -->
