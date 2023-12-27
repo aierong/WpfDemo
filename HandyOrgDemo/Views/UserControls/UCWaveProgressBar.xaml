@@ -24,8 +24,6 @@
                 ShowText	是否显示进度文本	true
                 WaveThickness	波浪边框粗细	0
             -->
-
-
             <hc:WaveProgressBar Margin="10,5,10,0"
                                 Value="50" />
             <hc:WaveProgressBar Width="60"
@@ -35,10 +33,11 @@
                                 Style="{StaticResource ProgressBarWarningWave}"
                                 Value="50" />
 
+            <!--  WaveThickness	波浪边框粗细  -->
             <hc:WaveProgressBar Margin="5"
                                 FontSize="20"
                                 WaveStroke="#FFFF0080"
-                                WaveThickness="3"
+                                WaveThickness="5"
                                 Value="50" />
 
             <!--

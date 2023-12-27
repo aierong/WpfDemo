@@ -38,10 +38,11 @@
                                   Value="100" />
             <hc:CircleProgressBar Margin="10,5,10,0"
                                   Value="250" />
-            <hc:CircleProgressBar Width="60"
-                                  Height="60"
+            <!--  ArcThickness	圆形粗细  -->
+            <hc:CircleProgressBar Width="68"
+                                  Height="68"
                                   Margin="10,5,10,0"
-                                  ArcThickness="8"
+                                  ArcThickness="10"
                                   Style="{StaticResource ProgressBarInfoCircle}"
                                   Value="50" />
             <!--  IsIndeterminate="True" 这个可以循环，好像没有啥用  -->
