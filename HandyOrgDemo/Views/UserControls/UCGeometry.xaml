@@ -47,6 +47,7 @@
                 handycontrol提供一些Geometry
                 
                 列表：  https://handyorg.github.io/handycontrol/basic_xaml/geometries/
+                或者：vs中转至Theme.xaml页面也可以看到
             -->
 
             <Path Width="33"
