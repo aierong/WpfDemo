@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:HandyOrgDemo.Views.UserControls"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:o="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+             xmlns:valueConverters="clr-namespace:ValueConverters;assembly=ValueConverters"
              d:DesignHeight="450"
              d:DesignWidth="800"
              mc:Ignorable="d">
@@ -53,6 +54,30 @@
                   o:Freeze="True">
             M68.191078 915.462005l161.384597 0L229.575676 431.30719 68.191078 431.30719 68.191078 915.462005zM955.808922 471.653083c0-44.582381-36.109406-80.69281-80.69281-80.69281L620.329241 390.960273 658.859789 206.578915c0.807389-4.034896 1.412163-8.271384 1.412163-12.709463 0-16.743336-6.859221-31.873941-17.752316-42.767036l-42.968627-42.565445L333.871043 374.216937c-14.524808 14.7264-23.602557 34.899858-23.602557 57.090253l0 403.462005c0 44.582381 36.109406 80.69281 80.69281 80.69281l363.116111 0c33.487695 0 62.133106-20.37505 74.236771-49.222051l121.643478-284.441261c3.63069-9.279341 5.850242-19.164478 5.850242-29.452799L955.807898 475.083206l-0.403183-0.403183L955.808922 471.653083z
         </Geometry>
+
+        <Style x:Key="TrueStyleTemplate"
+               TargetType="{x:Type hc:AnimationPath}">
+            <Setter Property="Data" Value="{StaticResource my3}" />
+            <Setter Property="Width" Value="66" />
+            <Setter Property="Height" Value="66" />
+            <Setter Property="Stroke" Value="Red" />
+        </Style>
+        <Style x:Key="FalseStyleTemplate"
+               TargetType="{x:Type hc:AnimationPath}">
+            <Setter Property="Data" Value="{StaticResource my4}" />
+            <Setter Property="Width" Value="33" />
+            <Setter Property="Height" Value="33" />
+            <Setter Property="Stroke" Value="LightGreen" />
+        </Style>
+
+        <!--
+            布尔转Style
+            IsInverted="True" 就是反转一下
+        -->
+        <valueConverters:BoolToStyleConverter x:Key="BoolToStyleConverter"
+                                              FalseValue="{StaticResource FalseStyleTemplate}"
+                                              TrueValue="{StaticResource TrueStyleTemplate}">
+        </valueConverters:BoolToStyleConverter>
 
     </UserControl.Resources>
 
@@ -169,6 +194,25 @@
                                   StrokeThickness="1"
                                   Duration="00:00:05" />
             </Viewbox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    Orientation="Horizontal">
+
+            <!--
+                动态
+            -->
+
+            <hc:AnimationPath Margin="10,10,10,10"
+                              Stretch="Uniform"
+                              StrokeThickness="1"
+                              Style="{Binding IsOpen, Converter={StaticResource BoolToStyleConverter}}"
+                              Duration="00:00:05">
+            </hc:AnimationPath>
+            <Button Margin="10"
+                    Command="{Binding TopButtonClickCommand}"
+                    Content="点击我(动态改变)" />
         </StackPanel>
     </Grid>
 </UserControl>
