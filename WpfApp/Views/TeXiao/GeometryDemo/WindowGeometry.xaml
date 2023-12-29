@@ -49,13 +49,13 @@
             M430.079734 481.464543c45.196365 45.596478 118.486578 45.596478 163.68499 0l360.684736-324.939627c0.547469 3.751441 1.13894 7.490601 1.13894 11.401678l0 404.753417 0 116.754121c0 42.995233-34.547841 77.838809-77.145008 77.838809L145.397996 767.272941c-42.597167 0-77.145008-34.844599-77.145008-77.838809L68.252988 494.839155 68.252988 167.926594c0-3.911076 0.593518-7.65126 1.139963-11.401678L430.079734 481.464543zM910.960992 74.226538 562.044278 387.28558c-38.470173 38.811957-62.276369 38.811957-100.770078 0L112.538611 74.408687c10.011005-4.789073 21.069875-7.673773 32.859385-7.673773l733.044372 0C890.095779 66.735937 901.065622 69.539796 910.960992 74.226538z
         </Geometry>
 
-
     </Window.Resources>
+
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
-
+            <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -63,8 +63,6 @@
         <StackPanel Grid.Row="0"
                     Grid.Column="0"
                     Orientation="Horizontal">
-
-
             <Path Width="66"
                   Height="66"
                   Margin="15,5,15,5"
@@ -92,12 +90,14 @@
                   Data="{StaticResource GithubGeometry1}"
                   Fill="SeaGreen"
                   Stretch="Uniform" />
+
             <Path Width="66"
                   Height="66"
                   Margin="15,5,15,5"
                   Data="{StaticResource NugetGeometry1}"
                   Fill="SeaGreen"
                   Stretch="Uniform" />
+
             <Path Width="66"
                   Height="66"
                   Margin="15,5,15,5"

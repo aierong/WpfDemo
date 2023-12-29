@@ -61,9 +61,6 @@
     /Views/TeXiao/PMD/DEMO1/PMDWindow1.XAML             跑马灯（文字）
     /Views/TeXiao/PMD/DEMO1/PMDWindowRunningBlock.XAML  跑马灯（运行块：支持放任何内容）
     
-    
-    
-    
     /Views/TeXiao/LedClock/demo1/view/ClockWindow1.XAML    时钟1
     /Views/TeXiao/LedClock/demo2/view/Clockled.XAML        时钟2
     
@@ -74,8 +71,7 @@
     /Views/BindData/Binds/BindsWindow1.XAML
     
     /Views/BindData/ElementNameDemo/ElementNameWindow1.XAML
-    
-    
+        
     /Views/TeXiao/GeometryDemo/WindowGeometry.XAML      Geometry
 -->
 <Application x:Class="WpfApp.App"
