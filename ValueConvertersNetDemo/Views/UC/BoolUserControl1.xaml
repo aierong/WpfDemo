@@ -11,18 +11,7 @@
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d">
     <UserControl.Resources>
-        <Style x:Key="TrueStyleTemplate"
-               TargetType="{x:Type Button}">
-            <Setter Property="Background" Value="LightGreen" />
-            <Setter Property="FontSize" Value="26">
-            </Setter>
-        </Style>
-        <Style x:Key="FalseStyleTemplate"
-               TargetType="{x:Type Button}">
-            <Setter Property="Background" Value="MistyRose" />
-            <Setter Property="FontSize" Value="10">
-            </Setter>
-        </Style>
+
 
 
 
@@ -78,14 +67,32 @@
                                               FalseValue="White"
                                               TrueValue="Blue" />
 
+        <Style x:Key="TrueStyleTemplate"
+               TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="LightGreen" />
+            <Setter Property="FontSize" Value="26">
+            </Setter>
+        </Style>
+        <Style x:Key="FalseStyleTemplate"
+               TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="MistyRose" />
+            <Setter Property="FontSize" Value="10">
+            </Setter>
+        </Style>
+
         <!--
             布尔转Style
             IsInverted="True" 就是反转一下
+        
+            注意：FalseStyleTemplate  TrueStyleTemplate 的代码必须要写在前面，写后面会报错
         -->
         <valueConverters:BoolToStyleConverter x:Key="BoolToStyleConverter"
                                               FalseValue="{StaticResource FalseStyleTemplate}"
                                               TrueValue="{StaticResource TrueStyleTemplate}">
         </valueConverters:BoolToStyleConverter>
+
+
+
 
 
     </UserControl.Resources>

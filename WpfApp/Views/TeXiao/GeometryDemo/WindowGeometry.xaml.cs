@@ -22,6 +22,8 @@ namespace WpfApp.Views.TeXiao.GeometryDemo
         public WindowGeometry ()
         {
             InitializeComponent();
+
+            this.DataContext = new WindowGeometryviewmodel();
         }
     }
 }

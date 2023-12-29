@@ -331,6 +331,7 @@
     <Compile Include="Views\TeXiao\EmojiDemo\EmojiWindow1.xaml.cs">
       <DependentUpon>EmojiWindow1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\TeXiao\GeometryDemo\WindowGeometryviewmodel.cs" />
     <Compile Include="Views\TeXiao\GeometryDemo\WindowGeometry.xaml.cs">
       <DependentUpon>WindowGeometry.xaml</DependentUpon>
     </Compile>
@@ -844,6 +845,9 @@
     </PackageReference>
     <PackageReference Include="SharpVectors.Wpf">
       <Version>1.8.2</Version>
+    </PackageReference>
+    <PackageReference Include="ValueConverters">
+      <Version>3.0.26</Version>
     </PackageReference>
     <PackageReference Include="WpfAnimatedGif">
       <Version>2.0.2</Version>
