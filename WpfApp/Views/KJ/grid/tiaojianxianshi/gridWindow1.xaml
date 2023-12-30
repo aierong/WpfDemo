@@ -5,7 +5,7 @@
         xmlns:local="clr-namespace:WpfApp.Views.KJ.grid.tiaojianxianshi"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="gridWindow1"
-        Width="800"
+        Width="960"
         Height="680"
         d:DataContext="{d:DesignInstance local:gridWindow1ViewModel,
                                          IsDesignTimeCreatable=True}"
@@ -19,46 +19,59 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
+
+
         <StackPanel Grid.Row="0"
                     Grid.Column="0">
+            <!--  这个表格演示,根据条件给单元格不同样式  -->
             <DataGrid AutoGenerateColumns="False"
                       CanUserAddRows="False"
-                      IsReadOnly="True"
                       ItemsSource="{Binding Students}">
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="100"
+                    <DataGridTextColumn Width="80"
                                         Binding="{Binding Id}"
                                         Header="ID" />
                     <DataGridTextColumn Width="100"
                                         Binding="{Binding Name}"
                                         Header="学生姓名" />
-                    <DataGridTextColumn Width="200"
+
+
+                    <DataGridTextColumn Width="80"
                                         Binding="{Binding Age}"
-                                        Header="年龄" />
-                    <DataGridTemplateColumn Width="160"
+                                        Header="年龄">
+                        <!--  方式1:使用DataGridTextColumn.CellStyle,配合数据触发器  -->
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="Foreground" Value="Black" />
+                                <Setter Property="Background" Value="Red" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsMan}"
+                                                 Value="True">
+                                        <!--  是男生就搞另一种样式  -->
+                                        <Setter Property="Foreground" Value="Green" />
+                                        <Setter Property="Background" Value="White" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+
+                            <!-- 如果写一个转换器DataGridCellStyleConverter,也可以这样
+
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="Background"
+                                        Value="{Binding IsMan, Converter={StaticResource DataGridCellStyleConverter}}"/>
+                            </Style>
+                            -->
+
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTemplateColumn Width="100"
                                             Header="性别文本">
+                        <!--  方式2:使用DataGridTemplateColumn.CellTemplate,配合数据触发器  -->
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock Margin="5,0,10,0"
-                                               Text="{Binding IsMan}">
-                                        <TextBlock.Style>
-
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding IsMan}"
-                                                                 Value="True">
-                                                        <Setter Property="Foreground" Value="Green" />
-                                                    </DataTrigger>
-                                                    <DataTrigger Binding="{Binding IsMan}"
-                                                                 Value="False">
-                                                        <Setter Property="Foreground" Value="Red" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
                                     <TextBlock>
                                         <TextBlock.Style>
                                             <Style TargetType="TextBlock">
@@ -85,8 +98,50 @@
                 </DataGrid.Columns>
             </DataGrid>
 
-
         </StackPanel>
+        
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0">
 
+            <!--  这个表格演示,根据条件给行不同样式  -->
+            <DataGrid AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      ItemsSource="{Binding Students}">
+                <!--  使用DataGrid.RowStyle,配合数据触发器  -->
+                <DataGrid.RowStyle>
+
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="Foreground" Value="Black" />
+                        <Setter Property="Background" Value="Red" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsMan}"
+                                         Value="True">
+                                <!--  是男生就搞另一种样式  -->
+                                <Setter Property="Foreground" Value="Green" />
+                                <Setter Property="Background" Value="White" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <!-- 如果写一个转换器DataGridRowStyleConverter,也可以这样
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="Background"
+                                Value="{Binding IsMan, Converter={StaticResource DataGridRowStyleConverter}}"/>
+                    </Style>
+                    -->
+                </DataGrid.RowStyle>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="80"
+                                        Binding="{Binding Id}"
+                                        Header="ID" />
+                    <DataGridTextColumn Width="100"
+                                        Binding="{Binding Name}"
+                                        Header="学生姓名" />
+                    <DataGridTextColumn Width="80"
+                                        Binding="{Binding Age}"
+                                        Header="年龄" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
     </Grid>
 </Window>

@@ -71,7 +71,7 @@
     /Views/BindData/Binds/BindsWindow1.XAML
     
     /Views/BindData/ElementNameDemo/ElementNameWindow1.XAML
-        
+    
     /Views/TeXiao/GeometryDemo/WindowGeometry.XAML      Geometry
 -->
 <Application x:Class="WpfApp.App"
@@ -83,7 +83,7 @@
              DispatcherUnhandledException="Application_DispatcherUnhandledException"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/KJ/grid/kong/kongWindow1.XAML">
+             StartupUri="/Views/KJ/grid/tiaojianxianshi/gridWindow1.XAML">
 
 
 
