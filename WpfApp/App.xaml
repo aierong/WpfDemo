@@ -5,7 +5,7 @@
     StartupUri="/Views/KJ/grid/tiaojianxianshi/gridWindow1.XAML"     表格
     StartupUri="/Views/KJ/grid/tiaojianxianshi/dongtugrid.XAML"      表格
     StartupUri="/Views/KJ/grid/tiaojianxianshi/dongtuplusgrid.XAML"  表格
-    
+    /Views/KJ/grid/kong/kongWindow1.XAML   空表格
     
     
     StartupUri="/Views/KJ/grid/tiaojianxianshi/BuTonggridWindow1.XAML"   表格
@@ -83,7 +83,7 @@
              DispatcherUnhandledException="Application_DispatcherUnhandledException"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/TeXiao/GeometryDemo/WindowGeometry.XAML">
+             StartupUri="/Views/KJ/grid/kong/kongWindow1.XAML">
 
 
 

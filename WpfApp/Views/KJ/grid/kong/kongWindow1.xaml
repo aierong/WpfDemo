@@ -1,0 +1,186 @@
+﻿<Window x:Class="WpfApp.Views.KJ.grid.kong.kongWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp.Views.KJ.grid.kong"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="kongWindow1"
+        Width="980"
+        Height="680"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
+    <Grid>
+        <!--  定义行  -->
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!--  定义列  -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!--
+            参考:
+            https://stackoverflow.com/questions/50233483/showing-message-no-data-when-wpf-datagrid-has-no-rows
+            https://cloud.tencent.com/developer/ask/sof/115095649
+            
+            这种方式当表格没有数据时,会显示没有数据,但是也看不到表格的列标题
+        -->
+        <DataGrid Grid.Row="0"
+                  Grid.Column="0"
+                  AutoGenerateColumns="False"
+                  ItemsSource="{Binding Students}">
+
+            <DataGrid.Style>
+                <Style TargetType="DataGrid">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding HasItems}"
+                                     Value="false">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="DataGrid">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="No" />
+                                            <TextBlock Text="data..." />
+                                        </StackPanel>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.Style>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="100"
+                                    Binding="{Binding Id}"
+                                    Header="ID" />
+                <DataGridTextColumn Width="100"
+                                    Binding="{Binding Name}"
+                                    Header="学生姓名" />
+                <DataGridTextColumn Width="200"
+                                    Binding="{Binding Age}"
+                                    Header="年龄" />
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+        <!--
+            参考:
+            https://stackoverflow.com/questions/50233483/showing-message-no-data-when-wpf-datagrid-has-no-rows
+            https://cloud.tencent.com/developer/ask/sof/115095649
+            
+            这种方式当表格没有数据时,会显示没有数据, 并且可以看到表格的列标题
+        -->
+        <DataGrid Grid.Row="1"
+                  Grid.Column="0"
+                  AutoGenerateColumns="False"
+                  ItemsSource="{Binding Students}">
+            <DataGrid.Style>
+                <Style TargetType="DataGrid">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding HasItems}"
+                                     Value="false">
+                            <!--
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="DataGrid">
+                                        <TextBlock Text="No data..." />
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            -->
+
+                            <!--  如果您想在没有行的情况下显示列标题，则应该在模板中包含一个DataGridColumnHeadersPresenter  -->
+
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="DataGrid">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <DataGridColumnHeadersPresenter x:Name="PART_ColumnHeadersPresenter"
+                                                                            Grid.Column="1"
+                                                                            Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static DataGridHeadersVisibility.Column}, Converter={x:Static DataGrid.HeadersVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+                                            <TextBlock Grid.Row="1"
+                                                       Text="No data..." />
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.Style>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="100"
+                                    Binding="{Binding Id}"
+                                    Header="ID" />
+                <DataGridTextColumn Width="100"
+                                    Binding="{Binding Name}"
+                                    Header="学生姓名" />
+                <DataGridTextColumn Width="200"
+                                    Binding="{Binding Age}"
+                                    Header="年龄" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Grid.Row="2"
+                Grid.Column="0"
+                Width="120"
+                Height="40"
+                Margin="10,10,10,10"
+                HorizontalAlignment="Left"
+                Command="{Binding UpdateCommand}"
+                Content="单击" />
+
+        <!--
+            可以在DataGrid外部放置一个ContentControl，并使用DataTrigger根据数据源是否有数据切换显示DataGrid或提示消息
+        -->
+
+        <ContentControl Grid.Row="0"
+                        Grid.Column="1">
+            <ContentControl.Style>
+                <Style TargetType="ContentControl">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=HasItems}"
+                                     Value="False">
+                            <Setter Property="Content">
+                                <Setter.Value>
+                                    <TextBlock Text="当前没有数据" />
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                    <Setter Property="Content">
+                        <Setter.Value>
+                            <DataGrid AutoGenerateColumns="False"
+                                      ItemsSource="{Binding Students}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Width="100"
+                                                        Binding="{Binding Id}"
+                                                        Header="ID" />
+                                    <DataGridTextColumn Width="100"
+                                                        Binding="{Binding Name}"
+                                                        Header="学生姓名" />
+                                    <DataGridTextColumn Width="200"
+                                                        Binding="{Binding Age}"
+                                                        Header="年龄" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ContentControl.Style>
+        </ContentControl>
+
+    </Grid>
+
+
+</Window>
