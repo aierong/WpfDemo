@@ -210,6 +210,34 @@
                               Style="{Binding IsOpen, Converter={StaticResource BoolToStyleConverter}}"
                               Duration="00:00:05">
             </hc:AnimationPath>
+
+            <!--
+                用数据触发器,控制动态显示
+            -->
+            <hc:AnimationPath Margin="10,10,10,10"
+                              Stretch="Uniform"
+                              Duration="00:00:05">
+                <hc:AnimationPath.Style>
+                    <Style TargetType="hc:AnimationPath">
+                        <Setter Property="StrokeThickness" Value="6" />
+                        <Setter Property="Width" Value="99" />
+                        <Setter Property="Height" Value="99" />
+                        <Setter Property="Data" Value="{StaticResource TwitterGeometry1}" />
+                        <Setter Property="Stroke" Value="Yellow" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsOpen}"
+                                         Value="True">
+                                <Setter Property="StrokeThickness" Value="1" />
+                                <Setter Property="Width" Value="33" />
+                                <Setter Property="Height" Value="33" />
+                                <Setter Property="Stroke" Value="Red" />
+                                <Setter Property="Data" Value="{StaticResource ThumbsUpGeometry1}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </hc:AnimationPath.Style>
+            </hc:AnimationPath>
+
             <Button Margin="10"
                     Command="{Binding TopButtonClickCommand}"
                     Content="点击我(动态改变)" />

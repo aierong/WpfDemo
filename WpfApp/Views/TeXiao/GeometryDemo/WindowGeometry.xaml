@@ -184,6 +184,30 @@
                   Stretch="Uniform"
                   Style="{Binding B1, Converter={StaticResource BoolToStyleConverter}}" />
 
+            <!--
+               用数据触发器,控制动态显示
+            -->
+            <Path Margin="15,5,15,5"
+                  Stretch="Uniform">
+                <Path.Style>
+                    <Style TargetType="Path">
+                        <Setter Property="Width" Value="88" />
+                        <Setter Property="Height" Value="88" />
+                        <Setter Property="Fill" Value="Red" />
+                        <Setter Property="Data" Value="{StaticResource my3}" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding B1}"
+                                         Value="True">
+                                <Setter Property="Width" Value="33" />
+                                <Setter Property="Height" Value="33" />
+                                <Setter Property="Data" Value="{StaticResource my4}" />
+                                <Setter Property="Fill" Value="LightGreen" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Path.Style>
+            </Path>
+
             <Button Width="100"
                     Height="20"
                     Command="{Binding UpdateDataCommand}"
