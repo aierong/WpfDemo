@@ -11,6 +11,8 @@ using Prism.Mvvm;
 using Prism.Regions;
 using SkiaSharp;
 
+
+
 namespace ChartsDemo.ViewModels.UC
 {
     public class Pie1ViewModel : BindableBase, INavigationAware
@@ -68,10 +70,10 @@ namespace ChartsDemo.ViewModels.UC
         public SolidColorPaint LegendTextPaint
         {
             get; set;
-        } =
-        new SolidColorPaint
+        } = new SolidColorPaint
         {
-            Color = SKColors.Black ,
+            //Legend的字体颜色绿色
+            Color = SKColors.Green ,
             SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
         };
 

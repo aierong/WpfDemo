@@ -24,7 +24,7 @@ namespace ChartsDemo.ViewModels.UC
             get; set;
         } = new LabelVisual
         {
-            Text = "My chart 标题(x轴是文字)" ,
+            Text = "My 标题(x轴是文字)" ,
 
             TextSize = 25 ,
             Padding = new LiveChartsCore.Drawing.Padding( 15 ) ,
@@ -44,7 +44,7 @@ namespace ChartsDemo.ViewModels.UC
         } =     {
                 new LineSeries<double>
                 {
-                    Values = new double[] { 2, 1, 3, 5, 9, 14 ,1,19 },
+                    Values = new double[] { 12, 1, 3, 5, 9, 24  },
 
                     Fill = null,
 
@@ -68,7 +68,7 @@ namespace ChartsDemo.ViewModels.UC
                     DataLabelsSize = 20,
                     DataLabelsPaint = new SolidColorPaint(SKColors.Blue),
                     DataLabelsPosition = LiveChartsCore.Measure.DataLabelsPosition.Top,
-                    DataLabelsFormatter = (point) => point.PrimaryValue.ToString("N2"),
+                    DataLabelsFormatter = (point) => point.PrimaryValue.ToString("N0"),
 
 
                     //线的平滑度
@@ -86,8 +86,9 @@ namespace ChartsDemo.ViewModels.UC
             new Axis
             {
                 //定义x轴值
-                Labels = new string[] { "08-10", "10-12", "12-14", "14-16", "16-18", "18-20", "20-22", "22-24" },
+                Labels = new string[] { "08-10", "10-12", "12-14", "14-16", "16-18", "18-20", },
 
+                
                
 
                 //标签字体大小
@@ -98,7 +99,7 @@ namespace ChartsDemo.ViewModels.UC
 
                 //标签的内边距
                 Padding = new LiveChartsCore.Drawing.Padding(0, 0),
-                                
+
 
                 LabelsPaint = new SolidColorPaint
                 {
@@ -119,16 +120,21 @@ namespace ChartsDemo.ViewModels.UC
         public Axis[] YAxes
         {
             get; set;
-        } =
-        {
+        } =   {
             new Axis
             {
                 //名字
                 //Name = "Sales amount",
+
                 //名字，显示边距
-                //NamePadding = new LiveChartsCore.Drawing.Padding(0, 22),
+                //NamePadding = new LiveChartsCore.Drawing.Padding(0, 12),
 
+                //Padding = new LiveChartsCore.Drawing.Padding(0, 0),
 
+                //不显示y轴
+                //IsVisible = false,
+
+                 
 
                 //显示分割线
                 //ShowSeparatorLines = false,
@@ -138,7 +144,7 @@ namespace ChartsDemo.ViewModels.UC
 
                 LabelsPaint = new SolidColorPaint
                 {
-                    //x轴文本颜色
+                    //轴文本颜色
                     Color = SKColors.Orange,
 
                 }
@@ -150,7 +156,11 @@ namespace ChartsDemo.ViewModels.UC
 
         public UserControl123ViewModel ()
         {
-
         }
+
+
+        public LiveChartsCore.Measure.Margin Margin { get; set; } 
+            = new LiveChartsCore.Measure.Margin( 30 );
+
     }
 }

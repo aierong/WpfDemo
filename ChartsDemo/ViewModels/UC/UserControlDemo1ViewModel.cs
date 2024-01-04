@@ -10,6 +10,8 @@ using SkiaSharp;
 using LiveChartsCore.SkiaSharpView.Painting;
 using LiveChartsCore.SkiaSharpView.VisualElements;
 
+
+
 namespace ChartsDemo.ViewModels.UC
 {
     public class UserControlDemo1ViewModel : BindableBase
@@ -21,7 +23,9 @@ namespace ChartsDemo.ViewModels.UC
             {
                 new LineSeries<double>
                 {
-                    Values = new double[] { 2, 1, 3, 5, 3, 4, 6 },
+                    Values = new double[] {
+                        2, 1, 3, 5, 3, 4, 16
+                    },
                     Fill = null,
 
                     //格式化，Tooltip

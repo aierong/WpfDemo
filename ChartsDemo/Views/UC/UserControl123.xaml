@@ -18,14 +18,16 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
+
+        <!--  DrawMargin="{Binding Margin}"  -->
         <lvc:CartesianChart Title="{Binding Title}"
                             Grid.Row="0"
                             Grid.Column="0"
                             Margin="0,0,0,0"
                             Series="{Binding Series}"
                             XAxes="{Binding XAxes}"
-                            YAxes="{Binding YAxes}">
+                            YAxes="{Binding YAxes}" />
 
-        </lvc:CartesianChart>
+
     </Grid>
 </UserControl>
