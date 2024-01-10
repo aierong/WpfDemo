@@ -13,8 +13,8 @@
             <TabItem Header="最基本款">
                 <localucFlipClock:UCFK />
             </TabItem>
-            <TabItem Header="AnimationPath动画路径">
-                <!--<localuc:UserControlAnimationPath />-->
+            <TabItem Header="调整字体颜色等等">
+                <localucFlipClock:UCFlipClockDZ />
             </TabItem>
         </TabControl>
     </Grid>

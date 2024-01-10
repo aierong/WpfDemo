@@ -19,8 +19,6 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-
-
         <ScrollViewer>
             <TabControl TabStripPlacement="Left">
                 <TabItem Header="Geometry几何形状">
@@ -63,7 +61,6 @@
                     <localuc:LoadingUserControl1 />
                 </TabItem>
                 <TabItem Header="翻页时种">
-                    <!--<localuc:UserControlFK />-->
                     <localucFlipClock:UCFlipClock>
                     </localucFlipClock:UCFlipClock>
                 </TabItem>

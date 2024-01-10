@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HandyOrgDemo.Views.UserControls
+namespace HandyOrgDemo.Views.UserControls.FlipClockDemo
 {
     /// <summary>
-    /// UserControlFK.xaml 的互動邏輯
+    /// UCFlipClockDZ.xaml 的互動邏輯
     /// </summary>
-    public partial class UserControlFK : UserControl
+    public partial class UCFlipClockDZ : UserControl
     {
-        public UserControlFK ()
+        public UCFlipClockDZ()
         {
             InitializeComponent();
         }
