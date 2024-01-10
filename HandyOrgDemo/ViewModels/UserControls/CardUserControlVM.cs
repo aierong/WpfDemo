@@ -8,6 +8,9 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using HandyOrgDemo.Models;
 
+
+
+
 namespace HandyOrgDemo.ViewModels.UserControls
 {
     public partial class CardUserControlVM : ObservableObject
