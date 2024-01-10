@@ -53,10 +53,11 @@
             <!--
                 上面生成的FlipClockStyle1
                 我可以定义：字体颜色和背景颜色
+                Background="Transparent"
+                Foreground="#F9F871"
             -->
             <Viewbox Width="200">
                 <hc:FlipClock Style="{DynamicResource FlipClockStyle1}">
-
                 </hc:FlipClock>
             </Viewbox>
         </StackPanel>
