@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:HandyOrgDemo"
         xmlns:localcommon="clr-namespace:HandyOrgDemo.Common"
         xmlns:localuc="clr-namespace:HandyOrgDemo.Views.UserControls"
+        xmlns:localucFlipClock="clr-namespace:HandyOrgDemo.Views.UserControls.FlipClockDemo"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="主页面"
         Width="990"
@@ -62,7 +63,9 @@
                     <localuc:LoadingUserControl1 />
                 </TabItem>
                 <TabItem Header="翻页时种">
-                    <localuc:UserControlFK />
+                    <!--<localuc:UserControlFK />-->
+                    <localucFlipClock:UCFlipClock>
+                    </localucFlipClock:UCFlipClock>
                 </TabItem>
                 <TabItem Header="card">
                     <localuc:CardUserControl />

@@ -5,9 +5,30 @@
              xmlns:hc="https://handyorg.github.io/handycontrol"
              xmlns:local="clr-namespace:HandyOrgDemo.Views.UserControls"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              d:DesignHeight="450"
              d:DesignWidth="800"
              mc:Ignorable="d">
+    <UserControl.Resources>
+       
+        <Style x:Key="FlipClockStyle1" TargetType="{x:Type hc:FlipClock}">
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type hc:FlipClock}">
+                        <StackPanel Orientation="Horizontal">
+                            <hc:FlipNumber Foreground="Red"  Margin="-20" Number="{Binding NumberList[0], RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+                            <hc:FlipNumber Margin="-20" Number="{Binding NumberList[1], RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+                            <hc:FlipNumber Margin="0,-20,-20,-20" Number="{Binding NumberList[2], RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+                            <hc:FlipNumber Margin="-20" Number="{Binding NumberList[3], RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+                            <hc:FlipNumber Foreground="Red" Background="Gold"  Margin="0,-20,-20,-20" Number="{Binding NumberList[4], RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+                            <hc:FlipNumber Foreground="CadetBlue"  Margin="-20" Number="{Binding NumberList[5], RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -15,7 +36,8 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0"
-                    Grid.Column="0">
+                    Grid.Column="0"
+                    Orientation="Vertical">
             <!--
                 官网提到要用：Viewbox控制大小
             -->
@@ -23,8 +45,16 @@
                 Stretch="Fill" 可以填充
             -->
             <Viewbox Width="200">
-                <hc:FlipClock />
+                <hc:FlipClock Style="{DynamicResource FlipClockStyle1}">
+
+                </hc:FlipClock>
+
+
+                <!--<hc:FlipClock Background="Green"
+                              Foreground="Gold" />-->
             </Viewbox>
+
+
 
         </StackPanel>
         <StackPanel Grid.Row="1"
