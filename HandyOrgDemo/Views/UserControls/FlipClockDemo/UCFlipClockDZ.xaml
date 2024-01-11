@@ -63,7 +63,7 @@
                                            Background="Transparent"
                                            Foreground="#F9F871"
                                            Number="{Binding NumberList[3], RelativeSource={RelativeSource Mode=TemplatedParent}}" />
-                            <!--
+                            <!--  屏蔽这个,就不显示秒
                             <hc:FlipNumber Margin="0,-20,-20,-20"
                                            Background="Transparent"
                                            Foreground="Goldenrod"
