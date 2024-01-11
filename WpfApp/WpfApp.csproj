@@ -192,6 +192,9 @@
     <Compile Include="Views\DH\BorderWindow1.xaml.cs">
       <DependentUpon>BorderWindow1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DH\Gradient\GradientWindow1.xaml.cs">
+      <DependentUpon>GradientWindow1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DH\Shadow\DemoWindow1.xaml.cs">
       <DependentUpon>DemoWindow1.xaml</DependentUpon>
     </Compile>
@@ -577,6 +580,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\DH\BorderWindow1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DH\Gradient\GradientWindow1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

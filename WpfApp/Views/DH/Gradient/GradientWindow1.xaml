@@ -1,0 +1,127 @@
+﻿<Window x:Class="WpfApp.Views.DH.Gradient.GradientWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp.Views.DH.Gradient"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="渐变"
+        Width="990"
+        Height="680"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TabControl Grid.Row="0"
+                    Grid.Column="0">
+            <TabItem Header="2种渐变模式">
+                <StackPanel HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <!--
+                        参考：
+                        https://learn.microsoft.com/zh-cn/dotnet/desktop/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview?view=netframeworkdesktop-4.8
+                    -->
+                    <TextBlock FontSize="18"
+                               Text="模式1:线性渐变(LinearGradientBrush) 可以从左到右渐变 或者从上到下等等" />
+                    <TextBlock FontSize="18"
+                               Text=" 模式2:径向渐变(RadialGradientBrush) 可以理解为从中心点往外渐变" />
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="线性渐变">
+                <Grid ShowGridLines="True">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="10,10,10,25">
+                        <Border.Background>
+                            <!--
+                                LinearGradientBrush 使用沿线定义的渐变（即渐变轴）绘制区域
+                                
+                                StartPoint="0,0" EndPoint="1,1"就是从左上角(西北方向)开始到右下角(东南方向)渐变
+                                Offset属性指定梯度停止点的颜色在渐变轴上的位置。 是一个介于0到1之间的Double值。值越接近0，颜色就越接近渐变的起点。 值越接近1，颜色就越接近渐变的终点。
+                            -->
+                            <!--
+                                下面的示例显示了使用四种颜色创建线性渐变的代码。
+                            -->
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                <GradientStop Offset="0.0" Color="Yellow" />
+                                <GradientStop Offset="0.25" Color="Red" />
+                                <GradientStop Offset="0.75" Color="Blue" />
+                                <GradientStop Offset="1.0" Color="LimeGreen" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <StackPanel Margin="10">
+                            <Button>按钮</Button>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="10,10,10,25">
+                        <Border.Background>
+                            <!--
+                                StartPoint="0,0.5" EndPoint="1,0.5" 就是从左边开始到右边渐变
+                                StartPoint="0.5,0" EndPoint="0.5,1" 就是从上到下垂直渐变
+                            -->
+                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                <GradientStop Offset="0.0" Color="Yellow" />
+                                <GradientStop Offset="0.25" Color="Red" />
+                                <GradientStop Offset="0.75" Color="Blue" />
+                                <GradientStop Offset="1.0" Color="LimeGreen" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <StackPanel Margin="10">
+                            <Button>按钮</Button>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="径向渐变">
+                <Grid ShowGridLines="True">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="10,10,10,25">
+                        <Border.Background>
+                            <!--
+                                RadialGradientBrush 径向渐变
+                                径向渐变画笔的轴由圆圈定义；它的颜色从中心点开始向外“辐射”
+                            -->
+                            <RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+                                <GradientStop Offset="0.0" Color="Yellow" />
+                                <GradientStop Offset="0.25" Color="Red" />
+                                <GradientStop Offset="0.75" Color="Blue" />
+                                <GradientStop Offset="1.0" Color="LimeGreen" />
+                            </RadialGradientBrush>
+                        </Border.Background>
+                        <StackPanel Margin="10">
+                            <Button>按钮</Button>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+
+    </Grid>
+</Window>
