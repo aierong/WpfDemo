@@ -7,6 +7,7 @@
         Title="DemoWindow1"
         Width="800"
         Height="660"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
@@ -52,7 +53,7 @@
                     Direction属性来控制阴影的方向(就是哪个方向的阴影)。 将此属性的方向值设置为介于0和360之间的度数。
                     Direction="270"阴影在下方
                     Direction="180"阴影在左边
-                    Direction="90"阴影在上面 
+                    Direction="90"阴影在上面
                     Direction="0"阴影在右边
                     Direction="225"阴影在左下角（西南方向夹角）
                     Direction="315"阴影在右下角（东南方向夹角）
