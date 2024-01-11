@@ -71,7 +71,7 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Multivitamin-Multiminimal-Workgroup.ico</ApplicationIcon>
+    <ApplicationIcon>app.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PP.Wpf, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
@@ -894,7 +894,7 @@
     <Resource Include="assets\svg\0_0.svg" />
     <Resource Include="assets\svg\8_8.svg" />
     <Resource Include="assets\svg\9_9.svg" />
-    <Resource Include="Multivitamin-Multiminimal-Workgroup.ico" />
+    <Resource Include="app.ico" />
     <Content Include="refdlls\PP.Wpf.dll" />
     <Content Include="Views\TeXiao\LedClock\demo2\font\demo.css" />
     <Content Include="Views\TeXiao\LedClock\demo2\font\demo_index.html" />
