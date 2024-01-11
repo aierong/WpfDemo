@@ -32,11 +32,11 @@
     
     StartupUri="/Views/ConverterDemo/demo1/Window1.XAML"  转换器
     
-    StartupUri="/Views/DH/WenZi.XAML"        动画
+    StartupUri="/Views/DH/WenZi.XAML"         动画
     StartupUri="/Views/DH/WenZi2.XAML"        动画
-    StartupUri="/Views/DH/Deng0.XAML"        动画
-    StartupUri="/Views/DH/Deng1.XAML"        动画
-    StartupUri="/Views/DH/Deng2.XAML"        动画
+    StartupUri="/Views/DH/Deng0.XAML"         动画
+    StartupUri="/Views/DH/Deng1.XAML"         动画
+    StartupUri="/Views/DH/Deng2.XAML"         动画
     StartupUri="/Views/DH/BorderWindow1.XAML"      动画
     StartupUri="/Views/DH/BorderWindow6.XAML"  动画
     
@@ -83,9 +83,7 @@
              DispatcherUnhandledException="Application_DispatcherUnhandledException"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/DH/Shadow/DemoWindow1.XAML">
-
-
+             StartupUri="/Views/KJ/mainpage.XAML">
 
     <!--  Application.Resources是定义整个程序级别的资源，每个窗体都可以访问到  -->
     <Application.Resources>

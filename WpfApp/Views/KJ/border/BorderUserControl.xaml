@@ -19,12 +19,16 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <!--  背景(Background)  边界刷(BorderBrush)  边界宽度(BorderThickness)  -->
+        <!--
+            背景(Background)    设置边框背景色
+            边界刷(BorderBrush) 设置边框颜色
+            边界宽度(BorderThickness) 可以设置一个值:BorderThickness="1"  可以设置多个值:BorderThickness="1,3,1,5"
+        -->
         <Border Grid.Row="0"
                 Grid.Column="0"
                 Margin="10,10,10,10"
                 Background="#FFC8C8F2"
-                BorderBrush="Gainsboro"
+                BorderBrush="Brown"
                 BorderThickness="1">
             <StackPanel Margin="10">
                 <Button>Button 1</Button>
@@ -32,46 +36,54 @@
                 <Button>Button 3</Button>
             </StackPanel>
         </Border>
-        <!--
-            Border边界控件最好的一个特点之一就是可以轻松的设置圆角  CornerRadius
-        -->
+        <!--  边界宽度(BorderThickness) 可以设置多个值  -->
         <Border Grid.Row="1"
+                Grid.Column="0"
+                Margin="10,10,10,10"
+                Background="GhostWhite"
+                BorderBrush="DodgerBlue"
+                BorderThickness="1,3,1,8">
+            <StackPanel Margin="10">
+                <Button>Button 1</Button>
+                <Button Margin="0,10">Button 2</Button>
+                <Button>Button 3</Button>
+            </StackPanel>
+        </Border>
+
+        <!--
+            Border边界控件最好的一个特点之一就是可以轻松的设置圆角
+            CornerRadius   4个值可以设置不一样
+        -->
+        <Border Grid.Row="2"
                 Grid.Column="0"
                 Margin="10,10,10,10"
                 Background="GhostWhite"
                 BorderBrush="Silver"
                 BorderThickness="1"
-                CornerRadius="18,18,3,3">
+                CornerRadius="19,19,4,6">
             <StackPanel Margin="10">
                 <Button>Button 1</Button>
                 <Button Margin="0,10">Button 2</Button>
                 <Button>Button 3</Button>
             </StackPanel>
         </Border>
-        <!--  边界颜色/宽度 边界宽度(BorderThickness )属性  -->
-        <Border Grid.Row="2"
-                Grid.Column="0"
-                Margin="10,10,10,10"
-                Background="GhostWhite"
-                BorderBrush="DodgerBlue"
-                BorderThickness="1,3,1,5">
-            <StackPanel Margin="10">
-                <Button>Button 1</Button>
-                <Button Margin="0,10">Button 2</Button>
-                <Button>Button 3</Button>
-            </StackPanel>
-        </Border>
-        <!--  边界背景  -->
+
+
+        <!--  背景渐变  -->
         <Border Grid.Row="3"
                 Grid.Column="0"
-                Margin="10,10,10,10"
-                BorderBrush="Navy"
-                BorderThickness="1,3,1,5">
+                Margin="10,10,10,10">
             <Border.Background>
-                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <!--
+                    StartPoint="0.5,0" EndPoint="0.5,1"
+                    StartPoint="0,0" EndPoint="1,1"
+                -->
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+
                     <GradientStop Offset="0.0" Color="LightCyan" />
                     <GradientStop Offset="0.5" Color="LightBlue" />
                     <GradientStop Offset="1.0" Color="DarkTurquoise" />
+
                 </LinearGradientBrush>
             </Border.Background>
             <StackPanel Margin="10">
@@ -80,5 +92,146 @@
                 <Button>Button 3</Button>
             </StackPanel>
         </Border>
+        
+        <!--
+            给Border添加阴影
+        -->
+        <Border Grid.Row="4"
+                Grid.Column="0"
+                Margin="10,10,10,25">
+            <Border.Background>
+
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+
+                    <GradientStop Offset="0.0" Color="LightCyan" />
+                    <GradientStop Offset="0.5" Color="LightBlue" />
+                    <GradientStop Offset="1.0" Color="DarkTurquoise" />
+
+                </LinearGradientBrush>
+            </Border.Background>
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="4"
+                                  Direction="270"
+                                  Opacity="0.4"
+                                  ShadowDepth="5"
+                                  Color="Red" />
+            </Border.Effect>
+            <StackPanel Margin="10">
+                <Button>给Border添加阴影</Button>
+            </StackPanel>
+        </Border>
+
+
+
+        <!--
+            给Border中间增加一些装饰效果（例如：2个相交小圈圈）
+        -->
+        <Border Grid.Row="0"
+                Grid.Column="1"
+                Margin="10,10,10,25">
+            <Border.Background>
+
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+
+                    <GradientStop Offset="0.0" Color="LightCyan" />
+                    <GradientStop Offset="0.5" Color="LightBlue" />
+                    <GradientStop Offset="1.0" Color="DarkTurquoise" />
+
+                </LinearGradientBrush>
+            </Border.Background>
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="4"
+                                  Direction="270"
+                                  Opacity="0.4"
+                                  ShadowDepth="5"
+                                  Color="Red" />
+            </Border.Effect>
+            <StackPanel Margin="10"
+                        Orientation="Vertical">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0"
+                            Grid.Column="0"
+                            Width="200"
+                            HorizontalAlignment="Left">
+                        按钮1
+                    </Button>
+                    <Button Grid.Row="1"
+                            Grid.Column="0"
+                            Width="200"
+                            HorizontalAlignment="Left"
+                            Content="按钮2" />
+                    <Button Grid.Row="2"
+                            Grid.Column="0"
+                            Width="200">
+                        按钮3
+                    </Button>
+                    <!--
+                        这个表格是3行，我们用Canvas合并三行布局
+                        再把2个Border相交
+                    -->
+                    <Canvas Grid.RowSpan="3">
+                        <Border Canvas.Top="10"
+                                Canvas.Right="-8"
+                                Width="38"
+                                Height="38"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Top"
+                                Background="LightCyan"
+                                CornerRadius="100"
+                                Opacity="0.2" />
+                        <Border Canvas.Top="25"
+                                Canvas.Right="-8"
+                                Width="48"
+                                Height="48"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Bottom"
+                                Background="LightCyan"
+                                CornerRadius="100"
+                                Opacity="0.2" />
+                    </Canvas>
+                </Grid>
+
+
+            </StackPanel>
+        </Border>
+
+
+        <!--
+            利用2个Border做装饰效果（例如：2个相交小圈圈）
+        -->
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="20,0,0,0"
+                    Orientation="Horizontal">
+            <Border Width="48"
+                    Height="48"
+                    Background="LightCyan"
+                    CornerRadius="30" />
+            <Border Width="48"
+                    Height="48"
+                    Margin="-15,0,0,0"
+                    Background="DarkTurquoise"
+                    CornerRadius="30" />
+
+            <Border Width="48"
+                    Height="48"
+                    Margin="20,0,0,0"
+                    Background="LightBlue"
+                    CornerRadius="30" />
+            <Border Width="48"
+                    Height="48"
+                    Margin="-15,0,0,0"
+                    Background="BurlyWood"
+                    CornerRadius="30" />
+        </StackPanel>
+
     </Grid>
 </UserControl>
+
+

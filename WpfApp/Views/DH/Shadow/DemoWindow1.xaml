@@ -50,14 +50,19 @@
                     BlurRadius属性来控制阴影的柔和度或模糊程度。BlurRadius属性设置为0.0（指示不使用模糊）来创建硬阴影
                     
                     Direction属性来控制阴影的方向(就是哪个方向的阴影)。 将此属性的方向值设置为介于0和360之间的度数。
+                    Direction="270"阴影在下方
+                    Direction="180"阴影在左边
+                    Direction="90"阴影在上面 
+                    Direction="0"阴影在右边
+                    Direction="225"阴影在左下角（西南方向夹角）
+                    Direction="315"阴影在右下角（东南方向夹角）
                     
                     Color属性来控制阴影的颜色
                 -->
 
                 <TextBlock.Effect>
-
                     <DropShadowEffect BlurRadius="4"
-                                      Direction="270"
+                                      Direction="315"
                                       Opacity="0.4"
                                       ShadowDepth="4"
                                       Color="Red" />
