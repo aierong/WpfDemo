@@ -83,7 +83,7 @@
              DispatcherUnhandledException="Application_DispatcherUnhandledException"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/KJ/grid/tiaojianxianshi/gridWindow1.XAML">
+             StartupUri="/Views/DH/Shadow/DemoWindow1.XAML">
 
 
 

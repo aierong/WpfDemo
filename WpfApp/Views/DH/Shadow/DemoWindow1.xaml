@@ -6,10 +6,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="DemoWindow1"
         Width="800"
-        Height="450"
+        Height="660"
         mc:Ignorable="d">
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
+            <RowDefinition Height="68" />
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
@@ -22,45 +23,125 @@
                     Grid.Column="0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
+            <TextBlock FontSize="28"
+                       Text="三种方式创建阴影" />
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
 
             <!--
                 参考:
                 https://learn.microsoft.com/zh-cn/dotnet/desktop/wpf/advanced/how-to-create-text-with-a-shadow?view=netframeworkdesktop-4.8
             -->
 
-            <TextBlock FontSize="25"
+            <TextBlock Margin="0,15,0,0"
+                       FontSize="48"
                        FontWeight="Bold"
                        Foreground="Teal"
                        Text="Shadow Text">
 
                 <!--
-                    可以通过设置 ShadowDepth 属性来控制阴影的宽度。 值 4.0 指示阴影宽度为 4 像素。
-                    可通过修改 BlurRadius 属性来控制阴影的柔和度或模糊程度。 值 0.0 指示无模糊。
+                    第1种创建阴影方式：DropShadowEffect
+                    ShadowDepth属性来控制阴影的宽度。 值4.0指示阴影宽度为4像素
+                    BlurRadius属性来控制阴影的柔和度或模糊程度。BlurRadius属性设置为0.0（指示不使用模糊）来创建硬阴影
+                    
+                    Direction属性来控制阴影的方向(就是哪个方向的阴影)。 将此属性的方向值设置为介于0和360之间的度数。
+                    
+                    Color属性来控制阴影的颜色
                 -->
 
                 <TextBlock.Effect>
+
                     <DropShadowEffect BlurRadius="4"
-                                      Direction="330"
-                                      Opacity="0.5"
+                                      Direction="270"
+                                      Opacity="0.4"
                                       ShadowDepth="4"
-                                      Color="Black" />
+                                      Color="Red" />
                 </TextBlock.Effect>
             </TextBlock>
-            <TextBlock Margin="0,20,0,0"
-                       FontSize="25"
-                       Foreground="Maroon"
-                       Text="Shadow Text">
-                <TextBlock.Effect>
-                    <DropShadowEffect BlurRadius="0.0"
-                                      Direction="135"
-                                      Opacity="0.35"
-                                      ShadowDepth="6"
-                                      Color="Maroon" />
-                </TextBlock.Effect>
-            </TextBlock>
+
+
+
 
 
         </StackPanel>
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Grid ShowGridLines="True">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
 
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <!--
+                    第2种创建阴影方式：
+                    2个TextBlock大小一样，位置一样
+                    利用BlurBitmapEffect于创建可放置在文本对象之后的类似于阴影的效果
+                -->
+                <TextBlock Grid.Row="0"
+                           Grid.Column="0"
+                           FontSize="48"
+                           Foreground="Green"
+                           Text="Shadow Text">
+                    <TextBlock.Effect>
+                        <BlurEffect KernelType="Box"
+                                    Radius="8.0" />
+                    </TextBlock.Effect>
+                </TextBlock>
+                <TextBlock Grid.Row="0"
+                           Grid.Column="0"
+                           FontSize="48"
+                           Foreground="Maroon"
+                           Text="Shadow Text" />
+            </Grid>
+
+        </StackPanel>
+        <StackPanel Grid.Row="3"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Grid ShowGridLines="True">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <!--
+                    第3种创建阴影方式：使用转换变换
+                    TranslateTransform 可用于创建可放置在文本对象之后的类似于阴影的效果。
+                -->
+                <!--
+                    以下代码示例使用 TranslateTransform 偏移文本。
+                    在本示例中，主要文本下方略微偏移的文本副本营造出了阴影效果。
+                -->
+
+                <TextBlock Grid.Row="0"
+                           Grid.Column="0"
+                           FontSize="48"
+                           Foreground="Black"
+                           Text="Shadow Text">
+                    <TextBlock.RenderTransform>
+                        <TranslateTransform X="3" Y="3" />
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <TextBlock Grid.Row="0"
+                           Grid.Column="0"
+                           FontSize="48"
+                           Foreground="Coral"
+                           Text="Shadow Text">
+                </TextBlock>
+            </Grid>
+
+        </StackPanel>
     </Grid>
 </Window>
