@@ -41,6 +41,9 @@
         <StackPanel Grid.Row="2"
                     Grid.Column="0">
 
+            <!--
+                官网提到要用：Viewbox控制大小
+            -->
             <Viewbox Width="400">
                 <hc:FlipClock Margin="32" />
             </Viewbox>

@@ -63,7 +63,7 @@
                                            Background="Transparent"
                                            Foreground="#F9F871"
                                            Number="{Binding NumberList[3], RelativeSource={RelativeSource Mode=TemplatedParent}}" />
-                            <!--  屏蔽这个,就不显示秒
+
                             <hc:FlipNumber Margin="0,-20,-20,-20"
                                            Background="Transparent"
                                            Foreground="Goldenrod"
@@ -72,15 +72,35 @@
                                            Background="Transparent"
                                            Foreground="Gold"
                                            Number="{Binding NumberList[5], RelativeSource={RelativeSource Mode=TemplatedParent}}" />
-                            -->
+                        </StackPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="FlipClockStyleNo"
+               TargetType="{x:Type hc:FlipClock}">
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type hc:FlipClock}">
+                        <StackPanel Orientation="Horizontal">
+                            <hc:FlipNumber Margin="-20"
+                                           Number="{Binding NumberList[0], RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                            <hc:FlipNumber Margin="-20"
+                                           Number="{Binding NumberList[1], RelativeSource={RelativeSource Mode=TemplatedParent}}" />
                             <hc:FlipNumber Margin="0,-20,-20,-20"
-                                           Background="Transparent"
-                                           Foreground="Goldenrod"
+                                           Foreground="Gold"
+                                           Number="{Binding NumberList[2], RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                            <hc:FlipNumber Margin="-20"
+                                           Foreground="Gold"
+                                           Number="{Binding NumberList[3], RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                            
+                            <!--  屏蔽这个,就不显示秒  -->
+                            <!--<hc:FlipNumber Margin="0,-20,-20,-20"
                                            Number="{Binding NumberList[4], RelativeSource={RelativeSource Mode=TemplatedParent}}" />
                             <hc:FlipNumber Margin="-20"
-                                           Background="Transparent"
-                                           Foreground="Gold"
-                                           Number="{Binding NumberList[5], RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                                           Number="{Binding NumberList[5], RelativeSource={RelativeSource Mode=TemplatedParent}}" />-->
+
                         </StackPanel>
                     </ControlTemplate>
                 </Setter.Value>
@@ -111,10 +131,21 @@
                     Grid.Column="0"
                     Orientation="Vertical">
             <!--
-                不用的样式
+                不同的样式
             -->
             <Viewbox Width="200">
                 <hc:FlipClock Style="{DynamicResource FlipClockStyleMy}">
+                </hc:FlipClock>
+            </Viewbox>
+        </StackPanel>
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0"
+                    Orientation="Vertical">
+            <!--
+                不同的样式 不显示秒
+            -->
+            <Viewbox Width="200">
+                <hc:FlipClock Style="{DynamicResource FlipClockStyleNo}">
                 </hc:FlipClock>
             </Viewbox>
         </StackPanel>
