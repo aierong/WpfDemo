@@ -8,6 +8,9 @@
              d:DesignHeight="450"
              d:DesignWidth="800"
              mc:Ignorable="d">
+    <UserControl.Resources>
+
+    </UserControl.Resources>
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
@@ -21,11 +24,23 @@
                     Orientation="Horizontal">
             <!--
                 Text	进度文本
-                ShowText	是否显示进度文本	true
+                ShowText	是否显示进度文本	true  它显示的是整数的百分比
                 WaveThickness	波浪边框粗细	0
+                
+                Value:值是0到100之间的数，可以小数
+                如果Value是大于等于99.5，ShowText会显示100%(四舍五入的)
+                如果Value是小于0.5，ShowText会显示0%(四舍五入的)
+                如果Value是大于100,ShowText会显示100%
             -->
             <hc:WaveProgressBar Margin="10,5,10,0"
-                                Value="50" />
+                                Value="51" />
+            <!--
+                控件自己显示的Text是整数类型的，并且四舍五入的
+                我们可以给Text赋值，这样更准确些
+            -->
+            <hc:WaveProgressBar Margin="10,5,10,0"
+                                Text="计算:99.49%"
+                                Value="99.485" />
             <hc:WaveProgressBar Width="60"
                                 Height="60"
                                 Margin="10,5,10,0"
