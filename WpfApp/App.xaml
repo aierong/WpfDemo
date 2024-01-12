@@ -25,6 +25,7 @@
     StartupUri="/Views/BUJU/StackPanel/cuizhi.XAML"       布局
     StartupUri="/Views/BUJU/Uniform/UniformWindow1.XAML"  布局
     StartupUri="/Views/BUJU/WrapPanel/Horizontal.XAML"    布局
+    StartupUri="/Views/BUJU/Canvas/CanvasWindow1.XAML"    Canvas布局
     
     
     StartupUri="/Views/fonts/fontWindow1.XAML"    图标
@@ -84,7 +85,7 @@
              DispatcherUnhandledException="Application_DispatcherUnhandledException"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/DH/Gradient/GradientWindow1.XAML">
+             StartupUri="/Views/BUJU/Canvas/CanvasWindow1.XAML">
 
     <!--  Application.Resources是定义整个程序级别的资源，每个窗体都可以访问到  -->
     <Application.Resources>

@@ -1,0 +1,206 @@
+﻿<Window x:Class="WpfApp.Views.BUJU.Canvas.CanvasWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp.Views.BUJU.Canvas"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="CanvasWindow1"
+        Width="900"
+        Height="680"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
+    <Grid ShowGridLines="True">
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TabControl Grid.Row="0"
+                    Grid.Column="0">
+            <TabItem Header="说明">
+                <Label Content="Canvas是一个布局控件，它允许以绝对定位的方式排列子元素.可以使用Canvas控件中的Left，Right，Top和Bottom（左，右，顶和底）属性定位" />
+            </TabItem>
+            <TabItem Header="基本使用">
+                <Grid ShowGridLines="True">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Canvas Grid.Row=" 0"
+                            Grid.Column="0"
+                            Background="AliceBlue">
+                        <!--
+                            离左边10，离上面30
+                        -->
+                        <Button Canvas.Left="10"
+                                Canvas.Top="30">
+                            Top left
+                        </Button>
+                        <Button Canvas.Right="10">Top right</Button>
+                        <Button Canvas.Left="10"
+                                Canvas.Bottom="28">
+                            Bottom left
+                        </Button>
+                        <Button Canvas.Right="10"
+                                Canvas.Bottom="28">
+                            Bottom right
+                        </Button>
+                    </Canvas>
+
+                    <Canvas Grid.Row="1"
+                            Grid.Column="0"
+                            Background="WhiteSmoke">
+                        <!--  添加一个红色矩形  -->
+                        <Rectangle Canvas.Left="10"
+                                   Canvas.Top="10"
+                                   Width="50"
+                                   Height="50"
+                                   Fill="Red" />
+                        <!--  添加一个蓝色圆形  -->
+                        <Ellipse Canvas.Left="100"
+                                 Canvas.Top="50"
+                                 Width="30"
+                                 Height="30"
+                                 Fill="Blue" />
+                        <!--  添加一个文本块  -->
+                        <TextBlock x:Name="HelloText"
+                                   Canvas.Left="200"
+                                   Canvas.Top="100"
+                                   FontSize="20"
+                                   Text="Hello, Canvas!" />
+                    </Canvas>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Z轴的说明">
+                <Grid ShowGridLines="True">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <!--
+                        如果画布中的两个子控件重叠，则标记中最后定义的控件将优先并覆盖其他控件
+                        如果我们设置ZIndex,数字大的覆盖数字小的
+                    -->
+
+                    <!--  这个是没有定义Z轴，xaml中写在后面的覆盖前面写的控件  -->
+                    <Canvas Grid.Row="0"
+                            Grid.Column="0"
+                            Background="WhiteSmoke">
+                        <Ellipse Canvas.Left="30"
+                                 Canvas.Top="20"
+                                 Width="60"
+                                 Height="60"
+                                 Fill="Green" />
+                        <Ellipse Canvas.Left="60"
+                                 Canvas.Top="40"
+                                 Width="60"
+                                 Height="60"
+                                 Fill="Blue" />
+                        <Ellipse Canvas.Left="90"
+                                 Canvas.Top="60"
+                                 Width="60"
+                                 Height="60"
+                                 Fill="Red" />
+                    </Canvas>
+
+                    <!--  这个有定义Z轴，ZIndex数值大的覆盖数值小的  -->
+                    <Canvas Grid.Row="1"
+                            Grid.Column="0"
+                            Background="WhiteSmoke">
+                        <Ellipse Canvas.Left="30"
+                                 Canvas.Top="20"
+                                 Width="60"
+                                 Height="60"
+                                 Canvas.ZIndex="3"
+                                 Fill="Green" />
+                        <Ellipse Canvas.Left="60"
+                                 Canvas.Top="40"
+                                 Width="60"
+                                 Height="60"
+                                 Canvas.ZIndex="2"
+                                 Fill="Blue" />
+                        <Ellipse Canvas.Left="90"
+                                 Canvas.Top="60"
+                                 Width="60"
+                                 Height="60"
+                                 Canvas.ZIndex="1"
+                                 Fill="Red" />
+                    </Canvas>
+                </Grid>
+            </TabItem>
+            <TabItem Header="一个综合的布局的demo">
+                <Border Margin="20,20,20,20">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Offset="0.0" Color="Yellow" />
+                            <GradientStop Offset="0.75" Color="YellowGreen" />
+                            <GradientStop Offset="1.0" Color="White" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Grid ShowGridLines="True">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Row="0"
+                                    Grid.Column="0">
+                            <Label Content="第1行的东西" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="1"
+                                    Grid.Column="0">
+                            <Label Content="第2行的东西" />
+                        </StackPanel>
+                        <!--  表格有2行，Canvas合并这2行，在有上角上画了2个交叉的圆圈  -->
+                        <Canvas Grid.RowSpan="2">
+
+                            <Border Canvas.Top="10"
+                                    Canvas.Right="-8"
+                                    Width="58"
+                                    Height="58"
+                                    Background="White"
+                                    CornerRadius="100"
+                                    Opacity="0.2" />
+                            <Border Canvas.Top="45"
+                                    Canvas.Right="-8"
+                                    Width="88"
+                                    Height="88"
+                                    Background="White"
+                                    CornerRadius="100"
+                                    Opacity="0.2" />
+
+                            <!-- 或者用下面的Ellipse画2个圆圈也可以
+                            <Ellipse Canvas.Top="10"
+                                     Canvas.Right="-8"
+                                     Width="58"
+                                     Height="58"
+                                     Fill="White"
+                                     Opacity="0.2" />
+                            <Ellipse Canvas.Top="45"
+                                     Canvas.Right="-8"
+                                     Width="88"
+                                     Height="88"
+                                     Fill="White"
+                                     Opacity="0.2" />
+                            -->
+                        </Canvas>
+                    </Grid>
+                </Border>
+
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

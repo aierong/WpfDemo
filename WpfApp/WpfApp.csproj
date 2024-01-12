@@ -131,6 +131,9 @@
     <Compile Include="Views\BindData\RelativeSource\DataWindow1.xaml.cs">
       <DependentUpon>DataWindow1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\BUJU\Canvas\CanvasWindow1.xaml.cs">
+      <DependentUpon>CanvasWindow1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\BUJU\Grid\cicun1.xaml.cs">
       <DependentUpon>cicun1.xaml</DependentUpon>
     </Compile>
@@ -435,6 +438,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\BindData\RelativeSource\DataWindow1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BUJU\Canvas\CanvasWindow1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
