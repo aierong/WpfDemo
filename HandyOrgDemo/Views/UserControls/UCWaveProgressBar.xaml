@@ -67,6 +67,7 @@
             <hc:WaveProgressBar Margin="10,5,10,0"
                                 Value="123.69" />
         </StackPanel>
+        
         <StackPanel Grid.Row="1"
                     Orientation="Horizontal">
             <!--

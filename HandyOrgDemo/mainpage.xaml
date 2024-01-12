@@ -70,6 +70,8 @@
                 <TabItem Header="轮播图">
                     <localuc:UserControlCarousel />
                 </TabItem>
+
+
                 <TabItem Header="跑马灯">
                     <localuc:UCRunningBlock />
                 </TabItem>

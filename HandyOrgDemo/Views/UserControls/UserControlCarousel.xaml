@@ -10,22 +10,21 @@
              mc:Ignorable="d">
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0"
                     Grid.Column="0">
-
             <!--
                 AutoRun	是否自动轮播
                 IsCenter	轮播项是否居中显示
             -->
-
             <hc:Carousel Width="600"
-                         Height="330"
+                         Height="280"
                          Margin="32"
                          VerticalAlignment="Center"
                          AutoRun="True"
@@ -89,6 +88,23 @@
                 <Image Width="300"
                        Source="/assets/Image/lb/5.jpg"
                        Stretch="UniformToFill" />
+            </hc:Carousel>
+        </StackPanel>
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0">
+            <!--
+                动态绑定
+            -->
+            <hc:Carousel Width="150"
+                         Height="100"
+                         AutoRun="True"
+                         ItemsSource="{Binding Images}">
+                <hc:Carousel.ItemTemplate>
+                    <DataTemplate>
+                        <Image Width="150"
+                               Source="{Binding}" />
+                    </DataTemplate>
+                </hc:Carousel.ItemTemplate>
             </hc:Carousel>
         </StackPanel>
     </Grid>
