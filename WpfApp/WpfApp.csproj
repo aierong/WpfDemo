@@ -346,6 +346,7 @@
     <Compile Include="Views\TeXiao\json\jsonWindow1.xaml.cs">
       <DependentUpon>jsonWindow1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\TeXiao\json\jsonWindowVM.cs" />
     <Compile Include="Views\TeXiao\LedClock\demo1\viewmodel\datawindowviewmodel.cs" />
     <Compile Include="Views\TeXiao\LedClock\demo1\view\ClockWindow1.xaml.cs">
       <DependentUpon>ClockWindow1.xaml</DependentUpon>
@@ -828,6 +829,13 @@
     <Resource Include="assets\json\ph.json" />
     <Resource Include="assets\json\notxinhao.json" />
     <Resource Include="assets\json\bg.json" />
+    <Resource Include="assets\json\Animation3.json" />
+    <Resource Include="assets\json\nodata.json" />
+    <Resource Include="assets\json\nodata2.json" />
+    <Resource Include="assets\json\Animation5.json" />
+    <Resource Include="assets\json\deliveryteam.json" />
+    <Resource Include="assets\json\businessteam.json" />
+    <Resource Include="assets\json\deliveryteam2.json" />
     <None Include="Views\TeXiao\LedClock\demo2\font\iconfont.json" />
     <Resource Include="Views\TeXiao\LedClock\demo2\font\iconfont.ttf" />
     <None Include="Views\TeXiao\LedClock\demo2\font\iconfont.woff" />

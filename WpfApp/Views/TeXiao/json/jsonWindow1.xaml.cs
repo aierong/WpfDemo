@@ -22,6 +22,8 @@ namespace WpfApp.Views.TeXiao.json
         public jsonWindow1 ()
         {
             InitializeComponent();
+
+            this.DataContext = new jsonWindowVM();
         }
     }
 }
