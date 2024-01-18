@@ -58,6 +58,8 @@
     
     /Views/TeXiao/EmojiDemo/EmojiWindow1.XAML     Emoji
     
+    /Views/TeXiao/json/jsonWindow1.XAML           json 
+    
     
     /Views/TeXiao/PMD/DEMO1/PMDWindow1.XAML             跑马灯（文字）
     /Views/TeXiao/PMD/DEMO1/PMDWindowRunningBlock.XAML  跑马灯（运行块：支持放任何内容）
@@ -85,7 +87,7 @@
              DispatcherUnhandledException="Application_DispatcherUnhandledException"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/BUJU/Canvas/CanvasWindow1.XAML">
+             StartupUri="/Views/TeXiao/json/jsonWindow1.XAML">
 
     <!--  Application.Resources是定义整个程序级别的资源，每个窗体都可以访问到  -->
     <Application.Resources>
