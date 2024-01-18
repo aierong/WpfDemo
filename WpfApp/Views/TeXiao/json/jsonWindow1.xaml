@@ -132,7 +132,7 @@
                                         ResourcePath="pack://application:,,,/assets/json/deliveryteam.json">
             </lottie:LottieAnimationView>
 
-            
+
             <lottie:LottieAnimationView Width="200"
                                         Height="300"
                                         HorizontalAlignment="Center"
@@ -142,7 +142,7 @@
                                         ResourcePath="pack://application:,,,/assets/json/businessteam.json">
             </lottie:LottieAnimationView>
 
-            
+
             <lottie:LottieAnimationView Width="200"
                                         Height="300"
                                         HorizontalAlignment="Center"
