@@ -10,6 +10,7 @@ using LiveChartsCore.SkiaSharpView.Painting;
 using LiveChartsCore.SkiaSharpView.VisualElements;
 using SkiaSharp;
 using System.Collections.ObjectModel;
+using LiveChartsCore.Drawing;
 
 namespace ChartsDemo.ViewModels.UC
 {
@@ -54,6 +55,11 @@ namespace ChartsDemo.ViewModels.UC
                     Stroke = new LinearGradientPaint(new[]{ new SKColor(45, 64, 89), new SKColor(255, 212, 96)}) { StrokeThickness = 10 },
                     GeometryStroke = new LinearGradientPaint(new[]{ new SKColor(45, 64, 89), new SKColor(255, 212, 96)}) { StrokeThickness = 10 },
 
+                    //配置距离x,y轴的距离 （内边距）
+                    //注意：LvcPoint的第1个参数是配置离y轴距离，第2个参数是配置离z轴距离  如果不配置控件默认0.5
+                    //下面这样就没有内边距了
+                    //DataPadding = new LvcPoint(0,0)
+
                 }
         };
 
@@ -68,6 +74,9 @@ namespace ChartsDemo.ViewModels.UC
             {
                 //Name = "Salesman/woman",
                 Labels = new string[] { "王", "赵", "张", "a", "b", "c" },
+
+                //Padding = new LiveChartsCore.Drawing.Padding(0, 0),
+
                 LabelsPaint = new SolidColorPaint
                 {
                     Color = SKColors.Black,

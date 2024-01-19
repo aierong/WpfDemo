@@ -50,7 +50,7 @@ namespace ChartsDemo.ViewModels.UC
 
                     //距离x,y轴的距离
                     //下面这样就没有距离了
-                    DataPadding =  new LiveChartsCore.Drawing.LvcPoint (0,0.5),
+                    DataPadding =  new LiveChartsCore.Drawing.LvcPoint (0,0 ),
 
                     //给线,或者柱子指定颜色和粗细
                     //如果是饼图，请使用：Fill
@@ -159,7 +159,10 @@ namespace ChartsDemo.ViewModels.UC
         }
 
 
-        public LiveChartsCore.Measure.Margin Margin { get; set; } 
+        public LiveChartsCore.Measure.Margin Margin
+        {
+            get; set;
+        }
             = new LiveChartsCore.Measure.Margin( 30 );
 
     }
