@@ -12,10 +12,10 @@
         mc:Ignorable="d">
 
     <!--
-        Install-Package LottieSharp
-        xmlns:lottie="clr-namespace:LottieSharp.WPF;assembly=LottieSharp"
+        安装： Install-Package LottieSharp
+        页面引入： xmlns:lottie="clr-namespace:LottieSharp.WPF;assembly=LottieSharp"
         
-        json文件要用资源
+        注意： json文件要配置为：资源
     -->
 
     <Grid ShowGridLines="True">
@@ -32,20 +32,10 @@
         <StackPanel Grid.Row="0"
                     Orientation="Horizontal">
 
-            <!--<StackPanel>
-
-            </StackPanel>
-
-            <StackPanel>
-
-            </StackPanel>
-            -->
-
             <!--
                 AutoPlay	True/False	为True时自动播放动画
                 RepeatCount	-1..N	    重复次数，-1表示永远重复
             -->
-
             <lottie:LottieAnimationView Width="100"
                                         Height="300"
                                         HorizontalAlignment="Center"
@@ -151,11 +141,37 @@
                                         RepeatCount="-1"
                                         ResourcePath="pack://application:,,,/assets/json/deliveryteam2.json">
             </lottie:LottieAnimationView>
+
+            <!-- 下面3个也是可以的，没有版面显示
+            <lottie:LottieAnimationView Width="200"
+                            Height="300"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            AutoPlay="True"
+                            RepeatCount="-1"
+                            ResourcePath="pack://application:,,,/assets/json/Animationa.json">
+            </lottie:LottieAnimationView>
+            <lottie:LottieAnimationView Width="200"
+                            Height="300"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            AutoPlay="True"
+                            RepeatCount="-1"
+                            ResourcePath="pack://application:,,,/assets/json/Animationb.json">
+            </lottie:LottieAnimationView>
+            <lottie:LottieAnimationView Width="200"
+                            Height="300"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            AutoPlay="True"
+                            RepeatCount="-1"
+                            ResourcePath="pack://application:,,,/assets/json/Animationc.json">
+            </lottie:LottieAnimationView>
+            -->
+
         </StackPanel>
         <StackPanel Grid.Row="2"
                     Orientation="Horizontal">
-
-
             <lottie:LottieAnimationView Width="200"
                                         Height="300"
                                         HorizontalAlignment="Center"
@@ -170,7 +186,6 @@
                     Command="{Binding UpdateDataCommand}"
                     Content="点击我动态改变">
             </Button>
-
         </StackPanel>
 
     </Grid>

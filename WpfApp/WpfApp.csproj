@@ -836,6 +836,9 @@
     <Resource Include="assets\json\deliveryteam.json" />
     <Resource Include="assets\json\businessteam.json" />
     <Resource Include="assets\json\deliveryteam2.json" />
+    <Resource Include="assets\json\Animationa.json" />
+    <Resource Include="assets\json\Animationc.json" />
+    <Resource Include="assets\json\Animationb.json" />
     <None Include="Views\TeXiao\LedClock\demo2\font\iconfont.json" />
     <Resource Include="Views\TeXiao\LedClock\demo2\font\iconfont.ttf" />
     <None Include="Views\TeXiao\LedClock\demo2\font\iconfont.woff" />
