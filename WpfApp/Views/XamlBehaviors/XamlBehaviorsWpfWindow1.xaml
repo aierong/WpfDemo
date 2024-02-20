@@ -1,0 +1,99 @@
+﻿<Window x:Class="WpfApp.Views.XamlBehaviors.XamlBehaviorsWpfWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:local="clr-namespace:WpfApp.Views.XamlBehaviors"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="Microsoft.Xaml.Behaviors.Wpf"
+        Width="800"
+        Height="450"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
+
+    <!--
+        安装：Microsoft.Xaml.Behaviors.Wpf
+        
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    -->
+
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+
+            <Button Width="100"
+                    Height="30"
+                    Margin="0,20,0,0"
+                    Command="{Binding UpdateDataCommand}"
+                    Content="{Binding Str1}">
+            </Button>
+
+            <Button Width="100"
+                    Height="30"
+                    Margin="0,20,0,0"
+                    Content="{Binding Str3}">
+
+                <!--
+                    MouseRightButtonDown="Button_MouseRightButtonDown"
+                    
+                    private void Button_MouseRightButtonDown ( object sender , MouseButtonEventArgs e )
+                    {
+                    
+                    }
+                    
+                    下面鼠标右键单击的代码实际相当于上面的代码
+                -->
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseRightButtonDown">
+                        <!--
+                            实际就是把鼠标右键单击的事件和vm中的某个命令绑定
+                        -->
+                        <i:InvokeCommandAction Command="{Binding RightDataCommand}">
+                        </i:InvokeCommandAction>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
+
+
+
+            <TextBlock Margin="0,20,0,0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Foreground="#FFF90909"
+                       Text="{Binding Str2}">
+
+                <!--
+                    MouseRightButtonDown="TextBlock_MouseRightButtonDown"
+                    
+                    private void TextBlock_MouseRightButtonDown ( object sender , MouseButtonEventArgs e )
+                    {
+                    
+                    }
+                    
+                    下面鼠标右键单击的代码实际相当于上面的代码
+                -->
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseRightButtonDown">
+                        <!--
+                            实际就是把鼠标右键单击的事件和vm中的某个命令绑定
+                        -->
+                        <i:InvokeCommandAction Command="{Binding RightUpdateDataCommand}">
+                        </i:InvokeCommandAction>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+
+            </TextBlock>
+        </StackPanel>
+
+    </Grid>
+</Window>

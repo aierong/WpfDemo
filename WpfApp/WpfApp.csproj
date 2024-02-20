@@ -397,6 +397,10 @@
     <Compile Include="Views\ValidationData\demo1\view\Yz.xaml.cs">
       <DependentUpon>Yz.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\XamlBehaviors\XamlBehaviorsWpfWindow1.xaml.cs">
+      <DependentUpon>XamlBehaviorsWpfWindow1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\XamlBehaviors\XamlBehaviorsWpfWindow1VM.cs" />
     <Page Include="DictionaryColor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -799,6 +803,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ValidationData\demo1\view\Yz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\XamlBehaviors\XamlBehaviorsWpfWindow1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -58,7 +58,7 @@
     
     /Views/TeXiao/EmojiDemo/EmojiWindow1.XAML     Emoji
     
-    /Views/TeXiao/json/jsonWindow1.XAML           json 
+    /Views/TeXiao/json/jsonWindow1.XAML           json
     
     
     /Views/TeXiao/PMD/DEMO1/PMDWindow1.XAML             跑马灯（文字）
@@ -77,6 +77,9 @@
     
     /Views/TeXiao/GeometryDemo/WindowGeometry.XAML      Geometry
     /Views/DH/Gradient/GradientWindow1.XAML             渐变效果
+    
+    
+    /Views/XamlBehaviors/XamlBehaviorsWpfWindow1.XAML     Microsoft.Xaml.Behaviors.Wpf
 -->
 <Application x:Class="WpfApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -87,7 +90,7 @@
              DispatcherUnhandledException="Application_DispatcherUnhandledException"
              Exit="Application_Exit"
              Startup="Application_Startup"
-             StartupUri="/Views/TeXiao/json/jsonWindow1.XAML">
+             StartupUri="Views/XamlBehaviors/XamlBehaviorsWpfWindow1.XAML">
 
     <!--  Application.Resources是定义整个程序级别的资源，每个窗体都可以访问到  -->
     <Application.Resources>
