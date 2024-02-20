@@ -886,7 +886,7 @@
       <Version>1.1.77</Version>
     </PackageReference>
     <PackageReference Include="SharpVectors.Wpf">
-      <Version>1.8.3</Version>
+      <Version>1.8.4</Version>
     </PackageReference>
     <PackageReference Include="ValueConverters">
       <Version>3.0.26</Version>
