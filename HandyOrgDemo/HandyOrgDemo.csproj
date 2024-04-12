@@ -42,7 +42,7 @@
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
-    <PackageReference Include="HandyControl" Version="3.5.0" />
+    <PackageReference Include="HandyControl" Version="3.5.1" />
     <PackageReference Include="ValueConverters" Version="3.0.26" />
   </ItemGroup>
 
