@@ -1,0 +1,373 @@
+﻿<UserControl x:Class="WpfApp.Views.KJ.gr.UserControlGR1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WpfApp.Views.KJ.gr"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+
+        <!--  样式1  -->
+        <Style x:Key="gr000"
+               TargetType="GroupBox">
+            <Setter Property="Margin" Value="0,5" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="GroupBox">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <StackPanel VerticalAlignment="Center"
+                                        Orientation="Horizontal">
+                                <TextBlock FontSize="16"
+                                           Foreground="LightBlue"
+                                           Text="{TemplateBinding Header}" />
+                                <TextBlock Margin="15,0,0,0"
+                                           VerticalAlignment="Bottom"
+                                           FontSize="12"
+                                           Foreground="LightCoral"
+                                           Text="{TemplateBinding Tag}" />
+                            </StackPanel>
+
+                            <Border Grid.Row="1"
+                                    Margin="0,7,5,5"
+                                    BorderBrush="#447D96C4"
+                                    BorderThickness="1">
+                                <ContentPresenter />
+                            </Border>
+
+
+
+
+                            <Grid Grid.Row="1"
+                                  Margin="0,7,0,0">
+                                <Border Margin="5,5,0,0"
+                                        BorderBrush="#447D96C4"
+                                        BorderThickness="0,0,1,1" />
+                                <Line Margin="0,5,0,0"
+                                      HorizontalAlignment="Right"
+                                      VerticalAlignment="Top"
+                                      Stroke="#447D96C4"
+                                      StrokeThickness="1"
+                                      X1="0"
+                                      X2="5"
+                                      Y1="0"
+                                      Y2="0" />
+                                <Line Margin="5,0,0,0"
+                                      HorizontalAlignment="Left"
+                                      VerticalAlignment="Bottom"
+                                      Stroke="#447D96C4"
+                                      StrokeThickness="1"
+                                      X1="0"
+                                      X2="0"
+                                      Y1="0"
+                                      Y2="5" />
+
+                                <Polyline HorizontalAlignment="Left"
+                                          VerticalAlignment="Top"
+                                          Points="5,0 0,0 0,5"
+                                          Stroke="#7D96C4" />
+                                <Polyline Margin="0,0,5,0"
+                                          HorizontalAlignment="Right"
+                                          VerticalAlignment="Top"
+                                          Points="0,0 5,0 5,5"
+                                          Stroke="#7D96C4" />
+
+                                <Polyline Grid.Row="1"
+                                          Margin="0,0,5,5"
+                                          HorizontalAlignment="Right"
+                                          VerticalAlignment="Bottom"
+                                          Points="0 5 5 5 5 0"
+                                          Stroke="#FF7D96C4" />
+                                <Polyline Grid.Row="1"
+                                          Margin="0,0,0,5"
+                                          HorizontalAlignment="Left"
+                                          VerticalAlignment="Bottom"
+                                          Points="0 0 0 5 5 5"
+                                          Stroke="#FF7D96C4" />
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+
+            </Setter>
+        </Style>
+
+
+
+        <!--  GroupBox  样式2  -->
+        <Style x:Key="gr2"
+               TargetType="GroupBox">
+            <Setter Property="Margin" Value="10,5" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="GroupBox">
+                        <Grid>
+                            <Polyline HorizontalAlignment="Left"
+                                      VerticalAlignment="Top"
+                                      Points="0 30,0 10,10 0,30 0"
+                                      Stroke="#9918AABD"
+                                      StrokeThickness="1" />
+                            <Ellipse Width="4"
+                                     Height="4"
+                                     Margin="24,-2,0,0"
+                                     HorizontalAlignment="Left"
+                                     VerticalAlignment="Top"
+                                     Fill="#9918AABD" />
+                            <Ellipse Width="4"
+                                     Height="4"
+                                     Margin="-2,24,0,0"
+                                     HorizontalAlignment="Left"
+                                     VerticalAlignment="Top"
+                                     Fill="#9918AABD" />
+                            <Path HorizontalAlignment="Right"
+                                  VerticalAlignment="Top"
+                                  Data="M0 0,3 3,30 3,33 0,68 0,73 7,78 7,78 10M8 0,25 0"
+                                  Stroke="#5518AABD" />
+                            <Polyline HorizontalAlignment="Left"
+                                      VerticalAlignment="Bottom"
+                                      Points="0,0 0,15 10,15"
+                                      Stroke="#5518AABD" />
+                            <Polyline HorizontalAlignment="Right"
+                                      VerticalAlignment="Bottom"
+                                      Points="10,0 0,10"
+                                      Stroke="#5518AABD" />
+                            <Polygon HorizontalAlignment="Right"
+                                     VerticalAlignment="Bottom"
+                                     Fill="#9918AABD"
+                                     Points="0,7 7 7 7 0" />
+                            <Border Margin="30,-0.5,78,0"
+                                    VerticalAlignment="Top"
+                                    BorderBrush="#5518AABD"
+                                    BorderThickness="0,1,0,0" />
+                            <Border Margin="0,10"
+                                    HorizontalAlignment="Right"
+                                    BorderBrush="#5518AABD"
+                                    BorderThickness="0,0,1,0" />
+                            <Border Margin="10,0"
+                                    VerticalAlignment="Bottom"
+                                    BorderBrush="#5518AABD"
+                                    BorderThickness="0,1,0,0" />
+                            <Border Margin="-0.5,15"
+                                    HorizontalAlignment="Left"
+                                    BorderBrush="#5518AABD"
+                                    BorderThickness="0,0,1,0" />
+
+                            <Path Margin="10,13"
+                                  HorizontalAlignment="Left"
+                                  VerticalAlignment="Top"
+                                  Data="M0 0,3 0,5 4,3 8,0 8,3 4"
+                                  Fill="#9918AABD" />
+                            <Path Margin="16,13"
+                                  HorizontalAlignment="Left"
+                                  VerticalAlignment="Top"
+                                  Data="M0 0,3 0,5 4,3 8,0 8,3 4"
+                                  Fill="#5518AABD" />
+                            <TextBlock Margin="25,8"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Top"
+                                       Foreground="#18AABD"
+                                       Text="{TemplateBinding Header}" />
+
+                            <ContentPresenter />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <!--  GroupBox  样式3  -->
+        <Style x:Key="GroupBoxStyle3"
+               TargetType="GroupBox">
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="GroupBox">
+                        <Border BorderBrush="#1FDCF5"
+                                BorderThickness="0.5"
+                                CornerRadius="10">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30" />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Border Height="8"
+                                        Margin="0,-4,0,0"
+                                        VerticalAlignment="Top">
+                                    <Border.Background>
+                                        <RadialGradientBrush>
+                                            <GradientStop Offset="0" Color="#1FDCF5" />
+                                            <GradientStop Offset="0.5" Color="Transparent" />
+                                        </RadialGradientBrush>
+                                    </Border.Background>
+                                </Border>
+                                <Border Grid.Row="1"
+                                        Height="8"
+                                        Margin="0,0,0,-3.5"
+                                        VerticalAlignment="Bottom">
+                                    <Border.Background>
+                                        <RadialGradientBrush>
+                                            <GradientStop Offset="0" Color="#1FDCF5" />
+                                            <GradientStop Offset="0.5" Color="Transparent" />
+                                        </RadialGradientBrush>
+                                    </Border.Background>
+                                </Border>
+
+
+                                <Border Height="0.5"
+                                        VerticalAlignment="Bottom"
+                                        Background="#1FDCF5" />
+
+                                <Ellipse Width="7"
+                                         Height="7"
+                                         Margin="10"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Fill="Orange" />
+
+                                <!--  TextBlock.FontFamily="{StaticResource Dingding}"  -->
+                                <ContentPresenter Margin="25,0"
+                                                  VerticalAlignment="Center"
+                                                  ContentSource="Header"
+                                                  TextBlock.Foreground="#1FDCF5" />
+
+                                <ContentPresenter Grid.Row="1" />
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <!--<RowDefinition />-->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Grid.Row="0"
+                  Grid.Column="0"
+                  Margin="10,5,0,5"
+                  Header="好看的GroupBox标题"
+                  Style="{StaticResource gr000}"
+                  Tag="可以说是一个副标题">
+            <StackPanel>
+                <TextBlock Margin="15,0,0,0"
+                           Text="TXT" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+
+
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,10"
+                           Text="好看的GroupBox——last" />
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Row="1"
+                  Grid.Column="0"
+                  Margin="10,5,0,5"
+                  Header="好看的GroupBox标题"
+                  Style="{StaticResource gr2}">
+            <!--
+                注意:  GroupBox内部容器需要设置Margin的top(要不会覆盖标题)
+            -->
+            <StackPanel Margin="0,25,0,0">
+                <TextBlock Margin="15,0,0,0"
+                           Text="TXT" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+
+
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,10"
+                           Text="好看的GroupBox——last" />
+            </StackPanel>
+        </GroupBox>
+
+
+        <GroupBox Grid.Row="0"
+                  Grid.Column="1"
+                  Margin="10,5,10,5"
+                  Header="好看的GroupBox"
+                  Style="{StaticResource GroupBoxStyle3}">
+
+
+            <StackPanel Grid.Row="1">
+                <TextBlock Margin="15,0,0,0"
+                           Text="TXT" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,0"
+                           Text="好看的GroupBox" />
+                <TextBlock Margin="15,0,0,10"
+                           Text="好看的GroupBox——last" />
+            </StackPanel>
+
+
+        </GroupBox>
+    </Grid>
+</UserControl>

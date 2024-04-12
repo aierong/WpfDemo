@@ -272,6 +272,9 @@
     </Compile>
     <Compile Include="Views\KJ\grid\tiaojianxianshi\gridWindow1ViewModel.cs" />
     <Compile Include="Views\KJ\grid\tiaojianxianshi\StudentData.cs" />
+    <Compile Include="Views\KJ\gr\UserControlGR1.xaml.cs">
+      <DependentUpon>UserControlGR1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\KJ\img\ImageUserControl.xaml.cs">
       <DependentUpon>ImageUserControl.xaml</DependentUpon>
     </Compile>
@@ -667,6 +670,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\KJ\grid\tiaojianxianshi\gridWindow1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KJ\gr\UserControlGR1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

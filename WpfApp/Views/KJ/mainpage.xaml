@@ -52,6 +52,10 @@
                     Click="btnNav_Click"
                     Content="RadioButton"
                     Tag="/Views/KJ/RadioButtons/UCRadioButton.xaml" />
+            <Button Margin="5"
+                    Click="btnNav_Click"
+                    Content="GroupBox"
+                    Tag="/Views/KJ/gr/UserControlGR1.xaml" />
         </WrapPanel>
         <Frame Name="frmMain"
                Grid.Row="1"
