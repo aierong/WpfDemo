@@ -258,6 +258,7 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
+        <!--  demo1  -->
         <GroupBox Grid.Row="0"
                   Grid.Column="0"
                   Margin="10,5,0,5"
@@ -294,6 +295,7 @@
             </StackPanel>
         </GroupBox>
 
+        <!--  demo2  -->
         <GroupBox Grid.Row="1"
                   Grid.Column="0"
                   Margin="10,5,0,5"
@@ -332,13 +334,12 @@
             </StackPanel>
         </GroupBox>
 
-
+        <!--  demo3  -->
         <GroupBox Grid.Row="0"
                   Grid.Column="1"
                   Margin="10,5,10,5"
                   Header="好看的GroupBox"
                   Style="{StaticResource GroupBoxStyle3}">
-
 
             <StackPanel Grid.Row="1">
                 <TextBlock Margin="15,0,0,0"
