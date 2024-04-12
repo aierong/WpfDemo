@@ -7,7 +7,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="jsonWindow1"
         Width="1280"
-        Height="800"
+        Height="900"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
 
@@ -20,6 +20,7 @@
 
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
+            <RowDefinition />
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
@@ -142,35 +143,40 @@
                                         ResourcePath="pack://application:,,,/assets/json/deliveryteam2.json">
             </lottie:LottieAnimationView>
 
-            <!-- 下面3个也是可以的，没有版面显示
-            <lottie:LottieAnimationView Width="200"
-                            Height="300"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            AutoPlay="True"
-                            RepeatCount="-1"
-                            ResourcePath="pack://application:,,,/assets/json/Animationa.json">
-            </lottie:LottieAnimationView>
-            <lottie:LottieAnimationView Width="200"
-                            Height="300"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            AutoPlay="True"
-                            RepeatCount="-1"
-                            ResourcePath="pack://application:,,,/assets/json/Animationb.json">
-            </lottie:LottieAnimationView>
-            <lottie:LottieAnimationView Width="200"
-                            Height="300"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            AutoPlay="True"
-                            RepeatCount="-1"
-                            ResourcePath="pack://application:,,,/assets/json/Animationc.json">
-            </lottie:LottieAnimationView>
-            -->
+
 
         </StackPanel>
+
         <StackPanel Grid.Row="2"
+                    Orientation="Horizontal">
+            <lottie:LottieAnimationView Width="200"
+                                        Height="300"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        AutoPlay="True"
+                                        RepeatCount="-1"
+                                        ResourcePath="pack://application:,,,/assets/json/Animationa.json">
+            </lottie:LottieAnimationView>
+            <lottie:LottieAnimationView Width="200"
+                                        Height="300"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        AutoPlay="True"
+                                        RepeatCount="-1"
+                                        ResourcePath="pack://application:,,,/assets/json/Animationb.json">
+            </lottie:LottieAnimationView>
+            <lottie:LottieAnimationView Width="200"
+                                        Height="300"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        AutoPlay="True"
+                                        RepeatCount="-1"
+                                        ResourcePath="pack://application:,,,/assets/json/Animationc.json">
+            </lottie:LottieAnimationView>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="3"
                     Orientation="Horizontal">
             <lottie:LottieAnimationView Width="200"
                                         Height="300"
