@@ -9,20 +9,34 @@ using LiveChartsCore;
 using Prism.Mvvm;
 using SkiaSharp;
 using Prism.Regions;
+using LiveChartsCore.Drawing;
 
 namespace ChartsDemo.ViewModels.UC
 {
-    public  class Bar0ViewModel : BindableBase, INavigationAware
+    public class Bar0ViewModel : BindableBase, INavigationAware
     {
         public ISeries[] Series
         {
             get; set;
         } =     {
-         
+
             new ColumnSeries<double>
             {
-             
+
                 Values = new double[] { 2, 5, 4 },
+
+                //  定义每个bars之间的间隔
+                Padding = 1,
+
+                // 定义bar的最大宽度
+                MaxBarWidth = double.PositiveInfinity,
+
+
+                //MaxBarWidth =2,
+                //GroupPadding =0,
+
+                //Padding =0,
+                //DataPadding=new LvcPoint(0, 0),
 
                 // 参考：https://lvcharts.com/docs/WPF/2.0.0-beta.710/samples.design.linearGradients
                 // 设置渐变颜色
@@ -48,7 +62,7 @@ namespace ChartsDemo.ViewModels.UC
                     // (x1, y1) where x1 could be read as "the middle of the x axis" (0.5) and y0 as "the end of the y axis" (1)
                     new SKPoint(0.5f, 1))
             },
-       
+
         };
 
 
@@ -60,9 +74,13 @@ namespace ChartsDemo.ViewModels.UC
         {
             new Axis
             {
-                Labels = new string[] { "组1" , "组2" , "Category3" },
+                //每个柱子的标题
+                Labels = new string[] { "1组" , "2组" , "Category3Category3" },
+
                 //旋转角度
                 LabelsRotation = 0,
+
+
                 SeparatorsPaint = new SolidColorPaint(new SKColor(200, 200, 200)),
                 SeparatorsAtCenter = false,
                 TicksPaint = new SolidColorPaint(new SKColor(35, 35, 35)),
