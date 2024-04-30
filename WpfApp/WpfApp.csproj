@@ -854,6 +854,8 @@
     <Resource Include="assets\json\Animationa.json" />
     <Resource Include="assets\json\Animationc.json" />
     <Resource Include="assets\json\Animationb.json" />
+    <Resource Include="assets\json\truckload2data.json" />
+    <Resource Include="assets\json\line1.json" />
     <None Include="Views\TeXiao\LedClock\demo2\font\iconfont.json" />
     <Resource Include="Views\TeXiao\LedClock\demo2\font\iconfont.ttf" />
     <None Include="Views\TeXiao\LedClock\demo2\font\iconfont.woff" />
