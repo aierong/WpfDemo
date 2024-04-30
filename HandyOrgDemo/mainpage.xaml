@@ -90,6 +90,9 @@
                 <TabItem Header="DataGrid">
                     <localuc:DataGridUserControl1 />
                 </TabItem>
+                <TabItem Header="CoverFlow">
+                    <localuc:CoverFlowUserControl1 />
+                </TabItem>
 
             </TabControl>
 
