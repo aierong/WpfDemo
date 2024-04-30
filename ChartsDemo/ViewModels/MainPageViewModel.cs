@@ -188,5 +188,14 @@ namespace ChartsDemo.ViewModels
             this._regionManager.RequestNavigate( Common.Common.RegionName , Common.Common.NavigateNameMultipleAxesDongTai1 );
         } ) );
 
+
+
+        private DelegateCommand _GaugeButtonClickCommand;
+        public DelegateCommand GaugeButtonClickCommand => _GaugeButtonClickCommand ?? ( _GaugeButtonClickCommand = new DelegateCommand( () =>
+        {
+            //RequestNavigate方法第一个参数是区域名字，第2个参数是App.xaml.cs中注册的导航名字
+            this._regionManager.RequestNavigate( Common.Common.RegionName , "GaugeUC1" );
+        } ) );
+
     }
 }

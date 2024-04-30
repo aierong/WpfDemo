@@ -96,6 +96,12 @@
                             Margin="10,10,10,10"
                             Command="{Binding MultipleAxesButtonClickCommand}"
                             Content="多个Y轴" />
+
+                    <Button Height="30"
+                            Margin="10,10,10,10"
+                            Command="{Binding GaugeButtonClickCommand}"
+                            Content="Gauge" />
+
                 </StackPanel>
                 <StackPanel Grid.Row="1"
                             Grid.Column="0"
