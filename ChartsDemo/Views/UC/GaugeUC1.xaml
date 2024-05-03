@@ -46,7 +46,7 @@
                           InitialRotation="-225"
                           MaxAngle="270"
                           MaxValue="100"
-                          MinValue="0"
+                          MinValue="0" 
                           Series="{Binding Series_GU}"
                           VisualElements="{Binding VisualElements}">
             </lvc:PieChart>
