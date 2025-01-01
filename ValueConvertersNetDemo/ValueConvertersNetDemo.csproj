@@ -126,7 +126,7 @@
       <Version>8.1.97</Version>
     </PackageReference>
     <PackageReference Include="ValueConverters">
-      <Version>3.0.26</Version>
+      <Version>3.1.22</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup />
