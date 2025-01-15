@@ -1,8 +1,10 @@
-﻿
-<!--
+﻿<!--
     StartupUri="Demo/DataWindow2.XAML"
     
     StartupUri="IOCDemo/Views/Window1.XAML"
+    
+    
+    StartupUri="MessengerDemo/MainWindow.XAML"
 -->
 
 <!--
@@ -15,7 +17,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WpfDemoNet6"
              Exit="Application_Exit"
-             StartupUri="IOCDemo/Views/Window1.XAML">
+             StartupUri="MessengerDemo/MainWindow.XAML">
     <Application.Resources>
     </Application.Resources>
 </Application>
