@@ -15,7 +15,7 @@ using WpfDemoNet6.MessengerDemo.Model;
 
 方式1.继承ObservableRecipient  
 
-方式2.实现接口IRecipient
+方式2.实现接口IRecipient                      WeakReferenceMessenger.Default.RegisterAll( this );
 
 推荐使用方式1,方式2不太灵活,它只可以一个模型接收一个数据,并且无法实现token区分
 */
