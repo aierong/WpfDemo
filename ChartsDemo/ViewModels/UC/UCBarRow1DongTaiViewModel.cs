@@ -14,7 +14,7 @@ using LiveChartsCore.Defaults;
 using LiveChartsCore.Drawing;
 using Prism.Commands;
 using Prism.Regions;
-using Newtonsoft.Json.Linq;
+//using Newtonsoft.Json.Linq;
 using System.Windows.Ink;
 using System.Xml.Linq;
 using System.ComponentModel;
@@ -70,7 +70,7 @@ namespace ChartsDemo.ViewModels.UC
                 DataLabelsPaint = new SolidColorPaint(new SKColor(245, 245, 245)),
                 DataLabelsPosition = DataLabelsPosition.End,
                 DataLabelsTranslate = new LvcPoint(-1, 0),
-                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.PrimaryValue}"
+                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.Coordinate.PrimaryValue }"
             },
             new RowSeries<ObservableValue>()
             {
@@ -81,7 +81,7 @@ namespace ChartsDemo.ViewModels.UC
                 DataLabelsPaint = new SolidColorPaint(new SKColor(245, 245, 245)),
                 DataLabelsPosition = DataLabelsPosition.End,
                 DataLabelsTranslate = new LvcPoint(-1, 0),
-                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.PrimaryValue}"
+                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.Coordinate.PrimaryValue}"
             },
             new RowSeries<ObservableValue>()
             {
@@ -92,7 +92,7 @@ namespace ChartsDemo.ViewModels.UC
                 DataLabelsPaint = new SolidColorPaint(new SKColor(245, 245, 245)),
                 DataLabelsPosition = DataLabelsPosition.End,
                 DataLabelsTranslate = new LvcPoint(-1, 0),
-                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.PrimaryValue}"
+                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.Coordinate.PrimaryValue}"
             },
              new RowSeries<ObservableValue>()
             {
@@ -103,7 +103,7 @@ namespace ChartsDemo.ViewModels.UC
                 DataLabelsPaint = new SolidColorPaint(new SKColor(245, 245, 245)),
                 DataLabelsPosition = DataLabelsPosition.End,
                 DataLabelsTranslate = new LvcPoint(-1, 0),
-                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.PrimaryValue}"
+                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.Coordinate.PrimaryValue}"
             },
               new RowSeries<ObservableValue>()
             {
@@ -114,7 +114,7 @@ namespace ChartsDemo.ViewModels.UC
                 DataLabelsPaint = new SolidColorPaint(new SKColor(245, 245, 245)),
                 DataLabelsPosition = DataLabelsPosition.End,
                 DataLabelsTranslate = new LvcPoint(-1, 0),
-                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.PrimaryValue}"
+                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.Coordinate.PrimaryValue}"
             },
                new RowSeries<ObservableValue>()
             {
@@ -125,7 +125,7 @@ namespace ChartsDemo.ViewModels.UC
                 DataLabelsPaint = new SolidColorPaint(new SKColor(245, 245, 245)),
                 DataLabelsPosition = DataLabelsPosition.End,
                 DataLabelsTranslate = new LvcPoint(-1, 0),
-                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.PrimaryValue}"
+                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.Coordinate.PrimaryValue}"
             },
                new RowSeries<ObservableValue>()
             {
@@ -136,7 +136,7 @@ namespace ChartsDemo.ViewModels.UC
                 DataLabelsPaint = new SolidColorPaint(new SKColor(245, 245, 245)),
                 DataLabelsPosition = DataLabelsPosition.End,
                 DataLabelsTranslate = new LvcPoint(-1, 0),
-                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.PrimaryValue}"
+                DataLabelsFormatter = point => $"{point.Context.Series.Name} {point.Coordinate.PrimaryValue}"
             },
 
         };

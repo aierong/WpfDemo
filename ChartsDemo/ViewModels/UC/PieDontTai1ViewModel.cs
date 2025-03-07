@@ -77,7 +77,7 @@ namespace ChartsDemo.ViewModels.UC
                     DataLabelsPaint = new SolidColorPaint( SKColors.Black ) ,
                     DataLabelsSize = 15 ,
 
-                    DataLabelsFormatter = point => point.PrimaryValue.ToString( "N2" )
+                    DataLabelsFormatter = point => point.Coordinate.PrimaryValue.ToString( "N2" )
 
                 } );
             }

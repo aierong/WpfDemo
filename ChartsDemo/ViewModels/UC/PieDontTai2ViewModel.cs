@@ -72,7 +72,7 @@ namespace ChartsDemo.ViewModels.UC
                         Color = SKColors.Black ,
                         SKTypeface = SKFontManager.Default.MatchCharacter( '汉' )
                     } ,
-                    DataLabelsFormatter = point => point.PrimaryValue.ToString( "N2" ) + "系列:" + num.ToString()
+                    DataLabelsFormatter = point => point.Coordinate.PrimaryValue.ToString( "N2" ) + "系列:" + num.ToString()
 
 
 

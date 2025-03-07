@@ -68,7 +68,7 @@ namespace ChartsDemo.ViewModels.UC
                     DataLabelsSize = 20,
                     DataLabelsPaint = new SolidColorPaint(SKColors.Blue),
                     DataLabelsPosition = LiveChartsCore.Measure.DataLabelsPosition.Top,
-                    DataLabelsFormatter = (point) => point.PrimaryValue.ToString("N0"),
+                    DataLabelsFormatter = (point) => point.Coordinate.PrimaryValue.ToString("N0"),
 
 
                     //线的平滑度

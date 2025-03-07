@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LiveChartsCore;
 using LiveChartsCore.Defaults;
+using LiveChartsCore.Kernel;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Drawing;
 using LiveChartsCore.SkiaSharpView.Extensions;
@@ -16,6 +17,9 @@ using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
 using SkiaSharp;
+
+
+
 
 namespace ChartsDemo.ViewModels.UC
 {
@@ -86,7 +90,7 @@ namespace ChartsDemo.ViewModels.UC
             }
         }
 
-        public IEnumerable<VisualElement<SkiaSharpDrawingContext>> VisualElements
+        public IEnumerable<ChartElement> VisualElements
         {
             get; set;
         }
@@ -115,9 +119,25 @@ namespace ChartsDemo.ViewModels.UC
                 new GaugeItem( 10 , s => SetStyle( sectionsOuter , sectionsWidth , s ) ) );
 
 
-            VisualElements = new VisualElement<SkiaSharpDrawingContext>[]
-               {
-                    new AngularTicksVisual
+            //VisualElements = new VisualElement<SkiaSharpDrawingContext>[]
+            //   {
+            //        new AngularTicksVisual
+            //        {
+            //            LabelsSize = 16,
+            //            LabelsOuterOffset = 15,
+            //            OuterOffset = 65,
+            //            TicksLength = 20 ,
+
+            //            //特别提示：下面2个是配置表盘刻度线颜色和字颜色，也可以不配置默认
+            //            //Stroke =new SolidColorPaint(SKColors.Blue) { StrokeThickness = 1 },
+            //            //LabelsPaint =new SolidColorPaint(SKColors.Blue)
+            //        },
+            //        Needle
+            //   };
+
+            VisualElements = [
+
+                new AngularTicksVisual
                     {
                         LabelsSize = 16,
                         LabelsOuterOffset = 15,
@@ -128,9 +148,24 @@ namespace ChartsDemo.ViewModels.UC
                         //Stroke =new SolidColorPaint(SKColors.Blue) { StrokeThickness = 1 },
                         //LabelsPaint =new SolidColorPaint(SKColors.Blue)
                     },
+
+                    //        new AngularTicksVisual
+                    //{
+                    //    Labeler = value => value.ToString("N1"),
+                    //    LabelsSize = 16,
+                    //    LabelsOuterOffset = 15,
+                    //    OuterOffset = 65,
+                    //    TicksLength = 20
+                    //},
+
                     Needle
-               };
+                ];
+
+                                 
+
         }
+
+
 
         private void SetStyle ( double sectionsOuter , double sectionsWidth , PieSeries<ObservableValue> series )
         {

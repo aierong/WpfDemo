@@ -8,6 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>ChartsDemo</RootNamespace>
     <AssemblyName>ChartsDemo</AssemblyName>
+	<LangVersion>12.0</LangVersion>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -259,7 +260,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="LiveChartsCore.SkiaSharpView.WPF">
-      <Version>2.0.0-rc4.5</Version>
+      <Version>2.0.0-rc5.4</Version>
     </PackageReference>
     <PackageReference Include="Prism.Unity">
       <Version>8.1.97</Version>
